@@ -45,4 +45,4 @@ const Input = styled.input`
 
 const Icon = styled.img`
 
-`
+'
