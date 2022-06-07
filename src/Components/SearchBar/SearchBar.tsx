@@ -15,6 +15,7 @@ export const SearchBar = forwardRef<HTMLDivElement, SearchBarProps>(({showSearch
 
     return (
         <Container ref={ref}>
+            <Icon src={SearchIcon} />
             <Input placeholder='What are you looking for? '/>
         </Container>
     )
@@ -44,5 +45,6 @@ const Input = styled.input`
 `
 
 const Icon = styled.img`
-
-'
+  height: 19px;
+  width: 20px;
+`
