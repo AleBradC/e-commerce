@@ -1,0 +1,8 @@
+yarn.lock
+coverage
+build
+es
+umd
+dist
+.git
+.gitignore
