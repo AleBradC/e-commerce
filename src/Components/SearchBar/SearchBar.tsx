@@ -1,24 +1,24 @@
-import styled from "styled-components";
-import { forwardRef } from "react";
+import styled from 'styled-components'
+import { forwardRef } from 'react'
 
 import SearchIcon from '../../assets/icons/searchIcon.svg'
 
 export interface SearchBarProps {
-    showSearchBar: boolean
+  showSearchBar: boolean
+  className?: string
 }
 
-export const SearchBar = forwardRef<HTMLDivElement, SearchBarProps>(({showSearchBar}, ref) => {
+export const SearchBar = forwardRef<HTMLDivElement, SearchBarProps>(({ showSearchBar, className }, ref) => {
+  if (!showSearchBar) {
+    return null
+  }
 
-    if (!showSearchBar) {
-        return null
-    }
-
-    return (
-        <Container ref={ref}>
-            <Icon src={SearchIcon} />
-            <Input placeholder='What are you looking for? '/>
-        </Container>
-    )
+  return (
+    <Container ref={ref} className={className}>
+      <Icon src={SearchIcon} />
+      <Input placeholder="What are you looking for? " />
+    </Container>
+  )
 })
 
 const Container = styled.div`
@@ -36,9 +36,9 @@ const Input = styled.input`
   padding: 8px 28px 8px 8px;
   max-width: 340px;
   width: 100%;
-  
+
   border-bottom: 1px solid ${props => props.theme.colors.grey2};
-  
+
   &:focus {
     outline: none;
   }
@@ -48,3 +48,5 @@ const Icon = styled.img`
   height: 19px;
   width: 20px;
 `
+
+SearchBar.displayName = 'SearchBar'
