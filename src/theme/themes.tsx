@@ -13,7 +13,7 @@ export const theme = {
     grey3: '#bdbdbd',
     grey4: '#828282',
     grey5: '#333',
-    brownLight: '#bc8765',
+    brownLight: '#bc8765', // hover
     brown: '#9a563a',
     brownBadge: '#9b6949',
     beigeLight: '#f8ebe3',
