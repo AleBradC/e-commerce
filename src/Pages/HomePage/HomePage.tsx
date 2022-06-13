@@ -30,14 +30,18 @@ const HomePage: React.FC<InputProps> = ({ value, ...inputProps }) => {
     middleware: [shift(), flip()],
   })
 
+  const handleShowMenu = () => {
+    setShowMenu(true)
+  }
+
   return (
     <>
       <Input {...inputProps} value={controlledValue} onChange={onChangeValue} />
-      <Button ref={reference} onClick={() => setShowMenu(true)}>
+      <Button ref={reference} onClick={handleShowMenu}>
         here
       </Button>
       <Menu showMenu={showMenu} ref={floating} position={{ position: strategy, top: y ?? '', left: x ?? '' }}>
-        <MenuItem onClick={() => console.log('here')}>hello</MenuItem>
+        <MenuItem onClick={() => console.log('this is a mock func')}>hello</MenuItem>
       </Menu>
 
       <DropDownMenu options={options} onSelected={setSelected} selected={selected} placeholder={'Choose one'} />

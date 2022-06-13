@@ -144,6 +144,10 @@ export const Header = () => {
     setMakeUpDropDown(false)
   }
 
+  const handleShowSearchBar = () => {
+    setShowSearchBar(!showSearchBar)
+  }
+
   return (
     <Main ref={reference}>
       <HeaderMainContainer>
@@ -173,7 +177,7 @@ export const Header = () => {
               </HeaderItemContainer>
             )}
             <ButtonsContainer>
-              <StyledIconButton variant={IconButtonType.SEARCH} onClick={() => setShowSearchBar(!showSearchBar)} />
+              <StyledIconButton variant={IconButtonType.SEARCH} onClick={handleShowSearchBar} />
               <BagContainer>
                 <IconButton variant={IconButtonType.BAG} />
                 {isDesktop && <Badge> 1 </Badge>}

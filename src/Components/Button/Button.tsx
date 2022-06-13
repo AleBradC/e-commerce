@@ -1,7 +1,8 @@
 import styled from 'styled-components'
+import { ReactNode } from 'react'
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  children: string
+  children: string | ReactNode
   className?: string
 }
 

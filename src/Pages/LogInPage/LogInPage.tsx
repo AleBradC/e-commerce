@@ -1,14 +1,12 @@
 import styled from 'styled-components'
-
-import { Input } from '../../Components/Input/Input'
-import { Button } from '../../Components/Button/Button'
+import { useState } from 'react'
 import { useForm } from 'react-hook-form'
+
 import useBreakpoint from '../../Helpers/useBreakpointsHook/useBreakpoint'
 
-const emailValidationRegex = /^([\w.%+-]+)@([\w-]+\.)+(\w{2,})$/i
-const specialCharacters = /[-!$%^&*()_+|~=`{}[\]:/;<>?,.@#]/
-// const num = /^\d+$/
-// const capitalLetter = /[^a-zA-Z-\-']/g
+import RegisterPage from '../RegisterPage/RegisterPage'
+import { Input } from '../../Components/Input/Input'
+import { Button } from '../../Components/Button/Button'
 
 export interface LogInFormFields {
   email: string
@@ -32,10 +30,20 @@ const LogInPage = () => {
   const breakPoint = useBreakpoint()
   const isTabletOrUp = breakPoint === 'md' || breakPoint === 'lg' || breakPoint === 'xl'
 
+  const [showRegistrationModal, setShowRegistrationModal] = useState(false)
+
   const handleLogIn = (data: LogInFormFields) => {
     console.log(data)
 
     reset()
+  }
+
+  const handleOpenRegistration = () => {
+    setShowRegistrationModal(true)
+  }
+
+  const handleCloseRegistrationModal = () => {
+    setShowRegistrationModal(false)
   }
 
   return (
@@ -50,10 +58,6 @@ const LogInPage = () => {
           required
           {...register('email', {
             required: { value: true, message: 'This field is required' },
-            pattern: {
-              value: emailValidationRegex,
-              message: 'Invalid format',
-            },
           })}
         />
         <StyledInput
@@ -64,10 +68,6 @@ const LogInPage = () => {
           required
           {...register('password', {
             required: { value: true, message: 'This field is required' },
-            pattern: {
-              value: specialCharacters,
-              message: 'Please add a special character',
-            },
           })}
         />
         <Button type="submit" disabled={!isDirty || !isValid}>
@@ -83,13 +83,16 @@ const LogInPage = () => {
           <Content>
             BY GIVING US YOUR DETAILS, PURCHASING IN ZARA.COM WILL BE FASTER AND AN ENJOYABLE EXPERIENCE.
           </Content>
-          <Button> REGISTER </Button>
+          <Button onClick={handleOpenRegistration}> REGISTER </Button>
         </RegisterContainer>
       ) : (
         <RegisterMobileContent>
-          DON’T HAVE AN ACCOUNT? <RegisterButton> REGISTER </RegisterButton>
+          DON’T HAVE AN ACCOUNT?
+          <RegisterButton onClick={handleOpenRegistration}> REGISTER </RegisterButton>
         </RegisterMobileContent>
       )}
+
+      <RegisterPage showRegistration={showRegistrationModal} closeRegistration={handleCloseRegistrationModal} />
     </Container>
   )
 }

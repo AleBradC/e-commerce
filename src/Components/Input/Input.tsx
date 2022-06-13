@@ -25,7 +25,7 @@ export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> 
 }
 
 const ForwardedInput: React.ForwardRefRenderFunction<HTMLInputElement, InputProps> = (props, forwardRef) => {
-  const { className, hasClearOption = true, error, onClear, sizeVariant = InputSize.MEDIUM, ...htmlInputProps } = props
+  const { className, hasClearOption = true, error, onClear, sizeVariant = InputSize.LARGE, ...htmlInputProps } = props
 
   const inputElementRef = useRef<HTMLInputElement>(null)
   useImperativeHandle(forwardRef, () => inputElementRef.current as HTMLInputElement)
@@ -83,6 +83,7 @@ export const Input = forwardRef(ForwardedInput)
 
 const Container = styled.div`
   width: 100%;
+  max-width: 300px;
 `
 
 const Wrapper = styled.div`
@@ -137,7 +138,9 @@ const StyledInput = styled.input<{
   hasValue: boolean
 }>`
   width: 100%;
-  padding: 12px 16px;
+
+  padding: ${props => props.sizeVariant === InputSize.LARGE && '12px 16px'};
+  padding: ${props => props.sizeVariant === InputSize.MEDIUM && '12px 6px'};
 
   transition: border-color 0.2s, background-color 0.2s;
   background-color: ${props => props.theme.colors.white};
@@ -146,6 +149,10 @@ const StyledInput = styled.input<{
   outline: none;
   border: 2px solid ${props => props.theme.colors.grey4};
   caret-color: ${props => props.theme.colors.brown};
+
+  ::placeholder {
+    font-family: 'Montserrat', sans-serif;
+  }
 
   :not(:disabled) {
     :hover {
