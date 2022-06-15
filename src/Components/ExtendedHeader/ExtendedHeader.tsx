@@ -1,9 +1,8 @@
 import { CSSProperties, forwardRef, ReactNode } from 'react'
-
 import styled from 'styled-components'
 
-import SkinCareImg from '../../assets/SkinCareImg.jpg'
-import MakeUpImg from '../../assets/MakeUpImg.jpg'
+import SkinCareImg from '../../assets/header/SkinCareImg.jpg'
+import MakeUpImg from '../../assets/header/MakeUpImg.jpg'
 
 export enum MenuImageType {
   SKINCARE = 'skinCare',

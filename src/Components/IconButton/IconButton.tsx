@@ -12,6 +12,7 @@ export enum IconButtonType {
 
 interface IconButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant: IconButtonType
+  className?: string
 }
 
 const iconVariants = {
@@ -20,9 +21,9 @@ const iconVariants = {
   [IconButtonType.MOBILE_BAG]: MobileBag,
 }
 
-export const IconButton: React.FC<IconButtonProps> = ({ variant, ...htmlButtonProps }) => {
+export const IconButton: React.FC<IconButtonProps> = ({ variant, className, ...htmlButtonProps }) => {
   return (
-    <ButtonContainer {...htmlButtonProps}>
+    <ButtonContainer {...htmlButtonProps} className={className}>
       <ButtonIcon src={iconVariants[variant]} alt="icon-button" />
     </ButtonContainer>
   )

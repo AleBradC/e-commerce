@@ -23,7 +23,7 @@ export const SearchBar = forwardRef<HTMLDivElement, SearchBarProps>(({ showSearc
 
 const Container = styled.div`
   display: flex;
-  align-content: center;
+  align-items: center;
   justify-content: center;
   width: 100%;
   padding: 4px;
@@ -31,11 +31,12 @@ const Container = styled.div`
 `
 
 const Input = styled.input`
-  border: none;
-  background-color: transparent;
   padding: 8px 28px 8px 8px;
+  margin-left: 6px;
   max-width: 340px;
   width: 100%;
+  border: none;
+  background-color: transparent;
 
   border-bottom: 1px solid ${props => props.theme.colors.grey2};
 
@@ -45,7 +46,7 @@ const Input = styled.input`
 `
 
 const Icon = styled.img`
-  height: 19px;
+  height: 18px;
   width: 20px;
 `
 
