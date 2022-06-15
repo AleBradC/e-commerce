@@ -3,6 +3,6 @@ coverage
 build
 dist
 .env
-
+procfile
 
 .idea
