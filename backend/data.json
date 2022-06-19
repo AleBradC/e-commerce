@@ -48,7 +48,7 @@
       "name": "Superfood Cleanser",
       "category": "Cleansers",
       "tags": ["new arrival"],
-      "imageURL": "../src/assets/products/cleansers/superfood-cleanser.jpg",
+      "imageURL": "../src/assets/products/cleansers/superfood-cleanser.png",
       "hoverImageURL": "../src/assets/products/cleansers/superfood-cleanser-hover.png",
       "rating": 5,
       "price": 36
@@ -60,7 +60,7 @@
       "category": "Cleansers",
       "tags": ["best seller"],
       "imageURL": "../src/assets/products/cleansers/superberry-dream-balm.jpg",
-      "hoverImageURL": "../src/assets/products/cleansers/superberry-dream-balm-hover.png",
+      "hoverImageURL": "../src/assets/products/cleansers/superberry-dream-balm-hover.jpg",
       "rating": 5,
       "price": 34
     },
@@ -76,7 +76,7 @@
       "price": 29
     },
     {
-      "id": 1,
+      "id": 1139298428948,
       "brand": "Environ",
       "name": "Clarifying Facial Polish",
       "category": "Cleansers",
@@ -166,7 +166,7 @@
       "name": "Vita-Complex Super Moisturizer",
       "category": "Moisturizers",
       "tags": ["vegan"],
-      "imageURL": "../src/assets/products/moisturizers/vita-complex.png",
+      "imageURL": "../src/assets/products/moisturizers/vita-complex.jpg",
       "hoverImageURL": "../src/assets/products/moisturizers/vita-complex-hover.jpg",
       "rating": 5,
       "price": 100
@@ -198,7 +198,7 @@
       "name": "Rosehip Bioregenerate Universal Face Oil",
       "category": "face-oils",
       "tags": ["best seller", "vegan"],
-      "imageURL": "../src/assets/products/face-oils/rosehip.png",
+      "imageURL": "../src/assets/products/face-oils/resehip.png",
       "hoverImageURL": "../src/assets/products/face-oils/rosehip-hover.png",
       "rating": 5,
       "price": 44
@@ -210,7 +210,7 @@
       "category": "face-oils",
       "tags": ["vegan"],
       "imageURL": "../src/assets/products/face-oils/para-a-face.jpg",
-      "hoverImageURL": "../src/assets/products/face-oils/para-a-face-hover.jpg",
+      "hoverImageURL": "../src/assets/products/face-oils/para-a-face-hover.webp",
       "rating": 0,
       "price": 135
     },
@@ -296,7 +296,7 @@
       "name": "15% Vitamin C + Clean Caffeine Energy Serum",
       "category": "face-serums",
       "imageURL": "../src/assets/products/face-serums/vitamine.jpg",
-      "hoverImageURL": "../src/assets/products/face-serums/vitamine-hover.jpg",
+      "hoverImageURL": "../src/assets/products/face-serums/vitamine-hover.webp",
       "rating": 5,
       "price": 195
     },
@@ -321,7 +321,7 @@
       "price": 40
     },
     {
-      "id": 17876,
+      "id": 178760999999,
       "brand": "Ideo",
       "name": "Ideo Skin Memory Serum",
       "category": "face-serums",
@@ -465,7 +465,7 @@
       "category": "Mascara",
       "tags": ["best seller", "vegan"],
       "imageURL": "../src/assets/products/mascara/volumizing.png",
-      "hoverImageURL": "../src/assets/products/mascara/volumizing-hover.png",
+      "hoverImageURL": "../src/assets/products/mascara/volumizing-hover.jpg",
       "rating": 3,
       "price": 58
     },
@@ -486,7 +486,7 @@
       "category": "Mascara",
       "tags": ["vegan"],
       "imageURL": "../src/assets/products/mascara/mob.png",
-      "hoverImageURL": "../src/assets/products/mascara/mob-hover.png",
+      "hoverImageURL": "../src/assets/products/mascara/mob-hover.jpg",
       "rating": 0,
       "price": 5
     },
@@ -595,7 +595,7 @@
       "name": "Watermelon Lip Water",
       "category": "lip-glosses",
       "imageURL": "../src/assets/products/lip-glosses/watermelon.jpg",
-      "hoverImageURL": "../src/assets/products/lip-glosses/watermelon-hover.jpg",
+      "hoverImageURL": "../src/assets/products/lip-glosses/watermelon-hover.png",
       "rating": 5,
       "price": 17.50
     },
@@ -606,7 +606,7 @@
       "category": "lip-sticks",
       "tags": ["best seller"],
       "imageURL": "../src/assets/products/lip-sticks/mob.png",
-      "hoverImageURL": "../src/assets/products/lip-sticks/mob-hover.png",
+      "hoverImageURL": "../src/assets/products/lip-sticks/mob-hover.jpg",
       "rating": 5,
       "price": 5
     },
@@ -638,7 +638,7 @@
       "category": "lip-sticks",
       "tags": ["best seller", "vegan"],
       "imageURL": "../src/assets/products/lip-sticks/mob-cream.png",
-      "hoverImageURL": "../src/assets/products/lip-sticks/mob-cream-hover.png",
+      "hoverImageURL": "../src/assets/products/lip-sticks/mob-cream-hover.jpg",
       "rating": 5,
       "price": 22
     },
