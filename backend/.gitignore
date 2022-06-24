@@ -5,6 +5,5 @@ build
 dist
 .env
 procfile
-.DS_Store
 
 .idea
