@@ -174,7 +174,6 @@ const RegisterButton = styled.button`
   border: none;
   background: none;
   text-decoration: underline;
-  cursor: pointer;
   font-family: 'Montserrat', sans-serif;
 
   :hover {

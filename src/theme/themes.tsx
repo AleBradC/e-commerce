@@ -18,6 +18,8 @@ export const theme = {
     brownBadge: '#9b6949',
     beigeLight: '#f8ebe3',
     beige: '#f2d8ca',
+    beige2: '#FAEFE9',
+    beige3: '#F8EBE4',
     yellow: '#fdd007',
     blueLight: '#7a8ef9',
     blue: '#0029ff',

@@ -16,14 +16,14 @@ import {
   treatmentsFaceSerumsRoute,
 } from '../../Helpers/routes'
 import useBreakpoint from '../../Helpers/useBreakpointsHook/useBreakpoint'
+import useClickOutSide from '../../Helpers/useClickOutSide'
 import { IconButton, IconButtonType } from '../IconButton/IconButton'
 import { ExtendedHeader, MenuImageType } from '../ExtendedHeader/ExtendedHeader'
 import { SectionMenu } from '../ExtendedHeader/SectionMenu/SectionMenu'
 import { SectionMenuItem } from '../ExtendedHeader/SectionMenuItem/SectionMenuItem'
+import { SearchBar } from '../SearchBar/SearchBar'
 
 import Logo from '../../assets/icons/logo.png'
-import useClickOutSide from '../../Helpers/useClickOutSide'
-import { SearchBar } from '../SearchBar/SearchBar'
 
 enum HeaderItemType {
   SKINCARE = 'SKINCARE',
@@ -264,7 +264,6 @@ const LoginButton = styled.button`
   font-weight: bold;
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
-  cursor: pointer;
 
   color: ${props => props.theme.colors.white};
 `
@@ -272,7 +271,7 @@ const LoginButton = styled.button`
 const HeaderContainer = styled.header`
   display: flex;
   align-items: center;
-  padding: 20px 42px 20px 62px;
+  padding: 20px 42px 2px 62px;
   border-bottom: 1px solid ${props => props.theme.colors.beigeLight};
 
   background: ${props => props.theme.colors.white};
@@ -304,11 +303,10 @@ const HeaderItemContainer = styled.div`
 const HeaderItem = styled.button<{ selected: boolean }>`
   border: none;
   background: none;
-  cursor: pointer;
 
   margin-right: 16px;
   padding: 0 0 6px 0;
-  font-weight: bold;
+  font-weight: bolder;
   font-size: 12px;
   font-family: 'Montserrat', sans-serif;
   border-bottom: 1px solid ${props => props.theme.colors.white};

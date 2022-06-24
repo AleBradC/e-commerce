@@ -17,7 +17,6 @@ export const SectionMenuItem: React.FC<OptionsMenuItemProps> = ({ onRedirect, ch
 const MenuItem = styled.button`
   background: none;
   border: none;
-  cursor: pointer;
 
   padding: 0;
   margin-bottom: 14px;

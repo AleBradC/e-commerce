@@ -10,7 +10,7 @@ const initialState: initStateProps = {
   close: true,
 }
 
-const searchBar = createSlice({
+export const searchBarSlice = createSlice({
   name: 'searchBar',
   initialState,
   reducers: {
@@ -25,6 +25,6 @@ const searchBar = createSlice({
   },
 })
 
-export const { showSearchBar, closeSearchBar } = searchBar.actions
+export const { showSearchBar, closeSearchBar } = searchBarSlice.actions
 
-export default reducer
+export default searchBarSlice.reducer

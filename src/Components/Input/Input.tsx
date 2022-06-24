@@ -111,7 +111,6 @@ const ClearButton = styled.button<{ sizeVariant: InputSize }>`
   transition: opacity 0.2s;
   background-color: transparent;
   border: none;
-  cursor: pointer;
 
   opacity: 0;
 

@@ -15,7 +15,7 @@ import {
   lipsLipSticksRoute,
   logInRoute,
   productRoute,
-  registerRoute,
+  // registerRoute,
   searchRoute,
   treatmentsFaceOilsRoute,
   treatmentsFaceSerumsRoute,
@@ -25,7 +25,7 @@ const HomePage = React.lazy(() => import('./Pages/HomePage/HomePage'))
 const LogInPage = React.lazy(() => import('./Pages/LogInPage/LogInPage'))
 const BagPage = React.lazy(() => import('./Pages/BagPage/BagPage'))
 const ProductPage = React.lazy(() => import('./Pages/ProductPage/ProductPage')) // TO DO with ID
-const RegisterPage = React.lazy(() => import('./Pages/RegisterPage/RegisterPage'))
+// const RegisterPage = React.lazy(() => import('./Pages/RegisterPage/RegisterPage'))
 const SearchPage = React.lazy(() => import('./Pages/SearchPage/SearchPage'))
 
 const AllProductsPage = React.lazy(() => import('./Pages/ProductsPages/AllProductsPage/AllProductsPage'))
@@ -76,7 +76,7 @@ function App() {
         <Route path={homeRoute} element={<HomePage />} />
         <Route path={logInRoute} element={<LogInPage />} />
         <Route path={productRoute} element={<ProductPage />} />
-        <Route path={registerRoute} element={<RegisterPage />} />
+        {/*<Route path={registerRoute} element={<RegisterPage />} />*/}
         <Route path={searchRoute} element={<SearchPage />} />
         <Route path={bagRoute} element={<BagPage />} />
 

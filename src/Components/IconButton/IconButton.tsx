@@ -32,7 +32,6 @@ export const IconButton: React.FC<IconButtonProps> = ({ variant, className, ...h
 const ButtonContainer = styled.button`
   border: none;
   background: none;
-  cursor: pointer;
 `
 
 const ButtonIcon = styled.img`

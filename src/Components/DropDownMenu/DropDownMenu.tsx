@@ -72,4 +72,12 @@ const Container = styled.button`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'Montserrat', sans-serif;
+
+  background: none;
+  border: none;
 `

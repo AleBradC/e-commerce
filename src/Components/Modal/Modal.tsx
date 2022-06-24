@@ -102,7 +102,6 @@ const CloseButton = styled.button`
   display: flex;
   border: none;
   background: none;
-  cursor: pointer;
 `
 
 const Icon = styled.img`

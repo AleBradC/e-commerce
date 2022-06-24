@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 import { forwardRef } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { searchRoute } from '../../Helpers/routes'
 
 import SearchIcon from '../../assets/icons/searchIcon.svg'
 
@@ -9,12 +11,20 @@ export interface SearchBarProps {
 }
 
 export const SearchBar = forwardRef<HTMLDivElement, SearchBarProps>(({ showSearchBar, className }, ref) => {
+  const navigateTo = useNavigate()
+
   if (!showSearchBar) {
     return null
   }
 
+  const onRedirect = (event: React.KeyboardEvent) => {
+    if (event.key === 'Enter') {
+      navigateTo(searchRoute)
+    }
+  }
+
   return (
-    <Container ref={ref} className={className}>
+    <Container ref={ref} className={className} onKeyDown={onRedirect}>
       <Icon src={SearchIcon} />
       <Input placeholder="What are you looking for? " />
     </Container>
@@ -25,7 +35,6 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
   padding: 4px;
   background-color: ${props => props.theme.colors.beigeLight};
 `

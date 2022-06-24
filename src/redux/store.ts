@@ -1,14 +1,13 @@
-import { configureStore, combineReducers } from '@reduxjs/toolkit'
+import { combineReducers, configureStore } from '@reduxjs/toolkit'
+
 import { api } from './api'
-import searchBarSlice from './reducers/searchBarSlice'
+import { searchBarSlice } from './reducers/searchBarSlice'
 
 export const reducer = combineReducers({
-  reducer: {
-    [api.reducerPath]: api.reducer,
+  [api.reducerPath]: api.reducer,
 
-    // other reducers
-    [searchBarSlice.name]: searchBarSlice.reducer,
-  },
+  // OTHERS REDUCERS
+  [searchBarSlice.name]: searchBarSlice.reducer,
 })
 
 export const store = configureStore({

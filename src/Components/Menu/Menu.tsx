@@ -26,7 +26,9 @@ const MenuContainer = styled.div`
   justify-content: center;
   align-items: center;
   padding: 4px;
-  min-width: 212px;
+  width: 200px;
+  border: 1px solid ${props => props.theme.colors.beigeLight};
+  background-color: ${props => props.theme.colors.white};
   z-index: 100;
 `
 
