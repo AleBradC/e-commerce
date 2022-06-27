@@ -1,7 +1,10 @@
-import { useState, useRef } from 'react'
+import { useRef, useState } from 'react'
 import styled, { css } from 'styled-components'
 import { useNavigate } from 'react-router-dom'
 import { flip, shift, useFloating } from '@floating-ui/react-dom'
+
+import { useAppDispatch, useAppSelector } from '../../redux/hooks'
+import { changeSearchBarValue, closeSearchBar, openSearchBar } from '../../redux/reducers/searchBarSlice'
 
 import {
   categoryCleansersRoute,
@@ -12,6 +15,7 @@ import {
   lipsLipGlossesRoute,
   lipsLipSticksRoute,
   logInRoute,
+  searchRoute,
   treatmentsFaceOilsRoute,
   treatmentsFaceSerumsRoute,
 } from '../../Helpers/routes'
@@ -102,7 +106,26 @@ export const Header = () => {
   const breakPoint = useBreakpoint()
   const isDesktop = breakPoint === 'lg' || breakPoint === 'xl'
   const navigateTo = useNavigate()
-  const { y, reference, floating, strategy } = useFloating({
+  const dispatch = useAppDispatch()
+  const isSearchBarOpen = useAppSelector(state => state.searchBar.open)
+  const searchValue = useAppSelector(state => state.searchBar.value)
+
+  const {
+    y: extendedHeaderY,
+    reference: extendedHeaderReference,
+    floating: extendedHeaderFloating,
+    strategy: extendedHeaderStrategy,
+  } = useFloating({
+    placement: 'bottom',
+    middleware: [shift(), flip()],
+  })
+
+  const {
+    y: searchBarY,
+    reference: searchBarReference,
+    floating: searchBarFloating,
+    strategy: searchBarStrategy,
+  } = useFloating({
     placement: 'bottom',
     middleware: [shift(), flip()],
   })
@@ -111,12 +134,11 @@ export const Header = () => {
   const [activeMenuItem, setActiveMenuItem] = useState(-1)
   const [showSkincareDropDown, setShowSkincareDropDown] = useState(false)
   const [showMakeupDropDown, setMakeUpDropDown] = useState(false)
-  const [showSearchBar, setShowSearchBar] = useState(false)
 
   useClickOutSide(parentRef, () => {
     setShowSkincareDropDown(false)
     setMakeUpDropDown(false)
-    setShowSearchBar(false)
+    dispatch(closeSearchBar())
     setActiveMenuItem(-1)
   })
 
@@ -136,7 +158,7 @@ export const Header = () => {
     }
   }
 
-  const onRedirect = (route: string) => {
+  const handleRedirectOnClick = (route: string) => {
     navigateTo(route)
 
     setActiveMenuItem(-1)
@@ -144,20 +166,35 @@ export const Header = () => {
     setMakeUpDropDown(false)
   }
 
-  const handleShowSearchBar = () => {
-    setShowSearchBar(!showSearchBar)
+  const handleToggleSearchBar = () => {
+    if (isSearchBarOpen) {
+      dispatch(closeSearchBar())
+    } else {
+      dispatch(openSearchBar())
+    }
+  }
+
+  const handleChangeValue = (event: React.ChangeEvent<HTMLInputElement>) => {
+    dispatch(changeSearchBarValue(event.target.value.toLowerCase()))
+  }
+
+  const handleRedirectOnEnter = (event: React.KeyboardEvent) => {
+    if (event.key === 'Enter' && searchValue.length >= 1) {
+      navigateTo(searchRoute)
+      dispatch(closeSearchBar())
+    }
   }
 
   return (
-    <Main ref={reference}>
-      <HeaderMainContainer>
+    <Main ref={searchBarReference}>
+      <HeaderMainContainer ref={extendedHeaderReference}>
         <LoginContainer>
           <Content> FREE SHIPPING ON ORDERS OVER $50 </Content>
-          <LoginButton onClick={() => onRedirect(logInRoute)}> LOG IN </LoginButton>
+          <LoginButton onClick={() => handleRedirectOnClick(logInRoute)}> LOG IN </LoginButton>
         </LoginContainer>
 
         <HeaderContainer>
-          <LogoContainer onClick={() => onRedirect(homeRoute)}>
+          <LogoContainer onClick={() => handleRedirectOnClick(homeRoute)}>
             <ShenLogo src={Logo} alt="logo" />
           </LogoContainer>
 
@@ -177,7 +214,11 @@ export const Header = () => {
               </HeaderItemContainer>
             )}
             <ButtonsContainer>
-              <StyledIconButton variant={IconButtonType.SEARCH} onClick={handleShowSearchBar} />
+              <StyledIconButton
+                variant={isSearchBarOpen ? IconButtonType.CLOSE : IconButtonType.SEARCH}
+                onClick={handleToggleSearchBar}
+              />
+
               <BagContainer>
                 <IconButton variant={IconButtonType.BAG} />
                 {isDesktop && <Badge> 1 </Badge>}
@@ -187,18 +228,32 @@ export const Header = () => {
           </InnerHeader>
         </HeaderContainer>
       </HeaderMainContainer>
-      <SearchBar ref={parentRef} showSearchBar={showSearchBar} />
+      {isSearchBarOpen && (
+        <RefContainer ref={parentRef}>
+          <SearchBar
+            value={searchValue}
+            onChange={handleChangeValue}
+            ref={searchBarFloating}
+            position={{ position: searchBarStrategy, top: searchBarY ?? '', left: 0 }}
+            onRedirect={handleRedirectOnEnter}
+          />
+        </RefContainer>
+      )}
 
       {showSkincareDropDown &&
         skincareHeaderItems.map((items, index) => (
-          <div key={index} ref={parentRef}>
-            <ExtendedHeader ref={floating} position={{ position: strategy, top: y ?? '', left: 0 }} image={items.image}>
+          <RefContainer key={index} ref={parentRef}>
+            <ExtendedHeader
+              ref={extendedHeaderFloating}
+              position={{ position: extendedHeaderStrategy, top: extendedHeaderY ?? '', left: 0 }}
+              image={items.image}
+            >
               {items?.sections?.map(section => (
                 <SectionMenu title={section.title} key={section.title}>
                   {section.submenu.map(submenuItem => (
                     <SectionMenuItem
                       key={submenuItem.submenuTitle}
-                      onRedirect={() => onRedirect(submenuItem.navigateTo)}
+                      onRedirect={() => handleRedirectOnClick(submenuItem.navigateTo)}
                     >
                       {submenuItem.submenuTitle}
                     </SectionMenuItem>
@@ -206,18 +261,22 @@ export const Header = () => {
                 </SectionMenu>
               ))}
             </ExtendedHeader>
-          </div>
+          </RefContainer>
         ))}
       {showMakeupDropDown &&
         makeupHeaderItems.map((items, index) => (
-          <div key={index} ref={parentRef}>
-            <ExtendedHeader ref={floating} position={{ position: strategy, top: y ?? '', left: 0 }} image={items.image}>
+          <RefContainer key={index} ref={parentRef}>
+            <ExtendedHeader
+              ref={extendedHeaderFloating}
+              position={{ position: extendedHeaderStrategy, top: extendedHeaderY ?? '', left: 0 }}
+              image={items.image}
+            >
               {items?.sections?.map(section => (
                 <SectionMenu title={section.title} key={section.title}>
                   {section.submenu.map(submenuItem => (
                     <SectionMenuItem
                       key={submenuItem.submenuTitle}
-                      onRedirect={() => onRedirect(submenuItem.navigateTo)}
+                      onRedirect={() => handleRedirectOnClick(submenuItem.navigateTo)}
                     >
                       {submenuItem.submenuTitle}
                     </SectionMenuItem>
@@ -225,7 +284,7 @@ export const Header = () => {
                 </SectionMenu>
               ))}
             </ExtendedHeader>
-          </div>
+          </RefContainer>
         ))}
     </Main>
   )
@@ -346,3 +405,5 @@ const StyledIconButton = styled(IconButton)`
 const StyledMobileIconButton = styled(IconButton)`
   margin-left: 24px;
 `
+
+const RefContainer = styled.div``

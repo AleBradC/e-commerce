@@ -1,16 +1,19 @@
 import { ReactNode } from 'react'
 import styled from 'styled-components'
 
+import { Product } from '../../types'
+
 export interface MenuItemProps {
-  children: ReactNode
-  onClick: () => void
+  children: ReactNode | Product | undefined | any
+  onClick?: () => void
   className?: string
+  checkBox?: boolean
 }
 
 export const MenuItem: React.FC<MenuItemProps> = ({ children, onClick, className }) => {
   const onClickItem = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     e.stopPropagation()
-    onClick()
+    onClick && onClick()
   }
 
   return (

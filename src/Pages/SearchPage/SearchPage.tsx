@@ -1,32 +1,67 @@
+import { useEffect, useState } from 'react'
 import styled from 'styled-components'
 
+import { Product } from '../../types'
 import { useGetProductsQuery } from '../../redux/api'
+import { useAppDispatch, useAppSelector } from '../../redux/hooks'
+import { openSearchBar } from '../../redux/reducers/searchBarSlice'
 import { ProductCard } from '../../Components/ProductCard/ProductCard'
 import { LargeHeader } from '../../Components/LargeHeader/LargeHeader'
 
 const SearchPage = () => {
-  const { data: products } = useGetProductsQuery()
+  const dispatch = useAppDispatch()
+  const searchValue = useAppSelector(state => state.searchBar.value)
+  const { data: allProducts } = useGetProductsQuery()
 
-  // const sortByLowerPrice = () => {
-  //   return products?.slice().sort((a, b) => a.price - b.price)
-  // }
-  //
-  // const sortByHigherPrice = () => {
-  //   return products?.slice().sort((a, b) => b.price - a.price)
-  // }
+  const [filteredProducts, setFilteredProducts] = useState<Product[] | undefined>([])
+  const [selectedSortType, setSelectedSortType] = useState<string | number>('')
+
+  const brands = [...new Set(allProducts?.map(product => product.brand))]
+  const concerns = [...new Set(allProducts?.map(product => product.tags).flat())]
+
+  useEffect(() => {
+    allProducts && setFilteredProducts(allProducts)
+  }, [allProducts])
+
+  useEffect(() => {
+    const products = allProducts?.filter((product: Product) => product.name?.toLowerCase().includes(searchValue))
+
+    if (selectedSortType === 'byLowerPrice' || selectedSortType === 'byHigherPrice') {
+      products?.sort((a, b) => {
+        const difference = a.price - b.price
+        if (difference === 0) return 0
+
+        const sign = Math.abs(difference) / difference
+        return selectedSortType === 'byLowerPrice' ? -sign : sign
+      })
+    }
+
+    setFilteredProducts(products)
+  }, [allProducts, dispatch, searchValue, selectedSortType])
+
+  const handleShowSearchBar = () => {
+    dispatch(openSearchBar())
+  }
+
+  const handleSelectedSortType = (option: string | number) => {
+    setSelectedSortType(option)
+  }
 
   return (
     <Container>
       <LargeHeader
-        title="Search results for"
-        description="— TEST"
-        numberOfItems={50}
-        otherDetails={<SearchButton> Search again </SearchButton>}
+        title="Search results for -"
+        numberOfItemsFound={filteredProducts?.length}
+        selectedSortType={handleSelectedSortType}
+        brands={brands}
+        concerns={concerns}
+        searchedValue={searchValue}
+        otherDetails={<SearchButton onClick={handleShowSearchBar}> Search again </SearchButton>}
       />
       <ProductsList>
-        {products?.map(product => (
+        {filteredProducts?.map((product, index) => (
           <ProductCard
-            key={product.id}
+            key={index}
             brand={product.brand}
             name={product.name}
             tags={product.tags}

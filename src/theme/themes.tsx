@@ -21,6 +21,7 @@ export const theme = {
     beige2: '#FAEFE9',
     beige3: '#F8EBE4',
     yellow: '#fdd007',
+    butter: '#F9F7F6',
     blueLight: '#7a8ef9',
     blue: '#0029ff',
     greenLight: '#64a69e',

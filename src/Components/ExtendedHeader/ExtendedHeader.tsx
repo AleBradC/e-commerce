@@ -38,7 +38,7 @@ const ExtendedHeaderContainer = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: space-around;
-  padding: 24px;
+  padding: 24px 0 24px 0;
   width: 100%;
 
   background: ${props => props.theme.colors.white};

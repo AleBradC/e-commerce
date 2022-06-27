@@ -1,4 +1,4 @@
-import { forwardRef, Key, useRef, useState } from 'react'
+import { forwardRef, Key, useState } from 'react'
 import { flip, shift, useFloating } from '@floating-ui/react-dom'
 import styled from 'styled-components'
 
@@ -19,48 +19,44 @@ export interface DropDownMenuProps {
   className?: string
 }
 
-const ForwardedDropDownMenu: React.ForwardRefRenderFunction<HTMLInputElement, DropDownMenuProps> = (
-  { onToggleDropDown, options, onSelected, selected, placeholder, className },
-  forwardRef
-) => {
-  const [showDropDown, setShowDropDown] = useState(false)
-  const parentRef = useRef<HTMLDivElement>(null)
+export const DropDownMenu = forwardRef<HTMLInputElement, DropDownMenuProps>(
+  ({ onToggleDropDown, options, onSelected, selected, placeholder, className }, ref) => {
+    const [showDropDown, setShowDropDown] = useState(false)
 
-  const { x, y, reference, floating, strategy } = useFloating({
-    placement: 'bottom',
-    middleware: [shift(), flip()],
-  })
+    const { x, y, reference, floating, strategy } = useFloating({
+      placement: 'bottom',
+      middleware: [shift(), flip()],
+    })
 
-  const handleChangeSelectedOption = (option: OptionsType['value']) => {
-    onSelected && onSelected(option)
-    setShowDropDown(false)
+    const handleChangeSelectedOption = (option: OptionsType['value']) => {
+      onSelected && onSelected(option)
+      setShowDropDown(false)
+    }
+
+    const toggleDropDown = () => {
+      onToggleDropDown && onToggleDropDown(!showDropDown)
+      setShowDropDown(!showDropDown)
+    }
+
+    const selectedOption = options.find(({ value }) => value === selected)
+
+    return (
+      <SelectedContainer ref={ref} className={className}>
+        <Container ref={reference} onClick={toggleDropDown}>
+          {selectedOption ? selectedOption.label : placeholder}
+        </Container>
+
+        <Menu ref={floating} showMenu={showDropDown} position={{ position: strategy, top: y ?? '', left: x ?? '' }}>
+          {options.map(option => (
+            <MenuItem key={option.value as Key} onClick={() => handleChangeSelectedOption(option.value)}>
+              {option.label}
+            </MenuItem>
+          ))}
+        </Menu>
+      </SelectedContainer>
+    )
   }
-
-  const toggleDropDown = () => {
-    onToggleDropDown && onToggleDropDown(!showDropDown)
-    setShowDropDown(!showDropDown)
-  }
-
-  const selectedOption = options.find(({ value }) => value === selected)
-
-  return (
-    <SelectedContainer ref={parentRef} className={className}>
-      <Container ref={reference} onClick={toggleDropDown}>
-        {selectedOption ? selectedOption.label : placeholder}
-      </Container>
-
-      <Menu ref={floating} showMenu={showDropDown} position={{ position: strategy, top: y ?? '', left: x ?? '' }}>
-        {options.map(option => (
-          <MenuItem key={option.value as Key} onClick={() => handleChangeSelectedOption(option.value)}>
-            {option.label}
-          </MenuItem>
-        ))}
-      </Menu>
-    </SelectedContainer>
-  )
-}
-
-export const DropDownMenu = forwardRef(ForwardedDropDownMenu)
+)
 
 const SelectedContainer = styled.div`
   position: relative;
@@ -81,3 +77,5 @@ const Container = styled.button`
   background: none;
   border: none;
 `
+
+DropDownMenu.displayName = 'DropDownMenu'

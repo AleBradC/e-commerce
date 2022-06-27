@@ -30,42 +30,28 @@ const SearchPage = React.lazy(() => import('./Pages/SearchPage/SearchPage'))
 
 const AllProductsPage = React.lazy(() => import('./Pages/ProductsPages/AllProductsPage/AllProductsPage'))
 const MascaraProductsPage = React.lazy(
-  () => import('./Pages/ProductsPages/MakeupProductsPages/EyesProductsPages/MascaraProductsPage/MascaraProductsPage')
+  () => import('./Pages/ProductsPages/MakeupProductsPages/EyesProductsPages/MascaraProductsPage')
 )
 const BrowsProductsPage = React.lazy(
-  () => import('./Pages/ProductsPages/MakeupProductsPages/EyesProductsPages/BrowsProductsPage/BrowsProductsPage')
+  () => import('./Pages/ProductsPages/MakeupProductsPages/EyesProductsPages/BrowsProductsPage')
 )
 const LipGlossesProductsPage = React.lazy(
-  () =>
-    import('./Pages/ProductsPages/MakeupProductsPages/LipsProductsPages/LipGlossesProductsPage/LipGlossesProductsPage')
+  () => import('./Pages/ProductsPages/MakeupProductsPages/LipsProductsPages/LipGlossesProductsPage')
 )
 const LipSticksProductsPage = React.lazy(
-  () =>
-    import('./Pages/ProductsPages/MakeupProductsPages/LipsProductsPages/LipSticksProductsPage/LipSticksProductsPage')
+  () => import('./Pages/ProductsPages/MakeupProductsPages/LipsProductsPages/LipSticksProductsPage')
 )
 const CleansersProductsPage = React.lazy(
-  () =>
-    import(
-      './Pages/ProductsPages/SkinCareProductsPages/ProductsByCategoryPages/CleansersProductsPage/CleansersProductsPage'
-    )
+  () => import('./Pages/ProductsPages/SkinCareProductsPages/ProductsByCategoryPages/CleansersProductsPage')
 )
 const MoisturizersProductsPage = React.lazy(
-  () =>
-    import(
-      './Pages/ProductsPages/SkinCareProductsPages/ProductsByCategoryPages/MoisturizersProductsPage/MoisturizersProductsPage'
-    )
+  () => import('./Pages/ProductsPages/SkinCareProductsPages/ProductsByCategoryPages/MoisturizersProductsPage')
 )
 const FaceOilsProductsPage = React.lazy(
-  () =>
-    import(
-      './Pages/ProductsPages/SkinCareProductsPages/TreatmentsProductsPages/FaceOilsProductsPage/FaceOilsProductsPage'
-    )
+  () => import('./Pages/ProductsPages/SkinCareProductsPages/TreatmentsProductsPages/FaceOilsProductsPage')
 )
 const FaceSerumsProductsPage = React.lazy(
-  () =>
-    import(
-      './Pages/ProductsPages/SkinCareProductsPages/TreatmentsProductsPages/FaceSerumsProductsPage/FaceSerumsProductsPage'
-    )
+  () => import('./Pages/ProductsPages/SkinCareProductsPages/TreatmentsProductsPages/FaceSerumsProductsPage')
 )
 
 function App() {

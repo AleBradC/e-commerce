@@ -1,42 +1,35 @@
+import { CSSProperties, forwardRef } from 'react'
 import styled from 'styled-components'
-import { forwardRef } from 'react'
-import { useNavigate } from 'react-router-dom'
-import { searchRoute } from '../../Helpers/routes'
 
 import SearchIcon from '../../assets/icons/searchIcon.svg'
 
-export interface SearchBarProps {
-  showSearchBar: boolean
+export interface SearchBarProps extends React.InputHTMLAttributes<HTMLInputElement> {
   className?: string
+  position: CSSProperties
+  onRedirect: (event: React.KeyboardEvent) => void
 }
 
-export const SearchBar = forwardRef<HTMLDivElement, SearchBarProps>(({ showSearchBar, className }, ref) => {
-  const navigateTo = useNavigate()
-
-  if (!showSearchBar) {
-    return null
+export const SearchBar = forwardRef<HTMLDivElement, SearchBarProps>(
+  ({ position, className, onRedirect, ...htmlInputProps }, ref) => {
+    return (
+      <Container ref={ref} style={position} className={className} onKeyDown={onRedirect}>
+        <Icon src={SearchIcon} />
+        <Input placeholder="What are you looking for? " {...htmlInputProps} />
+      </Container>
+    )
   }
-
-  const onRedirect = (event: React.KeyboardEvent) => {
-    if (event.key === 'Enter') {
-      navigateTo(searchRoute)
-    }
-  }
-
-  return (
-    <Container ref={ref} className={className} onKeyDown={onRedirect}>
-      <Icon src={SearchIcon} />
-      <Input placeholder="What are you looking for? " />
-    </Container>
-  )
-})
+)
 
 const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 4px;
-  background-color: ${props => props.theme.colors.beigeLight};
+  width: 100%;
+  font-size: 1.4rem;
+  line-height: 1.29;
+  padding: 12px 0 12px 0;
+  border: none;
+  background-color: ${props => props.theme.colors.butter};
 `
 
 const Input = styled.input`
@@ -46,8 +39,6 @@ const Input = styled.input`
   width: 100%;
   border: none;
   background-color: transparent;
-
-  border-bottom: 1px solid ${props => props.theme.colors.grey2};
 
   &:focus {
     outline: none;

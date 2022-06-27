@@ -1,26 +1,45 @@
-import { ReactNode, useRef, useState } from 'react'
+import React, { ReactNode, useEffect, useRef, useState } from 'react'
 import { flip, shift, useFloating } from '@floating-ui/react-dom'
 import styled from 'styled-components'
 
-import { brands, options, types } from '../../Helpers/variables'
+import { capitalizeEachWord } from '../../Helpers/methlods'
+import { options } from '../../Helpers/variables'
+import useClickOutSide from '../../Helpers/useClickOutSide'
 import { Menu } from '../Menu/Menu'
 import { MenuItem } from '../MenuItem/MenuItem'
 import { DropDownMenu } from '../DropDownMenu/DropDownMenu'
-import useClickOutSide from '../../Helpers/useClickOutSide'
+import { Checkbox } from '../CheckBox/CheckBox'
+import { Tag } from '../Tag/Tag'
 
 export interface LargeHeaderProps {
   title: string
-  description: string
+  searchedValue?: string
   otherDetails?: ReactNode
-  numberOfItems: number
+  numberOfItemsFound: number | undefined
+  selectedSortType: (selectedType: string | number) => void
+  brands: string[] | undefined
+  concerns: string[] | undefined
 }
 
-export const LargeHeader: React.FC<LargeHeaderProps> = ({ title, description, otherDetails, numberOfItems }) => {
+export const LargeHeader: React.FC<LargeHeaderProps> = ({
+  selectedSortType,
+  title,
+  searchedValue,
+  otherDetails,
+  numberOfItemsFound,
+  brands,
+  concerns,
+}) => {
+  const [selectedOption, setSelectedOption] = useState<string | number>('')
+  const [showFilterByBrandMenu, setShowFilterByBrandMenu] = useState(false)
+  const [showFilterByType, setShowFilterByType] = useState(false)
+  const [checkedOptions, setCheckedOptions] = useState<string[]>([])
   const parentRef = useRef<HTMLDivElement>(null)
 
-  const [selectedOption, setSelectedOption] = useState<string | number>('')
-  const [filterByBrandMenu, setFilterByBrandMenu] = useState(false)
-  const [filterByType, setFilterByType] = useState(false)
+  useClickOutSide(parentRef, () => {
+    setShowFilterByBrandMenu(false)
+    setShowFilterByType(false)
+  })
 
   const {
     x: filterByBrandX,
@@ -29,7 +48,7 @@ export const LargeHeader: React.FC<LargeHeaderProps> = ({ title, description, ot
     floating: filterByBrandFloating,
     strategy: filterByBrandStrategy,
   } = useFloating({
-    placement: 'bottom',
+    placement: 'bottom-start',
     middleware: [shift(), flip()],
   })
 
@@ -40,24 +59,38 @@ export const LargeHeader: React.FC<LargeHeaderProps> = ({ title, description, ot
     floating: filterByTypeFloating,
     strategy: filterByTypeStrategy,
   } = useFloating({
-    placement: 'bottom',
+    placement: 'bottom-start',
     middleware: [shift(), flip()],
   })
 
-  useClickOutSide(parentRef, () => {
-    setFilterByBrandMenu(false)
-    setFilterByType(false)
-  })
+  useEffect(() => {
+    selectedSortType(selectedOption)
+  }, [selectedOption, selectedSortType])
 
   const handleFilterByBrandMenu = () => {
-    setFilterByBrandMenu(!filterByBrandMenu)
-    setFilterByType(false)
+    setShowFilterByBrandMenu(!showFilterByBrandMenu)
+    setShowFilterByType(false)
   }
 
   const handleFilterByTypeMenu = () => {
-    setFilterByType(!filterByType)
-    setFilterByBrandMenu(false)
+    setShowFilterByType(!showFilterByType)
+    setShowFilterByBrandMenu(false)
   }
+
+  const handleChangeCheckedOption = (event: React.ChangeEvent<HTMLInputElement>, selectedItem: string) => {
+    if (!checkedOptions.includes(selectedItem)) {
+      setCheckedOptions([...checkedOptions, event.target.value])
+    } else {
+      const newCheckedOptions = checkedOptions.filter(option => option !== selectedItem)
+      setCheckedOptions(newCheckedOptions)
+    }
+  }
+
+  const handleClearAll = () => {
+    setCheckedOptions([])
+  }
+
+  console.log(checkedOptions)
 
   return (
     <Container>
@@ -66,44 +99,67 @@ export const LargeHeader: React.FC<LargeHeaderProps> = ({ title, description, ot
           <Title>{title}</Title>
           {otherDetails}
         </TitleContainer>
-        <Description>{description}</Description>
+        <SearchedValue>{searchedValue}</SearchedValue>
       </DetailsContainer>
 
       <FooterBar>
         <FilterContainer ref={parentRef}>
-          <FilterItem ref={filterByBrandReference} onClick={handleFilterByBrandMenu}>
-            Brand
-          </FilterItem>
-          <Menu
-            showMenu={filterByBrandMenu}
-            ref={filterByBrandFloating}
-            position={{ position: filterByBrandStrategy, top: filterByBrandY ?? '', left: filterByBrandX ?? '' }}
-          >
-            {brands.map((brand, index) => (
-              <MenuItem key={index} onClick={() => setFilterByBrandMenu(false)}>
-                {brand}
-              </MenuItem>
-            ))}
-          </Menu>
+          {brands && (
+            <>
+              <FilterCategoryTitle ref={filterByBrandReference} onClick={handleFilterByBrandMenu}>
+                Brand
+              </FilterCategoryTitle>
+              <Menu
+                showMenu={showFilterByBrandMenu}
+                ref={filterByBrandFloating}
+                position={{ position: filterByBrandStrategy, top: filterByBrandY ?? '', left: filterByBrandX ?? '' }}
+              >
+                {brands?.map((brand, index) => (
+                  <MenuItem key={index}>
+                    <MenuItemContainer>
+                      <Checkbox
+                        isChecked={checkedOptions.includes(brand)}
+                        onChange={event => handleChangeCheckedOption(event, brand)}
+                        value={brand}
+                      />
+                      {brand}
+                    </MenuItemContainer>
+                  </MenuItem>
+                ))}
+              </Menu>
+            </>
+          )}
 
-          <FilterItem ref={filterByTypeReference} onClick={handleFilterByTypeMenu}>
-            Type
-          </FilterItem>
-          <Menu
-            showMenu={filterByType}
-            ref={filterByTypeFloating}
-            position={{ position: filterByTypeStrategy, top: filterByTypeY ?? '', left: filterByTypeX ?? '' }}
-          >
-            {types.map((type, index) => (
-              <MenuItem key={index} onClick={() => setFilterByType(false)}>
-                {type}
-              </MenuItem>
-            ))}
-          </Menu>
+          {concerns && (
+            <>
+              <FilterCategoryTitle ref={filterByTypeReference} onClick={handleFilterByTypeMenu}>
+                CONCERN
+              </FilterCategoryTitle>
+
+              <Menu
+                showMenu={showFilterByType}
+                ref={filterByTypeFloating}
+                position={{ position: filterByTypeStrategy, top: filterByTypeY ?? '', left: filterByTypeX ?? '' }}
+              >
+                {concerns?.map((concern, index) => (
+                  <MenuItem key={index}>
+                    <MenuItemContainer>
+                      <Checkbox
+                        isChecked={checkedOptions.includes(concern)}
+                        onChange={event => handleChangeCheckedOption(event, concern)}
+                        value={concern}
+                      />
+                      {concern}
+                    </MenuItemContainer>
+                  </MenuItem>
+                ))}
+              </Menu>
+            </>
+          )}
         </FilterContainer>
 
         <SortContainer>
-          <NumberOfItems> {numberOfItems} products </NumberOfItems>
+          <NumberOfItems> {numberOfItemsFound} products </NumberOfItems>
           <DropDownMenu
             options={options}
             onSelected={setSelectedOption}
@@ -113,7 +169,12 @@ export const LargeHeader: React.FC<LargeHeaderProps> = ({ title, description, ot
         </SortContainer>
       </FooterBar>
 
-      <div> after check add tags + delete </div>
+      <TagsContainer>
+        {checkedOptions.map(option => (
+          <Tag key={option}> {option} </Tag>
+        ))}
+        {!!checkedOptions.length && <ClearAllButton onClick={handleClearAll}> Clear All </ClearAllButton>}
+      </TagsContainer>
     </Container>
   )
 }
@@ -141,11 +202,12 @@ const Title = styled.span`
   font-weight: 100;
 `
 
-const Description = styled.span`
+const SearchedValue = styled.span`
   margin-left: 16px;
   font-size: 38px;
   font-family: 'Tiro Telugu', serif;
   font-weight: 100;
+  text-transform: uppercase;
   color: ${props => props.theme.colors.greyDarker};
 `
 
@@ -160,9 +222,11 @@ const FooterBar = styled.div`
 const FilterContainer = styled.div`
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 62px;
 `
 
-const FilterItem = styled.button`
+const FilterCategoryTitle = styled.button`
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
@@ -182,6 +246,11 @@ const FilterItem = styled.button`
   }
 `
 
+const MenuItemContainer = styled.div`
+  display: flex;
+  align-items: center;
+`
+
 const SortContainer = styled.div`
   display: flex;
   align-items: center;
@@ -189,8 +258,23 @@ const SortContainer = styled.div`
 `
 
 const NumberOfItems = styled.span`
-  margin-right: 12px;
+  margin-right: 22px;
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   color: ${props => props.theme.colors.grey4};
+`
+
+const TagsContainer = styled.div`
+  display: flex;
+  padding: 20px 60px 20px 64px;
+`
+
+const ClearAllButton = styled.button`
+  border: none;
+  text-decoration: underline;
+  background: none;
+  color: ${props => props.theme.colors.black};
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
 `
