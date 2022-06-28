@@ -12,6 +12,9 @@ const AllProductsPage = () => {
   const [filteredProducts, setFilteredProducts] = useState<Product[] | undefined>([])
   const [selectedSortType, setSelectedSortType] = useState<string | number>('')
 
+  const concerns = [...new Set(allProducts?.map(product => product.category))]
+  const brands = [...new Set(allProducts?.map(product => product.brand))]
+
   useEffect(() => {
     allProducts && setFilteredProducts(allProducts)
   }, [allProducts])
@@ -32,16 +35,13 @@ const AllProductsPage = () => {
     setSelectedSortType(option)
   }
 
-  const types = [...new Set(allProducts?.map(product => product.category))]
-  const brands = [...new Set(allProducts?.map(product => product.brand))]
-
   return (
     <Container>
       <LargeHeader
         selectedSortType={handleSelectedSortType}
         title="Search results for"
         numberOfItemsFound={allProducts?.length}
-        types={types}
+        concerns={concerns}
         brands={brands}
       />
       <ProductsList>

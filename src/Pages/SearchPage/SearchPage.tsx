@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { Product } from '../../types'
 import { useGetProductsQuery } from '../../redux/api'
 import { useAppDispatch, useAppSelector } from '../../redux/hooks'
-import { openSearchBar } from '../../redux/reducers/searchBarSlice'
+import { changeSearchBarValue, openSearchBar } from '../../redux/reducers/searchBarSlice'
 import { ProductCard } from '../../Components/ProductCard/ProductCard'
 import { LargeHeader } from '../../Components/LargeHeader/LargeHeader'
 
@@ -14,6 +14,7 @@ const SearchPage = () => {
   const { data: allProducts } = useGetProductsQuery()
 
   const [filteredProducts, setFilteredProducts] = useState<Product[] | undefined>([])
+  const [selectedConcernsOptions, setSelectedConcernsOptions] = useState<string[]>([])
   const [selectedSortType, setSelectedSortType] = useState<string | number>('')
 
   const brands = [...new Set(allProducts?.map(product => product.brand))]
@@ -27,6 +28,9 @@ const SearchPage = () => {
     const products = allProducts?.filter((product: Product) => product.name?.toLowerCase().includes(searchValue))
 
     if (selectedSortType === 'byLowerPrice' || selectedSortType === 'byHigherPrice') {
+      setSelectedConcernsOptions([])
+      dispatch(changeSearchBarValue(''))
+
       products?.sort((a, b) => {
         const difference = a.price - b.price
         if (difference === 0) return 0
@@ -36,8 +40,16 @@ const SearchPage = () => {
       })
     }
 
-    setFilteredProducts(products)
-  }, [allProducts, dispatch, searchValue, selectedSortType])
+    if (selectedConcernsOptions.length > 0) {
+      const filteredByConcerns = selectedConcernsOptions
+        .map(option => allProducts?.filter(product => product.tags.includes(option)))
+        .flat()
+
+      setFilteredProducts(filteredByConcerns as Product[])
+    } else {
+      setFilteredProducts(products)
+    }
+  }, [allProducts, dispatch, selectedConcernsOptions, searchValue, selectedSortType])
 
   const handleShowSearchBar = () => {
     dispatch(openSearchBar())
@@ -47,12 +59,17 @@ const SearchPage = () => {
     setSelectedSortType(option)
   }
 
+  const handleFilterByConcern = (options: string[]) => {
+    setSelectedConcernsOptions(options)
+  }
+
   return (
     <Container>
       <LargeHeader
         title="Search results for -"
         numberOfItemsFound={filteredProducts?.length}
         selectedSortType={handleSelectedSortType}
+        checkedConcern={handleFilterByConcern}
         brands={brands}
         concerns={concerns}
         searchedValue={searchValue}

@@ -18,10 +18,12 @@ export const Checkbox: React.FC<CheckboxProps> = ({ className, isChecked, onChan
 const CheckboxContainer = styled.div`
   display: inline-block;
   vertical-align: middle;
+  cursor: pointer;
 
   margin-right: 6px;
 `
 
 const Input = styled.input`
   border-radius: unset;
+  cursor: pointer;
 `

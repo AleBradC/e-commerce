@@ -2,7 +2,6 @@ import React, { ReactNode, useEffect, useRef, useState } from 'react'
 import { flip, shift, useFloating } from '@floating-ui/react-dom'
 import styled from 'styled-components'
 
-import { capitalizeEachWord } from '../../Helpers/methlods'
 import { options } from '../../Helpers/variables'
 import useClickOutSide from '../../Helpers/useClickOutSide'
 import { Menu } from '../Menu/Menu'
@@ -16,6 +15,7 @@ export interface LargeHeaderProps {
   searchedValue?: string
   otherDetails?: ReactNode
   numberOfItemsFound: number | undefined
+  checkedConcern?: (filteredItems: string[]) => void
   selectedSortType: (selectedType: string | number) => void
   brands: string[] | undefined
   concerns: string[] | undefined
@@ -23,6 +23,7 @@ export interface LargeHeaderProps {
 
 export const LargeHeader: React.FC<LargeHeaderProps> = ({
   selectedSortType,
+  checkedConcern,
   title,
   searchedValue,
   otherDetails,
@@ -30,9 +31,9 @@ export const LargeHeader: React.FC<LargeHeaderProps> = ({
   brands,
   concerns,
 }) => {
-  const [selectedOption, setSelectedOption] = useState<string | number>('')
   const [showFilterByBrandMenu, setShowFilterByBrandMenu] = useState(false)
   const [showFilterByType, setShowFilterByType] = useState(false)
+  const [selectedOption, setSelectedOption] = useState<string | number>('')
   const [checkedOptions, setCheckedOptions] = useState<string[]>([])
   const parentRef = useRef<HTMLDivElement>(null)
 
@@ -65,7 +66,8 @@ export const LargeHeader: React.FC<LargeHeaderProps> = ({
 
   useEffect(() => {
     selectedSortType(selectedOption)
-  }, [selectedOption, selectedSortType])
+    checkedConcern && checkedConcern(checkedOptions)
+  }, [checkedOptions, checkedConcern, selectedOption, selectedSortType])
 
   const handleFilterByBrandMenu = () => {
     setShowFilterByBrandMenu(!showFilterByBrandMenu)
@@ -89,8 +91,6 @@ export const LargeHeader: React.FC<LargeHeaderProps> = ({
   const handleClearAll = () => {
     setCheckedOptions([])
   }
-
-  console.log(checkedOptions)
 
   return (
     <Container>
@@ -117,11 +117,11 @@ export const LargeHeader: React.FC<LargeHeaderProps> = ({
                 {brands?.map((brand, index) => (
                   <MenuItem key={index}>
                     <MenuItemContainer>
-                      <Checkbox
-                        isChecked={checkedOptions.includes(brand)}
-                        onChange={event => handleChangeCheckedOption(event, brand)}
-                        value={brand}
-                      />
+                      {/*<Checkbox*/}
+                      {/*  isChecked={checkedOptions.includes(brand)}*/}
+                      {/*  onChange={event => handleChangeCheckedOption(event, brand)}*/}
+                      {/*  value={brand}*/}
+                      {/*/>*/}
                       {brand}
                     </MenuItemContainer>
                   </MenuItem>
