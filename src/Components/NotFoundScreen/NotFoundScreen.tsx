@@ -9,10 +9,10 @@ export const NotFoundScreen = () => {
 }
 
 const Container = styled.div`
-  height: 100%;
+  height: 40vh;
 `
 
-const Content = styled.span`
+const Content = styled.div`
   font-size: 26px;
   font-family: 'Tiro Telugu', serif;
   color: ${props => props.theme.colors.black};

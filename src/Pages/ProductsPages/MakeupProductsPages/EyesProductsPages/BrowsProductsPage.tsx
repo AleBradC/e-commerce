@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import { LargeHeader } from '../../../../Components/LargeHeader/LargeHeader'
 import { ProductCard } from '../../../../Components/ProductCard/ProductCard'
 import { Product } from '../../../../types'
-import { NotFoundScreen } from '../../../../Components/NotFoundScreen/NotFoundScreen'
 
 const BrowsProductsPage = () => {
   const [filteredProducts, setFilteredProducts] = useState<Product[] | undefined>([])
@@ -40,7 +39,6 @@ const BrowsProductsPage = () => {
             price={product.price}
           />
         ))}
-        {!browsProducts?.length && <NotFoundScreen />}
       </ProductsList>
     </Container>
   )

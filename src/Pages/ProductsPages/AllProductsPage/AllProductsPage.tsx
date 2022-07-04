@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import { Product } from '../../../types'
 import { LargeHeader } from '../../../Components/LargeHeader/LargeHeader'
 import { ProductCard } from '../../../Components/ProductCard/ProductCard'
-import { NotFoundScreen } from '../../../Components/NotFoundScreen/NotFoundScreen'
 
 const AllProductsPage = () => {
   const [filteredProducts, setFilteredProducts] = useState<Product[] | undefined>([])
@@ -13,6 +12,9 @@ const AllProductsPage = () => {
     setFilteredProducts(products)
   }
 
+  const brands = [...new Set(filteredProducts?.map(product => product.brand))]
+  const concerns = [...new Set(filteredProducts?.map(product => product.tags).flat())]
+
   return (
     <Container>
       <LargeHeader
@@ -20,6 +22,8 @@ const AllProductsPage = () => {
         description="Access to signature exclusives and the essentials of tomorrow, before everyone else. Discover the hottest new beauty, makeup, and skincare products."
         filteredProductsResult={handleFilteredProducts}
         numberOfProducts={filteredProducts?.length}
+        brands={brands}
+        concerns={concerns}
       />
       <ProductsList>
         {filteredProducts?.map((product, index) => (
@@ -34,8 +38,6 @@ const AllProductsPage = () => {
             price={product.price}
           />
         ))}
-
-        {!filteredProducts?.length && <NotFoundScreen />}
       </ProductsList>
     </Container>
   )

@@ -18,6 +18,9 @@ const SearchPage = () => {
     setFilteredProducts(products)
   }
 
+  const brands = [...new Set(filteredProducts?.map(product => product.brand))]
+  const concerns = [...new Set(filteredProducts?.map(product => product.tags).flat())]
+
   const handleShowSearchBar = () => {
     dispatch(openSearchBar())
   }
@@ -30,6 +33,8 @@ const SearchPage = () => {
         filteredProductsResult={handleFilteredProducts}
         otherDetails={<SearchButton onClick={handleShowSearchBar}> Search again </SearchButton>}
         numberOfProducts={filteredProducts?.length}
+        brands={brands}
+        concerns={concerns}
       />
       <ProductsList>
         {filteredProducts?.map((product, index) => (
@@ -45,7 +50,7 @@ const SearchPage = () => {
           />
         ))}
 
-        {!filteredProducts?.length && <NotFoundScreen />}
+        {!!filteredProducts && <NotFoundScreen />}
       </ProductsList>
     </Container>
   )

@@ -139,77 +139,83 @@ export const LargeHeader: React.FC<LargeHeaderProps> = ({
       </DetailsContainer>
 
       <FooterBar>
-        <FilterContainer ref={parentRef}>
-          <FilterCategoryTitle ref={filterByBrandReference} onClick={handleShowFilterByBrandMenu}>
-            BRAND
-          </FilterCategoryTitle>
-          <Menu
-            showMenu={showFilterByBrandMenu}
-            ref={filterByBrandFloating}
-            position={{ position: filterByBrandStrategy, top: filterByBrandY ?? '', left: filterByBrandX ?? '' }}
-          >
-            {brands?.map(brand => (
-              <MenuItem key={brand}>
-                <MenuItemContainer>
-                  <Checkbox
-                    isChecked={selectedConcernsOrBrandOptions.includes(brand)}
-                    onChange={event => handleChangeCheckedOption(event, brand)}
-                    value={brand}
-                  />
-                  {brand}
-                </MenuItemContainer>
-              </MenuItem>
-            ))}
-          </Menu>
+        {!!brands.length && !!concerns.length && (
+          <>
+            <FilterContainer ref={parentRef}>
+              <FilterCategoryTitle ref={filterByBrandReference} onClick={handleShowFilterByBrandMenu}>
+                BRAND
+              </FilterCategoryTitle>
+              <Menu
+                showMenu={showFilterByBrandMenu}
+                ref={filterByBrandFloating}
+                position={{ position: filterByBrandStrategy, top: filterByBrandY ?? '', left: filterByBrandX ?? '' }}
+              >
+                {brands?.map(brand => (
+                  <MenuItem key={brand}>
+                    <MenuItemContainer>
+                      <Checkbox
+                        isChecked={selectedConcernsOrBrandOptions.includes(brand)}
+                        onChange={event => handleChangeCheckedOption(event, brand)}
+                        value={brand}
+                      />
+                      {brand}
+                    </MenuItemContainer>
+                  </MenuItem>
+                ))}
+              </Menu>
 
-          <FilterCategoryTitle ref={filterByConcernsReference} onClick={handleShowFilterByConcernsMenu}>
-            CONCERN
-          </FilterCategoryTitle>
-          <Menu
-            showMenu={showFilterByConcernsMenu}
-            ref={filterByConcernsFloating}
-            position={{
-              position: filterByConcernsStrategy,
-              top: filterByConcernsY ?? '',
-              left: filterByConcernsX ?? '',
-            }}
-          >
-            {concerns?.map(concern => (
-              <MenuItem key={concern}>
-                <MenuItemContainer>
-                  <Checkbox
-                    isChecked={selectedConcernsOrBrandOptions.includes(concern)}
-                    onChange={event => handleChangeCheckedOption(event, concern)}
-                    value={concern}
-                  />
-                  {concern}
-                </MenuItemContainer>
-              </MenuItem>
-            ))}
-          </Menu>
-        </FilterContainer>
+              <FilterCategoryTitle ref={filterByConcernsReference} onClick={handleShowFilterByConcernsMenu}>
+                CONCERN
+              </FilterCategoryTitle>
+              <Menu
+                showMenu={showFilterByConcernsMenu}
+                ref={filterByConcernsFloating}
+                position={{
+                  position: filterByConcernsStrategy,
+                  top: filterByConcernsY ?? '',
+                  left: filterByConcernsX ?? '',
+                }}
+              >
+                {concerns?.map(concern => (
+                  <MenuItem key={concern}>
+                    <MenuItemContainer>
+                      <Checkbox
+                        isChecked={selectedConcernsOrBrandOptions.includes(concern)}
+                        onChange={event => handleChangeCheckedOption(event, concern)}
+                        value={concern}
+                      />
+                      {concern}
+                    </MenuItemContainer>
+                  </MenuItem>
+                ))}
+              </Menu>
+            </FilterContainer>
 
-        <SortContainer>
-          <NumberOfItems> {numberOfProducts} products </NumberOfItems>
-          <DropDownMenu
-            options={options}
-            onSelected={setSelectedSortOption}
-            selected={selectedSortOption}
-            placeholder={'Sort by'}
-          />
-        </SortContainer>
+            <SortContainer>
+              <NumberOfItems> {numberOfProducts} products </NumberOfItems>
+              <DropDownMenu
+                options={options}
+                onSelected={setSelectedSortOption}
+                selected={selectedSortOption}
+                placeholder={'Sort by'}
+              />
+            </SortContainer>
+          </>
+        )}
       </FooterBar>
 
-      <TagsContainer>
-        {selectedConcernsOrBrandOptions.map(option => (
-          <Tag key={option} isFilterTag deleteTag={() => handleDeleteTag(option)}>
-            {option}
-          </Tag>
-        ))}
-        {!!selectedConcernsOrBrandOptions.length && (
-          <ClearAllButton onClick={handleClearAll}> Clear All </ClearAllButton>
-        )}
-      </TagsContainer>
+      {!!brands.length && !!concerns.length && (
+        <TagsContainer>
+          {selectedConcernsOrBrandOptions.map(option => (
+            <Tag key={option} isFilterTag deleteTag={() => handleDeleteTag(option)}>
+              {option}
+            </Tag>
+          ))}
+          {!!selectedConcernsOrBrandOptions.length && (
+            <ClearAllButton onClick={handleClearAll}> Clear All </ClearAllButton>
+          )}
+        </TagsContainer>
+      )}
     </Container>
   )
 }

@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import { Product } from '../../../../types'
 import { LargeHeader } from '../../../../Components/LargeHeader/LargeHeader'
 import { ProductCard } from '../../../../Components/ProductCard/ProductCard'
-import { NotFoundScreen } from '../../../../Components/NotFoundScreen/NotFoundScreen'
 
 const FaceOilsProductsPage = () => {
   const [filteredProducts, setFilteredProducts] = useState<Product[] | undefined>([])
@@ -40,7 +39,6 @@ const FaceOilsProductsPage = () => {
             price={product.price}
           />
         ))}
-        {!faceOilsProducts?.length && <NotFoundScreen />}
       </ProductsList>
     </Container>
   )
