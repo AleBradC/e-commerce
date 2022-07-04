@@ -76,18 +76,18 @@
       "price": 29
     },
     {
-      "id": 1139298428948,
+      "id": 8,
       "brand": "Environ",
       "name": "Clarifying Facial Polish",
       "category": "Cleansers",
-      "tags": ["Best seller", "Low Stock"],
+      "tags": ["Best Seller", "Low Stock"],
       "imageURL": "../src/assets/products/cleansers/environ-clarifying.png",
       "hoverImageURL": "../src/assets/products/cleansers/environ-clarifying-hover.png",
       "rating": 4,
       "price": 41
     },
     {
-      "id": 8,
+      "id": 9,
       "brand": "BeautyCounter",
       "name": "Dew Skin Tinted Moisturizer",
       "category": "Moisturizers",
@@ -98,7 +98,7 @@
       "price": 50
     },
     {
-      "id": 9,
+      "id": 10,
       "brand": "Spectacle",
       "name": "Spectacle Performance Crème",
       "category": "Moisturizers",
@@ -109,7 +109,7 @@
       "price": 87
     },
     {
-      "id": 10,
+      "id": 11,
       "brand": "Ursa Major",
       "name": "Golden Hour Recovery Cream",
       "category": "Moisturizers",
@@ -120,7 +120,7 @@
       "price": 20
     },
     {
-      "id": 11,
+      "id": 12,
       "brand": "Youth to the people",
       "name": "Superfood Air-Whip Moisture Cream",
       "category": "Moisturizers",
@@ -130,7 +130,7 @@
       "price": 48
     },
     {
-      "id": 12,
+      "id": 13,
       "brand": "Youth to the people",
       "name": "Adaptogen Deep Moisture Cream",
       "category": "Moisturizers",
@@ -140,7 +140,7 @@
       "price": 58
     },
     {
-      "id": 13,
+      "id": 14,
       "brand": "Augustinus Bader",
       "name": "The Cream",
       "category": "Moisturizers",
@@ -150,7 +150,7 @@
       "price": 68
     },
     {
-      "id": 14,
+      "id": 15,
       "brand": "Irene Forte",
       "name": "Aloe Vera Face Cream",
       "category": "Moisturizers",
@@ -161,7 +161,7 @@
       "price": 120
     },
     {
-      "id": 15,
+      "id": 16,
       "brand": "Environ",
       "name": "Vita-Complex Super Moisturizer",
       "category": "Moisturizers",
@@ -172,7 +172,7 @@
       "price": 100
     },
     {
-      "id": 16,
+      "id": 17,
       "brand": "Venn",
       "name": "Advanced Multi-Perfecting Red Oil Serum",
       "category": "Face Oils",
@@ -183,7 +183,7 @@
       "price": 115
     },
     {
-      "id": 17,
+      "id": 18,
       "brand": "Vintner's Daughter",
       "name": "Active Botanical Serum",
       "category": "Face Oils",
@@ -194,6 +194,7 @@
       "price": 195
     },
     {
+      "id": 19,
       "brand": "Pai",
       "name": "Rosehip Bioregenerate Universal Face Oil",
       "category": "Face Oils",
@@ -204,7 +205,7 @@
       "price": 44
     },
     {
-      "id": 18,
+      "id": 20,
       "brand": "Costa Brazil",
       "name": "Sérum Para A Face - Face Serum",
       "category": "Face Oils",
@@ -215,7 +216,7 @@
       "price": 135
     },
     {
-      "id": 19,
+      "id": 21,
       "brand": "Supernatural",
       "name": "Cosmic Glow Oil",
       "category": "Face Oils",
@@ -225,7 +226,7 @@
       "price": 108
     },
     {
-      "id": 111,
+      "id": 22,
       "brand": "Costa Brazil",
       "name": "Costa Brazil Oleo Para A Face - Kaya Anti-Aging Face Oil",
       "category": "Face Oils",
@@ -236,7 +237,7 @@
       "price": 128
     },
     {
-      "id": 112,
+      "id": 23,
       "brand": "Youth to the people",
       "name": "Superberry Hydrate and Glow Dream Oil",
       "category": "Face Oils",
@@ -247,7 +248,7 @@
       "price": 44
     },
     {
-      "id": 113,
+      "id": 24,
       "brand": "Pai",
       "name": "Impossible Glow",
       "category": "Face Oils",
@@ -258,7 +259,7 @@
       "price": 44
     },
     {
-      "id": 114,
+      "id": 25,
       "brand": "Venn",
       "name": "Advanced Multi-Perfecting Red Oil Serum",
       "category": "Face Serums",
@@ -269,7 +270,7 @@
       "price": 115
     },
     {
-      "id": 1342,
+      "id": 26,
       "brand": "Venn",
       "name": "Age-Response Compound K Hyaluronic Booster",
       "category": "Face Serums",
@@ -280,7 +281,7 @@
       "price": 125
     },
     {
-      "id": 14324,
+      "id": 27,
       "brand": "Vintner's daughter",
       "name": "Active Botanical Serum",
       "category": "Face Serums",
@@ -291,7 +292,7 @@
       "price": 195
     },
     {
-      "id": 121321,
+      "id": 28,
       "brand": "Youth to the people",
       "name": "15% Vitamin C + Clean Caffeine Energy Serum",
       "category": "Face Serums",
@@ -301,7 +302,7 @@
       "price": 195
     },
     {
-      "id": 154354,
+      "id": 29,
       "brand": "Youth to the people",
       "name": "Triple Peptide + Cactus Oasis Serum",
       "category": "Face Serums",
@@ -311,7 +312,7 @@
       "price": 54
     },
     {
-      "id": 1676,
+      "id": 30,
       "brand": "Zitsticks",
       "name": "MEGASHADE™ Breakout-proof SPF Serum",
       "category": "Face Serums",
@@ -321,7 +322,7 @@
       "price": 40
     },
     {
-      "id": 178760999999,
+      "id": 31,
       "brand": "Ideo",
       "name": "Ideo Skin Memory Serum",
       "category": "Face Serums",
@@ -331,7 +332,7 @@
       "price": 175
     },
     {
-      "id": 103839,
+      "id": 32,
       "brand": "Beautycounter",
       "name": "Counter+ All Bright C Serum",
       "category": "Face Serums",
@@ -341,7 +342,7 @@
       "price": 90
     },
     {
-      "id": 13243,
+      "id": 33,
       "brand": "Kosas",
       "name": "Clear Air Brow Tinted Volumizing Treatment Gel",
       "category": "Brows",
@@ -352,7 +353,7 @@
       "price": 22
     },
     {
-      "id": 154546790,
+      "id": 34,
       "brand": "Kosas",
       "name": "Air Brow Tinted Volumizing Treatment Gel",
       "category": "Brows",
@@ -363,7 +364,7 @@
       "price": 22
     },
     {
-      "id": 19090,
+      "id": 35,
       "brand": "Kosas",
       "name": "Brow Pop Dual-Action Defining Pencil",
       "category": "Brows",
@@ -374,7 +375,7 @@
       "price": 22
     },
     {
-      "id": 123356,
+      "id": 36,
       "brand": "Westman Atelier",
       "name": "Bonne Brow",
       "category": "Brows",
@@ -385,7 +386,7 @@
       "price": 38
     },
     {
-      "id": 1908907,
+      "id": 37,
       "brand": "Roen",
       "name": "vowBrow Pencil",
       "category": "Brows",
@@ -396,7 +397,7 @@
       "price": 26
     },
     {
-      "id": 10938363,
+      "id": 38,
       "brand": "Tweezers",
       "name": "Classic Stainless Slat Tweezers",
       "category": "Brows",
@@ -406,7 +407,7 @@
       "price": 23
     },
     {
-      "id": 1234500,
+      "id": 39,
       "brand": "Beautycounter",
       "name": "Brilliant Brow",
       "category": "Brows",
@@ -417,7 +418,7 @@
       "price": 23
     },
     {
-      "id": 1546,
+      "id": 40,
       "brand": "Tweezers",
       "name": "Point Tweezer Classic Stainless",
       "category": "Brows",
@@ -428,7 +429,7 @@
       "price": 23
     },
     {
-      "id": 17876,
+      "id": 41,
       "brand": "Eyeco",
       "name": "Lash Alert Mascara",
       "category": "Mascara",
@@ -439,7 +440,7 @@
       "price": 24
     },
     {
-      "id": 187686876876,
+      "id": 42,
       "brand": "Beautycounter",
       "name": "Think Big All-in-One Mascara",
       "category": "Mascara",
@@ -449,7 +450,7 @@
       "price": 30
     },
     {
-      "id": 132323232323,
+      "id": 43,
       "brand": "Westman atelier",
       "name": "Eye Love You Mascara",
       "category": "Mascara",
@@ -459,7 +460,7 @@
       "price": 58
     },
     {
-      "id": 109876,
+      "id": 44,
       "brand": "Mob",
       "name": "Volumizing Mascara M66 - Refill",
       "category": "Mascara",
@@ -470,7 +471,7 @@
       "price": 58
     },
     {
-      "id": 1939384,
+      "id": 45,
       "brand": "Kosas",
       "name": "The Big Clean Volumizing + Lash Care Mascara-Intense Black",
       "category": "Mascara",
@@ -480,7 +481,7 @@
       "price": 13
     },
     {
-      "id": 109090,
+      "id": 46,
       "brand": "Mob",
       "name": "MOB Capsule 2",
       "category": "Mascara",
@@ -491,7 +492,7 @@
       "price": 5
     },
     {
-      "id": 189989898,
+      "id": 47,
       "brand": "Eyeco",
       "name": "Colored Lash Alert Mascara",
       "category": "Mascara",
@@ -502,7 +503,7 @@
       "price": 19
     },
     {
-      "id": 1555,
+      "id": 48,
       "brand": "Roen",
       "name": "CAKE Mascara",
       "category": "Mascara",
@@ -513,7 +514,7 @@
       "price": 28
     },
     {
-      "id": 1888,
+      "id": 49,
       "brand": "Roen",
       "name": "Elixir Tinted Lip Oil Balm",
       "category": "Lip Glosses",
@@ -524,7 +525,7 @@
       "price": 32
     },
     {
-      "id": 1777,
+      "id": 50,
       "brand": "Westman Atelier",
       "name": "Squeaky Clean Liquid Lip Balm",
       "category": "Lip Glosses",
@@ -535,7 +536,7 @@
       "price": 38
     },
     {
-      "id": 155555,
+      "id": 51,
       "brand": "Lanolips",
       "name": "Holographic Lip Water",
       "category": "Lip Glosses",
@@ -546,7 +547,7 @@
       "price": 17.50
     },
     {
-      "id": 1333,
+      "id": 52,
       "brand": "Lanolips",
       "name": "Tinted Balm",
       "category": "Lip Glosses",
@@ -557,7 +558,7 @@
       "price": 14
     },
     {
-      "id": 111222,
+      "id": 53,
       "brand": "Alpyn beauty",
       "name": "Willow & Sweet Agave Plumping Lip Mask",
       "category": "Lip Glosses",
@@ -568,7 +569,7 @@
       "price": 28
     },
     {
-      "id": 14444555,
+      "id": 54,
       "brand": "Kosas",
       "name": "Wet Lip Oil Treatment Plumping Gloss",
       "category": "Lip Glosses",
@@ -579,7 +580,7 @@
       "price": 22
     },
     {
-      "id": 343431,
+      "id": 55,
       "brand": "Maarks Lip",
       "name": "MAARKS Lip",
       "category": "Lip Glosses",
@@ -590,7 +591,7 @@
       "price": 29
     },
     {
-      "id": 4341,
+      "id": 56,
       "brand": "Lanolips",
       "name": "Watermelon Lip Water",
       "category": "Lip Glosses",
@@ -600,7 +601,7 @@
       "price": 17.50
     },
     {
-      "id": 1222221,
+      "id": 57,
       "brand": "Mob",
       "name": "MOB RePurpose Capsule",
       "category": "Lip Sticks",
@@ -611,7 +612,7 @@
       "price": 5
     },
     {
-      "id": 12320987,
+      "id": 58,
       "brand": "Beautycounter",
       "name": "Sheer Genius Conditioning Lipstick",
       "category": "Lip Sticks",
@@ -621,7 +622,7 @@
       "price": 35
     },
     {
-      "id": 14343,
+      "id": 59,
       "brand": "Kosas",
       "name": "Weightless Lip Color",
       "category": "Lip Sticks",
@@ -632,7 +633,7 @@
       "price": 28
     },
     {
-      "id": 1342326789,
+      "id": 60,
       "brand": "Mob",
       "name": "MOB Cream Lipstick",
       "category": "Lip Sticks",
@@ -643,7 +644,7 @@
       "price": 22
     },
     {
-      "id": 10985544,
+      "id": 61,
       "brand": "Westman Atelier",
       "name": "Lip Suede Palette Les Nudes",
       "category": "Lip Sticks",
@@ -653,7 +654,7 @@
       "price": 85
     },
     {
-      "id": 1890743,
+      "id": 62,
       "brand": "Maarks Lip",
       "name": "MAARKS Lip",
       "category": "Lip Sticks",
@@ -663,7 +664,7 @@
       "price": 28
     },
     {
-      "id": 1123443,
+      "id": 63,
       "brand": "Westman Atelier",
       "name": "Lip Suede Palette Les Rouges",
       "category": "Lip Sticks",
@@ -673,7 +674,7 @@
       "price": 85
     },
     {
-      "id": 12320965658,
+      "id": 64,
       "brand": "Mob",
       "name": "MOB Matte Lipstick (M67)",
       "category": "Lip Sticks",

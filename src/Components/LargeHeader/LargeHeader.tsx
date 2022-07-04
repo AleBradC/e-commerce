@@ -1,8 +1,10 @@
-import React, { ReactNode, useEffect, useRef, useState } from 'react'
+import React, { ReactNode, useEffect, useMemo, useRef, useState } from 'react'
 import { flip, shift, useFloating } from '@floating-ui/react-dom'
 import styled from 'styled-components'
 
+import { Product } from '../../types'
 import { options } from '../../Helpers/variables'
+import { useGetProductsQuery } from '../../redux/api'
 import useClickOutSide from '../../Helpers/useClickOutSide'
 import { Menu } from '../Menu/Menu'
 import { MenuItem } from '../MenuItem/MenuItem'
@@ -14,32 +16,35 @@ export interface LargeHeaderProps {
   title: string
   searchedValue?: string
   otherDetails?: ReactNode
-  numberOfItemsFound: number | undefined
-  checkedConcern?: (filteredItems: string[]) => void
-  selectedSortType: (selectedType: string | number) => void
-  brands: string[] | undefined
-  concerns: string[] | undefined
+  description?: string
+  brands: string[]
+  concerns: string[]
+  numberOfProducts: number | undefined
+  filteredProductsResult: (products: Product[] | undefined) => void
 }
 
 export const LargeHeader: React.FC<LargeHeaderProps> = ({
-  selectedSortType,
-  checkedConcern,
   title,
   searchedValue,
-  otherDetails,
-  numberOfItemsFound,
+  description,
   brands,
   concerns,
+  otherDetails,
+  numberOfProducts,
+  filteredProductsResult,
 }) => {
+  const { data: allProducts } = useGetProductsQuery()
+
   const [showFilterByBrandMenu, setShowFilterByBrandMenu] = useState(false)
-  const [showFilterByType, setShowFilterByType] = useState(false)
-  const [selectedOption, setSelectedOption] = useState<string | number>('')
-  const [checkedOptions, setCheckedOptions] = useState<string[]>([])
+  const [showFilterByConcernsMenu, setShowFilterByConcernsMenu] = useState(false)
+  const [selectedConcernsOrBrandOptions, setSelectedConcernsOrBrandOptions] = useState<string[]>([])
+  const [selectedSortOption, setSelectedSortOption] = useState<string | number>('')
+
   const parentRef = useRef<HTMLDivElement>(null)
 
   useClickOutSide(parentRef, () => {
     setShowFilterByBrandMenu(false)
-    setShowFilterByType(false)
+    setShowFilterByConcernsMenu(false)
   })
 
   const {
@@ -54,42 +59,73 @@ export const LargeHeader: React.FC<LargeHeaderProps> = ({
   })
 
   const {
-    x: filterByTypeX,
-    y: filterByTypeY,
-    reference: filterByTypeReference,
-    floating: filterByTypeFloating,
-    strategy: filterByTypeStrategy,
+    x: filterByConcernsX,
+    y: filterByConcernsY,
+    reference: filterByConcernsReference,
+    floating: filterByConcernsFloating,
+    strategy: filterByConcernsStrategy,
   } = useFloating({
     placement: 'bottom-start',
     middleware: [shift(), flip()],
   })
 
+  const filteredProducts = useMemo(() => {
+    // filter after redirect, if it has search value or not (for other pages)
+    const filteredBySearchValue = searchedValue
+      ? allProducts?.filter((product: Product) => product.name?.toLowerCase().includes(searchedValue as string))
+      : allProducts
+
+    // filter by brand / concerns when after check
+    if (selectedConcernsOrBrandOptions.length > 0) {
+      return selectedConcernsOrBrandOptions
+        .map(option =>
+          filteredBySearchValue?.filter(product => {
+            // products that have one of the options (concern / brand)
+            if (product.tags.includes(option) || product.brand.includes(option)) {
+              return product
+            }
+          })
+        )
+        .flat() as Product[]
+    } else if (selectedSortOption === 'byLowerPrice') {
+      return filteredBySearchValue?.slice().sort((a, b) => a.price - b.price)
+    } else if (selectedSortOption === 'byHigherPrice') {
+      return filteredBySearchValue?.slice().sort((a, b) => b.price - a.price)
+    } else {
+      return filteredBySearchValue
+    }
+  }, [allProducts, searchedValue, selectedConcernsOrBrandOptions, selectedSortOption])
+
   useEffect(() => {
-    selectedSortType(selectedOption)
-    checkedConcern && checkedConcern(checkedOptions)
-  }, [checkedOptions, checkedConcern, selectedOption, selectedSortType])
-
-  const handleFilterByBrandMenu = () => {
-    setShowFilterByBrandMenu(!showFilterByBrandMenu)
-    setShowFilterByType(false)
-  }
-
-  const handleFilterByTypeMenu = () => {
-    setShowFilterByType(!showFilterByType)
-    setShowFilterByBrandMenu(false)
-  }
+    filteredProductsResult(filteredProducts)
+  })
 
   const handleChangeCheckedOption = (event: React.ChangeEvent<HTMLInputElement>, selectedItem: string) => {
-    if (!checkedOptions.includes(selectedItem)) {
-      setCheckedOptions([...checkedOptions, event.target.value])
+    if (!selectedConcernsOrBrandOptions.includes(selectedItem)) {
+      setSelectedConcernsOrBrandOptions([...selectedConcernsOrBrandOptions, event.target.value])
     } else {
-      const newCheckedOptions = checkedOptions.filter(option => option !== selectedItem)
-      setCheckedOptions(newCheckedOptions)
+      const newCheckedOptions = selectedConcernsOrBrandOptions.filter(option => option !== selectedItem)
+      setSelectedConcernsOrBrandOptions(newCheckedOptions)
     }
   }
 
+  const handleShowFilterByBrandMenu = () => {
+    setShowFilterByBrandMenu(!showFilterByBrandMenu)
+    setShowFilterByConcernsMenu(false)
+  }
+
+  const handleShowFilterByConcernsMenu = () => {
+    setShowFilterByConcernsMenu(!showFilterByConcernsMenu)
+    setShowFilterByBrandMenu(false)
+  }
+
   const handleClearAll = () => {
-    setCheckedOptions([])
+    setSelectedConcernsOrBrandOptions([])
+  }
+
+  const handleDeleteTag = (tag: string) => {
+    const newTagList = selectedConcernsOrBrandOptions.filter(existedTag => existedTag !== tag)
+    setSelectedConcernsOrBrandOptions(newTagList)
   }
 
   return (
@@ -99,81 +135,80 @@ export const LargeHeader: React.FC<LargeHeaderProps> = ({
           <Title>{title}</Title>
           {otherDetails}
         </TitleContainer>
-        <SearchedValue>{searchedValue}</SearchedValue>
+        {searchedValue ? <SearchedValue> {searchedValue} </SearchedValue> : <Description> {description} </Description>}
       </DetailsContainer>
 
       <FooterBar>
         <FilterContainer ref={parentRef}>
-          {brands && (
-            <>
-              <FilterCategoryTitle ref={filterByBrandReference} onClick={handleFilterByBrandMenu}>
-                Brand
-              </FilterCategoryTitle>
-              <Menu
-                showMenu={showFilterByBrandMenu}
-                ref={filterByBrandFloating}
-                position={{ position: filterByBrandStrategy, top: filterByBrandY ?? '', left: filterByBrandX ?? '' }}
-              >
-                {brands?.map((brand, index) => (
-                  <MenuItem key={index}>
-                    <MenuItemContainer>
-                      {/*<Checkbox*/}
-                      {/*  isChecked={checkedOptions.includes(brand)}*/}
-                      {/*  onChange={event => handleChangeCheckedOption(event, brand)}*/}
-                      {/*  value={brand}*/}
-                      {/*/>*/}
-                      {brand}
-                    </MenuItemContainer>
-                  </MenuItem>
-                ))}
-              </Menu>
-            </>
-          )}
+          <FilterCategoryTitle ref={filterByBrandReference} onClick={handleShowFilterByBrandMenu}>
+            BRAND
+          </FilterCategoryTitle>
+          <Menu
+            showMenu={showFilterByBrandMenu}
+            ref={filterByBrandFloating}
+            position={{ position: filterByBrandStrategy, top: filterByBrandY ?? '', left: filterByBrandX ?? '' }}
+          >
+            {brands?.map(brand => (
+              <MenuItem key={brand}>
+                <MenuItemContainer>
+                  <Checkbox
+                    isChecked={selectedConcernsOrBrandOptions.includes(brand)}
+                    onChange={event => handleChangeCheckedOption(event, brand)}
+                    value={brand}
+                  />
+                  {brand}
+                </MenuItemContainer>
+              </MenuItem>
+            ))}
+          </Menu>
 
-          {concerns && (
-            <>
-              <FilterCategoryTitle ref={filterByTypeReference} onClick={handleFilterByTypeMenu}>
-                CONCERN
-              </FilterCategoryTitle>
-
-              <Menu
-                showMenu={showFilterByType}
-                ref={filterByTypeFloating}
-                position={{ position: filterByTypeStrategy, top: filterByTypeY ?? '', left: filterByTypeX ?? '' }}
-              >
-                {concerns?.map((concern, index) => (
-                  <MenuItem key={index}>
-                    <MenuItemContainer>
-                      <Checkbox
-                        isChecked={checkedOptions.includes(concern)}
-                        onChange={event => handleChangeCheckedOption(event, concern)}
-                        value={concern}
-                      />
-                      {concern}
-                    </MenuItemContainer>
-                  </MenuItem>
-                ))}
-              </Menu>
-            </>
-          )}
+          <FilterCategoryTitle ref={filterByConcernsReference} onClick={handleShowFilterByConcernsMenu}>
+            CONCERN
+          </FilterCategoryTitle>
+          <Menu
+            showMenu={showFilterByConcernsMenu}
+            ref={filterByConcernsFloating}
+            position={{
+              position: filterByConcernsStrategy,
+              top: filterByConcernsY ?? '',
+              left: filterByConcernsX ?? '',
+            }}
+          >
+            {concerns?.map(concern => (
+              <MenuItem key={concern}>
+                <MenuItemContainer>
+                  <Checkbox
+                    isChecked={selectedConcernsOrBrandOptions.includes(concern)}
+                    onChange={event => handleChangeCheckedOption(event, concern)}
+                    value={concern}
+                  />
+                  {concern}
+                </MenuItemContainer>
+              </MenuItem>
+            ))}
+          </Menu>
         </FilterContainer>
 
         <SortContainer>
-          <NumberOfItems> {numberOfItemsFound} products </NumberOfItems>
+          <NumberOfItems> {numberOfProducts} products </NumberOfItems>
           <DropDownMenu
             options={options}
-            onSelected={setSelectedOption}
-            selected={selectedOption}
+            onSelected={setSelectedSortOption}
+            selected={selectedSortOption}
             placeholder={'Sort by'}
           />
         </SortContainer>
       </FooterBar>
 
       <TagsContainer>
-        {checkedOptions.map(option => (
-          <Tag key={option}> {option} </Tag>
+        {selectedConcernsOrBrandOptions.map(option => (
+          <Tag key={option} isFilterTag deleteTag={() => handleDeleteTag(option)}>
+            {option}
+          </Tag>
         ))}
-        {!!checkedOptions.length && <ClearAllButton onClick={handleClearAll}> Clear All </ClearAllButton>}
+        {!!selectedConcernsOrBrandOptions.length && (
+          <ClearAllButton onClick={handleClearAll}> Clear All </ClearAllButton>
+        )}
       </TagsContainer>
     </Container>
   )
@@ -187,6 +222,7 @@ const Container = styled.div`
 
 const DetailsContainer = styled.div`
   display: flex;
+  gap: 30px;
   padding: 102px 64px 42px;
 `
 
@@ -194,19 +230,28 @@ const TitleContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  max-width: 300px;
+  width: 100%;
 `
 
 const Title = styled.span`
   font-size: 38px;
+  line-height: 1.42;
   font-family: 'Tiro Telugu', serif;
-  font-weight: 100;
+`
+
+const Description = styled.div`
+  flex: 1;
+  font-size: 38px;
+  line-height: 1.42;
+  font-family: 'Tiro Telugu', serif;
 `
 
 const SearchedValue = styled.span`
-  margin-left: 16px;
   font-size: 38px;
+  line-height: 1.42;
+  margin-left: 16px;
   font-family: 'Tiro Telugu', serif;
-  font-weight: 100;
   text-transform: uppercase;
   color: ${props => props.theme.colors.greyDarker};
 `
@@ -270,6 +315,7 @@ const TagsContainer = styled.div`
 `
 
 const ClearAllButton = styled.button`
+  margin-left: 12px;
   border: none;
   text-decoration: underline;
   background: none;

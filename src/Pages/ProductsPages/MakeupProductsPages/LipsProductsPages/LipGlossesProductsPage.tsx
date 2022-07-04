@@ -1,21 +1,36 @@
+import { useState } from 'react'
 import styled from 'styled-components'
 
-import { useGetProductsQuery } from '../../../../redux/api'
+import { Product } from '../../../../types'
 import { LargeHeader } from '../../../../Components/LargeHeader/LargeHeader'
 import { ProductCard } from '../../../../Components/ProductCard/ProductCard'
+import { NotFoundScreen } from '../../../../Components/NotFoundScreen/NotFoundScreen'
 
 const LipGlossesProductsPage = () => {
-  const { data: allProducts } = useGetProductsQuery()
+  const [filteredProducts, setFilteredProducts] = useState<Product[] | undefined>([])
+  const lipGlossesProducts = filteredProducts?.filter(product => product.category === 'Lip Glosses')
 
-  const lipGlossesProducts = allProducts?.filter(product => product.category === 'Lip Glosses')
+  const handleFilteredProducts = (products: Product[] | undefined) => {
+    setFilteredProducts(products)
+  }
+
+  const brands = [...new Set(lipGlossesProducts?.map(product => product.brand))]
+  const concerns = [...new Set(lipGlossesProducts?.map(product => product.tags).flat())]
 
   return (
     <Container>
-      <LargeHeader title="Search results for" numberOfItems={lipGlossesProducts?.length} />
+      <LargeHeader
+        title="Luxury Lip Gloss, Natural Lip Tints"
+        description="Gloss, tints, and shine for lips that go on for days. Shop natural tinted lip gloss and luxury lip oils."
+        filteredProductsResult={handleFilteredProducts}
+        numberOfProducts={lipGlossesProducts?.length}
+        brands={brands}
+        concerns={concerns}
+      />
       <ProductsList>
-        {lipGlossesProducts?.map(product => (
+        {lipGlossesProducts?.map((product, index) => (
           <ProductCard
-            key={product.id}
+            key={index}
             brand={product.brand}
             name={product.name}
             tags={product.tags}
@@ -25,6 +40,7 @@ const LipGlossesProductsPage = () => {
             price={product.price}
           />
         ))}
+        {!lipGlossesProducts?.length && <NotFoundScreen />}
       </ProductsList>
     </Container>
   )

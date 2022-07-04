@@ -1,21 +1,36 @@
+import { useState } from 'react'
 import styled from 'styled-components'
 
-import { useGetProductsQuery } from '../../../../redux/api'
+import { Product } from '../../../../types'
 import { LargeHeader } from '../../../../Components/LargeHeader/LargeHeader'
 import { ProductCard } from '../../../../Components/ProductCard/ProductCard'
+import { NotFoundScreen } from '../../../../Components/NotFoundScreen/NotFoundScreen'
 
 const FaceSerumsProductsPage = () => {
-  const { data: allProducts } = useGetProductsQuery()
+  const [filteredProducts, setFilteredProducts] = useState<Product[] | undefined>([])
+  const faceSerumsProducts = filteredProducts?.filter(product => product.category === 'Face Serums')
 
-  const faceSerumsProducts = allProducts?.filter(product => product.category === 'Face Serums')
+  const handleFilteredProducts = (products: Product[] | undefined) => {
+    setFilteredProducts(products)
+  }
+
+  const brands = [...new Set(faceSerumsProducts?.map(product => product.brand))]
+  const concerns = [...new Set(faceSerumsProducts?.map(product => product.tags).flat())]
 
   return (
     <Container>
-      <LargeHeader title="Search results for" numberOfItems={faceSerumsProducts?.length} />
+      <LargeHeader
+        title="Skincare - Face Serums"
+        description="Best-in-class active ingredients to brighten, boost hydration, and address skin aging. Explore effective and natural face serums for dry skin, acne, and anti-aging."
+        filteredProductsResult={handleFilteredProducts}
+        numberOfProducts={faceSerumsProducts?.length}
+        brands={brands}
+        concerns={concerns}
+      />
       <ProductsList>
-        {faceSerumsProducts?.map(product => (
+        {faceSerumsProducts?.map((product, index) => (
           <ProductCard
-            key={product.id}
+            key={index}
             brand={product.brand}
             name={product.name}
             tags={product.tags}
@@ -25,6 +40,7 @@ const FaceSerumsProductsPage = () => {
             price={product.price}
           />
         ))}
+        {!faceSerumsProducts?.length && <NotFoundScreen />}
       </ProductsList>
     </Container>
   )

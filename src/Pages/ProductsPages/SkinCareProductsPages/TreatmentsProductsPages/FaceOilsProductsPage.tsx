@@ -1,21 +1,36 @@
+import { useState } from 'react'
 import styled from 'styled-components'
 
-import { useGetProductsQuery } from '../../../../redux/api'
+import { Product } from '../../../../types'
 import { LargeHeader } from '../../../../Components/LargeHeader/LargeHeader'
 import { ProductCard } from '../../../../Components/ProductCard/ProductCard'
+import { NotFoundScreen } from '../../../../Components/NotFoundScreen/NotFoundScreen'
 
 const FaceOilsProductsPage = () => {
-  const { data: allProducts } = useGetProductsQuery()
+  const [filteredProducts, setFilteredProducts] = useState<Product[] | undefined>([])
+  const faceOilsProducts = filteredProducts?.filter(product => product.category === 'Face Oils')
 
-  const faceOilsProducts = allProducts?.filter(product => product.category === 'Face Oils')
+  const handleFilteredProducts = (products: Product[] | undefined) => {
+    setFilteredProducts(products)
+  }
+
+  const brands = [...new Set(faceOilsProducts?.map(product => product.brand))]
+  const concerns = [...new Set(faceOilsProducts?.map(product => product.tags).flat())]
 
   return (
     <Container>
-      <LargeHeader title="Search results for" numberOfItems={faceOilsProducts?.length} />
+      <LargeHeader
+        title="Best Luxurious & Vegan Face Oils"
+        description="Luxurious face oils to seal-in skincare, prevent water loss, and protect outer layers of the skin. Discover the best beauty oils at SHEN Beauty."
+        filteredProductsResult={handleFilteredProducts}
+        numberOfProducts={faceOilsProducts?.length}
+        brands={brands}
+        concerns={concerns}
+      />
       <ProductsList>
-        {faceOilsProducts?.map(product => (
+        {faceOilsProducts?.map((product, index) => (
           <ProductCard
-            key={product.id}
+            key={index}
             brand={product.brand}
             name={product.name}
             tags={product.tags}
@@ -25,6 +40,7 @@ const FaceOilsProductsPage = () => {
             price={product.price}
           />
         ))}
+        {!faceOilsProducts?.length && <NotFoundScreen />}
       </ProductsList>
     </Container>
   )

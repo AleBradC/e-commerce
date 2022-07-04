@@ -6,13 +6,12 @@ import SearchIcon from '../../assets/icons/searchIcon.svg'
 export interface SearchBarProps extends React.InputHTMLAttributes<HTMLInputElement> {
   className?: string
   position: CSSProperties
-  onRedirect: (event: React.KeyboardEvent) => void
 }
 
 export const SearchBar = forwardRef<HTMLDivElement, SearchBarProps>(
-  ({ position, className, onRedirect, ...htmlInputProps }, ref) => {
+  ({ position, className, ...htmlInputProps }, ref) => {
     return (
-      <Container ref={ref} style={position} className={className} onKeyDown={onRedirect}>
+      <Container ref={ref} style={position} className={className}>
         <Icon src={SearchIcon} />
         <Input placeholder="What are you looking for? " {...htmlInputProps} />
       </Container>

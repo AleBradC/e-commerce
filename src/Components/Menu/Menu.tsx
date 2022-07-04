@@ -25,9 +25,9 @@ const MenuContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px 6px 20px 6px;
+  padding: 14px 6px 14px 6px;
   width: 200px;
-  max-height: 30rem;
+  max-height: 18rem;
   overflow-x: hidden;
   overflow-y: auto;
   border: 1px solid ${props => props.theme.colors.beigeLight};

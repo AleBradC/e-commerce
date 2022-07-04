@@ -1,21 +1,36 @@
+import { useState } from 'react'
 import styled from 'styled-components'
 
-import { useGetProductsQuery } from '../../../../redux/api'
+import { Product } from '../../../../types'
 import { LargeHeader } from '../../../../Components/LargeHeader/LargeHeader'
 import { ProductCard } from '../../../../Components/ProductCard/ProductCard'
+import { NotFoundScreen } from '../../../../Components/NotFoundScreen/NotFoundScreen'
 
 const CleansersProductsPage = () => {
-  const { data: allProducts } = useGetProductsQuery()
+  const [filteredProducts, setFilteredProducts] = useState<Product[] | undefined>([])
+  const cleansersProducts = filteredProducts?.filter(product => product.category === 'Cleansers')
 
-  const cleansersProducts = allProducts?.filter(product => product.category === 'Cleansers')
+  const handleFilteredResult = (resultProducts: Product[] | undefined) => {
+    setFilteredProducts(resultProducts)
+  }
+
+  const brands = [...new Set(cleansersProducts?.map(product => product.brand))]
+  const concerns = [...new Set(cleansersProducts?.map(product => product.tags).flat())]
 
   return (
     <Container>
-      <LargeHeader title="Search results for" numberOfItems={cleansersProducts?.length} />
+      <LargeHeader
+        title="Skincare - Cleansers"
+        description="Top-rated cleansers to remove makeup, unclog pores, exfoliate dead skin, and target skin conditions. Discover natural cleansers, and effective face wipes, foaming face wash, and oil and gel cleansers."
+        filteredProductsResult={handleFilteredResult}
+        numberOfProducts={cleansersProducts?.length}
+        brands={brands}
+        concerns={concerns}
+      />
       <ProductsList>
-        {cleansersProducts?.map(product => (
+        {cleansersProducts?.map((product, index) => (
           <ProductCard
-            key={product.id}
+            key={index}
             brand={product.brand}
             name={product.name}
             tags={product.tags}
@@ -25,6 +40,7 @@ const CleansersProductsPage = () => {
             price={product.price}
           />
         ))}
+        {!cleansersProducts?.length && <NotFoundScreen />}
       </ProductsList>
     </Container>
   )

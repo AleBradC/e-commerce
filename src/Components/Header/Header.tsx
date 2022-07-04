@@ -1,28 +1,16 @@
 import { useRef, useState } from 'react'
-import styled, { css } from 'styled-components'
 import { useNavigate } from 'react-router-dom'
 import { flip, shift, useFloating } from '@floating-ui/react-dom'
+import styled, { css } from 'styled-components'
 
 import { useAppDispatch, useAppSelector } from '../../redux/hooks'
 import { changeSearchBarValue, closeSearchBar, openSearchBar } from '../../redux/reducers/searchBarSlice'
-
-import {
-  categoryCleansersRoute,
-  categoryMoisturizersRoute,
-  eyesBrowsRoute,
-  eyesMascaraRoute,
-  homeRoute,
-  lipsLipGlossesRoute,
-  lipsLipSticksRoute,
-  logInRoute,
-  searchRoute,
-  treatmentsFaceOilsRoute,
-  treatmentsFaceSerumsRoute,
-} from '../../Helpers/routes'
+import { allProductsRoute, homeRoute, logInRoute, searchRoute } from '../../Helpers/routes'
+import { makeupHeaderItems, skincareHeaderItems } from '../../Helpers/variables'
 import useBreakpoint from '../../Helpers/useBreakpointsHook/useBreakpoint'
 import useClickOutSide from '../../Helpers/useClickOutSide'
 import { IconButton, IconButtonType } from '../IconButton/IconButton'
-import { ExtendedHeader, MenuImageType } from '../ExtendedHeader/ExtendedHeader'
+import { ExtendedHeader } from '../ExtendedHeader/ExtendedHeader'
 import { SectionMenu } from '../ExtendedHeader/SectionMenu/SectionMenu'
 import { SectionMenuItem } from '../ExtendedHeader/SectionMenuItem/SectionMenuItem'
 import { SearchBar } from '../SearchBar/SearchBar'
@@ -32,75 +20,8 @@ import Logo from '../../assets/icons/logo.png'
 enum HeaderItemType {
   SKINCARE = 'SKINCARE',
   MAKE_UP = 'MAKEUP',
+  ALL_PRODUCTS = 'ALL PRODUCTS',
 }
-
-const skincareHeaderItems = [
-  {
-    image: MenuImageType.SKINCARE,
-    sections: [
-      {
-        title: 'BY CATEGORY',
-        submenu: [
-          {
-            submenuTitle: 'Cleansers',
-            navigateTo: categoryCleansersRoute,
-          },
-          {
-            submenuTitle: 'Moisturizers',
-            navigateTo: categoryMoisturizersRoute,
-          },
-        ],
-      },
-      {
-        title: 'TREATMENTS',
-        submenu: [
-          {
-            submenuTitle: 'Face Serums',
-            navigateTo: treatmentsFaceSerumsRoute,
-          },
-          {
-            submenuTitle: 'Face Oils',
-            navigateTo: treatmentsFaceOilsRoute,
-          },
-        ],
-      },
-    ],
-  },
-]
-
-const makeupHeaderItems = [
-  {
-    image: MenuImageType.MAKE_UP,
-    sections: [
-      {
-        title: 'EYES',
-        submenu: [
-          {
-            submenuTitle: 'Mascara',
-            navigateTo: eyesMascaraRoute,
-          },
-          {
-            submenuTitle: 'Brows',
-            navigateTo: eyesBrowsRoute,
-          },
-        ],
-      },
-      {
-        title: 'LIPS',
-        submenu: [
-          {
-            submenuTitle: 'Lipstick',
-            navigateTo: lipsLipSticksRoute,
-          },
-          {
-            submenuTitle: 'Lip Glosses & Tints',
-            navigateTo: lipsLipGlossesRoute,
-          },
-        ],
-      },
-    ],
-  },
-]
 
 export const Header = () => {
   const breakPoint = useBreakpoint()
@@ -108,7 +29,19 @@ export const Header = () => {
   const navigateTo = useNavigate()
   const dispatch = useAppDispatch()
   const isSearchBarOpen = useAppSelector(state => state.searchBar.open)
-  const searchValue = useAppSelector(state => state.searchBar.value)
+
+  const [activeMenuItem, setActiveMenuItem] = useState(-1)
+  const [showSkincareDropDown, setShowSkincareDropDown] = useState(false)
+  const [showMakeupDropDown, setMakeUpDropDown] = useState(false)
+  const [searchBarValue, setSearchBarValue] = useState('')
+
+  const parentRef = useRef<HTMLDivElement>(null)
+
+  useClickOutSide(parentRef, () => {
+    setShowSkincareDropDown(false)
+    setMakeUpDropDown(false)
+    setActiveMenuItem(-1)
+  })
 
   const {
     y: extendedHeaderY,
@@ -129,32 +62,25 @@ export const Header = () => {
     placement: 'bottom',
     middleware: [shift(), flip()],
   })
-  const parentRef = useRef<HTMLDivElement>(null)
-
-  const [activeMenuItem, setActiveMenuItem] = useState(-1)
-  const [showSkincareDropDown, setShowSkincareDropDown] = useState(false)
-  const [showMakeupDropDown, setMakeUpDropDown] = useState(false)
-
-  useClickOutSide(parentRef, () => {
-    setShowSkincareDropDown(false)
-    setMakeUpDropDown(false)
-    dispatch(closeSearchBar())
-    setActiveMenuItem(-1)
-  })
 
   const handleActiveMenuItem = (menuItemIndex: number, event: any) => {
     const { name } = event.target
 
     setActiveMenuItem(menuItemIndex)
 
-    if (name === 'SKINCARE') {
+    if (name === HeaderItemType.SKINCARE) {
       setShowSkincareDropDown(!showSkincareDropDown)
       setMakeUpDropDown(false)
     }
 
-    if (name === 'MAKEUP') {
+    if (name === HeaderItemType.MAKE_UP) {
       setMakeUpDropDown(!showMakeupDropDown)
       setShowSkincareDropDown(false)
+    }
+
+    if (name === HeaderItemType.ALL_PRODUCTS) {
+      navigateTo(allProductsRoute)
+      setActiveMenuItem(-1)
     }
   }
 
@@ -175,13 +101,16 @@ export const Header = () => {
   }
 
   const handleChangeValue = (event: React.ChangeEvent<HTMLInputElement>) => {
-    dispatch(changeSearchBarValue(event.target.value.toLowerCase()))
+    setSearchBarValue(event.target.value.toLowerCase())
   }
 
-  const handleRedirectOnEnter = (event: React.KeyboardEvent) => {
-    if (event.key === 'Enter' && searchValue.length >= 1) {
+  const handleSearch = (event: React.KeyboardEvent) => {
+    if (event.key === 'Enter') {
+      dispatch(changeSearchBarValue(searchBarValue))
       navigateTo(searchRoute)
+
       dispatch(closeSearchBar())
+      setSearchBarValue('')
     }
   }
 
@@ -228,18 +157,18 @@ export const Header = () => {
           </InnerHeader>
         </HeaderContainer>
       </HeaderMainContainer>
+
       {isSearchBarOpen && (
         <RefContainer ref={parentRef}>
           <SearchBar
-            value={searchValue}
+            value={searchBarValue}
             onChange={handleChangeValue}
+            onKeyDown={handleSearch}
             ref={searchBarFloating}
             position={{ position: searchBarStrategy, top: searchBarY ?? '', left: 0 }}
-            onRedirect={handleRedirectOnEnter}
           />
         </RefContainer>
       )}
-
       {showSkincareDropDown &&
         skincareHeaderItems.map((items, index) => (
           <RefContainer key={index} ref={parentRef}>

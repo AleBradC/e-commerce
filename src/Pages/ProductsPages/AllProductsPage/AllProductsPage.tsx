@@ -1,53 +1,30 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import styled from 'styled-components'
 
 import { Product } from '../../../types'
-import { useGetProductsQuery } from '../../../redux/api'
 import { LargeHeader } from '../../../Components/LargeHeader/LargeHeader'
 import { ProductCard } from '../../../Components/ProductCard/ProductCard'
+import { NotFoundScreen } from '../../../Components/NotFoundScreen/NotFoundScreen'
 
 const AllProductsPage = () => {
-  const { data: allProducts } = useGetProductsQuery()
-
   const [filteredProducts, setFilteredProducts] = useState<Product[] | undefined>([])
-  const [selectedSortType, setSelectedSortType] = useState<string | number>('')
 
-  const concerns = [...new Set(allProducts?.map(product => product.category))]
-  const brands = [...new Set(allProducts?.map(product => product.brand))]
-
-  useEffect(() => {
-    allProducts && setFilteredProducts(allProducts)
-  }, [allProducts])
-
-  useEffect(() => {
-    if (selectedSortType === 'byLowerPrice') {
-      const sortByLowerPrice = allProducts?.slice().sort((a, b) => b.price - a.price)
-      setFilteredProducts(sortByLowerPrice)
-    } else if (selectedSortType === 'byHigherPrice') {
-      const sortByHigherPrice = allProducts?.slice().sort((a, b) => a.price - b.price)
-      setFilteredProducts(sortByHigherPrice)
-    } else {
-      setFilteredProducts(allProducts)
-    }
-  }, [allProducts, selectedSortType])
-
-  const handleSelectedSortType = (option: string | number) => {
-    setSelectedSortType(option)
+  const handleFilteredProducts = (products: Product[] | undefined) => {
+    setFilteredProducts(products)
   }
 
   return (
     <Container>
       <LargeHeader
-        selectedSortType={handleSelectedSortType}
-        title="Search results for"
-        numberOfItemsFound={allProducts?.length}
-        concerns={concerns}
-        brands={brands}
+        title="All products"
+        description="Access to signature exclusives and the essentials of tomorrow, before everyone else. Discover the hottest new beauty, makeup, and skincare products."
+        filteredProductsResult={handleFilteredProducts}
+        numberOfProducts={filteredProducts?.length}
       />
       <ProductsList>
-        {filteredProducts?.map(product => (
+        {filteredProducts?.map((product, index) => (
           <ProductCard
-            key={product.id}
+            key={index}
             brand={product.brand}
             name={product.name}
             tags={product.tags}
@@ -57,6 +34,8 @@ const AllProductsPage = () => {
             price={product.price}
           />
         ))}
+
+        {!filteredProducts?.length && <NotFoundScreen />}
       </ProductsList>
     </Container>
   )

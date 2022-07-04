@@ -1,54 +1,36 @@
+import { useState } from 'react'
 import styled from 'styled-components'
 
-import { useGetProductsQuery } from '../../../../redux/api'
 import { LargeHeader } from '../../../../Components/LargeHeader/LargeHeader'
 import { ProductCard } from '../../../../Components/ProductCard/ProductCard'
-import { useEffect, useState } from 'react'
 import { Product } from '../../../../types'
+import { NotFoundScreen } from '../../../../Components/NotFoundScreen/NotFoundScreen'
 
 const BrowsProductsPage = () => {
-  const { data: allProducts } = useGetProductsQuery()
-
   const [filteredProducts, setFilteredProducts] = useState<Product[] | undefined>([])
-  const [selectedSortType, setSelectedSortType] = useState<string | number>('')
+  const browsProducts = filteredProducts?.filter(product => product.category === 'Brows')
 
-  const browsProducts = allProducts?.filter(product => product.category === 'Brows')
-  const concerns = [...new Set(browsProducts?.map(product => product.category))]
-  const brands = [...new Set(browsProducts?.map(product => product.brand))]
-
-  useEffect(() => {
-    browsProducts && setFilteredProducts(browsProducts)
-  }, [browsProducts])
-
-  useEffect(() => {
-    if (selectedSortType === 'byLowerPrice') {
-      const sortByLowerPrice = browsProducts?.slice().sort((a, b) => b.price - a.price)
-      setFilteredProducts(sortByLowerPrice)
-    } else if (selectedSortType === 'byHigherPrice') {
-      const sortByHigherPrice = browsProducts?.slice().sort((a, b) => a.price - b.price)
-      setFilteredProducts(sortByHigherPrice)
-    } else {
-      setFilteredProducts(browsProducts)
-    }
-  }, [browsProducts, selectedSortType])
-
-  const handleSelectedSortType = (option: string | number) => {
-    setSelectedSortType(option)
+  const handleFilteredProducts = (products: Product[] | undefined) => {
+    setFilteredProducts(products)
   }
+
+  const brands = [...new Set(browsProducts?.map(product => product.brand))]
+  const concerns = [...new Set(browsProducts?.map(product => product.tags).flat())]
 
   return (
     <Container>
       <LargeHeader
-        selectedSortType={handleSelectedSortType}
-        title="Search results for"
-        concerns={concerns}
+        title="Vegan & Natural Eyebrow Makeup"
+        description="Shape, shade, groom, and condition your brows with the best in brow tools and products. Discover our collection of eyebrow makeup with natural and vegan eyebrow pencils and gels."
+        filteredProductsResult={handleFilteredProducts}
+        numberOfProducts={browsProducts?.length}
         brands={brands}
-        numberOfItemsFound={filteredProducts?.length}
+        concerns={concerns}
       />
       <ProductsList>
-        {filteredProducts?.map(product => (
+        {browsProducts?.map((product, index) => (
           <ProductCard
-            key={product.id}
+            key={index}
             brand={product.brand}
             name={product.name}
             tags={product.tags}
@@ -58,6 +40,7 @@ const BrowsProductsPage = () => {
             price={product.price}
           />
         ))}
+        {!browsProducts?.length && <NotFoundScreen />}
       </ProductsList>
     </Container>
   )

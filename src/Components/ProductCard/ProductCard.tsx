@@ -43,8 +43,8 @@ export const ProductCard: React.FC<ProductCardProps> = ({
             </BrandContainer>
             <ProductName> {name} </ProductName>
             <TagsContainer>
-              {tags?.map((tag, index) => (
-                <Tag key={index}> {tag} </Tag>
+              {tags?.map(tag => (
+                <Tag key={tag}> {tag} </Tag>
               ))}
             </TagsContainer>
           </>

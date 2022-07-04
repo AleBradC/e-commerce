@@ -1,21 +1,36 @@
+import { useState } from 'react'
 import styled from 'styled-components'
 
-import { useGetProductsQuery } from '../../../../redux/api'
+import { Product } from '../../../../types'
 import { LargeHeader } from '../../../../Components/LargeHeader/LargeHeader'
 import { ProductCard } from '../../../../Components/ProductCard/ProductCard'
+import { NotFoundScreen } from '../../../../Components/NotFoundScreen/NotFoundScreen'
 
 const MoisturizersProductsPage = () => {
-  const { data: allProducts } = useGetProductsQuery()
+  const [filteredProducts, setFilteredProducts] = useState<Product[] | undefined>([])
+  const moisturizersProducts = filteredProducts?.filter(product => product.category === 'Moisturizers')
 
-  const moisturizersProducts = allProducts?.filter(product => product.category === 'Moisturizers')
+  const handleFilteredProducts = (products: Product[] | undefined) => {
+    setFilteredProducts(products)
+  }
+
+  const brands = [...new Set(moisturizersProducts?.map(product => product.brand))]
+  const concerns = [...new Set(moisturizersProducts?.map(product => product.tags).flat())]
 
   return (
     <Container>
-      <LargeHeader title="Search results for" numberOfItems={moisturizersProducts?.length} />
+      <LargeHeader
+        title="Skincare - Moisturizers"
+        description="Hero hydration to soothe, add suppleness, amplify moisturize, and increase skin barrier function. Shop the best hydrating and natural face moisturizers approved by SHEN."
+        filteredProductsResult={handleFilteredProducts}
+        numberOfProducts={moisturizersProducts?.length}
+        brands={brands}
+        concerns={concerns}
+      />
       <ProductsList>
-        {moisturizersProducts?.map(product => (
+        {moisturizersProducts?.map((product, index) => (
           <ProductCard
-            key={product.id}
+            key={index}
             brand={product.brand}
             name={product.name}
             tags={product.tags}
@@ -25,6 +40,7 @@ const MoisturizersProductsPage = () => {
             price={product.price}
           />
         ))}
+        {!moisturizersProducts?.length && <NotFoundScreen />}
       </ProductsList>
     </Container>
   )

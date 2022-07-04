@@ -1,21 +1,36 @@
+import { useState } from 'react'
 import styled from 'styled-components'
 
-import { useGetProductsQuery } from '../../../../redux/api'
+import { Product } from '../../../../types'
 import { LargeHeader } from '../../../../Components/LargeHeader/LargeHeader'
 import { ProductCard } from '../../../../Components/ProductCard/ProductCard'
+import { NotFoundScreen } from '../../../../Components/NotFoundScreen/NotFoundScreen'
 
 const LipSticksProductsPage = () => {
-  const { data: allProducts } = useGetProductsQuery()
+  const [filteredProducts, setFilteredProducts] = useState<Product[] | undefined>([])
+  const lipSticksProducts = filteredProducts?.filter(product => product.category === 'Lip Sticks')
 
-  const lipSticksProducts = allProducts?.filter(product => product.category === 'Lip Sticks')
+  const handleFilteredProducts = (products: Product[] | undefined) => {
+    setFilteredProducts(products)
+  }
+
+  const brands = [...new Set(lipSticksProducts?.map(product => product.brand))]
+  const concerns = [...new Set(lipSticksProducts?.map(product => product.tags).flat())]
 
   return (
     <Container>
-      <LargeHeader title="Search results for" numberOfItems={lipSticksProducts?.length} />
+      <LargeHeader
+        title="Luxury & Vegan Lipstick & Lip Color"
+        description="Bold, rich, creamy color for multi-faceted lip looks. Explore luxury and vegan lipstick to give you that perfect lip color."
+        filteredProductsResult={handleFilteredProducts}
+        numberOfProducts={lipSticksProducts?.length}
+        brands={brands}
+        concerns={concerns}
+      />
       <ProductsList>
-        {lipSticksProducts?.map(product => (
+        {lipSticksProducts?.map((product, index) => (
           <ProductCard
-            key={product.id}
+            key={index}
             brand={product.brand}
             name={product.name}
             tags={product.tags}
@@ -25,6 +40,7 @@ const LipSticksProductsPage = () => {
             price={product.price}
           />
         ))}
+        {!lipSticksProducts?.length && <NotFoundScreen />}
       </ProductsList>
     </Container>
   )

@@ -1,21 +1,36 @@
+import { useState } from 'react'
 import styled from 'styled-components'
 
-import { useGetProductsQuery } from '../../../../redux/api'
+import { Product } from '../../../../types'
 import { LargeHeader } from '../../../../Components/LargeHeader/LargeHeader'
 import { ProductCard } from '../../../../Components/ProductCard/ProductCard'
+import { NotFoundScreen } from '../../../../Components/NotFoundScreen/NotFoundScreen'
 
 const MascaraProductsPage = () => {
-  const { data: allProducts } = useGetProductsQuery()
+  const [filteredProducts, setFilteredProducts] = useState<Product[] | undefined>([])
+  const mascaraProducts = filteredProducts?.filter(product => product.category === 'Mascara')
 
-  const mascaraProducts = allProducts?.filter(product => product.category === 'Mascara')
+  const handleFilteredProducts = (products: Product[] | undefined) => {
+    setFilteredProducts(products)
+  }
+
+  const brands = [...new Set(mascaraProducts?.map(product => product.brand))]
+  const concerns = [...new Set(mascaraProducts?.map(product => product.tags).flat())]
 
   return (
     <Container>
-      <LargeHeader title="Search results for" numberOfItems={mascaraProducts?.length} />
+      <LargeHeader
+        title="Makeup - Eyes - Mascara"
+        description="Arguably the most indispensable makeup item, these mascaras deliver length, volume, curl, and even waterproof wear. Explore natural, organic, and high end mascara for sensitive eyes."
+        filteredProductsResult={handleFilteredProducts}
+        numberOfProducts={mascaraProducts?.length}
+        brands={brands}
+        concerns={concerns}
+      />
       <ProductsList>
-        {mascaraProducts?.map(product => (
+        {mascaraProducts?.map((product, index) => (
           <ProductCard
-            key={product.id}
+            key={index}
             brand={product.brand}
             name={product.name}
             tags={product.tags}
@@ -25,6 +40,7 @@ const MascaraProductsPage = () => {
             price={product.price}
           />
         ))}
+        {!mascaraProducts?.length && <NotFoundScreen />}
       </ProductsList>
     </Container>
   )
