@@ -9,3 +9,12 @@ export interface Product {
   rating: number
   price: number
 }
+
+export interface ProductCart {
+  id: number
+  brand: string
+  name: string
+  imageURL: string
+  price: number
+  quantity: number
+}

@@ -1,102 +1,95 @@
-import express from 'express';
-const router = express.Router();
+import express from 'express'
+const router = express.Router()
 
-import CartProduct from '../models/cartProduct.js';
+import CartProduct from '../models/cartProduct.js'
 
 router.get('/', async (req, res) => {
   try {
-    const cartProducts = await CartProduct.find();
-    res.send(cartProducts);
+    const cartProducts = await CartProduct.find()
+    res.send(cartProducts)
   } catch (error) {
-    res.status(500).send('Error: ' + error.message);
+    res.status(500).send('Error: ' + error.message)
   }
-});
+})
 
 router.delete('/:id/delete', async (req, res) => {
   try {
-    await CartProduct.deleteOne({id: req.params.id});
-    res.status(204).send();
+    await CartProduct.deleteOne({ id: req.params.id })
+    res.status(204).send()
   } catch (error) {
-    res.status(404);
-    res.send({ error: 'Product doesn\'t exist!' });
+    res.status(404)
+    res.send({ error: "Product doesn't exist!" })
   }
-});
+})
 
+// ALL -> TO DO
 router.delete('/delete', async (req, res) => {
   try {
-    await CartProduct.remove();
+    await CartProduct.remove()
 
-    res.status(204).send();
+    res.status(204).send()
   } catch (error) {
-    res.status(404);
-    res.send({ error: 'Product doesn\'t exist!' });
+    res.status(404)
+    res.send({ error: "Product doesn't exist!" })
   }
-
-});
+})
 
 router.put('/:id/add', async (req, res) => {
-
   try {
-    const {id, image, title, price, quantity} = req.body;
-    const product = await CartProduct.findOne({id: req.params.id});
+    const { id, brand, name, imageURL, price, quantity } = req.body
+    const product = await CartProduct.findOne({ id: req.params.id })
 
-    if(!product) {
+    if (!product) {
       const cartProduct = new CartProduct({
         _id: id,
         id: id,
-        image: image,
-        title: title,
+        brand: brand,
+        name: name,
+        imageURL: imageURL,
         price: price,
-        quantity: quantity
-      });
+        quantity: quantity,
+      })
 
-      await cartProduct.save();
-      return res.send(cartProduct);
+      await cartProduct.save()
+      return res.send(cartProduct)
     }
 
-    const updatedProduct = await product.updateOne(
-      {
-        $inc: {quantity: quantity}
-      }
-    );
-    res.send(updatedProduct);
+    const updatedProduct = await product.updateOne({
+      $inc: { quantity: quantity },
+    })
+    res.send(updatedProduct)
   } catch (error) {
-    res.status(404);
-    res.send({error: 'Product doesn\'t exist!'});
+    res.status(404)
+    res.send({ error: "Product doesn't exist!" })
   }
-});
+})
 
-router.put('/:id/increaseDrawerQuantity', async (req, res) => {
+router.put('/:id/increaseQuantity', async (req, res) => {
   try {
-    const product = await CartProduct.findOne({id: req.params.id});
+    const product = await CartProduct.findOne({ id: req.params.id })
 
-    const updatedProduct = await product.updateOne(
-      {
-        $inc: {quantity: 1}
-      }
-    );
+    const updatedProduct = await product.updateOne({
+      $inc: { quantity: 1 },
+    })
 
-    res.send(updatedProduct);
+    res.send(updatedProduct)
   } catch (error) {
-    res.status(404);
-    res.send({error: 'Product doesn\'t exist!'});
+    res.status(404)
+    res.send({ error: "Product doesn't exist!" })
   }
-});
+})
 
-router.put('/:id/decreaseDrawerQuantity', async (req, res) => {
+router.put('/:id/decreaseQuantity', async (req, res) => {
   try {
-    const product = await CartProduct.findOne({id: req.params.id});
-    const updatedProduct = await product.updateOne(
-      {
-        $inc: {quantity: -1}
-      }
-    );
-    res.send(updatedProduct);
+    const product = await CartProduct.findOne({ id: req.params.id })
+    const updatedProduct = await product.updateOne({
+      $inc: { quantity: -1 },
+    })
+    res.send(updatedProduct)
   } catch (error) {
-    res.status(404);
-    res.send({error: 'Product doesn\'t exist!'});
+    res.status(404)
+    res.send({ error: "Product doesn't exist!" })
   }
-});
+})
 
-
-export default router;
+export default router

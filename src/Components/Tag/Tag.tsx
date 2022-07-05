@@ -3,7 +3,7 @@ import { IconButton, IconButtonType } from '../IconButton/IconButton'
 
 export interface TagsProps {
   children: string | any
-  deleteTag: () => void
+  deleteTag?: () => void
   isFilterTag?: boolean
 }
 

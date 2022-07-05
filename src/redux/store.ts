@@ -2,12 +2,14 @@ import { combineReducers, configureStore } from '@reduxjs/toolkit'
 
 import { api } from './api'
 import { searchBarSlice } from './reducers/searchBarSlice'
+import { bagDrawerSlice } from './reducers/bagDrawerSlice'
 
 export const reducer = combineReducers({
   [api.reducerPath]: api.reducer,
 
   // OTHERS REDUCERS
   [searchBarSlice.name]: searchBarSlice.reducer,
+  [bagDrawerSlice.name]: bagDrawerSlice.reducer,
 })
 
 export const store = configureStore({

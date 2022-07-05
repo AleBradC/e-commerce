@@ -1,12 +1,20 @@
-import { useRef, useState } from 'react'
+import { useCallback, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { flip, shift, useFloating } from '@floating-ui/react-dom'
 import styled, { css } from 'styled-components'
 
+import { closeBagDrawer, openBagDrawer } from '../../redux/reducers/bagDrawerSlice'
 import { useAppDispatch, useAppSelector } from '../../redux/hooks'
 import { changeSearchBarValue, closeSearchBar, openSearchBar } from '../../redux/reducers/searchBarSlice'
 import { allProductsRoute, homeRoute, logInRoute, searchRoute } from '../../Helpers/routes'
 import { makeupHeaderItems, skincareHeaderItems } from '../../Helpers/variables'
+import {
+  useDecreaseQuantityMutation,
+  useDeleteAllProductsFromCartMutation,
+  useDeleteProductsFromCartMutation,
+  useGetProductsCartQuery,
+  useIncreaseQuantityMutation,
+} from '../../redux/api'
 import useBreakpoint from '../../Helpers/useBreakpointsHook/useBreakpoint'
 import useClickOutSide from '../../Helpers/useClickOutSide'
 import { IconButton, IconButtonType } from '../IconButton/IconButton'
@@ -14,8 +22,10 @@ import { ExtendedHeader } from '../ExtendedHeader/ExtendedHeader'
 import { SectionMenu } from '../ExtendedHeader/SectionMenu/SectionMenu'
 import { SectionMenuItem } from '../ExtendedHeader/SectionMenuItem/SectionMenuItem'
 import { SearchBar } from '../SearchBar/SearchBar'
+import { BagDrawer } from '../BagDrawer/BagDrawer'
 
 import Logo from '../../assets/icons/logo.png'
+import { SmallProductCard } from '../SmallProductCard/SmallProductCard'
 
 enum HeaderItemType {
   SKINCARE = 'SKINCARE',
@@ -29,18 +39,27 @@ export const Header = () => {
   const navigateTo = useNavigate()
   const dispatch = useAppDispatch()
   const isSearchBarOpen = useAppSelector(state => state.searchBar.open)
+  const isBagDrawerOpen = useAppSelector(state => state.bagDrawer.open)
 
   const [activeMenuItem, setActiveMenuItem] = useState(-1)
   const [showSkincareDropDown, setShowSkincareDropDown] = useState(false)
   const [showMakeupDropDown, setMakeUpDropDown] = useState(false)
   const [searchBarValue, setSearchBarValue] = useState('')
 
-  const parentRef = useRef<HTMLDivElement>(null)
+  const { data: cartProducts } = useGetProductsCartQuery()
+  const [deleteProductsFromCart] = useDeleteProductsFromCartMutation()
+  const [deleteAllProductsFromCart] = useDeleteAllProductsFromCartMutation()
+  const [increaseQuantity] = useIncreaseQuantityMutation()
+  const [decreaseQuantity] = useDecreaseQuantityMutation()
 
+  const parentRef = useRef<HTMLDivElement>(null)
   useClickOutSide(parentRef, () => {
     setShowSkincareDropDown(false)
     setMakeUpDropDown(false)
     setActiveMenuItem(-1)
+
+    dispatch(closeSearchBar())
+    dispatch(closeBagDrawer())
   })
 
   const {
@@ -62,6 +81,43 @@ export const Header = () => {
     placement: 'bottom',
     middleware: [shift(), flip()],
   })
+
+  const increaseProductQuantity = useCallback(
+    async (productId: number) => {
+      await increaseQuantity({
+        id: productId,
+      })
+    },
+    [increaseQuantity]
+  )
+
+  const decreaseProductQuantity = useCallback(
+    async (productId: number) => {
+      await decreaseQuantity({
+        id: productId,
+      })
+    },
+    [decreaseQuantity]
+  )
+
+  const deleteProductFromCart = useCallback(
+    async (productId: number) => {
+      await deleteProductsFromCart({
+        id: productId,
+      })
+    },
+    [deleteProductsFromCart]
+  )
+
+  const clearAll = useCallback(async () => {
+    await deleteAllProductsFromCart()
+  }, [deleteAllProductsFromCart])
+
+  const subTotal = cartProducts?.reduce((sum, product) => {
+    sum += product.quantity * product.price
+
+    return sum
+  }, 0)
 
   const handleActiveMenuItem = (menuItemIndex: number, event: any) => {
     const { name } = event.target
@@ -100,6 +156,14 @@ export const Header = () => {
     }
   }
 
+  const handleToggleBagDrawer = () => {
+    if (isBagDrawerOpen) {
+      dispatch(closeBagDrawer())
+    } else {
+      dispatch(openBagDrawer())
+    }
+  }
+
   const handleChangeValue = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchBarValue(event.target.value.toLowerCase())
   }
@@ -115,107 +179,127 @@ export const Header = () => {
   }
 
   return (
-    <Main ref={searchBarReference}>
-      <HeaderMainContainer ref={extendedHeaderReference}>
-        <LoginContainer>
-          <Content> FREE SHIPPING ON ORDERS OVER $50 </Content>
-          <LoginButton onClick={() => handleRedirectOnClick(logInRoute)}> LOG IN </LoginButton>
-        </LoginContainer>
+    <>
+      <Main ref={searchBarReference}>
+        <HeaderMainContainer ref={extendedHeaderReference}>
+          <LoginContainer>
+            <Content> FREE SHIPPING ON ORDERS OVER $50 </Content>
+            <LoginButton onClick={() => handleRedirectOnClick(logInRoute)}> LOG IN </LoginButton>
+          </LoginContainer>
 
-        <HeaderContainer>
-          <LogoContainer onClick={() => handleRedirectOnClick(homeRoute)}>
-            <ShenLogo src={Logo} alt="logo" />
-          </LogoContainer>
+          <HeaderContainer>
+            <LogoContainer onClick={() => handleRedirectOnClick(homeRoute)}>
+              <ShenLogo src={Logo} alt="logo" />
+            </LogoContainer>
 
-          <InnerHeader isTabletOrMobile={!isDesktop}>
-            {isDesktop && (
-              <HeaderItemContainer>
-                {Object.values(HeaderItemType).map((item, index) => (
-                  <HeaderItem
-                    name={item}
-                    key={index}
-                    selected={activeMenuItem === index}
-                    onClick={() => handleActiveMenuItem(index, event)}
-                  >
-                    {item}
-                  </HeaderItem>
+            <InnerHeader isTabletOrMobile={!isDesktop}>
+              {isDesktop && (
+                <HeaderItemContainer>
+                  {Object.values(HeaderItemType).map((item, index) => (
+                    <HeaderItem
+                      name={item}
+                      key={index}
+                      selected={activeMenuItem === index}
+                      onClick={() => handleActiveMenuItem(index, event)}
+                    >
+                      {item}
+                    </HeaderItem>
+                  ))}
+                </HeaderItemContainer>
+              )}
+              <ButtonsContainer>
+                <StyledIconButton
+                  variant={isSearchBarOpen ? IconButtonType.CLOSE : IconButtonType.SEARCH}
+                  onClick={handleToggleSearchBar}
+                />
+
+                <BagContainer>
+                  <IconButton variant={IconButtonType.BAG} onClick={handleToggleBagDrawer} />
+                  {isDesktop && <Badge> {cartProducts?.length} </Badge>}
+                </BagContainer>
+                {!isDesktop && <StyledMobileIconButton variant={IconButtonType.MOBILE_BAG} />}
+              </ButtonsContainer>
+            </InnerHeader>
+          </HeaderContainer>
+        </HeaderMainContainer>
+
+        {isSearchBarOpen && (
+          <RefContainer ref={parentRef}>
+            <SearchBar
+              value={searchBarValue}
+              onChange={handleChangeValue}
+              onKeyDown={handleSearch}
+              ref={searchBarFloating}
+              position={{ position: searchBarStrategy, top: searchBarY ?? '', left: 0 }}
+            />
+          </RefContainer>
+        )}
+        {showSkincareDropDown &&
+          skincareHeaderItems.map((items, index) => (
+            <RefContainer key={index} ref={parentRef}>
+              <ExtendedHeader
+                ref={extendedHeaderFloating}
+                position={{ position: extendedHeaderStrategy, top: extendedHeaderY ?? '', left: 0 }}
+                image={items.image}
+              >
+                {items?.sections?.map(section => (
+                  <SectionMenu title={section.title} key={section.title}>
+                    {section.submenu.map(submenuItem => (
+                      <SectionMenuItem
+                        key={submenuItem.submenuTitle}
+                        onRedirect={() => handleRedirectOnClick(submenuItem.navigateTo)}
+                      >
+                        {submenuItem.submenuTitle}
+                      </SectionMenuItem>
+                    ))}
+                  </SectionMenu>
                 ))}
-              </HeaderItemContainer>
-            )}
-            <ButtonsContainer>
-              <StyledIconButton
-                variant={isSearchBarOpen ? IconButtonType.CLOSE : IconButtonType.SEARCH}
-                onClick={handleToggleSearchBar}
+              </ExtendedHeader>
+            </RefContainer>
+          ))}
+        {showMakeupDropDown &&
+          makeupHeaderItems.map((items, index) => (
+            <RefContainer key={index} ref={parentRef}>
+              <ExtendedHeader
+                ref={extendedHeaderFloating}
+                position={{ position: extendedHeaderStrategy, top: extendedHeaderY ?? '', left: 0 }}
+                image={items.image}
+              >
+                {items?.sections?.map(section => (
+                  <SectionMenu title={section.title} key={section.title}>
+                    {section.submenu.map(submenuItem => (
+                      <SectionMenuItem
+                        key={submenuItem.submenuTitle}
+                        onRedirect={() => handleRedirectOnClick(submenuItem.navigateTo)}
+                      >
+                        {submenuItem.submenuTitle}
+                      </SectionMenuItem>
+                    ))}
+                  </SectionMenu>
+                ))}
+              </ExtendedHeader>
+            </RefContainer>
+          ))}
+
+        {isBagDrawerOpen && (
+          <BagDrawer clearAll={clearAll} subTotal={subTotal}>
+            {cartProducts?.map(product => (
+              <SmallProductCard
+                key={product.id}
+                imageURL={product.imageURL}
+                brand={product.brand}
+                name={product.name}
+                price={product.price}
+                quantity={product.quantity}
+                deleteProduct={() => deleteProductFromCart(product.id)}
+                increaseQuantity={() => increaseProductQuantity(product.id)}
+                decreaseQuantity={() => decreaseProductQuantity(product.id)}
               />
-
-              <BagContainer>
-                <IconButton variant={IconButtonType.BAG} />
-                {isDesktop && <Badge> 1 </Badge>}
-              </BagContainer>
-              {!isDesktop && <StyledMobileIconButton variant={IconButtonType.MOBILE_BAG} />}
-            </ButtonsContainer>
-          </InnerHeader>
-        </HeaderContainer>
-      </HeaderMainContainer>
-
-      {isSearchBarOpen && (
-        <RefContainer ref={parentRef}>
-          <SearchBar
-            value={searchBarValue}
-            onChange={handleChangeValue}
-            onKeyDown={handleSearch}
-            ref={searchBarFloating}
-            position={{ position: searchBarStrategy, top: searchBarY ?? '', left: 0 }}
-          />
-        </RefContainer>
-      )}
-      {showSkincareDropDown &&
-        skincareHeaderItems.map((items, index) => (
-          <RefContainer key={index} ref={parentRef}>
-            <ExtendedHeader
-              ref={extendedHeaderFloating}
-              position={{ position: extendedHeaderStrategy, top: extendedHeaderY ?? '', left: 0 }}
-              image={items.image}
-            >
-              {items?.sections?.map(section => (
-                <SectionMenu title={section.title} key={section.title}>
-                  {section.submenu.map(submenuItem => (
-                    <SectionMenuItem
-                      key={submenuItem.submenuTitle}
-                      onRedirect={() => handleRedirectOnClick(submenuItem.navigateTo)}
-                    >
-                      {submenuItem.submenuTitle}
-                    </SectionMenuItem>
-                  ))}
-                </SectionMenu>
-              ))}
-            </ExtendedHeader>
-          </RefContainer>
-        ))}
-      {showMakeupDropDown &&
-        makeupHeaderItems.map((items, index) => (
-          <RefContainer key={index} ref={parentRef}>
-            <ExtendedHeader
-              ref={extendedHeaderFloating}
-              position={{ position: extendedHeaderStrategy, top: extendedHeaderY ?? '', left: 0 }}
-              image={items.image}
-            >
-              {items?.sections?.map(section => (
-                <SectionMenu title={section.title} key={section.title}>
-                  {section.submenu.map(submenuItem => (
-                    <SectionMenuItem
-                      key={submenuItem.submenuTitle}
-                      onRedirect={() => handleRedirectOnClick(submenuItem.navigateTo)}
-                    >
-                      {submenuItem.submenuTitle}
-                    </SectionMenuItem>
-                  ))}
-                </SectionMenu>
-              ))}
-            </ExtendedHeader>
-          </RefContainer>
-        ))}
-    </Main>
+            ))}
+          </BagDrawer>
+        )}
+      </Main>
+    </>
   )
 }
 

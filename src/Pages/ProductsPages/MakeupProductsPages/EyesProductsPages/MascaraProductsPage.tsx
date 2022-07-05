@@ -30,6 +30,7 @@ const MascaraProductsPage = () => {
         {mascaraProducts?.map((product, index) => (
           <ProductCard
             key={index}
+            id={product.id}
             brand={product.brand}
             name={product.name}
             tags={product.tags}

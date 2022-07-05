@@ -1,10 +1,15 @@
-import { useState } from 'react'
+import { useCallback, useState } from 'react'
 import styled from 'styled-components'
 
 import { Tag } from '../Tag/Tag'
 import { Button } from '../Button/Button'
+import { useAddProductToCardMutation } from '../../redux/api'
+
+import { openBagDrawer } from '../../redux/reducers/bagDrawerSlice'
+import { useAppDispatch } from '../../redux/hooks'
 
 export interface ProductCardProps {
+  id: number
   brand: string
   name: string
   tags: string[]
@@ -15,6 +20,7 @@ export interface ProductCardProps {
 }
 
 export const ProductCard: React.FC<ProductCardProps> = ({
+  id,
   brand,
   name,
   tags,
@@ -24,6 +30,9 @@ export const ProductCard: React.FC<ProductCardProps> = ({
   price,
 }) => {
   const [hoveredCard, setHoveredCard] = useState(false)
+  const [addProductToCard, { isLoading }] = useAddProductToCardMutation()
+
+  const dispatch = useAppDispatch()
 
   const handleHover = () => {
     setHoveredCard(true)
@@ -32,6 +41,22 @@ export const ProductCard: React.FC<ProductCardProps> = ({
   const handleRemoveHover = () => {
     setHoveredCard(false)
   }
+
+  const handleAddToCard = useCallback(
+    async (productId: number) => {
+      await addProductToCard({
+        id: productId,
+        brand: brand,
+        name: name,
+        imageURL: imageURL,
+        price: price,
+        quantity: 1,
+      })
+
+      dispatch(openBagDrawer())
+    },
+    [addProductToCard, brand, dispatch, imageURL, name, price]
+  )
 
   return (
     <Container onMouseEnter={handleHover} onMouseLeave={handleRemoveHover}>
@@ -55,7 +80,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
       </ImageContainer>
       <Footer>
         {hoveredCard ? (
-          <StyledButton> ADD TO CART </StyledButton>
+          <StyledButton onClick={() => handleAddToCard(id)}> ADD TO CART </StyledButton>
         ) : (
           <>
             <StarsContainer> {rating} </StarsContainer>
