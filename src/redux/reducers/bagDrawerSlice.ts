@@ -1,30 +1,23 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 interface initStateProps {
-  open: boolean
-  close: boolean
+  isOpenBagDrawer: boolean
 }
 
 const initialState: initStateProps = {
-  open: false,
-  close: true,
+  isOpenBagDrawer: false,
 }
 
 export const bagDrawerSlice = createSlice({
   name: 'bagDrawer',
   initialState,
   reducers: {
-    openBagDrawer: state => {
-      state.open = true
-      state.close = false
-    },
-    closeBagDrawer: state => {
-      state.open = false
-      state.close = true
+    toggleBagDrawer: (state, action: PayloadAction<boolean>) => {
+      state.isOpenBagDrawer = action.payload
     },
   },
 })
 
-export const { openBagDrawer, closeBagDrawer } = bagDrawerSlice.actions
+export const { toggleBagDrawer } = bagDrawerSlice.actions
 
 export default bagDrawerSlice.reducer

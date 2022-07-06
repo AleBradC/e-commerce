@@ -1,11 +1,11 @@
-import { ReactNode } from 'react'
+import { forwardRef, ReactNode } from 'react'
 import { useNavigate } from 'react-router-dom'
 import ReactDOM from 'react-dom'
 import styled from 'styled-components'
 
 import { bagRoute } from '../../Helpers/routes'
 import { useAppDispatch } from '../../redux/hooks'
-import { closeBagDrawer } from '../../redux/reducers/bagDrawerSlice'
+import { toggleBagDrawer } from '../../redux/reducers/bagDrawerSlice'
 import { IconButton, IconButtonType } from '../IconButton/IconButton'
 import { Button } from '../Button/Button'
 
@@ -13,49 +13,52 @@ export interface BagDrawerProps {
   children: ReactNode
   clearAll: () => void
   subTotal: number | undefined
+  numberOfProducts: number | undefined
 }
 
-export const BagDrawer: React.FC<BagDrawerProps> = ({ children, clearAll, subTotal }) => {
-  const dispatch = useAppDispatch()
-  const navigateTo = useNavigate()
+export const BagDrawer = forwardRef<HTMLDivElement, BagDrawerProps>(
+  ({ children, clearAll, subTotal, numberOfProducts }, ref) => {
+    const dispatch = useAppDispatch()
+    const navigateTo = useNavigate()
 
-  const portalRoot = document.getElementById('portal')
+    const portalRoot = document.getElementById('portal')
 
-  const handleClose = () => {
-    dispatch(closeBagDrawer())
+    const handleClose = () => {
+      dispatch(toggleBagDrawer(false))
+    }
+
+    const redirectToBagPage = () => {
+      navigateTo(bagRoute)
+    }
+
+    return portalRoot
+      ? ReactDOM.createPortal(
+          <Container ref={ref}>
+            <Header>
+              <Title> Your cart ({numberOfProducts})</Title>
+              <StyledIconButton variant={IconButtonType.CLOSE} onClick={handleClose} />
+              <ShippingContainer> Congratulations, you`ve earned FREE shipping </ShippingContainer>
+              {/*to do*/}
+            </Header>
+
+            <Content>{children}</Content>
+
+            <Footer>
+              <SubtotalContainer>
+                <SubtotalTitle> Subtotal </SubtotalTitle>
+                <Price> ${subTotal} </Price>
+              </SubtotalContainer>
+              <ButtonContainer>
+                <StyledButton onClick={redirectToBagPage}> View Cart </StyledButton>
+                <ClearAllButton onClick={clearAll}> Clear All </ClearAllButton>
+              </ButtonContainer>
+            </Footer>
+          </Container>,
+          portalRoot
+        )
+      : null
   }
-
-  const redirectToBagPage = () => {
-    navigateTo(bagRoute)
-  }
-
-  return portalRoot
-    ? ReactDOM.createPortal(
-        <Container>
-          <Header>
-            <Title> Your cart (1)</Title>
-            <StyledIconButton variant={IconButtonType.CLOSE} onClick={handleClose} />
-            <ShippingContainer> Congratulations, you`ve earned FREE shipping </ShippingContainer>
-            {/*to do*/}
-          </Header>
-
-          <Content>{children}</Content>
-
-          <Footer>
-            <SubtotalContainer>
-              <SubtotalTitle> Subtotal </SubtotalTitle>
-              <Price> ${subTotal} </Price>
-            </SubtotalContainer>
-            <ButtonContainer>
-              <StyledButton onClick={redirectToBagPage}> View Cart </StyledButton>
-              <ClearAllButton onClick={clearAll}> Clear All </ClearAllButton>
-            </ButtonContainer>
-          </Footer>
-        </Container>,
-        portalRoot
-      )
-    : null
-}
+)
 
 const Container = styled.div`
   position: fixed;
@@ -171,3 +174,5 @@ const ClearAllButton = styled.button`
     color: ${props => props.theme.colors.brownLight};
   }
 `
+
+BagDrawer.displayName = 'BagDrawer'

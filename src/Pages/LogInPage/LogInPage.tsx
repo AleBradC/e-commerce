@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form'
 import useBreakpoint from '../../Helpers/useBreakpointsHook/useBreakpoint'
 
 import RegisterPage from '../RegisterPage/RegisterPage'
-import { Input } from '../../Components/Input/Input'
+import { Input, InputSize } from '../../Components/Input/Input'
 import { Button } from '../../Components/Button/Button'
 
 export interface LogInFormFields {
@@ -54,17 +54,20 @@ const LogInPage = () => {
           placeholder="Email"
           type="email"
           id="email"
+          sizeVariant={InputSize.MEDIUM}
           error={touchedFields.email ? errors?.email?.message : undefined}
           required
           {...register('email', {
             required: { value: true, message: 'This field is required' },
           })}
         />
+
         <StyledInput
           placeholder="Password"
           type="password"
           id="password"
           error={errors.password?.message}
+          sizeVariant={InputSize.MEDIUM}
           required
           {...register('password', {
             required: { value: true, message: 'This field is required' },

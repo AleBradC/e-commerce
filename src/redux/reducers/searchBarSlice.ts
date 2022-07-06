@@ -1,14 +1,12 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 interface initStateProps {
-  open: boolean
-  close: boolean
+  isSearchBarOpen: boolean
   value: string
 }
 
 const initialState: initStateProps = {
-  open: false,
-  close: true,
+  isSearchBarOpen: false,
   value: '',
 }
 
@@ -16,13 +14,8 @@ export const searchBarSlice = createSlice({
   name: 'searchBar',
   initialState,
   reducers: {
-    openSearchBar: state => {
-      state.open = true
-      state.close = false
-    },
-    closeSearchBar: state => {
-      state.open = false
-      state.close = true
+    toggleSearchBar: (state, action: PayloadAction<boolean>) => {
+      state.isSearchBarOpen = action.payload
     },
     changeSearchBarValue: (state, action) => {
       state.value = action.payload
@@ -30,6 +23,6 @@ export const searchBarSlice = createSlice({
   },
 })
 
-export const { changeSearchBarValue, openSearchBar, closeSearchBar } = searchBarSlice.actions
+export const { changeSearchBarValue, toggleSearchBar } = searchBarSlice.actions
 
 export default searchBarSlice.reducer

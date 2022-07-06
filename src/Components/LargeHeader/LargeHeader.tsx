@@ -4,7 +4,6 @@ import styled from 'styled-components'
 
 import { Product } from '../../types'
 import { options } from '../../Helpers/variables'
-import { useGetProductsQuery } from '../../redux/api'
 import useClickOutSide from '../../Helpers/useClickOutSide'
 import { Menu } from '../Menu/Menu'
 import { MenuItem } from '../MenuItem/MenuItem'
@@ -17,35 +16,34 @@ export interface LargeHeaderProps {
   searchedValue?: string
   otherDetails?: ReactNode
   description?: string
-  brands: string[]
-  concerns: string[]
   numberOfProducts: number | undefined
   filteredProductsResult: (products: Product[] | undefined) => void
+  products: Product[] | undefined
 }
 
 export const LargeHeader: React.FC<LargeHeaderProps> = ({
   title,
   searchedValue,
   description,
-  brands,
-  concerns,
   otherDetails,
   numberOfProducts,
   filteredProductsResult,
+  products,
 }) => {
-  const { data: allProducts } = useGetProductsQuery()
-
   const [showFilterByBrandMenu, setShowFilterByBrandMenu] = useState(false)
   const [showFilterByConcernsMenu, setShowFilterByConcernsMenu] = useState(false)
   const [selectedConcernsOrBrandOptions, setSelectedConcernsOrBrandOptions] = useState<string[]>([])
   const [selectedSortOption, setSelectedSortOption] = useState<string | number>('')
 
-  const parentRef = useRef<HTMLDivElement>(null)
+  const clickRef = useRef<HTMLDivElement>(null)
 
-  useClickOutSide(parentRef, () => {
+  useClickOutSide(clickRef, () => {
     setShowFilterByBrandMenu(false)
     setShowFilterByConcernsMenu(false)
   })
+
+  const brands = [...new Set(products?.map(product => product.brand))]
+  const concerns = [...new Set(products?.map(product => product.tags).flat())]
 
   const {
     x: filterByBrandX,
@@ -72,8 +70,8 @@ export const LargeHeader: React.FC<LargeHeaderProps> = ({
   const filteredProducts = useMemo(() => {
     // filter after redirect, if it has search value or not (for other pages)
     const filteredBySearchValue = searchedValue
-      ? allProducts?.filter((product: Product) => product.name?.toLowerCase().includes(searchedValue as string))
-      : allProducts
+      ? products?.filter((product: Product) => product.name?.toLowerCase().includes(searchedValue as string))
+      : products
 
     // filter by brand / concerns when after check
     if (selectedConcernsOrBrandOptions.length > 0) {
@@ -94,7 +92,7 @@ export const LargeHeader: React.FC<LargeHeaderProps> = ({
     } else {
       return filteredBySearchValue
     }
-  }, [allProducts, searchedValue, selectedConcernsOrBrandOptions, selectedSortOption])
+  }, [products, searchedValue, selectedConcernsOrBrandOptions, selectedSortOption])
 
   useEffect(() => {
     filteredProductsResult(filteredProducts)
@@ -138,10 +136,10 @@ export const LargeHeader: React.FC<LargeHeaderProps> = ({
         {searchedValue ? <SearchedValue> {searchedValue} </SearchedValue> : <Description> {description} </Description>}
       </DetailsContainer>
 
-      <FooterBar>
-        {!!brands.length && !!concerns.length && (
-          <>
-            <FilterContainer ref={parentRef}>
+      {!!filteredProducts?.length && (
+        <>
+          <FooterBar>
+            <FilterContainer ref={clickRef}>
               <FilterCategoryTitle ref={filterByBrandReference} onClick={handleShowFilterByBrandMenu}>
                 BRAND
               </FilterCategoryTitle>
@@ -150,8 +148,8 @@ export const LargeHeader: React.FC<LargeHeaderProps> = ({
                 ref={filterByBrandFloating}
                 position={{ position: filterByBrandStrategy, top: filterByBrandY ?? '', left: filterByBrandX ?? '' }}
               >
-                {brands?.map(brand => (
-                  <MenuItem key={brand}>
+                {brands?.map((brand, index) => (
+                  <MenuItem key={index}>
                     <MenuItemContainer>
                       <Checkbox
                         isChecked={selectedConcernsOrBrandOptions.includes(brand)}
@@ -176,8 +174,8 @@ export const LargeHeader: React.FC<LargeHeaderProps> = ({
                   left: filterByConcernsX ?? '',
                 }}
               >
-                {concerns?.map(concern => (
-                  <MenuItem key={concern}>
+                {concerns?.map((concern, index) => (
+                  <MenuItem key={index}>
                     <MenuItemContainer>
                       <Checkbox
                         isChecked={selectedConcernsOrBrandOptions.includes(concern)}
@@ -200,21 +198,19 @@ export const LargeHeader: React.FC<LargeHeaderProps> = ({
                 placeholder={'Sort by'}
               />
             </SortContainer>
-          </>
-        )}
-      </FooterBar>
+          </FooterBar>
 
-      {!!brands.length && !!concerns.length && (
-        <TagsContainer>
-          {selectedConcernsOrBrandOptions.map(option => (
-            <Tag key={option} isFilterTag deleteTag={() => handleDeleteTag(option)}>
-              {option}
-            </Tag>
-          ))}
-          {!!selectedConcernsOrBrandOptions.length && (
-            <ClearAllButton onClick={handleClearAll}> Clear All </ClearAllButton>
-          )}
-        </TagsContainer>
+          <TagsContainer>
+            {selectedConcernsOrBrandOptions.map(option => (
+              <Tag key={option} isFilterTag deleteTag={() => handleDeleteTag(option)}>
+                {option}
+              </Tag>
+            ))}
+            {!!selectedConcernsOrBrandOptions.length && (
+              <ClearAllButton onClick={handleClearAll}> Clear All </ClearAllButton>
+            )}
+          </TagsContainer>
+        </>
       )}
     </Container>
   )

@@ -4,11 +4,54 @@ import { Product, ProductCart } from '../types'
 export const api = createApi({
   reducerPath: 'api',
   baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:8080' }),
-  tagTypes: ['Products', 'CartProducts'],
+  tagTypes: [
+    'Products',
+    'CartProducts',
+    'BrowsProduct',
+    'MascaraProducts',
+    'LipGlossesProducts',
+    'LipSticksProducts',
+    'CleansersProducts',
+    'MoisturizersProducts',
+    'FaceOilsProducts',
+    'FaceSerumsProducts',
+  ],
   endpoints: builder => ({
     getProducts: builder.query<Product[], void>({
       query: () => '/api/products',
       providesTags: ['Products'],
+    }),
+    getBrowsProducts: builder.query<Product[], void>({
+      query: () => '/api/products/brows-products',
+      providesTags: ['BrowsProduct'],
+    }),
+    getMascaraProducts: builder.query<Product[], void>({
+      query: () => '/api/products/mascara-products',
+      providesTags: ['MascaraProducts'],
+    }),
+    getLipGlossesProducts: builder.query<Product[], void>({
+      query: () => '/api/products/lip-glosses-products',
+      providesTags: ['LipGlossesProducts'],
+    }),
+    getLipSticksProducts: builder.query<Product[], void>({
+      query: () => '/api/products/lip-sticks-products',
+      providesTags: ['LipSticksProducts'],
+    }),
+    getCleansersProducts: builder.query<Product[], void>({
+      query: () => '/api/products/cleansers-products',
+      providesTags: ['CleansersProducts'],
+    }),
+    getMoisturizersProducts: builder.query<Product[], void>({
+      query: () => '/api/products/moisturizers-products',
+      providesTags: ['MoisturizersProducts'],
+    }),
+    getFaceOilsProducts: builder.query<Product[], void>({
+      query: () => '/api/products/face-oils-products',
+      providesTags: ['FaceOilsProducts'],
+    }),
+    getFaceSerumsProducts: builder.query<Product[], void>({
+      query: () => '/api/products/face-serums-products',
+      providesTags: ['FaceSerumsProducts'],
     }),
 
     getProductsCart: builder.query<ProductCart[], void>({
@@ -44,10 +87,9 @@ export const api = createApi({
       }),
       invalidatesTags: ['CartProducts'],
     }),
-    // TO DO
     deleteAllProductsFromCart: builder.mutation<ProductCart, void>({
       query: () => ({
-        url: 'api/delete',
+        url: '/api/cart/delete',
         method: 'DELETE',
       }),
       invalidatesTags: ['CartProducts'],
@@ -63,4 +105,12 @@ export const {
   useDeleteAllProductsFromCartMutation,
   useIncreaseQuantityMutation,
   useDecreaseQuantityMutation,
+  useGetBrowsProductsQuery,
+  useGetMascaraProductsQuery,
+  useGetLipGlossesProductsQuery,
+  useGetLipSticksProductsQuery,
+  useGetCleansersProductsQuery,
+  useGetMoisturizersProductsQuery,
+  useGetFaceOilsProductsQuery,
+  useGetFaceSerumsProductsQuery,
 } = api

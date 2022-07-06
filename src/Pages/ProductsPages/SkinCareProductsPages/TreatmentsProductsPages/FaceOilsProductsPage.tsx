@@ -1,20 +1,19 @@
 import { useState } from 'react'
 import styled from 'styled-components'
 
+import { useGetFaceOilsProductsQuery } from '../../../../redux/api'
 import { Product } from '../../../../types'
 import { LargeHeader } from '../../../../Components/LargeHeader/LargeHeader'
 import { ProductCard } from '../../../../Components/ProductCard/ProductCard'
 
 const FaceOilsProductsPage = () => {
+  const { data: faceOilsProducts } = useGetFaceOilsProductsQuery()
+
   const [filteredProducts, setFilteredProducts] = useState<Product[] | undefined>([])
-  const faceOilsProducts = filteredProducts?.filter(product => product.category === 'Face Oils')
 
   const handleFilteredProducts = (products: Product[] | undefined) => {
     setFilteredProducts(products)
   }
-
-  const brands = [...new Set(faceOilsProducts?.map(product => product.brand))]
-  const concerns = [...new Set(faceOilsProducts?.map(product => product.tags).flat())]
 
   return (
     <Container>
@@ -22,12 +21,11 @@ const FaceOilsProductsPage = () => {
         title="Best Luxurious & Vegan Face Oils"
         description="Luxurious face oils to seal-in skincare, prevent water loss, and protect outer layers of the skin. Discover the best beauty oils at SHEN Beauty."
         filteredProductsResult={handleFilteredProducts}
-        numberOfProducts={faceOilsProducts?.length}
-        brands={brands}
-        concerns={concerns}
+        numberOfProducts={filteredProducts?.length}
+        products={faceOilsProducts}
       />
       <ProductsList>
-        {faceOilsProducts?.map((product, index) => (
+        {filteredProducts?.map((product, index) => (
           <ProductCard
             key={index}
             id={product.id}

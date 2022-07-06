@@ -26,7 +26,7 @@ export const MenuItem: React.FC<MenuItemProps> = ({ children, onClick, className
 const MenuItemContainer = styled.button`
   display: flex;
   align-items: center;
-  padding: 12px;
+  padding: 10px;
   width: 100%;
   border: none;
   background: none;

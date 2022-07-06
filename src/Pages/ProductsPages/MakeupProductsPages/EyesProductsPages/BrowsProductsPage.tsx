@@ -1,20 +1,19 @@
 import { useState } from 'react'
 import styled from 'styled-components'
 
+import { useGetBrowsProductsQuery } from '../../../../redux/api'
 import { LargeHeader } from '../../../../Components/LargeHeader/LargeHeader'
 import { ProductCard } from '../../../../Components/ProductCard/ProductCard'
 import { Product } from '../../../../types'
 
 const BrowsProductsPage = () => {
+  const { data: browsProducts } = useGetBrowsProductsQuery()
+
   const [filteredProducts, setFilteredProducts] = useState<Product[] | undefined>([])
-  const browsProducts = filteredProducts?.filter(product => product.category === 'Brows')
 
-  const handleFilteredProducts = (products: Product[] | undefined) => {
-    setFilteredProducts(products)
+  const handleFilteredProducts = (receivedProducts: Product[] | undefined) => {
+    setFilteredProducts(receivedProducts)
   }
-
-  const brands = [...new Set(browsProducts?.map(product => product.brand))]
-  const concerns = [...new Set(browsProducts?.map(product => product.tags).flat())]
 
   return (
     <Container>
@@ -22,12 +21,11 @@ const BrowsProductsPage = () => {
         title="Vegan & Natural Eyebrow Makeup"
         description="Shape, shade, groom, and condition your brows with the best in brow tools and products. Discover our collection of eyebrow makeup with natural and vegan eyebrow pencils and gels."
         filteredProductsResult={handleFilteredProducts}
-        numberOfProducts={browsProducts?.length}
-        brands={brands}
-        concerns={concerns}
+        numberOfProducts={filteredProducts?.length}
+        products={browsProducts}
       />
       <ProductsList>
-        {browsProducts?.map((product, index) => (
+        {filteredProducts?.map((product, index) => (
           <ProductCard
             key={index}
             id={product.id}

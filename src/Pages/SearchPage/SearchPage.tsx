@@ -1,9 +1,10 @@
 import { useState } from 'react'
 import styled from 'styled-components'
 
+import { useGetProductsQuery } from '../../redux/api'
 import { Product } from '../../types'
 import { useAppDispatch, useAppSelector } from '../../redux/hooks'
-import { openSearchBar } from '../../redux/reducers/searchBarSlice'
+import { toggleSearchBar } from '../../redux/reducers/searchBarSlice'
 import { ProductCard } from '../../Components/ProductCard/ProductCard'
 import { LargeHeader } from '../../Components/LargeHeader/LargeHeader'
 import { NotFoundScreen } from '../../Components/NotFoundScreen/NotFoundScreen'
@@ -12,17 +13,16 @@ const SearchPage = () => {
   const dispatch = useAppDispatch()
   const searchValue = useAppSelector(state => state.searchBar.value)
 
+  const { data: allProducts } = useGetProductsQuery()
+
   const [filteredProducts, setFilteredProducts] = useState<Product[] | undefined>([])
 
   const handleFilteredProducts = (products: Product[] | undefined) => {
     setFilteredProducts(products)
   }
 
-  const brands = [...new Set(filteredProducts?.map(product => product.brand))]
-  const concerns = [...new Set(filteredProducts?.map(product => product.tags).flat())]
-
   const handleShowSearchBar = () => {
-    dispatch(openSearchBar())
+    dispatch(toggleSearchBar(true))
   }
 
   return (
@@ -33,24 +33,26 @@ const SearchPage = () => {
         filteredProductsResult={handleFilteredProducts}
         otherDetails={<SearchButton onClick={handleShowSearchBar}> Search again </SearchButton>}
         numberOfProducts={filteredProducts?.length}
-        brands={brands}
-        concerns={concerns}
+        products={allProducts}
       />
       <ProductsList>
-        {filteredProducts?.map((product, index) => (
-          <ProductCard
-            key={index}
-            brand={product.brand}
-            name={product.name}
-            tags={product.tags}
-            imageURL={product.imageURL}
-            hoverImageURL={product.hoverImageURL}
-            rating={product.rating}
-            price={product.price}
-          />
-        ))}
-
-        {!!filteredProducts && <NotFoundScreen />}
+        {filteredProducts?.length ? (
+          filteredProducts?.map((product, index) => (
+            <ProductCard
+              id={product.id}
+              key={index}
+              brand={product.brand}
+              name={product.name}
+              tags={product.tags}
+              imageURL={product.imageURL}
+              hoverImageURL={product.hoverImageURL}
+              rating={product.rating}
+              price={product.price}
+            />
+          ))
+        ) : (
+          <NotFoundScreen />
+        )}
       </ProductsList>
     </Container>
   )

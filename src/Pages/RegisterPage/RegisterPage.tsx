@@ -111,8 +111,7 @@ const RegisterPage: React.FC<RegisterPageProps> = ({ showRegistration, closeRegi
             </Button>
           ) : (
             <Button onClick={handleSubmit(onRegister)} disabled={!isDirty || !isValid}>
-              {' '}
-              SUBMIT{' '}
+              SUBMIT
             </Button>
           )}
         </Footer>

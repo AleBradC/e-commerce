@@ -1,20 +1,19 @@
 import { useState } from 'react'
 import styled from 'styled-components'
 
+import { useGetMoisturizersProductsQuery } from '../../../../redux/api'
 import { Product } from '../../../../types'
 import { LargeHeader } from '../../../../Components/LargeHeader/LargeHeader'
 import { ProductCard } from '../../../../Components/ProductCard/ProductCard'
 
 const MoisturizersProductsPage = () => {
+  const { data: moisturizersProducts } = useGetMoisturizersProductsQuery()
+
   const [filteredProducts, setFilteredProducts] = useState<Product[] | undefined>([])
-  const moisturizersProducts = filteredProducts?.filter(product => product.category === 'Moisturizers')
 
   const handleFilteredProducts = (products: Product[] | undefined) => {
     setFilteredProducts(products)
   }
-
-  const brands = [...new Set(moisturizersProducts?.map(product => product.brand))]
-  const concerns = [...new Set(moisturizersProducts?.map(product => product.tags).flat())]
 
   return (
     <Container>
@@ -22,12 +21,11 @@ const MoisturizersProductsPage = () => {
         title="Skincare - Moisturizers"
         description="Hero hydration to soothe, add suppleness, amplify moisturize, and increase skin barrier function. Shop the best hydrating and natural face moisturizers approved by SHEN."
         filteredProductsResult={handleFilteredProducts}
-        numberOfProducts={moisturizersProducts?.length}
-        brands={brands}
-        concerns={concerns}
+        numberOfProducts={filteredProducts?.length}
+        products={moisturizersProducts}
       />
       <ProductsList>
-        {moisturizersProducts?.map((product, index) => (
+        {filteredProducts?.map((product, index) => (
           <ProductCard
             key={index}
             id={product.id}

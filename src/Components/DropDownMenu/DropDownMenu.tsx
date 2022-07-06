@@ -1,9 +1,10 @@
-import { forwardRef, Key, useState } from 'react'
+import { forwardRef, Key, useRef, useState } from 'react'
 import { flip, shift, useFloating } from '@floating-ui/react-dom'
 import styled from 'styled-components'
 
 import { Menu } from '../Menu/Menu'
 import { MenuItem } from '../MenuItem/MenuItem'
+import useClickOutSide from '../../Helpers/useClickOutSide'
 
 export interface OptionsType {
   value: string | number
@@ -28,6 +29,12 @@ export const DropDownMenu = forwardRef<HTMLInputElement, DropDownMenuProps>(
       middleware: [shift(), flip()],
     })
 
+    const clickRef = useRef<HTMLDivElement>(null)
+
+    useClickOutSide(clickRef, () => {
+      setShowDropDown(false)
+    })
+
     const handleChangeSelectedOption = (option: OptionsType['value']) => {
       onSelected && onSelected(option)
       setShowDropDown(false)
@@ -41,22 +48,26 @@ export const DropDownMenu = forwardRef<HTMLInputElement, DropDownMenuProps>(
     const selectedOption = options.find(({ value }) => value === selected)
 
     return (
-      <SelectedContainer ref={ref} className={className}>
-        <Container ref={reference} onClick={toggleDropDown}>
-          {selectedOption ? selectedOption.label : placeholder}
-        </Container>
+      <MainContainer ref={clickRef}>
+        <SelectedContainer ref={ref} className={className}>
+          <Container ref={reference} onClick={toggleDropDown}>
+            {selectedOption ? selectedOption.label : placeholder}
+          </Container>
 
-        <Menu ref={floating} showMenu={showDropDown} position={{ position: strategy, top: y ?? '', left: x ?? '' }}>
-          {options.map(option => (
-            <MenuItem key={option.value as Key} onClick={() => handleChangeSelectedOption(option.value)}>
-              {option.label}
-            </MenuItem>
-          ))}
-        </Menu>
-      </SelectedContainer>
+          <Menu ref={floating} showMenu={showDropDown} position={{ position: strategy, top: y ?? '', left: x ?? '' }}>
+            {options.map(option => (
+              <MenuItem key={option.value as Key} onClick={() => handleChangeSelectedOption(option.value)}>
+                {option.label}
+              </MenuItem>
+            ))}
+          </Menu>
+        </SelectedContainer>
+      </MainContainer>
     )
   }
 )
+
+const MainContainer = styled.div``
 
 const SelectedContainer = styled.div`
   position: relative;

@@ -4,17 +4,16 @@ import styled from 'styled-components'
 import { Product } from '../../../../types'
 import { LargeHeader } from '../../../../Components/LargeHeader/LargeHeader'
 import { ProductCard } from '../../../../Components/ProductCard/ProductCard'
+import { useGetMascaraProductsQuery } from '../../../../redux/api'
 
 const MascaraProductsPage = () => {
+  const { data: mascaraProducts } = useGetMascaraProductsQuery()
+
   const [filteredProducts, setFilteredProducts] = useState<Product[] | undefined>([])
-  const mascaraProducts = filteredProducts?.filter(product => product.category === 'Mascara')
 
   const handleFilteredProducts = (products: Product[] | undefined) => {
     setFilteredProducts(products)
   }
-
-  const brands = [...new Set(mascaraProducts?.map(product => product.brand))]
-  const concerns = [...new Set(mascaraProducts?.map(product => product.tags).flat())]
 
   return (
     <Container>
@@ -22,12 +21,11 @@ const MascaraProductsPage = () => {
         title="Makeup - Eyes - Mascara"
         description="Arguably the most indispensable makeup item, these mascaras deliver length, volume, curl, and even waterproof wear. Explore natural, organic, and high end mascara for sensitive eyes."
         filteredProductsResult={handleFilteredProducts}
-        numberOfProducts={mascaraProducts?.length}
-        brands={brands}
-        concerns={concerns}
+        numberOfProducts={filteredProducts?.length}
+        products={mascaraProducts}
       />
       <ProductsList>
-        {mascaraProducts?.map((product, index) => (
+        {filteredProducts?.map((product, index) => (
           <ProductCard
             key={index}
             id={product.id}

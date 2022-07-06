@@ -1,19 +1,27 @@
 import { useState } from 'react'
 import styled from 'styled-components'
 
+import { useGetProductsQuery } from '../../../redux/api'
 import { Product } from '../../../types'
 import { LargeHeader } from '../../../Components/LargeHeader/LargeHeader'
 import { ProductCard } from '../../../Components/ProductCard/ProductCard'
+import { Button } from '../../../Components/Button/Button'
 
 const AllProductsPage = () => {
+  const { data: allProducts } = useGetProductsQuery()
+
   const [filteredProducts, setFilteredProducts] = useState<Product[] | undefined>([])
+  const [showMore, setShowMore] = useState(false)
+
+  const filteredProductsResult = showMore ? filteredProducts : filteredProducts?.slice(0, 8)
 
   const handleFilteredProducts = (products: Product[] | undefined) => {
     setFilteredProducts(products)
   }
 
-  const brands = [...new Set(filteredProducts?.map(product => product.brand))]
-  const concerns = [...new Set(filteredProducts?.map(product => product.tags).flat())]
+  const toggleShowMore = () => {
+    setShowMore(!showMore)
+  }
 
   return (
     <Container>
@@ -22,11 +30,10 @@ const AllProductsPage = () => {
         description="Access to signature exclusives and the essentials of tomorrow, before everyone else. Discover the hottest new beauty, makeup, and skincare products."
         filteredProductsResult={handleFilteredProducts}
         numberOfProducts={filteredProducts?.length}
-        brands={brands}
-        concerns={concerns}
+        products={allProducts}
       />
       <ProductsList>
-        {filteredProducts?.map((product, index) => (
+        {filteredProductsResult?.map((product, index) => (
           <ProductCard
             key={index}
             id={product.id}
@@ -40,6 +47,10 @@ const AllProductsPage = () => {
           />
         ))}
       </ProductsList>
+
+      <ShowMoreContainer onClick={toggleShowMore}>
+        <Button> {showMore ? 'SHOW LESS' : 'SHOW MORE'} </Button>
+      </ShowMoreContainer>
     </Container>
   )
 }
@@ -65,6 +76,14 @@ const ProductsList = styled.div`
   width: 100%;
   padding: 60px 20px 20px 20px;
   margin: 0 auto;
+`
+
+const ShowMoreContainer = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0 20px 0;
 `
 
 export default AllProductsPage

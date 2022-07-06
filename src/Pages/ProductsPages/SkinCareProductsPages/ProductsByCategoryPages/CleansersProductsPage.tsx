@@ -1,20 +1,19 @@
 import { useState } from 'react'
 import styled from 'styled-components'
 
+import { useGetCleansersProductsQuery } from '../../../../redux/api'
 import { Product } from '../../../../types'
 import { LargeHeader } from '../../../../Components/LargeHeader/LargeHeader'
 import { ProductCard } from '../../../../Components/ProductCard/ProductCard'
 
 const CleansersProductsPage = () => {
+  const { data: cleansersProducts } = useGetCleansersProductsQuery()
+
   const [filteredProducts, setFilteredProducts] = useState<Product[] | undefined>([])
-  const cleansersProducts = filteredProducts?.filter(product => product.category === 'Cleansers')
 
   const handleFilteredResult = (resultProducts: Product[] | undefined) => {
     setFilteredProducts(resultProducts)
   }
-
-  const brands = [...new Set(cleansersProducts?.map(product => product.brand))]
-  const concerns = [...new Set(cleansersProducts?.map(product => product.tags).flat())]
 
   return (
     <Container>
@@ -22,12 +21,11 @@ const CleansersProductsPage = () => {
         title="Skincare - Cleansers"
         description="Top-rated cleansers to remove makeup, unclog pores, exfoliate dead skin, and target skin conditions. Discover natural cleansers, and effective face wipes, foaming face wash, and oil and gel cleansers."
         filteredProductsResult={handleFilteredResult}
-        numberOfProducts={cleansersProducts?.length}
-        brands={brands}
-        concerns={concerns}
+        numberOfProducts={filteredProducts?.length}
+        products={cleansersProducts}
       />
       <ProductsList>
-        {cleansersProducts?.map((product, index) => (
+        {filteredProducts?.map((product, index) => (
           <ProductCard
             key={index}
             id={product.id}

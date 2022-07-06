@@ -25,11 +25,11 @@ const MenuContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 14px 6px 14px 6px;
+  padding: 10px 6px 10px 6px;
   width: 200px;
-  max-height: 18rem;
-  overflow-x: hidden;
-  overflow-y: auto;
+  max-height: 265px;
+  height: auto;
+  overflow: hidden;
   border: 1px solid ${props => props.theme.colors.beigeLight};
   background-color: ${props => props.theme.colors.white};
   z-index: 100;

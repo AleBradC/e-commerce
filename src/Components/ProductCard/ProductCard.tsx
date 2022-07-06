@@ -5,7 +5,7 @@ import { Tag } from '../Tag/Tag'
 import { Button } from '../Button/Button'
 import { useAddProductToCardMutation } from '../../redux/api'
 
-import { openBagDrawer } from '../../redux/reducers/bagDrawerSlice'
+import { toggleBagDrawer } from '../../redux/reducers/bagDrawerSlice'
 import { useAppDispatch } from '../../redux/hooks'
 
 export interface ProductCardProps {
@@ -30,7 +30,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
   price,
 }) => {
   const [hoveredCard, setHoveredCard] = useState(false)
-  const [addProductToCard, { isLoading }] = useAddProductToCardMutation()
+  const [addProductToCard] = useAddProductToCardMutation()
 
   const dispatch = useAppDispatch()
 
@@ -53,7 +53,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
         quantity: 1,
       })
 
-      dispatch(openBagDrawer())
+      dispatch(toggleBagDrawer(true))
     },
     [addProductToCard, brand, dispatch, imageURL, name, price]
   )

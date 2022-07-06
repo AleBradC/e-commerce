@@ -1,20 +1,19 @@
 import { useState } from 'react'
 import styled from 'styled-components'
 
+import { useGetFaceSerumsProductsQuery } from '../../../../redux/api'
 import { Product } from '../../../../types'
 import { LargeHeader } from '../../../../Components/LargeHeader/LargeHeader'
 import { ProductCard } from '../../../../Components/ProductCard/ProductCard'
 
 const FaceSerumsProductsPage = () => {
+  const { data: faceSerumsProducts } = useGetFaceSerumsProductsQuery()
+
   const [filteredProducts, setFilteredProducts] = useState<Product[] | undefined>([])
-  const faceSerumsProducts = filteredProducts?.filter(product => product.category === 'Face Serums')
 
   const handleFilteredProducts = (products: Product[] | undefined) => {
     setFilteredProducts(products)
   }
-
-  const brands = [...new Set(faceSerumsProducts?.map(product => product.brand))]
-  const concerns = [...new Set(faceSerumsProducts?.map(product => product.tags).flat())]
 
   return (
     <Container>
@@ -22,12 +21,11 @@ const FaceSerumsProductsPage = () => {
         title="Skincare - Face Serums"
         description="Best-in-class active ingredients to brighten, boost hydration, and address skin aging. Explore effective and natural face serums for dry skin, acne, and anti-aging."
         filteredProductsResult={handleFilteredProducts}
-        numberOfProducts={faceSerumsProducts?.length}
-        brands={brands}
-        concerns={concerns}
+        numberOfProducts={filteredProducts?.length}
+        products={faceSerumsProducts}
       />
       <ProductsList>
-        {faceSerumsProducts?.map((product, index) => (
+        {filteredProducts?.map((product, index) => (
           <ProductCard
             key={index}
             id={product.id}

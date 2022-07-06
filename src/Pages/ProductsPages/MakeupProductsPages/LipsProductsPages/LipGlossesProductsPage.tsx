@@ -1,20 +1,19 @@
 import { useState } from 'react'
 import styled from 'styled-components'
 
+import { useGetLipGlossesProductsQuery } from '../../../../redux/api'
 import { Product } from '../../../../types'
 import { LargeHeader } from '../../../../Components/LargeHeader/LargeHeader'
 import { ProductCard } from '../../../../Components/ProductCard/ProductCard'
 
 const LipGlossesProductsPage = () => {
+  const { data: lipGlossesProducts } = useGetLipGlossesProductsQuery()
+
   const [filteredProducts, setFilteredProducts] = useState<Product[] | undefined>([])
-  const lipGlossesProducts = filteredProducts?.filter(product => product.category === 'Lip Glosses')
 
   const handleFilteredProducts = (products: Product[] | undefined) => {
     setFilteredProducts(products)
   }
-
-  const brands = [...new Set(lipGlossesProducts?.map(product => product.brand))]
-  const concerns = [...new Set(lipGlossesProducts?.map(product => product.tags).flat())]
 
   return (
     <Container>
@@ -22,12 +21,11 @@ const LipGlossesProductsPage = () => {
         title="Luxury Lip Gloss, Natural Lip Tints"
         description="Gloss, tints, and shine for lips that go on for days. Shop natural tinted lip gloss and luxury lip oils."
         filteredProductsResult={handleFilteredProducts}
-        numberOfProducts={lipGlossesProducts?.length}
-        brands={brands}
-        concerns={concerns}
+        numberOfProducts={filteredProducts?.length}
+        products={lipGlossesProducts}
       />
       <ProductsList>
-        {lipGlossesProducts?.map((product, index) => (
+        {filteredProducts?.map((product, index) => (
           <ProductCard
             key={index}
             id={product.id}
