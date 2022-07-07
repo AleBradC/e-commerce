@@ -11,13 +11,14 @@ import { Button } from '../Button/Button'
 
 export interface BagDrawerProps {
   children: ReactNode
+  isOpen: boolean
   clearAll: () => void
   subTotal: number | undefined
   numberOfProducts: number | undefined
 }
 
 export const BagDrawer = forwardRef<HTMLDivElement, BagDrawerProps>(
-  ({ children, clearAll, subTotal, numberOfProducts }, ref) => {
+  ({ children, isOpen, clearAll, subTotal, numberOfProducts }, ref) => {
     const dispatch = useAppDispatch()
     const navigateTo = useNavigate()
 
@@ -25,43 +26,67 @@ export const BagDrawer = forwardRef<HTMLDivElement, BagDrawerProps>(
 
     const handleClose = () => {
       dispatch(toggleBagDrawer(false))
+
+      // when bag drawer is close
+      document.body.style.overflow = 'unset'
+    }
+
+    if (isOpen) {
+      // disabled scroll
+      if (typeof window != 'undefined' && window.document) {
+        document.body.style.overflow = 'hidden'
+      }
     }
 
     const redirectToBagPage = () => {
       navigateTo(bagRoute)
     }
 
-    return portalRoot
+    return isOpen && portalRoot
       ? ReactDOM.createPortal(
-          <Container ref={ref}>
-            <Header>
-              <Title> Your cart ({numberOfProducts})</Title>
-              <StyledIconButton variant={IconButtonType.CLOSE} onClick={handleClose} />
-              <ShippingContainer> Congratulations, you`ve earned FREE shipping </ShippingContainer>
-              {/*to do*/}
-            </Header>
+          <BlurWrapper>
+            <Container ref={ref}>
+              <Header>
+                <Title> Your cart ({numberOfProducts})</Title>
+                <StyledIconButton variant={IconButtonType.CLOSE} onClick={handleClose} />
+                <ShippingContainer> Congratulations, you`ve earned FREE shipping </ShippingContainer>
+                {/*to do*/}
+              </Header>
 
-            <Content>{children}</Content>
+              <Content>{children}</Content>
 
-            <Footer>
-              <SubtotalContainer>
-                <SubtotalTitle> Subtotal </SubtotalTitle>
-                <Price> ${subTotal} </Price>
-              </SubtotalContainer>
-              <ButtonContainer>
-                <StyledButton onClick={redirectToBagPage}> View Cart </StyledButton>
-                <ClearAllButton onClick={clearAll}> Clear All </ClearAllButton>
-              </ButtonContainer>
-            </Footer>
-          </Container>,
+              <Footer>
+                <SubtotalContainer>
+                  <SubtotalTitle> Subtotal </SubtotalTitle>
+                  <Price> ${subTotal} </Price>
+                </SubtotalContainer>
+                <ButtonContainer>
+                  <StyledButton onClick={redirectToBagPage}> View Cart </StyledButton>
+                  <ClearAllButton onClick={clearAll}> Clear All </ClearAllButton>
+                </ButtonContainer>
+              </Footer>
+            </Container>
+          </BlurWrapper>,
           portalRoot
         )
       : null
   }
 )
 
-const Container = styled.div`
+const BlurWrapper = styled.div`
   position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+`
+
+const Container = styled.div`
+  position: absolute;
   top: 0;
   right: 0;
 

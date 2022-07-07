@@ -3,8 +3,8 @@ import { useNavigate } from 'react-router-dom'
 import { flip, shift, useFloating } from '@floating-ui/react-dom'
 import styled, { css } from 'styled-components'
 
-import { toggleBagDrawer } from '../../redux/reducers/bagDrawerSlice'
 import { useAppDispatch, useAppSelector } from '../../redux/hooks'
+import { toggleBagDrawer } from '../../redux/reducers/bagDrawerSlice'
 import { changeSearchBarValue, toggleSearchBar } from '../../redux/reducers/searchBarSlice'
 import { allProductsRoute, homeRoute, logInRoute, searchRoute } from '../../Helpers/routes'
 import { makeupHeaderItems, skincareHeaderItems } from '../../Helpers/variables'
@@ -73,6 +73,9 @@ export const Header = () => {
 
     dispatch(toggleSearchBar(false))
     dispatch(toggleBagDrawer(false))
+
+    // when bag drawer is close
+    document.body.style.overflow = 'unset'
   })
 
   const {
@@ -169,6 +172,10 @@ export const Header = () => {
     }
   }
 
+  const handleShowBagDrawer = () => {
+    dispatch(toggleBagDrawer(true))
+  }
+
   return (
     <>
       <HeaderMainContainer ref={extendedHeaderReference}>
@@ -204,7 +211,7 @@ export const Header = () => {
               />
 
               <BagContainer>
-                <IconButton variant={IconButtonType.BAG} onClick={() => dispatch(toggleBagDrawer(!isBagDrawerOpen))} />
+                <IconButton variant={IconButtonType.BAG} onClick={handleShowBagDrawer} />
                 {isDesktop && <Badge> {cartProducts?.length} </Badge>}
               </BagContainer>
               {!isDesktop && <StyledMobileIconButton variant={IconButtonType.MOBILE_BAG} />}
@@ -272,23 +279,27 @@ export const Header = () => {
           </RefContainer>
         ))}
 
-      {isBagDrawerOpen && (
-        <BagDrawer ref={clickRef} clearAll={clearAll} subTotal={subTotal} numberOfProducts={numberOfProducts}>
-          {cartProducts?.map(product => (
-            <SmallProductCard
-              key={product.id}
-              imageURL={`${'../../../../../' + product.imageURL}`}
-              brand={product.brand}
-              name={product.name}
-              price={product.price}
-              quantity={product.quantity}
-              deleteProduct={() => deleteProductFromCart(product.id)}
-              increaseQuantity={() => increaseProductQuantity(product.id)}
-              decreaseQuantity={() => decreaseProductQuantity(product.id)}
-            />
-          ))}
-        </BagDrawer>
-      )}
+      <BagDrawer
+        ref={clickRef}
+        isOpen={isBagDrawerOpen}
+        clearAll={clearAll}
+        subTotal={subTotal}
+        numberOfProducts={numberOfProducts}
+      >
+        {cartProducts?.map(product => (
+          <SmallProductCard
+            key={product.id}
+            imageURL={`${'../../../../../' + product.imageURL}`}
+            brand={product.brand}
+            name={product.name}
+            price={product.price}
+            quantity={product.quantity}
+            deleteProduct={() => deleteProductFromCart(product.id)}
+            increaseQuantity={() => increaseProductQuantity(product.id)}
+            decreaseQuantity={() => decreaseProductQuantity(product.id)}
+          />
+        ))}
+      </BagDrawer>
     </>
   )
 }
