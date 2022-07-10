@@ -1,12 +1,12 @@
 import {
-  categoryCleansersRoute,
-  categoryMoisturizersRoute,
-  eyesBrowsRoute,
-  eyesMascaraRoute,
-  lipsLipGlossesRoute,
-  lipsLipSticksRoute,
-  treatmentsFaceOilsRoute,
-  treatmentsFaceSerumsRoute,
+  cleansersRoute,
+  moisturizersRoute,
+  browsRoute,
+  mascaraRoute,
+  lipGlossesRoute,
+  lipSticksRoute,
+  faceOilsRoute,
+  faceSerumsRoute,
 } from './routes'
 
 import { MenuImageType } from '../Components/ExtendedHeader/ExtendedHeader'
@@ -31,11 +31,11 @@ export const skincareHeaderItems = [
         submenu: [
           {
             submenuTitle: 'Cleansers',
-            navigateTo: categoryCleansersRoute,
+            navigateTo: cleansersRoute,
           },
           {
             submenuTitle: 'Moisturizers',
-            navigateTo: categoryMoisturizersRoute,
+            navigateTo: moisturizersRoute,
           },
         ],
       },
@@ -44,11 +44,11 @@ export const skincareHeaderItems = [
         submenu: [
           {
             submenuTitle: 'Face Serums',
-            navigateTo: treatmentsFaceSerumsRoute,
+            navigateTo: faceSerumsRoute,
           },
           {
             submenuTitle: 'Face Oils',
-            navigateTo: treatmentsFaceOilsRoute,
+            navigateTo: faceOilsRoute,
           },
         ],
       },
@@ -65,11 +65,11 @@ export const makeupHeaderItems = [
         submenu: [
           {
             submenuTitle: 'Mascara',
-            navigateTo: eyesMascaraRoute,
+            navigateTo: mascaraRoute,
           },
           {
             submenuTitle: 'Brows',
-            navigateTo: eyesBrowsRoute,
+            navigateTo: browsRoute,
           },
         ],
       },
@@ -78,11 +78,11 @@ export const makeupHeaderItems = [
         submenu: [
           {
             submenuTitle: 'Lipstick',
-            navigateTo: lipsLipSticksRoute,
+            navigateTo: lipSticksRoute,
           },
           {
             submenuTitle: 'Lip Glosses & Tints',
-            navigateTo: lipsLipGlossesRoute,
+            navigateTo: lipGlossesRoute,
           },
         ],
       },

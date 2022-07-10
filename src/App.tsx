@@ -6,26 +6,28 @@ import { Header } from './Components/Header/Header'
 import {
   allProductsRoute,
   bagRoute,
-  categoryCleansersRoute,
-  categoryMoisturizersRoute,
-  eyesBrowsRoute,
-  eyesMascaraRoute,
+  browsRoute,
+  cleansersRoute,
+  faceOilsRoute,
+  faceSerumsRoute,
   homeRoute,
-  lipsLipGlossesRoute,
-  lipsLipSticksRoute,
+  lipGlossesRoute,
+  lipSticksRoute,
   logInRoute,
-  productRoute,
   // registerRoute,
+  mascaraRoute,
+  moisturizersRoute,
+  productRoute,
   searchRoute,
-  treatmentsFaceOilsRoute,
-  treatmentsFaceSerumsRoute,
 } from './Helpers/routes'
+
+import { Footer } from './Components/Footer/Footer'
 
 const HomePage = React.lazy(() => import('./Pages/HomePage/HomePage'))
 const LogInPage = React.lazy(() => import('./Pages/LogInPage/LogInPage'))
+// const RegisterPage = React.lazy(() => import('./Pages/RegisterPage/RegisterPage'))
 const BagPage = React.lazy(() => import('./Pages/BagPage/BagPage'))
 const ProductPage = React.lazy(() => import('./Pages/ProductPage/ProductPage')) // TO DO with ID
-// const RegisterPage = React.lazy(() => import('./Pages/RegisterPage/RegisterPage'))
 const SearchPage = React.lazy(() => import('./Pages/SearchPage/SearchPage'))
 
 const AllProductsPage = React.lazy(() => import('./Pages/ProductsPages/AllProductsPage/AllProductsPage'))
@@ -68,18 +70,19 @@ function App() {
 
         <Route path={allProductsRoute} element={<AllProductsPage />} />
 
-        <Route path={eyesMascaraRoute} element={<MascaraProductsPage />} />
-        <Route path={eyesBrowsRoute} element={<BrowsProductsPage />} />
+        <Route path={mascaraRoute} element={<MascaraProductsPage />} />
+        <Route path={browsRoute} element={<BrowsProductsPage />} />
 
-        <Route path={lipsLipGlossesRoute} element={<LipGlossesProductsPage />} />
-        <Route path={lipsLipSticksRoute} element={<LipSticksProductsPage />} />
+        <Route path={lipGlossesRoute} element={<LipGlossesProductsPage />} />
+        <Route path={lipSticksRoute} element={<LipSticksProductsPage />} />
 
-        <Route path={categoryCleansersRoute} element={<CleansersProductsPage />} />
-        <Route path={categoryMoisturizersRoute} element={<MoisturizersProductsPage />} />
+        <Route path={cleansersRoute} element={<CleansersProductsPage />} />
+        <Route path={moisturizersRoute} element={<MoisturizersProductsPage />} />
 
-        <Route path={treatmentsFaceOilsRoute} element={<FaceOilsProductsPage />} />
-        <Route path={treatmentsFaceSerumsRoute} element={<FaceSerumsProductsPage />} />
+        <Route path={faceOilsRoute} element={<FaceOilsProductsPage />} />
+        <Route path={faceSerumsRoute} element={<FaceSerumsProductsPage />} />
       </Routes>
+      <Footer />
     </Suspense>
   )
 }

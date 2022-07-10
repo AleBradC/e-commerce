@@ -5,6 +5,7 @@ import { useGetLipGlossesProductsQuery } from '../../../../redux/api'
 import { Product } from '../../../../types'
 import { LargeHeader } from '../../../../Components/LargeHeader/LargeHeader'
 import { ProductCard } from '../../../../Components/ProductCard/ProductCard'
+import { ProductsListWrapper } from '../../../../Components/ProductsListWrapper/ProductsListWrapper'
 
 const LipGlossesProductsPage = () => {
   const { data: lipGlossesProducts } = useGetLipGlossesProductsQuery()
@@ -24,7 +25,7 @@ const LipGlossesProductsPage = () => {
         numberOfProducts={filteredProducts?.length}
         products={lipGlossesProducts}
       />
-      <ProductsList>
+      <ProductsListWrapper>
         {filteredProducts?.map((product, index) => (
           <ProductCard
             key={index}
@@ -38,7 +39,7 @@ const LipGlossesProductsPage = () => {
             price={product.price}
           />
         ))}
-      </ProductsList>
+      </ProductsListWrapper>
     </Container>
   )
 }
@@ -46,24 +47,6 @@ const LipGlossesProductsPage = () => {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-
-  background-image: linear-gradient(
-    to bottom right,
-    ${props => props.theme.colors.beigeLight},
-    ${props => props.theme.colors.beige2},
-    ${props => props.theme.colors.beige3},
-    ${props => props.theme.colors.beige}
-  );
-`
-
-const ProductsList = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(286px, 1fr));
-  grid-gap: 30px;
-  max-width: 1360px;
-  width: 100%;
-  padding: 60px 20px 20px 20px;
-  margin: 0 auto;
 `
 
 export default LipGlossesProductsPage

@@ -81,6 +81,8 @@ const BlurWrapper = styled.div`
   bottom: 0;
   width: 100%;
   height: 100%;
+
+  z-index: ${props => props.theme.zIndex.others};
   backdrop-filter: blur(4px);
   background: rgba(0, 0, 0, 0.5);
 `
@@ -96,7 +98,7 @@ const Container = styled.div`
   max-width: 375px;
   width: 100%;
   height: 100%;
-
+  
   background: ${props => props.theme.colors.beigeLight2};
 }
 `
@@ -116,8 +118,9 @@ const StyledIconButton = styled(IconButton)`
   position: absolute;
   top: 25px;
   right: 25px;
-  z-index: 5;
   padding: 0;
+
+  z-index: ${props => props.theme.zIndex.others};
 `
 
 const Title = styled.div`

@@ -72,10 +72,11 @@ const Container = styled.div<{ isMobile: boolean }>`
   padding: 20px;
   box-shadow: 0 5px 10px 2px rgba(195, 192, 192, 0.5);
 
-  z-index: 1000;
   background-color: ${props => props.theme.colors.white};
   border: 1px solid ${props => props.theme.colors.brownBadge};
   border-radius: 4px;
+
+  z-index: ${props => props.theme.zIndex.header};
 
   ${props =>
     props.isMobile &&

@@ -28,4 +28,9 @@ export const theme = {
     greenLight: '#64a69e',
     red: '#ce2f57',
   },
+  zIndex: {
+    header: 100,
+    others: 1000,
+    negative: -1,
+  },
 }

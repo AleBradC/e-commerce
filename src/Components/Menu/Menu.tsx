@@ -32,7 +32,7 @@ const MenuContainer = styled.div`
   overflow: hidden;
   border: 1px solid ${props => props.theme.colors.beigeLight};
   background-color: ${props => props.theme.colors.white};
-  z-index: 100;
+  z-index: ${props => props.theme.zIndex.others};
 `
 
 Menu.displayName = 'Menu'

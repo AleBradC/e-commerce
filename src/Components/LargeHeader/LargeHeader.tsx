@@ -220,6 +220,8 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
+
+  background-image: linear-gradient(${props => props.theme.colors.white} 10%, rgba(248, 235, 227, 0.8) 100%);
 `
 
 const DetailsContainer = styled.div`

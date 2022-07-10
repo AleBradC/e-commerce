@@ -305,8 +305,12 @@ export const Header = () => {
 }
 
 const HeaderMainContainer = styled.div`
+  position: sticky;
+  top: 0;
   display: flex;
   flex-direction: column;
+
+  z-index: ${props => props.theme.zIndex.header};
 `
 
 const LoginContainer = styled.div`
@@ -340,8 +344,6 @@ const HeaderContainer = styled.header`
   display: flex;
   align-items: center;
   padding: 20px 42px 2px 62px;
-  border-bottom: 1px solid ${props => props.theme.colors.beigeLight};
-
   background: ${props => props.theme.colors.white};
 `
 
@@ -359,8 +361,13 @@ const InnerHeader = styled.div<{ isTabletOrMobile: boolean }>`
   display: flex;
   align-items: center;
   justify-content: ${props => (props.isTabletOrMobile ? 'flex-end' : 'space-between')};
-
+  padding-bottom: 6px;
   width: 100%;
+
+  border-bottom: 1px solid transparent;
+  &:hover {
+    border-bottom: 1px solid ${props => props.theme.colors.beigeLight};
+  }
 `
 
 const HeaderItemContainer = styled.div`

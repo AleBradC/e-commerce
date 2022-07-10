@@ -115,7 +115,7 @@ const ClearButton = styled.button<{ sizeVariant: InputSize }>`
   opacity: 0;
 
   :disabled {
-    z-index: -1;
+    z-index: ${props => props.theme.zIndex.negative};
   }
 
   :enabled:hover,

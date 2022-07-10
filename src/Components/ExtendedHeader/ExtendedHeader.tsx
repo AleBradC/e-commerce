@@ -33,14 +33,14 @@ export const ExtendedHeader = forwardRef<HTMLDivElement, ExtendedHeaderProps>(
 )
 
 const ExtendedHeaderContainer = styled.div`
-  z-index: 1000;
-  overflow: hidden;
   display: flex;
   align-items: flex-start;
   justify-content: space-around;
   padding: 24px 0 24px 0;
   width: 100%;
 
+  z-index: ${props => props.theme.zIndex.header};
+  overflow: hidden;
   background: ${props => props.theme.colors.white};
 `
 

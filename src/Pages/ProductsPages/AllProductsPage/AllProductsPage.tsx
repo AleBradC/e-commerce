@@ -6,6 +6,7 @@ import { Product } from '../../../types'
 import { LargeHeader } from '../../../Components/LargeHeader/LargeHeader'
 import { ProductCard } from '../../../Components/ProductCard/ProductCard'
 import { Button } from '../../../Components/Button/Button'
+import { ProductsListWrapper } from '../../../Components/ProductsListWrapper/ProductsListWrapper'
 
 const AllProductsPage = () => {
   const { data: allProducts } = useGetProductsQuery()
@@ -32,7 +33,7 @@ const AllProductsPage = () => {
         numberOfProducts={filteredProducts?.length}
         products={allProducts}
       />
-      <ProductsList>
+      <ProductsListWrapper>
         {filteredProductsResult?.map((product, index) => (
           <ProductCard
             key={index}
@@ -46,7 +47,7 @@ const AllProductsPage = () => {
             price={product.price}
           />
         ))}
-      </ProductsList>
+      </ProductsListWrapper>
 
       <ShowMoreContainer onClick={toggleShowMore}>
         <Button> {showMore ? 'SHOW LESS' : 'SHOW MORE'} </Button>
@@ -58,24 +59,6 @@ const AllProductsPage = () => {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-
-  background-image: linear-gradient(
-    to bottom right,
-    ${props => props.theme.colors.beigeLight},
-    ${props => props.theme.colors.beige2},
-    ${props => props.theme.colors.beige3},
-    ${props => props.theme.colors.beige}
-  );
-`
-
-const ProductsList = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(286px, 1fr));
-  grid-gap: 30px;
-  max-width: 1360px;
-  width: 100%;
-  padding: 60px 20px 20px 20px;
-  margin: 0 auto;
 `
 
 const ShowMoreContainer = styled.div`
