@@ -38,10 +38,10 @@ const SearchPage = () => {
       />
       <ProductsListWrapper>
         {filteredProducts?.length ? (
-          filteredProducts?.map((product, index) => (
+          filteredProducts?.map(product => (
             <ProductCard
+              key={product.id}
               id={product.id}
-              key={index}
               brand={product.brand}
               name={product.name}
               tags={product.tags}

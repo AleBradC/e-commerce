@@ -20,7 +20,7 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 4px 8px;
+  padding: 4px 6px;
   margin-right: 4px;
   border-radius: 20px;
   border: 1px solid ${props => props.theme.colors.black};

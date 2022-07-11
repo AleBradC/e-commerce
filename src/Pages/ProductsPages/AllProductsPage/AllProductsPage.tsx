@@ -34,9 +34,9 @@ const AllProductsPage = () => {
         products={allProducts}
       />
       <ProductsListWrapper>
-        {filteredProductsResult?.map((product, index) => (
+        {filteredProductsResult?.map(product => (
           <ProductCard
-            key={index}
+            key={product.id}
             id={product.id}
             brand={product.brand}
             name={product.name}

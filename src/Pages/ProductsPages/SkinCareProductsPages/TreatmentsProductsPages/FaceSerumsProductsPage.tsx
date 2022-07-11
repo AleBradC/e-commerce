@@ -26,9 +26,9 @@ const FaceSerumsProductsPage = () => {
         products={faceSerumsProducts}
       />
       <ProductsListWrapper>
-        {filteredProducts?.map((product, index) => (
+        {filteredProducts?.map(product => (
           <ProductCard
-            key={index}
+            key={product.id}
             id={product.id}
             brand={product.brand}
             name={product.name}

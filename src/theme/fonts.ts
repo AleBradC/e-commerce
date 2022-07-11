@@ -9,5 +9,4 @@ const FontFamily = createGlobalStyle`
   }
 `
 
-
 export default FontFamily

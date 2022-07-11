@@ -1,4 +1,4 @@
-import React, { ReactNode, useEffect, useMemo, useRef, useState } from 'react'
+import React, { Key, ReactNode, useEffect, useMemo, useRef, useState } from 'react'
 import { flip, shift, useFloating } from '@floating-ui/react-dom'
 import styled from 'styled-components'
 
@@ -148,8 +148,8 @@ export const LargeHeader: React.FC<LargeHeaderProps> = ({
                 ref={filterByBrandFloating}
                 position={{ position: filterByBrandStrategy, top: filterByBrandY ?? '', left: filterByBrandX ?? '' }}
               >
-                {brands?.map((brand, index) => (
-                  <MenuItem key={index}>
+                {brands?.map(brand => (
+                  <MenuItem key={brand}>
                     <MenuItemContainer>
                       <Checkbox
                         isChecked={selectedConcernsOrBrandOptions.includes(brand)}
@@ -174,8 +174,8 @@ export const LargeHeader: React.FC<LargeHeaderProps> = ({
                   left: filterByConcernsX ?? '',
                 }}
               >
-                {concerns?.map((concern, index) => (
-                  <MenuItem key={index}>
+                {concerns?.map(concern => (
+                  <MenuItem key={concern}>
                     <MenuItemContainer>
                       <Checkbox
                         isChecked={selectedConcernsOrBrandOptions.includes(concern)}
