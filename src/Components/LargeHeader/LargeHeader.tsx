@@ -1,4 +1,4 @@
-import React, { Key, ReactNode, useEffect, useMemo, useRef, useState } from 'react'
+import React, { ReactNode, useEffect, useMemo, useRef, useState } from 'react'
 import { flip, shift, useFloating } from '@floating-ui/react-dom'
 import styled from 'styled-components'
 

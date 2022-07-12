@@ -286,19 +286,25 @@ export const Header = () => {
         subTotal={subTotal}
         numberOfProducts={numberOfProducts}
       >
-        {cartProducts?.map(product => (
-          <SmallProductCard
-            key={product.id}
-            imageURL={`${'../../../../../' + product.imageURL}`}
-            brand={product.brand}
-            name={product.name}
-            price={product.price}
-            quantity={product.quantity}
-            deleteProduct={() => deleteProductFromCart(product.id)}
-            increaseQuantity={() => increaseProductQuantity(product.id)}
-            decreaseQuantity={() => decreaseProductQuantity(product.id)}
-          />
-        ))}
+        {cartProducts?.length ? (
+          cartProducts?.map(product => (
+            <SmallProductCard
+              key={product.id}
+              imageURL={`${'../../../../../' + product.imageURL}`}
+              brand={product.brand}
+              name={product.name}
+              price={product.price}
+              quantity={product.quantity}
+              deleteProduct={() => deleteProductFromCart(product.id)}
+              increaseQuantity={() => increaseProductQuantity(product.id)}
+              decreaseQuantity={() => decreaseProductQuantity(product.id)}
+            />
+          ))
+        ) : (
+          <EmptyBag>
+            <Text> Your cart is empty </Text>
+          </EmptyBag>
+        )}
       </BagDrawer>
     </>
   )
@@ -420,6 +426,18 @@ const StyledIconButton = styled(IconButton)`
 
 const StyledMobileIconButton = styled(IconButton)`
   margin-left: 24px;
+`
+
+const EmptyBag = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px;
+`
+
+const Text = styled.span`
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
 `
 
 const RefContainer = styled.div``

@@ -56,7 +56,7 @@ const Container = styled.div`
   align-items: flex-start;
   flex-wrap: wrap;
 
-  padding: 90px;
+  padding: 68px;
   margin-top: 32px;
   margin-bottom: 0;
 `

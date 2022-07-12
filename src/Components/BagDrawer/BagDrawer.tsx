@@ -1,13 +1,15 @@
+import ReactDOM from 'react-dom'
 import { forwardRef, ReactNode } from 'react'
 import { useNavigate } from 'react-router-dom'
-import ReactDOM from 'react-dom'
 import styled from 'styled-components'
 
+import { maxSumForFreeShipping } from '../../Helpers/variables'
 import { bagRoute } from '../../Helpers/routes'
 import { useAppDispatch } from '../../redux/hooks'
 import { toggleBagDrawer } from '../../redux/reducers/bagDrawerSlice'
 import { IconButton, IconButtonType } from '../IconButton/IconButton'
 import { Button } from '../Button/Button'
+import { ProgressBar } from '../ProgressBar/ProgressBar'
 
 export interface BagDrawerProps {
   children: ReactNode
@@ -23,13 +25,7 @@ export const BagDrawer = forwardRef<HTMLDivElement, BagDrawerProps>(
     const navigateTo = useNavigate()
 
     const portalRoot = document.getElementById('portal')
-
-    const handleClose = () => {
-      dispatch(toggleBagDrawer(false))
-
-      // when bag drawer is close
-      document.body.style.overflow = 'unset'
-    }
+    const remainingSum = subTotal && maxSumForFreeShipping - subTotal
 
     if (isOpen) {
       // disabled scroll
@@ -38,8 +34,19 @@ export const BagDrawer = forwardRef<HTMLDivElement, BagDrawerProps>(
       }
     }
 
+    const handleClose = () => {
+      dispatch(toggleBagDrawer(false))
+
+      // when bag drawer is close
+      document.body.style.overflow = 'unset'
+    }
+
     const redirectToBagPage = () => {
       navigateTo(bagRoute)
+
+      dispatch(toggleBagDrawer(false))
+      // when bag drawer is close
+      document.body.style.overflow = 'unset'
     }
 
     return isOpen && portalRoot
@@ -49,8 +56,18 @@ export const BagDrawer = forwardRef<HTMLDivElement, BagDrawerProps>(
               <Header>
                 <Title> Your cart ({numberOfProducts})</Title>
                 <StyledIconButton variant={IconButtonType.CLOSE} onClick={handleClose} />
-                <ShippingContainer> Congratulations, you`ve earned FREE shipping </ShippingContainer>
-                {/*to do*/}
+                <ShippingContainer>
+                  {subTotal && subTotal < maxSumForFreeShipping ? (
+                    <ShippingText>
+                      Only spend <RemainingSum> ${remainingSum} </RemainingSum> more for FREE shipping
+                    </ShippingText>
+                  ) : (
+                    <ShippingText>Congratulations, you`ve earned FREE shipping</ShippingText>
+                  )}
+                </ShippingContainer>
+                <ProgressBarContainer>
+                  <ProgressBar totalSum={subTotal} />
+                </ProgressBarContainer>
               </Header>
 
               <Content>{children}</Content>
@@ -129,12 +146,27 @@ const Title = styled.div`
 `
 
 const ShippingContainer = styled.div`
+  text-align: center;
+`
+
+const ShippingText = styled.span`
   font-family: 'Montserrat', sans-serif;
   font-size: 20px;
-  text-align: center;
   font-weight: bold;
 
   color: ${props => props.theme.colors.greyDarker};
+`
+const RemainingSum = styled.span`
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+
+  color: ${props => props.theme.colors.brownBadge};
+`
+
+const ProgressBarContainer = styled.div`
+  width: 100%;
+  padding: 20px;
 `
 
 const Content = styled.div`
