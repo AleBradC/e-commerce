@@ -15,6 +15,7 @@ import cleansersProducts from './routes/cleansersProducts.js'
 import moisturizersProducts from './routes/moisturizersProducts.js'
 import faceOilsProducts from './routes/faceOilsProducts.js'
 import faceSerumsProducts from './routes/faceSerumsProducts.js'
+import newArrivalProducts from './routes/newArrivalProducts.js'
 
 dotenv.config()
 const app = express()
@@ -31,6 +32,7 @@ app.use('/api/products/cleansers-products', cleansersProducts)
 app.use('/api/products/moisturizers-products', moisturizersProducts)
 app.use('/api/products/face-oils-products', faceOilsProducts)
 app.use('/api/products/face-serums-products', faceSerumsProducts)
+app.use('/api/products/new-arrival-products', newArrivalProducts)
 
 app.use('/api/cart', cart)
 app.use('/api/product-info', productInfo)

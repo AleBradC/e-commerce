@@ -122,7 +122,7 @@ const LoginContainer = styled.form<{ isMobile: boolean }>`
 const Title = styled.span`
   margin-bottom: 6px;
   font-size: 18px;
-  font-family: 'Tiro Telugu', serif;
+  font-family: 'Optima', sans-serif;
   font-weight: 600;
   color: ${props => props.theme.colors.black};
 `

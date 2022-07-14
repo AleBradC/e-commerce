@@ -15,6 +15,7 @@ export const api = createApi({
     'MoisturizersProducts',
     'FaceOilsProducts',
     'FaceSerumsProducts',
+    'NewArrivalProducts',
   ],
   endpoints: builder => ({
     getProducts: builder.query<Product[], void>({
@@ -52,6 +53,11 @@ export const api = createApi({
     getFaceSerumsProducts: builder.query<Product[], void>({
       query: () => '/api/products/face-serums-products',
       providesTags: ['FaceSerumsProducts'],
+    }),
+
+    getNewArrivalsProducts: builder.query<Product[], void>({
+      query: () => '/api/products/new-arrival-products',
+      providesTags: ['NewArrivalProducts'],
     }),
 
     getProductsCart: builder.query<ProductCart[], void>({
@@ -113,4 +119,5 @@ export const {
   useGetMoisturizersProductsQuery,
   useGetFaceOilsProductsQuery,
   useGetFaceSerumsProductsQuery,
+  useGetNewArrivalsProductsQuery,
 } = api

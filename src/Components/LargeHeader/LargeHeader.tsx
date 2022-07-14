@@ -241,21 +241,21 @@ const TitleContainer = styled.div`
 const Title = styled.span`
   font-size: 38px;
   line-height: 1.42;
-  font-family: 'Tiro Telugu', serif;
+  font-family: 'Optima', sans-serif;
 `
 
 const Description = styled.div`
   flex: 1;
   font-size: 38px;
   line-height: 1.42;
-  font-family: 'Tiro Telugu', serif;
+  font-family: 'Optima', sans-serif;
 `
 
 const SearchedValue = styled.span`
   font-size: 38px;
   line-height: 1.42;
   margin-left: 16px;
-  font-family: 'Tiro Telugu', serif;
+  font-family: 'Optima', sans-serif;
   text-transform: uppercase;
   color: ${props => props.theme.colors.greyDarker};
 `

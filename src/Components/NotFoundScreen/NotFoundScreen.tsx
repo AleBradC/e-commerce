@@ -14,6 +14,6 @@ const Container = styled.div`
 
 const Content = styled.div`
   font-size: 26px;
-  font-family: 'Tiro Telugu', serif;
+  font-family: 'Optima', sans-serif;
   color: ${props => props.theme.colors.black};
 `

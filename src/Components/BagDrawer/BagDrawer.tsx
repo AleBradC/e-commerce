@@ -141,7 +141,7 @@ const StyledIconButton = styled(IconButton)`
 `
 
 const Title = styled.div`
-  font-family: 'Tiro Telugu', serif;
+  font-family: 'Optima', sans-serif;
   font-size: 24px;
 `
 
@@ -201,12 +201,12 @@ const SubtotalContainer = styled.div`
 `
 
 const SubtotalTitle = styled.span`
-  font-family: 'Tiro Telugu', serif;
+  font-family: 'Optima', sans-serif;
   font-size: 18px;
 `
 
 const Price = styled.span`
-  font-family: 'Tiro Telugu', serif;
+  font-family: 'Optima', sans-serif;
   font-size: 18px;
 `
 

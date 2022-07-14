@@ -144,7 +144,7 @@ const Header = styled.div`
 const Title = styled.span`
   margin-bottom: 12px;
   font-size: 32px;
-  font-family: 'Tiro Telugu', serif;
+  font-family: 'Optima', sans-serif;
 `
 
 const Subtitle = styled.span`
