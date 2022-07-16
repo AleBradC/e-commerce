@@ -2,7 +2,7 @@ import { useState } from 'react'
 import styled from 'styled-components'
 
 import { useGetProductsQuery } from '../../../redux/api'
-import { Product } from '../../../types'
+import { ProductType } from '../../../types'
 import { LargeHeader } from '../../../Components/LargeHeader/LargeHeader'
 import { ProductCard } from '../../../Components/ProductCard/ProductCard'
 import { Button } from '../../../Components/Button/Button'
@@ -11,12 +11,12 @@ import { ProductsListWrapper } from '../../../Components/ProductsListWrapper/Pro
 const AllProductsPage = () => {
   const { data: allProducts } = useGetProductsQuery()
 
-  const [filteredProducts, setFilteredProducts] = useState<Product[] | undefined>([])
+  const [filteredProducts, setFilteredProducts] = useState<ProductType[] | undefined>([])
   const [showMore, setShowMore] = useState(false)
 
   const filteredProductsResult = showMore ? filteredProducts : filteredProducts?.slice(0, 8)
 
-  const handleFilteredProducts = (products: Product[] | undefined) => {
+  const handleFilteredProducts = (products: ProductType[] | undefined) => {
     setFilteredProducts(products)
   }
 

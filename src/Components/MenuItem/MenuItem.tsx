@@ -1,10 +1,10 @@
 import { ReactNode } from 'react'
 import styled from 'styled-components'
 
-import { Product } from '../../types'
+import { ProductType } from '../../types'
 
 export interface MenuItemProps {
-  children: ReactNode | Product | undefined | any
+  children: ReactNode | ProductType | undefined | any
   onClick?: () => void
   className?: string
   checkBox?: boolean

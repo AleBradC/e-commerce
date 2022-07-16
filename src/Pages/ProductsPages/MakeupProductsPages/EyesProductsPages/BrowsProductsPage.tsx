@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import styled from 'styled-components'
 
-import { Product } from '../../../../types'
+import { ProductType } from '../../../../types'
 import { useGetBrowsProductsQuery } from '../../../../redux/api'
 import { LargeHeader } from '../../../../Components/LargeHeader/LargeHeader'
 import { ProductCard } from '../../../../Components/ProductCard/ProductCard'
@@ -10,9 +10,9 @@ import { ProductsListWrapper } from '../../../../Components/ProductsListWrapper/
 const BrowsProductsPage = () => {
   const { data: browsProducts } = useGetBrowsProductsQuery()
 
-  const [filteredProducts, setFilteredProducts] = useState<Product[] | undefined>([])
+  const [filteredProducts, setFilteredProducts] = useState<ProductType[] | undefined>([])
 
-  const handleFilteredProducts = (receivedProducts: Product[] | undefined) => {
+  const handleFilteredProducts = (receivedProducts: ProductType[] | undefined) => {
     setFilteredProducts(receivedProducts)
   }
 

@@ -2,7 +2,7 @@ import { useState } from 'react'
 import styled from 'styled-components'
 
 import { useGetMoisturizersProductsQuery } from '../../../../redux/api'
-import { Product } from '../../../../types'
+import { ProductType } from '../../../../types'
 import { LargeHeader } from '../../../../Components/LargeHeader/LargeHeader'
 import { ProductCard } from '../../../../Components/ProductCard/ProductCard'
 import { ProductsListWrapper } from '../../../../Components/ProductsListWrapper/ProductsListWrapper'
@@ -10,9 +10,9 @@ import { ProductsListWrapper } from '../../../../Components/ProductsListWrapper/
 const MoisturizersProductsPage = () => {
   const { data: moisturizersProducts } = useGetMoisturizersProductsQuery()
 
-  const [filteredProducts, setFilteredProducts] = useState<Product[] | undefined>([])
+  const [filteredProducts, setFilteredProducts] = useState<ProductType[] | undefined>([])
 
-  const handleFilteredProducts = (products: Product[] | undefined) => {
+  const handleFilteredProducts = (products: ProductType[] | undefined) => {
     setFilteredProducts(products)
   }
 

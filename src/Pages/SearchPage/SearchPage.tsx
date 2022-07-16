@@ -2,7 +2,7 @@ import { useState } from 'react'
 import styled from 'styled-components'
 
 import { useGetProductsQuery } from '../../redux/api'
-import { Product } from '../../types'
+import { ProductType } from '../../types'
 import { useAppDispatch, useAppSelector } from '../../redux/hooks'
 import { toggleSearchBar } from '../../redux/reducers/searchBarSlice'
 import { ProductCard } from '../../Components/ProductCard/ProductCard'
@@ -16,9 +16,9 @@ const SearchPage = () => {
 
   const { data: allProducts } = useGetProductsQuery()
 
-  const [filteredProducts, setFilteredProducts] = useState<Product[] | undefined>([])
+  const [filteredProducts, setFilteredProducts] = useState<ProductType[] | undefined>([])
 
-  const handleFilteredProducts = (products: Product[] | undefined) => {
+  const handleFilteredProducts = (products: ProductType[] | undefined) => {
     setFilteredProducts(products)
   }
 

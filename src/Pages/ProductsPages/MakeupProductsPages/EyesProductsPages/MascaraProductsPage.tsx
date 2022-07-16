@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import styled from 'styled-components'
 
-import { Product } from '../../../../types'
+import { ProductType } from '../../../../types'
 import { useGetMascaraProductsQuery } from '../../../../redux/api'
 import { LargeHeader } from '../../../../Components/LargeHeader/LargeHeader'
 import { ProductCard } from '../../../../Components/ProductCard/ProductCard'
@@ -10,9 +10,9 @@ import { ProductsListWrapper } from '../../../../Components/ProductsListWrapper/
 const MascaraProductsPage = () => {
   const { data: mascaraProducts } = useGetMascaraProductsQuery()
 
-  const [filteredProducts, setFilteredProducts] = useState<Product[] | undefined>([])
+  const [filteredProducts, setFilteredProducts] = useState<ProductType[] | undefined>([])
 
-  const handleFilteredProducts = (products: Product[] | undefined) => {
+  const handleFilteredProducts = (products: ProductType[] | undefined) => {
     setFilteredProducts(products)
   }
 

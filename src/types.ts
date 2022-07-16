@@ -1,4 +1,4 @@
-export interface Product {
+export interface ProductType {
   id: number
   brand: string
   name: string
@@ -10,11 +10,28 @@ export interface Product {
   price: number
 }
 
-export interface ProductCart {
+export interface ProductCartType {
   id: number
   brand: string
   name: string
   imageURL: string
   price: number
   quantity: number
+}
+
+export interface SlideType {
+  image: string
+  content: string
+  button: string
+  redirectLink: string
+}
+
+export interface CarouselItemType {
+  image: string
+  topContent: string
+  middleContent: string
+  bottomContent: string
+  productBrand: string
+  productName: string
+  rating?: number
 }

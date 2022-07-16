@@ -2,7 +2,7 @@ import React, { ReactNode, useEffect, useMemo, useRef, useState } from 'react'
 import { flip, shift, useFloating } from '@floating-ui/react-dom'
 import styled from 'styled-components'
 
-import { Product } from '../../types'
+import { ProductType } from '../../types'
 import { options } from '../../Helpers/variables'
 import useClickOutSide from '../../Helpers/useClickOutSide'
 import { Menu } from '../Menu/Menu'
@@ -17,8 +17,8 @@ export interface LargeHeaderProps {
   otherDetails?: ReactNode
   description?: string
   numberOfProducts: number | undefined
-  filteredProductsResult: (products: Product[] | undefined) => void
-  products: Product[] | undefined
+  filteredProductsResult: (products: ProductType[] | undefined) => void
+  products: ProductType[] | undefined
 }
 
 export const LargeHeader: React.FC<LargeHeaderProps> = ({
@@ -70,7 +70,7 @@ export const LargeHeader: React.FC<LargeHeaderProps> = ({
   const filteredProducts = useMemo(() => {
     // filter after redirect, if it has search value or not (for other pages)
     const filteredBySearchValue = searchedValue
-      ? products?.filter((product: Product) => product.name?.toLowerCase().includes(searchedValue as string))
+      ? products?.filter((product: ProductType) => product.name?.toLowerCase().includes(searchedValue as string))
       : products
 
     // filter by brand / concerns when after check
@@ -84,7 +84,7 @@ export const LargeHeader: React.FC<LargeHeaderProps> = ({
             }
           })
         )
-        .flat() as Product[]
+        .flat() as ProductType[]
     } else if (selectedSortOption === 'byLowerPrice') {
       return filteredBySearchValue?.slice().sort((a, b) => a.price - b.price)
     } else if (selectedSortOption === 'byHigherPrice') {

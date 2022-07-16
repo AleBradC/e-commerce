@@ -2,7 +2,7 @@ import { useState } from 'react'
 import styled from 'styled-components'
 
 import { useGetCleansersProductsQuery } from '../../../../redux/api'
-import { Product } from '../../../../types'
+import { ProductType } from '../../../../types'
 import { LargeHeader } from '../../../../Components/LargeHeader/LargeHeader'
 import { ProductCard } from '../../../../Components/ProductCard/ProductCard'
 import { ProductsListWrapper } from '../../../../Components/ProductsListWrapper/ProductsListWrapper'
@@ -10,9 +10,9 @@ import { ProductsListWrapper } from '../../../../Components/ProductsListWrapper/
 const CleansersProductsPage = () => {
   const { data: cleansersProducts } = useGetCleansersProductsQuery()
 
-  const [filteredProducts, setFilteredProducts] = useState<Product[] | undefined>([])
+  const [filteredProducts, setFilteredProducts] = useState<ProductType[] | undefined>([])
 
-  const handleFilteredResult = (resultProducts: Product[] | undefined) => {
+  const handleFilteredResult = (resultProducts: ProductType[] | undefined) => {
     setFilteredProducts(resultProducts)
   }
 
