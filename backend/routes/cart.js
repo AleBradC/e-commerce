@@ -22,7 +22,7 @@ router.delete('/:id/delete', async (req, res) => {
   }
 })
 
-// ALL -> TO DO
+// ALL
 router.delete('/delete', async (req, res) => {
   try {
     await CartProduct.remove()

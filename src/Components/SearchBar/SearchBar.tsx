@@ -28,6 +28,8 @@ const Container = styled.div`
   line-height: 1.29;
   padding: 12px 0 12px 0;
   border: none;
+
+  z-index: ${props => props.theme.zIndex.others};
   background-color: ${props => props.theme.colors.butter};
 `
 

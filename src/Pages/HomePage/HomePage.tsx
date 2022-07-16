@@ -94,7 +94,7 @@ const HomePage = () => {
   return (
     <Container>
       <SliderSection>
-        <SlideShow sliders={sliders} delay={3500} />
+        <SlideShow sliders={sliders} delay={2500} />
       </SliderSection>
       <NewArrivalSection>
         <NewArrivalHeader>
@@ -159,10 +159,10 @@ const HomePage = () => {
             <DotButton onClick={() => setActiveCarouselIndex(0)} />
           </TopDotButtonContainer>
           <MiddleDotButtonContainer isActive={activeCarouselIndex === 1}>
-            <DotButton onClick={() => setActiveCarouselIndex(0)} />
+            <DotButton onClick={() => setActiveCarouselIndex(1)} />
           </MiddleDotButtonContainer>
           <BottomDotButtonContainer isActive={activeCarouselIndex === 2}>
-            <DotButton onClick={() => setActiveCarouselIndex(0)} />
+            <DotButton onClick={() => setActiveCarouselIndex(2)} />
           </BottomDotButtonContainer>
         </LeftSummerEssentialsSection>
 
@@ -234,8 +234,6 @@ const Container = styled.div`
 
 const SliderSection = styled.div`
   margin-bottom: 62px;
-  width: 100%;
-  height: 100%;
 `
 
 const NewArrivalSection = styled.div`

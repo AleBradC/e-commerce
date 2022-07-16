@@ -9,6 +9,10 @@ export interface SliderProps {
 }
 
 export const Slider: React.FC<SliderProps> = ({ sliders, sliderActiveIndex, setSliderActiveIndex, delay }) => {
+  // to do swipe
+  // to do infinite scroll
+  // to do transition, efects
+
   useEffect(() => {
     if (delay) {
       const interval = setInterval(() => {
@@ -33,8 +37,9 @@ export const Slider: React.FC<SliderProps> = ({ sliders, sliderActiveIndex, setS
 
 const Container = styled.div`
   margin: 0 auto;
-  width: 100%;
   overflow: hidden;
+
+  cursor: pointer;
 `
 
 const InnerContainer = styled.div`
