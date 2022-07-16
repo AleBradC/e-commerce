@@ -1,14 +1,13 @@
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 
 import { CarouselItemType, SlideType } from '../../types'
 import { useGetNewArrivalsProductsQuery } from '../../redux/api'
 import { logInRoute, allProductsRoute } from '../../Helpers/routes'
 import { ProductCard } from '../../Components/ProductCard/ProductCard'
-import { Slider } from '../../Components/Slider/Slider'
-import { Slide } from '../../Components/Slider/Components/Slide'
 import { Button } from '../../Components/Button/Button'
+import { Carousel } from '../../Components/Carousel/Carousel'
+import { SlideShow } from '../../Components/SlideShow/SlideShow'
 
 import SliderImg1 from '../../assets/homePage/slider/banner1.jpg'
 import SliderImg2 from '../../assets/homePage/slider/banner2.jpg'
@@ -21,9 +20,9 @@ import BeautySectionImg3 from '../../assets/homePage/beauty-section-img3.png'
 
 import SummerEssentialsImg from '../../assets/homePage/carrousel-image-essentials.png'
 
-import CarrouselImg1 from '../../assets/homePage/carrousel/carrousel-item1.png'
-import CarrouselImg2 from '../../assets/homePage/carrousel/carrousel-item2.png'
-import CarrouselImg3 from '../../assets/homePage/carrousel/carrousel-item3.jpg'
+import CarouselImg1 from '../../assets/homePage/carousel/carousel-item1.png'
+import CarouselImg2 from '../../assets/homePage/carousel/carousel-item2.png'
+import CarouselImg3 from '../../assets/homePage/carousel/carousel-item3.jpg'
 
 import SpaServiceBeautyBarImg from '../../assets/homePage/spa-service-beauty-bar.png'
 import SpaServiceFacialsImg from '../../assets/homePage/spa-service-facials.png'
@@ -58,9 +57,9 @@ const sliders: SlideType[] = [
   },
 ]
 
-const carouselData: CarouselItemType[] = [
+const carouselSliders: CarouselItemType[] = [
   {
-    image: CarrouselImg1,
+    image: CarouselImg1,
     topContent: 'Niacinamide (Vitamin B3)',
     middleContent: 'Lactic Acid',
     bottomContent: 'Hyaluronic Acid',
@@ -69,7 +68,7 @@ const carouselData: CarouselItemType[] = [
     rating: 5,
   },
   {
-    image: CarrouselImg2,
+    image: CarouselImg2,
     topContent: 'Organic Jojoba',
     middleContent: 'Shea Butter',
     bottomContent: 'Plant-Based Seed Oils',
@@ -77,7 +76,7 @@ const carouselData: CarouselItemType[] = [
     productName: 'Squeaky Clean Liquid Lip Balm',
   },
   {
-    image: CarrouselImg3,
+    image: CarouselImg3,
     topContent: 'Vitamin C',
     middleContent: 'Wild Rose Extract',
     bottomContent: 'Polygonum Bistorta Root',
@@ -88,43 +87,15 @@ const carouselData: CarouselItemType[] = [
 ]
 
 const HomePage = () => {
-  const navigate = useNavigate()
-
-  const [isActiveDotButton, setIsActiveDotButton] = useState(0)
+  const [activeCarouselIndex, setActiveCarouselIndex] = useState<number | any>(0)
 
   const { data: newArrivalProducts } = useGetNewArrivalsProductsQuery()
-
-  const handleRedirect = (route: string) => {
-    navigate(route)
-  }
-
-  const handleChangeActiveDotButton = (index: number) => {
-    setIsActiveDotButton(index)
-  }
 
   return (
     <Container>
       <SliderSection>
-        <Slider
-          delay={3200}
-          sliders={sliders.map((slide, index) => (
-            <Slide key={index}>
-              <SlideContainer bgImg={slide.image}>
-                <SlideBody>
-                  <SlideContent> {slide.content} </SlideContent>
-                  <Button onClick={() => handleRedirect(slide.redirectLink)}> {slide.button} </Button>
-                </SlideBody>
-                <SlideFooter>
-                  {sliders.map((_, index) => (
-                    <SlideBar key={index}></SlideBar>
-                  ))}
-                </SlideFooter>
-              </SlideContainer>
-            </Slide>
-          ))}
-        />
+        <SlideShow sliders={sliders} delay={3500} />
       </SliderSection>
-
       <NewArrivalSection>
         <NewArrivalHeader>
           <NewArrivalTitle>What’s New</NewArrivalTitle>
@@ -184,41 +155,23 @@ const HomePage = () => {
       <SummerEssentialsSection>
         <LeftSummerEssentialsSection>
           <SummerEssentialsImage src={SummerEssentialsImg} />
-          <TopDotButtonContainer isActive={isActiveDotButton === 0}>
-            <DotButton onClick={() => handleChangeActiveDotButton(0)} />
+          <TopDotButtonContainer isActive={activeCarouselIndex === 0}>
+            <DotButton onClick={() => setActiveCarouselIndex(0)} />
           </TopDotButtonContainer>
-          <MiddleDotButtonContainer isActive={isActiveDotButton === 1}>
-            <DotButton onClick={() => handleChangeActiveDotButton(1)} />
+          <MiddleDotButtonContainer isActive={activeCarouselIndex === 1}>
+            <DotButton onClick={() => setActiveCarouselIndex(0)} />
           </MiddleDotButtonContainer>
-          <BottomDotButtonContainer isActive={isActiveDotButton === 2}>
-            <DotButton onClick={() => handleChangeActiveDotButton(2)} />
+          <BottomDotButtonContainer isActive={activeCarouselIndex === 2}>
+            <DotButton onClick={() => setActiveCarouselIndex(0)} />
           </BottomDotButtonContainer>
         </LeftSummerEssentialsSection>
 
         <RightSummerEssentialsSection>
-          <CarrouselTitle> Summer Glow Essentials </CarrouselTitle>
-          <Slider
-            sliders={carouselData.map(carrouselItem => (
-              <Slide key={carrouselItem.productName}>
-                <Carrousel>
-                  <CarrouselBody>
-                    <CarrouselTopContent> {carrouselItem.topContent} </CarrouselTopContent>
-                    <CarrouselMiddleContent> {carrouselItem.middleContent} </CarrouselMiddleContent>
-                    <CarrouselBottomContent> {carrouselItem.bottomContent} </CarrouselBottomContent>
-                    <CarrouselImage src={carrouselItem.image} />
-                  </CarrouselBody>
-                  <CarrouselFooter>
-                    <ProductDetails>
-                      <LeftArrow>x</LeftArrow>
-                      <ProductBrand> {carrouselItem.productBrand} </ProductBrand>
-                      <ProductName> {carrouselItem.productName} </ProductName>
-                      <RightArrow>x</RightArrow>
-                    </ProductDetails>
-                    <Button> SHOP THE ROUTINE </Button>
-                  </CarrouselFooter>
-                </Carrousel>
-              </Slide>
-            ))}
+          <CarouselTitle> Summer Glow Essentials </CarouselTitle>
+          <Carousel
+            carouselSliders={carouselSliders}
+            carouselActiveIndex={activeCarouselIndex}
+            setCarouselActiveIndex={setActiveCarouselIndex}
           />
         </RightSummerEssentialsSection>
       </SummerEssentialsSection>
@@ -283,56 +236,6 @@ const SliderSection = styled.div`
   margin-bottom: 62px;
   width: 100%;
   height: 100%;
-`
-
-const SlideContainer = styled.div<{ bgImg?: string }>`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 0 36px 46px 36px;
-  height: 676px;
-
-  object-fit: cover;
-  background-image: url(${props => props.bgImg});
-  background-repeat: no-repeat;
-  background-size: auto;
-`
-
-const SlideBody = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 24px;
-  width: 100%;
-
-  border-top: 1px solid ${props => props.theme.colors.white};
-`
-
-const SlideContent = styled.div`
-  font-size: 38px;
-  font-family: 'Optima', sans-serif;
-  letter-spacing: 4px;
-
-  color: ${props => props.theme.colors.white};
-`
-
-const SlideFooter = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 24px;
-  width: 100%;
-`
-
-const SlideBar = styled.div`
-  display: inline-block;
-  margin: 15px 7px 0;
-  height: 3px;
-  width: 6%;
-
-  border-radius: 50px;
-  background-color: ${props => props.theme.colors.white2};
 `
 
 const NewArrivalSection = styled.div`
@@ -574,113 +477,11 @@ const RightSummerEssentialsSection = styled.div`
   background-image: linear-gradient(${props => props.theme.colors.white} 10%, rgba(248, 235, 227, 0.8) 100%);
 `
 
-const CarrouselTitle = styled.div`
+const CarouselTitle = styled.div`
   margin-bottom: 38px;
   font-family: 'Optima', sans-serif;
   line-height: 1.21;
   font-size: 48px;
-`
-
-const Carrousel = styled.div`
-  display: flex;
-  flex-direction: column;
-  flex-basis: auto;
-`
-
-const CarrouselBody = styled.div`
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-`
-
-const CarrouselTopContent = styled.div`
-  position: absolute;
-  right: calc(50% + 142px);
-  bottom: 80%;
-  left: auto;
-  transform: translateY(50%);
-  margin-left: auto;
-  padding-right: 26px;
-  padding-bottom: 3px;
-  max-width: 100%;
-  word-break: break-word;
-
-  font-family: 'Montserrat', sans-serif;
-  border-bottom: 1px solid ${props => props.theme.colors.brown};
-`
-
-const CarrouselMiddleContent = styled.div`
-  position: absolute;
-  left: calc(50% + 142px);
-  bottom: 62%;
-  right: auto;
-  transform: translateY(50%);
-  margin-left: auto;
-  padding-left: 26px;
-  padding-bottom: 3px;
-  max-width: 100%;
-  word-break: break-word;
-
-  font-family: 'Montserrat', sans-serif;
-  border-bottom: 1px solid ${props => props.theme.colors.brown};
-`
-
-const CarrouselBottomContent = styled.div`
-  position: absolute;
-  right: calc(50% + 113px);
-  bottom: 20%;
-  left: auto;
-  transform: translateY(-50%);
-  margin-left: auto;
-  padding-right: 26px;
-  padding-bottom: 3px;
-  max-width: 100%;
-  word-break: break-word;
-
-  font-family: 'Montserrat', sans-serif;
-  border-bottom: 1px solid ${props => props.theme.colors.brown};
-`
-
-const CarrouselImage = styled.img`
-  max-width: 268px;
-  width: 100%;
-  height: 296px;
-  object-fit: contain;
-  object-position: center;
-`
-
-const CarrouselFooter = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 24px;
-`
-
-const ProductDetails = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 64px;
-`
-
-const LeftArrow = styled.div``
-const RightArrow = styled.div``
-
-const ProductBrand = styled.div`
-  margin-bottom: 6px;
-
-  font-family: 'Montserrat', sans-serif;
-  color: ${props => props.theme.colors.grey4};
-`
-
-const ProductName = styled.div`
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
-  color: ${props => props.theme.colors.black};
 `
 
 const TestimonialSection = styled.div`
