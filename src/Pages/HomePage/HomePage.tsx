@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 
+import { CarouselItemType, SlideType } from '../../types'
 import { useGetNewArrivalsProductsQuery } from '../../redux/api'
 import { logInRoute, allProductsRoute } from '../../Helpers/routes'
 import { ProductCard } from '../../Components/ProductCard/ProductCard'
@@ -24,7 +25,13 @@ import CarrouselImg1 from '../../assets/homePage/carrousel/carrousel-item1.png'
 import CarrouselImg2 from '../../assets/homePage/carrousel/carrousel-item2.png'
 import CarrouselImg3 from '../../assets/homePage/carrousel/carrousel-item3.jpg'
 
-const sliders = [
+import SpaServiceBeautyBarImg from '../../assets/homePage/spa-service-beauty-bar.png'
+import SpaServiceFacialsImg from '../../assets/homePage/spa-service-facials.png'
+import SpaServiceHydrafacialImg from '../../assets/homePage/spa-service-hydrafacial.png'
+import SpaServiceMicroImg from '../../assets/homePage/spa-service-micro.png'
+import SpaServiceWaxingImg from '../../assets/homePage/spa-service-waxings.png'
+
+const sliders: SlideType[] = [
   {
     image: SliderImg1,
     content: 'JOIN THE PARTY AND GET REWARDED',
@@ -51,7 +58,7 @@ const sliders = [
   },
 ]
 
-const carrousel = [
+const carouselData: CarouselItemType[] = [
   {
     image: CarrouselImg1,
     topContent: 'Niacinamide (Vitamin B3)',
@@ -63,20 +70,20 @@ const carrousel = [
   },
   {
     image: CarrouselImg2,
-    productBrand: 'WESTMAN ATELIER',
-    productName: 'Squeaky Clean Liquid Lip Balm',
     topContent: 'Organic Jojoba',
     middleContent: 'Shea Butter',
     bottomContent: 'Plant-Based Seed Oils',
+    productBrand: 'WESTMAN ATELIER',
+    productName: 'Squeaky Clean Liquid Lip Balm',
   },
   {
     image: CarrouselImg3,
-    productBrand: 'DR. BARBARA STURM',
-    productName: 'Glow Drops',
-    rating: 5,
     topContent: 'Vitamin C',
     middleContent: 'Wild Rose Extract',
     bottomContent: 'Polygonum Bistorta Root',
+    productBrand: 'DR. BARBARA STURM',
+    productName: 'Glow Drops',
+    rating: 5,
   },
 ]
 
@@ -191,7 +198,7 @@ const HomePage = () => {
         <RightSummerEssentialsSection>
           <CarrouselTitle> Summer Glow Essentials </CarrouselTitle>
           <Slider
-            sliders={carrousel.map(carrouselItem => (
+            sliders={carouselData.map(carrouselItem => (
               <Slide key={carrouselItem.productName}>
                 <Carrousel>
                   <CarrouselBody>
@@ -218,7 +225,49 @@ const HomePage = () => {
 
       <TestimonialSection></TestimonialSection>
 
-      <ServicesSection></ServicesSection>
+      <SpaSection>
+        <SpaSectionLeftContainer>
+          <SpaSectionTitle> Spa Services </SpaSectionTitle>
+          <SpaSectionDescription>
+            Luxury facials, makeup application, waxing and brow shaping and so much more to meet your beauty needs.{' '}
+          </SpaSectionDescription>
+          <SpaSectionServicesContainer>
+            <SpaService>
+              <SpaServiceLabel>Microblading</SpaServiceLabel>
+              <SpaServiceContent>
+                For the client who needs a little brow help, unevenness or lack of hair we`ve got you covered.
+              </SpaServiceContent>
+            </SpaService>
+            <SpaService>
+              <SpaServiceLabel>Facials</SpaServiceLabel>
+              <SpaServiceContent>An option for every skin type and concern.</SpaServiceContent>
+            </SpaService>
+            <SpaService>
+              <SpaServiceLabel>Hydrafacial</SpaServiceLabel>
+              <SpaServiceContent>
+                Using a unique, patented vortex-fusion delivery system to exfoliate and hydrate skin, while the spiral
+                design delivers painless extractions.
+              </SpaServiceContent>
+            </SpaService>
+            <SpaService>
+              <SpaServiceLabel>Waxing</SpaServiceLabel>
+              <SpaServiceContent>
+                Reveal your most beautiful skin with bikini, Brazilian, eyebrow, facial or body waxing.
+              </SpaServiceContent>
+            </SpaService>
+            <SpaService>
+              <SpaServiceLabel>Beauty Bar</SpaServiceLabel>
+              <SpaServiceContent>
+                Experience personalized beauty by licensed professionals providing a full service experience that allows
+                every client to feel pampered and look amazing.
+              </SpaServiceContent>
+            </SpaService>
+          </SpaSectionServicesContainer>
+        </SpaSectionLeftContainer>
+        <SpaSectionRightContainer>
+          <SpaServiceImage src={SpaServiceMicroImg} />
+        </SpaSectionRightContainer>
+      </SpaSection>
 
       <BlogSection></BlogSection>
     </Container>
@@ -638,9 +687,87 @@ const TestimonialSection = styled.div`
   margin-bottom: 62px;
 `
 
-const ServicesSection = styled.div`
-  margin-bottom: 62px;
+const SpaSection = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0 30px 0 60px;
 `
+
+const SpaSectionLeftContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50%;
+  padding: 0 70px 0 82px;
+`
+
+const SpaSectionTitle = styled.div`
+  margin: 20px 15px 0 30px;
+  font-family: 'Optima', sans-serif;
+  font-size: 62px;
+`
+
+const SpaSectionDescription = styled.div`
+  padding: 15px 15px 30px 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+`
+
+const SpaSectionServicesContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px 15px 30px 30px;
+`
+
+const SpaServiceLabel = styled.div`
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+
+  color: ${props => props.theme.colors.greyDark};
+  cursor: pointer;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 0;
+    transform: translate(calc(-100% - 15px));
+    width: 10px;
+    height: 2px;
+
+    color: ${props => props.theme.colors.black};
+  }
+`
+
+const SpaService = styled.div`
+  margin-bottom: 15px;
+
+  &:hover {
+    padding-left: 45px;
+
+    ${SpaServiceLabel} {
+      color: ${props => props.theme.colors.black};
+    }
+  }
+`
+
+const SpaServiceContent = styled.div`
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  line-height: 1.5;
+  letter-spacing: -0.3px;
+
+  color: ${props => props.theme.colors.black};
+  cursor: pointer;
+`
+
+const SpaSectionRightContainer = styled.div``
+
+const SpaServiceImage = styled.img``
 
 const BlogSection = styled.div`
   margin-bottom: 62px;
