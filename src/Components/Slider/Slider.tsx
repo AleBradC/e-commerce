@@ -1,18 +1,16 @@
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
 
+import { SlideType } from '../../types'
+
 export interface SliderProps {
-  sliders: string[] | any
+  sliders: SlideType[] | any
   sliderActiveIndex: number
   setSliderActiveIndex?: (prevIndex: any) => void
   delay?: number
 }
 
 export const Slider: React.FC<SliderProps> = ({ sliders, sliderActiveIndex, setSliderActiveIndex, delay }) => {
-  // to do swipe
-  // to do infinite scroll
-  // to do transition, efects
-
   useEffect(() => {
     if (delay) {
       const interval = setInterval(() => {

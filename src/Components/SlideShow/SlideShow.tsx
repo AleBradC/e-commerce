@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 import { SlideType } from '../../types'
 import { Button } from '../Button/Button'
@@ -35,7 +35,7 @@ export const SlideShow: React.FC<SlideShowProps> = ({ delay, sliders }) => {
             </Body>
             <Footer>
               {sliders.map((_, index) => (
-                <SlideBar key={index}></SlideBar>
+                <SlideProgressBar key={index} onClick={() => setActiveIndex(index)} isActive={activeIndex === index} />
               ))}
             </Footer>
           </Container>
@@ -85,12 +85,20 @@ const Footer = styled.div`
   width: 100%;
 `
 
-const SlideBar = styled.div`
+const SlideProgressBar = styled.button<{ isActive: boolean }>`
   display: inline-block;
   margin: 15px 7px 0;
-  height: 3px;
+  padding: 0;
+  height: 4px;
   width: 6%;
 
   border-radius: 50px;
-  background-color: ${props => props.theme.colors.white2};
+  border: none;
+
+  background-color: ${props => props.theme.colors.white2}
+    ${props =>
+      props.isActive &&
+      css`
+        background-color: ${props => props.theme.colors.white};
+      `};
 `

@@ -35,3 +35,8 @@ export interface CarouselItemType {
   productName: string
   rating?: number
 }
+
+export interface ComplexCarouselType {
+  imageLogo: string
+  content: string
+}

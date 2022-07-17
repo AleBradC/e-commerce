@@ -1,13 +1,14 @@
 import { useState } from 'react'
 import styled from 'styled-components'
 
-import { CarouselItemType, SlideType } from '../../types'
+import { CarouselItemType, ComplexCarouselType, SlideType } from '../../types'
 import { useGetNewArrivalsProductsQuery } from '../../redux/api'
 import { logInRoute, allProductsRoute } from '../../Helpers/routes'
 import { ProductCard } from '../../Components/ProductCard/ProductCard'
 import { Button } from '../../Components/Button/Button'
 import { Carousel } from '../../Components/Carousel/Carousel'
 import { SlideShow } from '../../Components/SlideShow/SlideShow'
+import { ComplexCarousel } from '../../Components/ComplexCarousel/ComplexCarousel'
 
 import SliderImg1 from '../../assets/homePage/slider/banner1.jpg'
 import SliderImg2 from '../../assets/homePage/slider/banner2.jpg'
@@ -23,6 +24,11 @@ import SummerEssentialsImg from '../../assets/homePage/carrousel-image-essential
 import CarouselImg1 from '../../assets/homePage/carousel/carousel-item1.png'
 import CarouselImg2 from '../../assets/homePage/carousel/carousel-item2.png'
 import CarouselImg3 from '../../assets/homePage/carousel/carousel-item3.jpg'
+
+import AllureLogoImg from '../../assets/homePage/complexCarousel/allure-logo.png'
+import HarpersLogoImg from '../../assets/homePage/complexCarousel/harpers-bazar-logo.png'
+import RectangleLogoImg from '../../assets/homePage/complexCarousel/rectangle-logo.png'
+import VanityLogoImg from '../../assets/homePage/complexCarousel/vanity-logo.png'
 
 import SpaServiceBeautyBarImg from '../../assets/homePage/spa-service-beauty-bar.png'
 import SpaServiceFacialsImg from '../../assets/homePage/spa-service-facials.png'
@@ -86,8 +92,28 @@ const carouselSliders: CarouselItemType[] = [
   },
 ]
 
+const complexCarouselSliders: ComplexCarouselType[] = [
+  {
+    imageLogo: RectangleLogoImg,
+    content: '"This OG clean-beauty boutique is famous for next-big-thing brands."',
+  },
+  {
+    imageLogo: AllureLogoImg,
+    content: '"One of the raddest beauty outposts in the entire city"',
+  },
+  {
+    imageLogo: HarpersLogoImg,
+    content: '"For beauty lovers walking into SHEN is like walking into haven"',
+  },
+  {
+    imageLogo: VanityLogoImg,
+    content: '"An expert in finding everyone`s next beauty obsession"',
+  },
+]
+
 const HomePage = () => {
   const [activeCarouselIndex, setActiveCarouselIndex] = useState<number | any>(0)
+  const [complexCarouselActiveIndex, setComplexCarouselActiveIndex] = useState<number | any>(0)
 
   const { data: newArrivalProducts } = useGetNewArrivalsProductsQuery()
 
@@ -176,7 +202,14 @@ const HomePage = () => {
         </RightSummerEssentialsSection>
       </SummerEssentialsSection>
 
-      <TestimonialSection></TestimonialSection>
+      <TestimonialSection>
+        <ComplexCarousel
+          delay={3000}
+          complexCarouselSliders={complexCarouselSliders}
+          complexCarouselIndex={complexCarouselActiveIndex}
+          setComplexCarouselIndex={setComplexCarouselActiveIndex}
+        />
+      </TestimonialSection>
 
       <SpaSection>
         <SpaSectionLeftContainer>
@@ -230,6 +263,8 @@ const HomePage = () => {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+
+  background-image: linear-gradient(to bottom, #f8e7e0 20%, #fbecec 10%, #ffffff 70%);
 `
 
 const SliderSection = styled.div`
@@ -395,7 +430,7 @@ const Content = styled.div`
 const SummerEssentialsSection = styled.div`
   position: relative;
   display: flex;
-  margin-bottom: 62px;
+  margin-bottom: 20px;
   padding: 70px 0;
 `
 
@@ -471,8 +506,6 @@ const RightSummerEssentialsSection = styled.div`
   align-items: center;
   justify-content: center;
   padding: 0 30px 0 42px;
-
-  background-image: linear-gradient(${props => props.theme.colors.white} 10%, rgba(248, 235, 227, 0.8) 100%);
 `
 
 const CarouselTitle = styled.div`
