@@ -40,3 +40,14 @@ export interface ComplexCarouselType {
   imageLogo: string
   content: string
 }
+
+export interface SpaServiceItemType {
+  label: string
+  content: string
+  serviceImage: string
+}
+
+export interface BlogPostType {
+  postImage: string
+  label: string
+}

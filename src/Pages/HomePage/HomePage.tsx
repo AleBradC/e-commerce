@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import styled from 'styled-components'
 
-import { CarouselItemType, ComplexCarouselType, SlideType } from '../../types'
+import { BlogPostType, CarouselItemType, ComplexCarouselType, SlideType, SpaServiceItemType } from '../../types'
 import { useGetNewArrivalsProductsQuery } from '../../redux/api'
 import { logInRoute, allProductsRoute } from '../../Helpers/routes'
 import { ProductCard } from '../../Components/ProductCard/ProductCard'
@@ -35,6 +35,10 @@ import SpaServiceFacialsImg from '../../assets/homePage/spa-service-facials.png'
 import SpaServiceHydrafacialImg from '../../assets/homePage/spa-service-hydrafacial.png'
 import SpaServiceMicroImg from '../../assets/homePage/spa-service-micro.png'
 import SpaServiceWaxingImg from '../../assets/homePage/spa-service-waxings.png'
+
+import BlogPost1Img from '../../assets/homePage/blog-post-1.png'
+import BlogPost2Img from '../../assets/homePage/blog-post-2.png'
+import BlogPost3Img from '../../assets/homePage/blog-post-3.png'
 
 const sliders: SlideType[] = [
   {
@@ -111,11 +115,79 @@ const complexCarouselSliders: ComplexCarouselType[] = [
   },
 ]
 
+const spaServicesContent: SpaServiceItemType[] = [
+  {
+    label: 'Microblading',
+    content: 'For the client who needs a little brow help, unevenness or lack of hair we`ve got you covered.',
+    serviceImage: SpaServiceMicroImg,
+  },
+  {
+    label: 'Facials',
+    content: 'An option for every skin type and concern.',
+    serviceImage: SpaServiceFacialsImg,
+  },
+  {
+    label: 'Hydrafacial',
+    content:
+      'Using a unique, patented vortex-fusion delivery system to exfoliate and hydrate skin, while the spiral design delivers painless extractions.',
+    serviceImage: SpaServiceHydrafacialImg,
+  },
+  {
+    label: 'Waxing',
+    content: 'Reveal your most beautiful skin with bikini, Brazilian, eyebrow, facial or body waxing',
+    serviceImage: SpaServiceWaxingImg,
+  },
+  {
+    label: 'Beauty Bar',
+    content:
+      'Experience personalized beauty by licensed professionals providing a full service experience that allows every client to feel pampered and look amazing.',
+    serviceImage: SpaServiceBeautyBarImg,
+  },
+]
+
+const blogPosts: BlogPostType[] = [
+  {
+    postImage: BlogPost1Img,
+    label: 'Esthetician Recommended Skin Care Products for Aging Skin',
+  },
+  {
+    postImage: BlogPost2Img,
+    label: 'Behind The Brand: Alpyn Beauty with Kendra Kolb Butler',
+  },
+  {
+    postImage: BlogPost3Img,
+    label: 'SHEN’s Lead Esthetician Monica Dawidowicz',
+  },
+]
+
 const HomePage = () => {
   const [activeCarouselIndex, setActiveCarouselIndex] = useState<number | any>(0)
   const [complexCarouselActiveIndex, setComplexCarouselActiveIndex] = useState<number | any>(0)
+  const [spaServiceActiveIndex, setSpaServicesActiveIndex] = useState(0)
 
   const { data: newArrivalProducts } = useGetNewArrivalsProductsQuery()
+
+  const handleChangeSpaServicesImage = (index: number) => {
+    setSpaServicesActiveIndex(index)
+  }
+
+  const switchSpaServiceImage = () => {
+    if (spaServiceActiveIndex === 0) {
+      return SpaServiceMicroImg
+    }
+    if (spaServiceActiveIndex === 1) {
+      return SpaServiceFacialsImg
+    }
+    if (spaServiceActiveIndex === 2) {
+      return SpaServiceHydrafacialImg
+    }
+    if (spaServiceActiveIndex === 3) {
+      return SpaServiceWaxingImg
+    }
+    if (spaServiceActiveIndex === 4) {
+      return SpaServiceBeautyBarImg
+    }
+  }
 
   return (
     <Container>
@@ -143,7 +215,6 @@ const HomePage = () => {
           ))}
         </ProductsList>
       </NewArrivalSection>
-
       <BeautyStoreSection>
         <BeautyStoreSectionTitle>
           Brooklyn`s Original Beauty Store. Curating the cool, the essential, and the unexpected.
@@ -173,11 +244,10 @@ const HomePage = () => {
               </Content>
               <Button> THE SKIN MEMORY SERUM </Button>
             </BeautyStoreSecondSectionContent>
-            <img src={BeautySectionImg3} alt="beauty-section-img" />
+            <BeautyStoreSecondSectionImage src={BeautySectionImg3} alt="beauty-section-img" />
           </BeautyStoreSecondSection>
         </BeautyStoreSectionBody>
       </BeautyStoreSection>
-
       <SummerEssentialsSection>
         <LeftSummerEssentialsSection>
           <SummerEssentialsImage src={SummerEssentialsImg} />
@@ -201,7 +271,6 @@ const HomePage = () => {
           />
         </RightSummerEssentialsSection>
       </SummerEssentialsSection>
-
       <TestimonialSection>
         <ComplexCarousel
           delay={3000}
@@ -218,44 +287,34 @@ const HomePage = () => {
             Luxury facials, makeup application, waxing and brow shaping and so much more to meet your beauty needs.{' '}
           </SpaSectionDescription>
           <SpaSectionServicesContainer>
-            <SpaService>
-              <SpaServiceLabel>Microblading</SpaServiceLabel>
-              <SpaServiceContent>
-                For the client who needs a little brow help, unevenness or lack of hair we`ve got you covered.
-              </SpaServiceContent>
-            </SpaService>
-            <SpaService>
-              <SpaServiceLabel>Facials</SpaServiceLabel>
-              <SpaServiceContent>An option for every skin type and concern.</SpaServiceContent>
-            </SpaService>
-            <SpaService>
-              <SpaServiceLabel>Hydrafacial</SpaServiceLabel>
-              <SpaServiceContent>
-                Using a unique, patented vortex-fusion delivery system to exfoliate and hydrate skin, while the spiral
-                design delivers painless extractions.
-              </SpaServiceContent>
-            </SpaService>
-            <SpaService>
-              <SpaServiceLabel>Waxing</SpaServiceLabel>
-              <SpaServiceContent>
-                Reveal your most beautiful skin with bikini, Brazilian, eyebrow, facial or body waxing.
-              </SpaServiceContent>
-            </SpaService>
-            <SpaService>
-              <SpaServiceLabel>Beauty Bar</SpaServiceLabel>
-              <SpaServiceContent>
-                Experience personalized beauty by licensed professionals providing a full service experience that allows
-                every client to feel pampered and look amazing.
-              </SpaServiceContent>
-            </SpaService>
+            {spaServicesContent.map((spaService, index) => (
+              <SpaService key={index}>
+                <SpaServiceLabel onMouseEnter={() => handleChangeSpaServicesImage(index)}>
+                  {spaService.label}
+                </SpaServiceLabel>
+                <SpaServiceContent>{spaService.content}</SpaServiceContent>
+              </SpaService>
+            ))}
           </SpaSectionServicesContainer>
         </SpaSectionLeftContainer>
         <SpaSectionRightContainer>
-          <SpaServiceImage src={SpaServiceMicroImg} />
+          <SpaServiceImage src={switchSpaServiceImage()} />
         </SpaSectionRightContainer>
       </SpaSection>
 
-      <BlogSection></BlogSection>
+      <BlogSection>
+        <BlogPostTitle>Blog posts</BlogPostTitle>
+        <BlogPostContainer>
+          {blogPosts.map((blogPost, index) => (
+            <BlogCart key={index}>
+              <BlogPostImageContainer>
+                <BlogPostImage src={blogPost.postImage} />
+              </BlogPostImageContainer>
+              <BlogPostLabel> {blogPost.label} </BlogPostLabel>
+            </BlogCart>
+          ))}
+        </BlogPostContainer>
+      </BlogSection>
     </Container>
   )
 }
@@ -414,6 +473,19 @@ const BeautyStoreSecondSectionContent = styled.div`
   padding: 0 48px 0 0;
 `
 
+const BeautyStoreSecondSectionImage = styled.img`
+  cursor: pointer;
+  //to do redirect to the product
+
+  transition: transform 0.5s, filter 1.7s ease-in-out;
+  filter: grayscale(100%);
+
+  &:hover {
+    transform: scale(1.03);
+    filter: grayscale(0);
+  }
+`
+
 const Title = styled.div`
   font-family: 'Optima', sans-serif;
   margin-bottom: 25px;
@@ -522,7 +594,7 @@ const TestimonialSection = styled.div`
 const SpaSection = styled.div`
   display: flex;
   justify-content: space-between;
-  margin: 0 auto;
+  margin-bottom: 82px;
   padding: 0 30px 0 60px;
 `
 
@@ -575,19 +647,8 @@ const SpaServiceLabel = styled.div`
   }
 `
 
-const SpaService = styled.div`
-  margin-bottom: 15px;
-
-  &:hover {
-    padding-left: 45px;
-
-    ${SpaServiceLabel} {
-      color: ${props => props.theme.colors.black};
-    }
-  }
-`
-
 const SpaServiceContent = styled.div`
+  display: none;
   font-family: 'Montserrat', sans-serif;
   font-weight: 800;
   line-height: 1.5;
@@ -597,12 +658,86 @@ const SpaServiceContent = styled.div`
   cursor: pointer;
 `
 
-const SpaSectionRightContainer = styled.div``
+const SpaService = styled.div`
+  margin-bottom: 15px;
+
+  &:hover {
+    padding-left: 45px;
+
+    ${SpaServiceLabel} {
+      color: ${props => props.theme.colors.black};
+    }
+
+    ${SpaServiceContent} {
+      display: block;
+    }
+  }
+`
+
+const SpaSectionRightContainer = styled.div`
+  width: 700px;
+  height: 600px;
+`
 
 const SpaServiceImage = styled.img``
 
 const BlogSection = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  padding: 40px;
   margin-bottom: 62px;
+`
+
+const BlogPostTitle = styled.div`
+  margin-bottom: 26px;
+  padding-left: 24px;
+
+  font-size: 32px;
+  font-family: 'Optima', sans-serif;
+`
+
+const BlogPostContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+`
+
+const BlogCart = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+
+  cursor: pointer;
+`
+
+const BlogPostImageContainer = styled.div`
+  margin-bottom: 18px;
+  width: 428px;
+  height: 254px;
+  overflow: hidden;
+`
+
+const BlogPostImage = styled.img`
+  display: block;
+  width: 428px;
+  height: 254px;
+
+  object-fit: cover;
+  object-position: center center;
+
+  transition: transform 0.5s ease;
+
+  &:hover {
+    transform: scale(1.5);
+  }
+`
+
+const BlogPostLabel = styled.div`
+  font-size: 22px;
+  font-family: 'Optima', sans-serif;
+  text-align: center;
 `
 
 export default HomePage
