@@ -1,164 +1,22 @@
 import { useState } from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
-import { BlogPostType, CarouselItemType, ComplexCarouselType, SlideType, SpaServiceItemType } from '../../types'
+import { BeautySectionImg1, BeautySectionImg2, BeautySectionImg3, SummerEssentialsImg } from './utils/images'
+import {
+  blogPosts,
+  carouselSliders,
+  complexCarouselSliders,
+  sliders,
+  spaServicesContent,
+  spaServicesImages,
+} from './utils/constants'
+
 import { useGetNewArrivalsProductsQuery } from '../../redux/api'
-import { logInRoute, allProductsRoute } from '../../Helpers/routes'
 import { ProductCard } from '../../Components/ProductCard/ProductCard'
 import { Button } from '../../Components/Button/Button'
 import { Carousel } from '../../Components/Carousel/Carousel'
 import { SlideShow } from '../../Components/SlideShow/SlideShow'
 import { ComplexCarousel } from '../../Components/ComplexCarousel/ComplexCarousel'
-
-import SliderImg1 from '../../assets/homePage/slider/banner1.jpg'
-import SliderImg2 from '../../assets/homePage/slider/banner2.jpg'
-import SliderImg3 from '../../assets/homePage/slider/banner3.jpg'
-import SliderImg4 from '../../assets/homePage/slider/banner4.png'
-
-import BeautySectionImg1 from '../../assets/homePage/beauty-section-img1.png'
-import BeautySectionImg2 from '../../assets/homePage/beauty-section-img2.png'
-import BeautySectionImg3 from '../../assets/homePage/beauty-section-img3.png'
-
-import SummerEssentialsImg from '../../assets/homePage/carrousel-image-essentials.png'
-
-import CarouselImg1 from '../../assets/homePage/carousel/carousel-item1.png'
-import CarouselImg2 from '../../assets/homePage/carousel/carousel-item2.png'
-import CarouselImg3 from '../../assets/homePage/carousel/carousel-item3.jpg'
-
-import AllureLogoImg from '../../assets/homePage/complexCarousel/allure-logo.png'
-import HarpersLogoImg from '../../assets/homePage/complexCarousel/harpers-bazar-logo.png'
-import RectangleLogoImg from '../../assets/homePage/complexCarousel/rectangle-logo.png'
-import VanityLogoImg from '../../assets/homePage/complexCarousel/vanity-logo.png'
-
-import SpaServiceBeautyBarImg from '../../assets/homePage/spa-service-beauty-bar.png'
-import SpaServiceFacialsImg from '../../assets/homePage/spa-service-facials.png'
-import SpaServiceHydrafacialImg from '../../assets/homePage/spa-service-hydrafacial.png'
-import SpaServiceMicroImg from '../../assets/homePage/spa-service-micro.png'
-import SpaServiceWaxingImg from '../../assets/homePage/spa-service-waxings.png'
-
-import BlogPost1Img from '../../assets/homePage/blog-post-1.png'
-import BlogPost2Img from '../../assets/homePage/blog-post-2.png'
-import BlogPost3Img from '../../assets/homePage/blog-post-3.png'
-
-const sliders: SlideType[] = [
-  {
-    image: SliderImg1,
-    content: 'JOIN THE PARTY AND GET REWARDED',
-    button: 'REGISTER',
-    redirectLink: logInRoute,
-  },
-  {
-    image: SliderImg2,
-    content: 'CUSTOMER APPROVED BEST SELLERS',
-    button: 'SHOP NOW',
-    redirectLink: allProductsRoute,
-  },
-  {
-    image: SliderImg3,
-    content: 'EXPLORE SCANDINAVIAN SKINCARE',
-    button: 'SHOP NOW',
-    redirectLink: allProductsRoute,
-  },
-  {
-    image: SliderImg4,
-    content: 'CLEAN SUN PROTECTION',
-    button: 'SHOP NOW',
-    redirectLink: allProductsRoute,
-  },
-]
-
-const carouselSliders: CarouselItemType[] = [
-  {
-    image: CarouselImg1,
-    topContent: 'Niacinamide (Vitamin B3)',
-    middleContent: 'Lactic Acid',
-    bottomContent: 'Hyaluronic Acid',
-    productBrand: 'ELTAMD',
-    productName: 'UV REPLENISH Broad-Spectrum SPF 44',
-    rating: 5,
-  },
-  {
-    image: CarouselImg2,
-    topContent: 'Organic Jojoba',
-    middleContent: 'Shea Butter',
-    bottomContent: 'Plant-Based Seed Oils',
-    productBrand: 'WESTMAN ATELIER',
-    productName: 'Squeaky Clean Liquid Lip Balm',
-  },
-  {
-    image: CarouselImg3,
-    topContent: 'Vitamin C',
-    middleContent: 'Wild Rose Extract',
-    bottomContent: 'Polygonum Bistorta Root',
-    productBrand: 'DR. BARBARA STURM',
-    productName: 'Glow Drops',
-    rating: 5,
-  },
-]
-
-const complexCarouselSliders: ComplexCarouselType[] = [
-  {
-    imageLogo: RectangleLogoImg,
-    content: '"This OG clean-beauty boutique is famous for next-big-thing brands."',
-  },
-  {
-    imageLogo: AllureLogoImg,
-    content: '"One of the raddest beauty outposts in the entire city"',
-  },
-  {
-    imageLogo: HarpersLogoImg,
-    content: '"For beauty lovers walking into SHEN is like walking into haven"',
-  },
-  {
-    imageLogo: VanityLogoImg,
-    content: '"An expert in finding everyone`s next beauty obsession"',
-  },
-]
-
-const spaServicesContent: SpaServiceItemType[] = [
-  {
-    label: 'Microblading',
-    content: 'For the client who needs a little brow help, unevenness or lack of hair we`ve got you covered.',
-    serviceImage: SpaServiceMicroImg,
-  },
-  {
-    label: 'Facials',
-    content: 'An option for every skin type and concern.',
-    serviceImage: SpaServiceFacialsImg,
-  },
-  {
-    label: 'Hydrafacial',
-    content:
-      'Using a unique, patented vortex-fusion delivery system to exfoliate and hydrate skin, while the spiral design delivers painless extractions.',
-    serviceImage: SpaServiceHydrafacialImg,
-  },
-  {
-    label: 'Waxing',
-    content: 'Reveal your most beautiful skin with bikini, Brazilian, eyebrow, facial or body waxing',
-    serviceImage: SpaServiceWaxingImg,
-  },
-  {
-    label: 'Beauty Bar',
-    content:
-      'Experience personalized beauty by licensed professionals providing a full service experience that allows every client to feel pampered and look amazing.',
-    serviceImage: SpaServiceBeautyBarImg,
-  },
-]
-
-const blogPosts: BlogPostType[] = [
-  {
-    postImage: BlogPost1Img,
-    label: 'Esthetician Recommended Skin Care Products for Aging Skin',
-  },
-  {
-    postImage: BlogPost2Img,
-    label: 'Behind The Brand: Alpyn Beauty with Kendra Kolb Butler',
-  },
-  {
-    postImage: BlogPost3Img,
-    label: 'SHEN’s Lead Esthetician Monica Dawidowicz',
-  },
-]
 
 const HomePage = () => {
   const [activeCarouselIndex, setActiveCarouselIndex] = useState<number | any>(0)
@@ -169,24 +27,6 @@ const HomePage = () => {
 
   const handleChangeSpaServicesImage = (index: number) => {
     setSpaServicesActiveIndex(index)
-  }
-
-  const switchSpaServiceImage = () => {
-    if (spaServiceActiveIndex === 0) {
-      return SpaServiceMicroImg
-    }
-    if (spaServiceActiveIndex === 1) {
-      return SpaServiceFacialsImg
-    }
-    if (spaServiceActiveIndex === 2) {
-      return SpaServiceHydrafacialImg
-    }
-    if (spaServiceActiveIndex === 3) {
-      return SpaServiceWaxingImg
-    }
-    if (spaServiceActiveIndex === 4) {
-      return SpaServiceBeautyBarImg
-    }
   }
 
   return (
@@ -280,7 +120,7 @@ const HomePage = () => {
         />
       </TestimonialSection>
 
-      <SpaSection>
+      <SpaServicesSection>
         <SpaSectionLeftContainer>
           <SpaSectionTitle> Spa Services </SpaSectionTitle>
           <SpaSectionDescription>
@@ -288,19 +128,29 @@ const HomePage = () => {
           </SpaSectionDescription>
           <SpaSectionServicesContainer>
             {spaServicesContent.map((spaService, index) => (
-              <SpaService key={index}>
-                <SpaServiceLabel onMouseEnter={() => handleChangeSpaServicesImage(index)}>
-                  {spaService.label}
-                </SpaServiceLabel>
-                <SpaServiceContent>{spaService.content}</SpaServiceContent>
-              </SpaService>
+              <SpaServiceItem
+                key={index}
+                onMouseOver={() => handleChangeSpaServicesImage(index)}
+                isActive={index === spaServiceActiveIndex}
+              >
+                <SpaServiceLabel isActive={index === spaServiceActiveIndex}>{spaService.label}</SpaServiceLabel>
+                <SpaServiceContent isActive={index === spaServiceActiveIndex}>{spaService.content}</SpaServiceContent>
+              </SpaServiceItem>
             ))}
           </SpaSectionServicesContainer>
         </SpaSectionLeftContainer>
         <SpaSectionRightContainer>
-          <SpaServiceImage src={switchSpaServiceImage()} />
+          {spaServicesImages.map((image, index) => (
+            <SpaServiceImageContainer isVisible={index === spaServiceActiveIndex} key={index}>
+              <SpaServiceImage
+                key={index}
+                isVisible={index === spaServiceActiveIndex}
+                src={spaServicesImages[spaServiceActiveIndex]}
+              />
+            </SpaServiceImageContainer>
+          ))}
         </SpaSectionRightContainer>
-      </SpaSection>
+      </SpaServicesSection>
 
       <BlogSection>
         <BlogPostTitle>Blog posts</BlogPostTitle>
@@ -487,16 +337,18 @@ const BeautyStoreSecondSectionImage = styled.img`
 `
 
 const Title = styled.div`
-  font-family: 'Optima', sans-serif;
   margin-bottom: 25px;
+
+  font-family: 'Optima', sans-serif;
   line-height: 1.21;
   font-size: 48px;
 `
 
 const Content = styled.div`
+  margin-bottom: 25px;
+
   font-family: 'Montserrat', sans-serif;
   font-size: 24px;
-  margin-bottom: 25px;
 `
 
 const SummerEssentialsSection = styled.div`
@@ -515,6 +367,7 @@ const SummerEssentialsImage = styled.img`
   display: block;
   max-width: 100%;
   height: auto;
+
   object-position: center;
 `
 
@@ -530,7 +383,15 @@ const TopDotButtonContainer = styled.div<{ isActive: boolean }>`
   height: 30px;
   border-radius: 100%;
 
-  border: 2px solid ${props => (props.isActive ? props.theme.colors.white : 'transparent')};
+  opacity: 1;
+  transition: border 0.25s ease-in-out;
+  border: 2px solid transparent;
+
+  ${props =>
+    props.isActive &&
+    css`
+      border: 2px solid ${props => props.theme.colors.white};
+    `}
 `
 
 const MiddleDotButtonContainer = styled.div<{ isActive: boolean }>`
@@ -545,7 +406,14 @@ const MiddleDotButtonContainer = styled.div<{ isActive: boolean }>`
   height: 30px;
   border-radius: 100%;
 
-  border: 2px solid ${props => (props.isActive ? props.theme.colors.white : 'transparent')};
+  transition: border 0.25s ease-in-out;
+  border: 2px solid transparent;
+
+  ${props =>
+    props.isActive &&
+    css`
+      border: 2px solid ${props => props.theme.colors.white};
+    `}
 `
 
 const BottomDotButtonContainer = styled.div<{ isActive: boolean }>`
@@ -560,7 +428,14 @@ const BottomDotButtonContainer = styled.div<{ isActive: boolean }>`
   height: 30px;
   border-radius: 100%;
 
-  border: 2px solid ${props => (props.isActive ? props.theme.colors.white : 'transparent')};
+  transition: border 0.25s ease-in-out;
+  border: 2px solid transparent;
+
+  ${props =>
+    props.isActive &&
+    css`
+      border: 2px solid ${props => props.theme.colors.white};
+    `}
 `
 
 const DotButton = styled.button`
@@ -582,6 +457,7 @@ const RightSummerEssentialsSection = styled.div`
 
 const CarouselTitle = styled.div`
   margin-bottom: 38px;
+
   font-family: 'Optima', sans-serif;
   line-height: 1.21;
   font-size: 48px;
@@ -591,7 +467,7 @@ const TestimonialSection = styled.div`
   margin-bottom: 62px;
 `
 
-const SpaSection = styled.div`
+const SpaServicesSection = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 82px;
@@ -602,18 +478,22 @@ const SpaSectionLeftContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 50%;
   padding: 0 70px 0 82px;
+  width: 50%;
 `
 
 const SpaSectionTitle = styled.div`
   margin: 20px 15px 0 30px;
+
   font-family: 'Optima', sans-serif;
   font-size: 62px;
 `
 
 const SpaSectionDescription = styled.div`
+  margin-bottom: 26px;
   padding: 15px 15px 30px 30px;
+  max-width: 428px;
+
   font-family: 'Montserrat', sans-serif;
   font-size: 20px;
 `
@@ -623,10 +503,28 @@ const SpaSectionServicesContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
   padding: 15px 15px 30px 30px;
+  max-width: 428px;
 `
 
-const SpaServiceLabel = styled.div`
+const SpaServiceItem = styled.div<{ isActive: boolean }>`
+  margin-bottom: 15px;
+  max-width: calc(100% - 50px);
+
+  opacity: 0.5;
+  transition: max-width 0.25s ease-in-out, padding 0.25s ease-in-out, opacity 0.25s ease-in-out;
+  color: ${props => props.theme.colors.black};
+
+  ${props =>
+    props.isActive &&
+    css`
+      opacity: 1;
+      padding-left: 45px;
+    `}
+`
+
+const SpaServiceLabel = styled.div<{ isActive: boolean }>`
   position: relative;
+
   font-family: 'Montserrat', sans-serif;
   font-size: 20px;
   font-weight: bold;
@@ -639,15 +537,36 @@ const SpaServiceLabel = styled.div`
     position: absolute;
     top: 15px;
     left: 0;
-    transform: translate(calc(-100% - 15px));
-    width: 10px;
-    height: 2px;
+    width: 0;
+    height: 1px;
 
-    color: ${props => props.theme.colors.black};
+    background-color: ${props => props.theme.colors.black};
+    transition: width 0.25s ease-in-out;
+    transform: translate(calc(-100% - 15px));
   }
+
+  ${props =>
+    props.isActive &&
+    css`
+      color: ${props => props.theme.colors.black};
+      font-weight: bolder;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 15px;
+        left: 0;
+        width: 30px;
+        height: 1px;
+
+        background-color: ${props => props.theme.colors.black};
+        transition: width 0.25s ease-in-out;
+        transform: translate(calc(-100% - 15px));
+      }
+    `}
 `
 
-const SpaServiceContent = styled.div`
+const SpaServiceContent = styled.div<{ isActive: boolean }>`
   display: none;
   font-family: 'Montserrat', sans-serif;
   font-weight: 800;
@@ -656,35 +575,49 @@ const SpaServiceContent = styled.div`
 
   color: ${props => props.theme.colors.black};
   cursor: pointer;
-`
 
-const SpaService = styled.div`
-  margin-bottom: 15px;
-
-  &:hover {
-    padding-left: 45px;
-
-    ${SpaServiceLabel} {
-      color: ${props => props.theme.colors.black};
-    }
-
-    ${SpaServiceContent} {
+  ${props =>
+    props.isActive &&
+    css`
       display: block;
-    }
-  }
+    `}
 `
 
 const SpaSectionRightContainer = styled.div`
-  width: 700px;
+  position: relative;
+  margin-left: 12px;
+
   height: 600px;
+  width: 700px;
 `
 
-const SpaServiceImage = styled.img``
+const SpaServiceImageContainer = styled.div<{ isVisible: boolean }>`
+  position: absolute;
+
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out, visibility 0.25s ease-in-out;
+
+  ${props =>
+    props.isVisible &&
+    css`
+      visibility: visible;
+      opacity: 1;
+    `}
+`
+
+const SpaServiceImage = styled.img<{ isVisible: boolean }>`
+  height: 100%;
+  width: 100%;
+
+  overflow: hidden;
+  object-position: center;
+  object-fit: cover;
+`
 
 const BlogSection = styled.div`
   display: flex;
   flex-direction: column;
-
   padding: 40px;
   margin-bottom: 62px;
 `

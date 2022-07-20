@@ -44,7 +44,6 @@ export interface ComplexCarouselType {
 export interface SpaServiceItemType {
   label: string
   content: string
-  serviceImage: string
 }
 
 export interface BlogPostType {
