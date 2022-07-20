@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { maxSumForFreeShipping } from '../../Helpers/variables'
+import { maxSumForFreeShipping } from '../../helpers/variables'
 
 export interface ProgressBarProps {
   totalSum: number | undefined

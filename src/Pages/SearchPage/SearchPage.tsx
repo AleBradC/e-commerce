@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import styled from 'styled-components'
 
+import { ProductType } from '../../helpers/types'
 import { useGetProductsQuery } from '../../redux/api'
-import { ProductType } from '../../types'
 import { useAppDispatch, useAppSelector } from '../../redux/hooks'
 import { toggleSearchBar } from '../../redux/reducers/searchBarSlice'
 import { ProductCard } from '../../Components/ProductCard/ProductCard'

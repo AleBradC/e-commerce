@@ -19,7 +19,7 @@ import {
   moisturizersRoute,
   productRoute,
   searchRoute,
-} from './Helpers/routes'
+} from './helpers/routes'
 
 import { Footer } from './Components/Footer/Footer'
 

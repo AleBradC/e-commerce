@@ -2,8 +2,9 @@ import React, { ReactNode } from 'react'
 import ReactDOM from 'react-dom'
 import styled, { css } from 'styled-components'
 
+import useBreakpoint from '../../hooks/useBreakpointsHook/useBreakpoint'
+
 import XIcon from '../../assets/icons/x.svg'
-import useBreakpoint from '../../Helpers/useBreakpointsHook/useBreakpoint'
 
 export interface ModalProps {
   header?: ReactNode

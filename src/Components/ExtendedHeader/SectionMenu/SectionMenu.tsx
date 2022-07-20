@@ -20,7 +20,8 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-right: 42px;
+  max-width: 180px;
+  min-width: 140px;
 
   background: ${props => props.theme.colors.white};
 `

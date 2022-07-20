@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { flip, shift, useFloating } from '@floating-ui/react-dom'
 import styled, { css } from 'styled-components'
 
-import { allProductsRoute, homeRoute, logInRoute, searchRoute } from '../../Helpers/routes'
+import { allProductsRoute, homeRoute, logInRoute, searchRoute } from '../../helpers/routes'
 import { makeupHeaderItems, skincareHeaderItems } from './utils/constants'
 import useBreakpoint from '../../hooks/useBreakpointsHook/useBreakpoint'
 import useClickOutSide from '../../hooks/useClickOutSide'
@@ -24,6 +24,7 @@ import { SectionMenuItem } from '../ExtendedHeader/SectionMenuItem/SectionMenuIt
 import { SearchBar } from '../SearchBar/SearchBar'
 import { BagDrawer } from '../BagDrawer/BagDrawer'
 import { SmallProductCard } from '../SmallProductCard/SmallProductCard'
+import { Badge } from '../Badge/Badge'
 
 import Logo from '../../assets/icons/logo.png'
 
@@ -165,7 +166,10 @@ export const Header = () => {
   const handleSearch = (event: React.KeyboardEvent) => {
     if (event.key === 'Enter') {
       dispatch(changeSearchBarValue(searchBarValue))
-      navigateTo(searchRoute)
+      navigateTo({
+        pathname: searchRoute,
+        search: `?q=${searchBarValue}`,
+      })
 
       dispatch(toggleSearchBar(false))
       setSearchBarValue('')
@@ -410,14 +414,10 @@ const ButtonsContainer = styled.div`
 `
 
 const BagContainer = styled.div`
+  position: relative;
+
   display: flex;
   align-items: center;
-`
-
-const Badge = styled.span`
-  margin-top: 4px;
-  font-size: 12px;
-  font-family: 'Montserrat', sans-serif;
 `
 
 const StyledIconButton = styled(IconButton)`

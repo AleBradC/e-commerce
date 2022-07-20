@@ -3,8 +3,8 @@ import { forwardRef, ReactNode } from 'react'
 import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 
-import { maxSumForFreeShipping } from '../../Helpers/variables'
-import { bagRoute } from '../../Helpers/routes'
+import { maxSumForFreeShipping } from '../../helpers/variables'
+import { bagRoute } from '../../helpers/routes'
 import { useAppDispatch } from '../../redux/hooks'
 import { toggleBagDrawer } from '../../redux/reducers/bagDrawerSlice'
 import { IconButton, IconButtonType } from '../IconButton/IconButton'
@@ -78,7 +78,7 @@ export const BagDrawer = forwardRef<HTMLDivElement, BagDrawerProps>(
                   <Price> ${subTotal} </Price>
                 </SubtotalContainer>
                 <ButtonContainer>
-                  <StyledButton onClick={redirectToBagPage}> View Cart </StyledButton>
+                  <StyledButton onClick={redirectToBagPage}> VIEW CART </StyledButton>
                   <ClearAllButton onClick={clearAll}> Clear All </ClearAllButton>
                 </ButtonContainer>
               </Footer>
@@ -133,8 +133,8 @@ const Header = styled.div`
 
 const StyledIconButton = styled(IconButton)`
   position: absolute;
-  top: 25px;
-  right: 25px;
+  top: 8px;
+  right: 20px;
   padding: 0;
 
   z-index: ${props => props.theme.zIndex.others};
@@ -197,6 +197,7 @@ const SubtotalContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 12px;
   width: 100%;
 `
 
@@ -226,8 +227,9 @@ const ClearAllButton = styled.button`
   border: none;
   margin-top: 8px;
 
-  font-size: 16px;
+  font-size: 14px;
   text-transform: uppercase;
+  font-weight: bolder;
   font-family: 'Montserrat', sans-serif;
 
   :hover {

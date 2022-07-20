@@ -2,7 +2,7 @@ import React, { ReactNode, useEffect, useMemo, useRef, useState } from 'react'
 import { flip, shift, useFloating } from '@floating-ui/react-dom'
 import styled from 'styled-components'
 
-import { ProductType } from '../../Helpers/types'
+import { ProductType } from '../../helpers/types'
 import { options } from './utils/constants'
 import useClickOutSide from '../../hooks//useClickOutSide'
 import { Menu } from '../Menu/Menu'

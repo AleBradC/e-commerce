@@ -8,7 +8,7 @@ import {
   lipSticksRoute,
   mascaraRoute,
   moisturizersRoute,
-} from '../../../Helpers/routes'
+} from '../../../helpers/routes'
 
 export const skincareHeaderItems = [
   {

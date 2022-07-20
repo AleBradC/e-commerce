@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import styled, { css } from 'styled-components'
 
-import { SlideType } from '../../types'
+import { SlideType } from '../../helpers/types'
 import { Button } from '../Button/Button'
 import { Slider } from '../Slider/Slider'
 import { Slide } from '../Slider/Components/Slide'

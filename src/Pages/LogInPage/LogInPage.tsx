@@ -2,8 +2,7 @@ import styled from 'styled-components'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 
-import useBreakpoint from '../../Helpers/useBreakpointsHook/useBreakpoint'
-
+import useBreakpoint from '../../hooks/useBreakpointsHook/useBreakpoint'
 import RegisterPage from '../RegisterPage/RegisterPage'
 import { Input, InputSize } from '../../Components/Input/Input'
 import { Button } from '../../Components/Button/Button'
@@ -121,7 +120,8 @@ const LoginContainer = styled.form<{ isMobile: boolean }>`
 
 const Title = styled.span`
   margin-bottom: 6px;
-  font-size: 18px;
+
+  font-size: 20px;
   font-family: 'Optima', sans-serif;
   font-weight: 600;
   color: ${props => props.theme.colors.black};

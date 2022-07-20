@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
 
-import { SlideType } from '../../types'
+import { SlideType } from '../../helpers/types'
 
 export interface SliderProps {
   sliders: SlideType[] | any

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { CarouselItemType } from '../../types'
+import { CarouselItemType } from '../../helpers/types'
 import { Slide } from '../Slider/Components/Slide'
 import { Button } from '../Button/Button'
 import { Slider } from '../Slider/Slider'

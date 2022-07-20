@@ -10,7 +10,7 @@ import {
   lipSticksRoute,
   mascaraRoute,
   moisturizersRoute,
-} from '../../Helpers/routes'
+} from '../../helpers/routes'
 import { Input } from '../Input/Input'
 import { Button } from '../Button/Button'
 

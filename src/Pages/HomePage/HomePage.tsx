@@ -12,16 +12,22 @@ import {
 } from './utils/constants'
 
 import { useGetNewArrivalsProductsQuery } from '../../redux/api'
+import useBreakpoint from '../../hooks/useBreakpointsHook/useBreakpoint'
 import { ProductCard } from '../../Components/ProductCard/ProductCard'
 import { Button } from '../../Components/Button/Button'
 import { Carousel } from '../../Components/Carousel/Carousel'
 import { SlideShow } from '../../Components/SlideShow/SlideShow'
 import { ComplexCarousel } from '../../Components/ComplexCarousel/ComplexCarousel'
+import { MutliImageCarousel } from '../../Components/MutliImageCarousel/MutliImageCarousel'
 
 const HomePage = () => {
+  const breakPoint = useBreakpoint()
+  const isDesktop = breakPoint === 'lg' || breakPoint === 'xl'
+
   const [activeCarouselIndex, setActiveCarouselIndex] = useState<number | any>(0)
   const [complexCarouselActiveIndex, setComplexCarouselActiveIndex] = useState<number | any>(0)
   const [spaServiceActiveIndex, setSpaServicesActiveIndex] = useState(0)
+  const [multiCarouselActiveIndex, setMultiCarouselActiveIndex] = useState(0)
 
   const { data: newArrivalProducts } = useGetNewArrivalsProductsQuery()
 
@@ -40,19 +46,41 @@ const HomePage = () => {
           <NewArrivalButton> SHOP NEW ARRIVALS </NewArrivalButton>
         </NewArrivalHeader>
         <ProductsList>
-          {newArrivalProducts?.map(product => (
-            <ProductCard
-              key={product.id}
-              id={product.id}
-              brand={product.brand}
-              name={product.name}
-              tags={product.tags}
-              imageURL={product.imageURL}
-              hoverImageURL={product.hoverImageURL}
-              rating={product.rating}
-              price={product.price}
-            />
-          ))}
+          {isDesktop ? (
+            newArrivalProducts?.map(product => (
+              <ProductCard
+                key={product.id}
+                id={product.id}
+                brand={product.brand}
+                name={product.name}
+                tags={product.tags}
+                imageURL={product.imageURL}
+                hoverImageURL={product.hoverImageURL}
+                rating={product.rating}
+                price={product.price}
+              />
+            ))
+          ) : (
+            <MutliImageCarousel
+              sliders={newArrivalProducts}
+              setMultiImageCarouselActiveIndex={setMultiCarouselActiveIndex}
+              multiImageCarouselActiveIndex={multiCarouselActiveIndex}
+            >
+              {newArrivalProducts?.map(product => (
+                <StyledProductCart
+                  key={product.id}
+                  id={product.id}
+                  brand={product.brand}
+                  name={product.name}
+                  tags={product.tags}
+                  imageURL={product.imageURL}
+                  hoverImageURL={product.hoverImageURL}
+                  rating={product.rating}
+                  price={product.price}
+                />
+              ))}
+            </MutliImageCarousel>
+          )}
         </ProductsList>
       </NewArrivalSection>
       <BeautyStoreSection>
@@ -219,6 +247,12 @@ const NewArrivalButton = styled.div`
 const ProductsList = styled.div`
   display: flex;
   justify-content: space-between;
+`
+
+const StyledProductCart = styled(ProductCard)`
+  min-width: 30%;
+  overflow: hidden;
+  margin: 10px;
 `
 
 const BeautyStoreSection = styled.div`

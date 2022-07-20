@@ -20,7 +20,7 @@ import {
   SpaServiceWaxingImg,
   VanityLogoImg,
 } from './images'
-import { allProductsRoute, logInRoute } from '../../../Helpers/routes'
+import { allProductsRoute, logInRoute } from '../../../helpers/routes'
 
 export const sliders: SlideType[] = [
   {

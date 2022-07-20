@@ -1,12 +1,12 @@
 import { useCallback, useState } from 'react'
 import styled from 'styled-components'
 
-import { Tag } from '../Tag/Tag'
-import { Button } from '../Button/Button'
+import useBreakpoint from '../../hooks/useBreakpointsHook/useBreakpoint'
 import { useAddProductToCardMutation } from '../../redux/api'
-
 import { toggleBagDrawer } from '../../redux/reducers/bagDrawerSlice'
 import { useAppDispatch } from '../../redux/hooks'
+import { Tag } from '../Tag/Tag'
+import { Button } from '../Button/Button'
 
 export interface ProductCardProps {
   id: number
@@ -17,6 +17,7 @@ export interface ProductCardProps {
   hoverImageURL: string
   rating: number
   price: number
+  className?: string
 }
 
 export const ProductCard: React.FC<ProductCardProps> = ({
@@ -28,18 +29,25 @@ export const ProductCard: React.FC<ProductCardProps> = ({
   hoverImageURL,
   rating,
   price,
+  className,
 }) => {
+  const breakPoint = useBreakpoint()
+  const dispatch = useAppDispatch()
+  const isDesktop = breakPoint === 'lg' || breakPoint === 'xl'
+
   const [hoveredCard, setHoveredCard] = useState(false)
   const [addProductToCard] = useAddProductToCardMutation()
 
-  const dispatch = useAppDispatch()
-
   const handleHover = () => {
-    setHoveredCard(true)
+    if (isDesktop) {
+      setHoveredCard(true)
+    }
   }
 
   const handleRemoveHover = () => {
-    setHoveredCard(false)
+    if (isDesktop) {
+      setHoveredCard(false)
+    }
   }
 
   const handleAddToCard = useCallback(
@@ -59,10 +67,10 @@ export const ProductCard: React.FC<ProductCardProps> = ({
   )
 
   return (
-    <Container onMouseEnter={handleHover} onMouseLeave={handleRemoveHover}>
+    <Container onMouseEnter={handleHover} onMouseLeave={handleRemoveHover} className={className}>
       <Header>
         {!hoveredCard && (
-          <>
+          <HoverHeader>
             <BrandContainer>
               <BrandName> {brand} </BrandName>
             </BrandContainer>
@@ -72,20 +80,20 @@ export const ProductCard: React.FC<ProductCardProps> = ({
                 <Tag key={tag}> {tag} </Tag>
               ))}
             </TagsContainer>
-          </>
+          </HoverHeader>
         )}
       </Header>
       <ImageContainer>
-        {hoveredCard ? <HoverImage src={hoverImageURL} /> : <ProductImage src={imageURL} />}
+        {hoveredCard && isDesktop ? <HoverImage src={hoverImageURL} /> : <ProductImage src={imageURL} />}
       </ImageContainer>
       <Footer>
         {hoveredCard ? (
           <StyledButton onClick={() => handleAddToCard(id)}> ADD TO CART </StyledButton>
         ) : (
-          <>
+          <StarPriceContainer>
             <StarsContainer> {rating} </StarsContainer>
             <Price> {price} $ </Price>
-          </>
+          </StarPriceContainer>
         )}
       </Footer>
     </Container>
@@ -99,10 +107,11 @@ const Container = styled.div`
   max-width: 286px;
   width: 100%;
   padding: 12px 20px 20px 20px;
-  margin: 0 auto;
+  margin: 10px;
 
   cursor: pointer;
   background-color: ${props => props.theme.colors.white};
+  }
 `
 
 const Header = styled.div`
@@ -111,18 +120,38 @@ const Header = styled.div`
   padding: 8px;
 `
 
+const HoverHeader = styled.div``
+
 const BrandContainer = styled.div`
-  margin-bottom: 6px;
+  position: relative;
+  min-height: 18px;
+  margin: 0 0 3px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    right: 0;
+    left: 0;
+    height: 1px;
+
+    background-color: ${props => props.theme.colors.greyLight};
+  }
 `
 
-const BrandName = styled.span`
+const BrandName = styled.div`
   position: relative;
+  display: inline-block;
+  background-color: ${props => props.theme.colors.white};
+  padding-right: 8px;
+
   font-family: 'Montserrat', sans-serif;
   font-weight: bolder;
   font-size: 14px;
   line-height: 1.29;
   letter-spacing: 1px;
   text-transform: uppercase;
+
   color: ${props => props.theme.colors.grey4};
 `
 
@@ -155,6 +184,13 @@ const ProductImage = styled.img`
 `
 
 const Footer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+`
+
+const StarPriceContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;

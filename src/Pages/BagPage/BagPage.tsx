@@ -10,7 +10,7 @@ import {
 import { BagProductCard } from '../../Components/BagProductCard/BagProductCard'
 import { Button } from '../../Components/Button/Button'
 import { ProgressBar } from '../../Components/ProgressBar/ProgressBar'
-import { maxSumForFreeShipping } from '../../Helpers/variables'
+import { maxSumForFreeShipping } from '../../helpers/variables'
 
 const BagPage = () => {
   const { data: cartProducts } = useGetProductsCartQuery()
