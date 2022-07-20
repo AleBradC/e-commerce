@@ -28,9 +28,11 @@ const Container = styled.div`
 const Title = styled.span`
   padding: 0;
   margin-bottom: 20px;
+
   text-align: start;
   font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: bolder;
   color: ${props => props.theme.colors.greyDarker};
 `
 

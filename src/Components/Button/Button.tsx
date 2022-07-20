@@ -20,7 +20,8 @@ const ButtonContainer = styled.button`
   background: ${props => props.theme.colors.brown};
   color: ${props => props.theme.colors.white};
   font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
+  font-weight: bolder;
+  letter-spacing: 1px;
 
   :hover {
     background-color: ${props => props.theme.colors.brownLight};

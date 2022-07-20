@@ -2,9 +2,9 @@ import { forwardRef, Key, useRef, useState } from 'react'
 import { flip, shift, useFloating } from '@floating-ui/react-dom'
 import styled from 'styled-components'
 
+import useClickOutSide from '../../hooks//useClickOutSide'
 import { Menu } from '../Menu/Menu'
 import { MenuItem } from '../MenuItem/MenuItem'
-import useClickOutSide from '../../Helpers/useClickOutSide'
 
 export interface OptionsType {
   value: string | number

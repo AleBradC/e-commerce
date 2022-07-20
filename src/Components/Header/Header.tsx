@@ -3,11 +3,13 @@ import { useNavigate } from 'react-router-dom'
 import { flip, shift, useFloating } from '@floating-ui/react-dom'
 import styled, { css } from 'styled-components'
 
+import { allProductsRoute, homeRoute, logInRoute, searchRoute } from '../../Helpers/routes'
+import { makeupHeaderItems, skincareHeaderItems } from './utils/constants'
+import useBreakpoint from '../../hooks/useBreakpointsHook/useBreakpoint'
+import useClickOutSide from '../../hooks/useClickOutSide'
 import { useAppDispatch, useAppSelector } from '../../redux/hooks'
 import { toggleBagDrawer } from '../../redux/reducers/bagDrawerSlice'
 import { changeSearchBarValue, toggleSearchBar } from '../../redux/reducers/searchBarSlice'
-import { allProductsRoute, homeRoute, logInRoute, searchRoute } from '../../Helpers/routes'
-import { makeupHeaderItems, skincareHeaderItems } from '../../Helpers/variables'
 import {
   useDecreaseQuantityMutation,
   useDeleteAllProductsFromCartMutation,
@@ -15,8 +17,6 @@ import {
   useGetProductsCartQuery,
   useIncreaseQuantityMutation,
 } from '../../redux/api'
-import useBreakpoint from '../../Helpers/useBreakpointsHook/useBreakpoint'
-import useClickOutSide from '../../Helpers/useClickOutSide'
 import { IconButton, IconButtonType } from '../IconButton/IconButton'
 import { ExtendedHeader } from '../ExtendedHeader/ExtendedHeader'
 import { SectionMenu } from '../ExtendedHeader/SectionMenu/SectionMenu'

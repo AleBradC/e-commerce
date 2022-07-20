@@ -14,14 +14,50 @@ export const SectionMenuItem: React.FC<OptionsMenuItemProps> = ({ onRedirect, ch
   )
 }
 
-const MenuItem = styled.button`
-  background: none;
-  border: none;
-
+const MenuItem = styled.div`
+  position: relative;
   padding: 0;
   margin-bottom: 14px;
+
+  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   font-size: 14px;
   text-align: start;
-  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+
+  color: ${props => props.theme.colors.black};
+  transition: padding 0.25s ease-in-out, color 0.25s ease-in-out;
+  pointer-events: all;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: ${props => props.theme.colors.black};
+    transition: width 0.25s ease-in-out, color 0.25s ease-in-out;
+  }
+
+  &:hover {
+    position: relative;
+    padding-left: 30px;
+    color: ${props => props.theme.colors.greyDark};
+
+    transition: padding 0.25s ease-in-out, color 0.25s ease-in-out;
+    pointer-events: all;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 0;
+      width: 20px;
+      height: 1px;
+      background: ${props => props.theme.colors.black};
+      transition: width 0.25s ease-in-out, color 0.25s ease-in-out;
+    }
+    }
+  }
 `

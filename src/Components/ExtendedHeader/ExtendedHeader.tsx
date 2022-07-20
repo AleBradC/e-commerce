@@ -25,7 +25,7 @@ export const ExtendedHeader = forwardRef<HTMLDivElement, ExtendedHeaderProps>(
   ({ position, children, image, className }, ref) => {
     return (
       <ExtendedHeaderContainer ref={ref} style={position} className={className}>
-        <SectionContainer>{children}</SectionContainer>
+        <Content>{children}</Content>
         <Image src={menuImageVariant[image]} alt="skin-care" />
       </ExtendedHeaderContainer>
     )
@@ -35,7 +35,7 @@ export const ExtendedHeader = forwardRef<HTMLDivElement, ExtendedHeaderProps>(
 const ExtendedHeaderContainer = styled.div`
   display: flex;
   align-items: flex-start;
-  justify-content: space-around;
+  justify-content: space-evenly;
   padding: 24px 0 24px 0;
   width: 100%;
 
@@ -44,8 +44,10 @@ const ExtendedHeaderContainer = styled.div`
   background: ${props => props.theme.colors.white};
 `
 
-const SectionContainer = styled.div`
+const Content = styled.div`
   display: flex;
+  margin-left: 20px;
+  width: 340px;
 `
 
 const Image = styled.img`
