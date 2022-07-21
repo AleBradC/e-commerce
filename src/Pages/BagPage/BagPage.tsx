@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import {
   useDecreaseQuantityMutation,
+  useDeleteAllProductsFromCartMutation,
   useDeleteProductsFromCartMutation,
   useGetProductsCartQuery,
   useIncreaseQuantityMutation,
@@ -14,6 +15,8 @@ import { maxSumForFreeShipping } from '../../helpers/variables'
 
 const BagPage = () => {
   const { data: cartProducts } = useGetProductsCartQuery()
+
+  const [deleteAllProductsFromCart] = useDeleteAllProductsFromCartMutation()
   const [deleteProductsFromCart] = useDeleteProductsFromCartMutation()
   const [decreaseQuantity] = useDecreaseQuantityMutation()
   const [increaseQuantity] = useIncreaseQuantityMutation()
@@ -58,6 +61,10 @@ const BagPage = () => {
     },
     [deleteProductsFromCart]
   )
+
+  const clearAll = useCallback(async () => {
+    await deleteAllProductsFromCart()
+  }, [deleteAllProductsFromCart])
 
   return (
     <Container>
@@ -117,6 +124,7 @@ const BagPage = () => {
               <Span> ${subTotal} </Span>
             </OrderSummaryFooterBody>
             <Button> CHECKOUT </Button>
+            <ClearAllButton onClick={clearAll}> Clear All </ClearAllButton>
           </OrderSummaryBody>
         </OrderSummary>
       </ContentContainer>
@@ -249,6 +257,21 @@ const OrderSummaryFooterBody = styled.div`
 
 const Total = styled.span`
   font-family: 'Montserrat', sans-serif;
+`
+
+const ClearAllButton = styled.button`
+  background: none;
+  border: none;
+  margin-top: 8px;
+
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-family: 'Montserrat', sans-serif;
+
+  :hover {
+    color: ${props => props.theme.colors.brownLight};
+  }
 `
 
 export default BagPage
