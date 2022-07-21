@@ -25,9 +25,8 @@ import { Footer } from './Components/Footer/Footer'
 const HomePage = React.lazy(() => import('./Pages/HomePage/HomePage'))
 const LogInPage = React.lazy(() => import('./Pages/LogInPage/LogInPage'))
 const BagPage = React.lazy(() => import('./Pages/BagPage/BagPage'))
-const ProductPage = React.lazy(() => import('./Pages/ProductPage/ProductPage')) // TO DO with ID
 const SearchPage = React.lazy(() => import('./Pages/SearchPage/SearchPage'))
-
+const ProductPage = React.lazy(() => import('./Pages/ProductPage/ProductPage')) // TO DO with ID
 const AllProductsPage = React.lazy(() => import('./Pages/ProductsPages/AllProductsPage/AllProductsPage'))
 const MascaraProductsPage = React.lazy(
   () => import('./Pages/ProductsPages/MakeupProductsPages/EyesProductsPages/MascaraProductsPage')

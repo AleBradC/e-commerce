@@ -2,190 +2,21 @@
   "products": [
     {
       "id": 1,
-      "brand": "Bioderma",
-      "name": "Bioderma H20 Wipes",
-      "category": "Cleansers",
-      "imageURL": "../src/assets/products/cleansers/bioderma-wipes.jpg",
-      "hoverImageURL": "../src/assets/products/cleansers/bioderma-wipes-hover.png",
-      "rating": 4,
-      "price": 12
+      "brand": "YOUTH TO THE PEOPLE",
+      "name": "Polypeptide-121 Future Cream",
+      "category": "Moisturizers",
+      "tags": [
+        "New Arrival"
+      ],
+      "imageURL": "../src/assets/products/moisturizers/polypeptide-121-future.jpg",
+      "hoverImageURL": "../src/assets/products/moisturizers/polypeptide-121-future-hover.jpg",
+      "rating": 0,
+      "price": 64
     },
     {
       "id": 2,
-      "brand": "Nature of things",
-      "name": "Clarifying Facial Polish",
-      "category": "Cleansers",
-      "tags": ["Best Seller"],
-      "imageURL": "../src/assets/products/cleansers/polish.jpg",
-      "hoverImageURL": "../src/assets/products/cleansers/polish-hover.jpg",
-      "rating": 3,
-      "price": 65
-    },
-    {
-      "id": 3,
-      "brand": "Ursa major",
-      "name": "Essential Face Wipes",
-      "category": "Cleansers",
-      "imageURL": "../src/assets/products/cleansers/ursa-wipes.jpg",
-      "hoverImageURL": "../src/assets/products/cleansers/ursa-wipes-hover.png",
-      "rating": 5,
-      "price": 26
-    },
-    {
-      "id": 4,
-      "brand": "Bioderma",
-      "name": "Sensibio H2O",
-      "category": "Cleansers",
-      "tags": ["Low Stock"],
-      "imageURL": "../src/assets/products/cleansers/bioderma-sensibio-h2o.jpg",
-      "hoverImageURL": "../src/assets/products/cleansers/bioderma-sensibio-h2o-hover.jpg",
-      "rating": 5,
-      "price": 7
-    },
-    {
-      "id": 5,
-      "brand": "Youth to the people",
-      "name": "Superfood Cleanser",
-      "category": "Cleansers",
-      "tags": ["New Arrival"],
-      "imageURL": "../src/assets/products/cleansers/superfood-cleanser.png",
-      "hoverImageURL": "../src/assets/products/cleansers/superfood-cleanser-hover.png",
-      "rating": 5,
-      "price": 36
-    },
-    {
-      "id": 6,
-      "brand": "Youth to the people",
-      "name": "SuperBerry Melt + Dream Balm",
-      "category": "Cleansers",
-      "tags": ["Best Seller"],
-      "imageURL": "../src/assets/products/cleansers/superberry-dream-balm.jpg",
-      "hoverImageURL": "../src/assets/products/cleansers/superberry-dream-balm-hover.jpg",
-      "rating": 5,
-      "price": 34
-    },
-    {
-      "id": 7,
-      "brand": "Pai",
-      "name": "Light Work Cleansing Oil",
-      "category": "Cleansers",
-      "tags": ["Vegan"],
-      "imageURL": "../src/assets/products/cleansers/pai-cleansing.png",
-      "hoverImageURL": "../src/assets/products/cleansers/pai-cleansing-hover.jpg",
-      "rating": 3,
-      "price": 29
-    },
-    {
-      "id": 8,
-      "brand": "Environ",
-      "name": "Clarifying Facial Polish",
-      "category": "Cleansers",
-      "tags": ["Best Seller", "Low Stock"],
-      "imageURL": "../src/assets/products/cleansers/environ-clarifying.png",
-      "hoverImageURL": "../src/assets/products/cleansers/environ-clarifying-hover.png",
-      "rating": 4,
-      "price": 41
-    },
-    {
-      "id": 9,
-      "brand": "BeautyCounter",
-      "name": "Dew Skin Tinted Moisturizer",
-      "category": "Moisturizers",
-      "tags": ["Best Seller"],
-      "imageURL": "../src/assets/products/moisturizers/dew-skin.jpg",
-      "hoverImageURL": "../src/assets/products/moisturizers/dew-skin-hover.jpg",
-      "rating": 0,
-      "price": 50
-    },
-    {
-      "id": 10,
-      "brand": "Spectacle",
-      "name": "Spectacle Performance Crème",
-      "category": "Moisturizers",
-      "tags": ["Best Seller", "New Arrival"],
-      "imageURL": "../src/assets/products/moisturizers/spectacle.png",
-      "hoverImageURL": "../src/assets/products/moisturizers/spectacle-hover.png",
-      "rating": 4.5,
-      "price": 87
-    },
-    {
-      "id": 11,
-      "brand": "Ursa Major",
-      "name": "Golden Hour Recovery Cream",
-      "category": "Moisturizers",
-      "tags": ["Best Seller"],
-      "imageURL": "../src/assets/products/moisturizers/golden-hour.jpg",
-      "hoverImageURL": "../src/assets/products/moisturizers/golden-hour-hover.jpg",
-      "rating": 5,
-      "price": 20
-    },
-    {
-      "id": 12,
-      "brand": "Youth to the people",
-      "name": "Superfood Air-Whip Moisture Cream",
-      "category": "Moisturizers",
-      "imageURL": "../src/assets/products/moisturizers/superfood-cream.jpg",
-      "hoverImageURL": "../src/assets/products/moisturizers/superfood-cream-hover.jpg",
-      "rating": 5,
-      "price": 48
-    },
-    {
-      "id": 13,
-      "brand": "Youth to the people",
-      "name": "Adaptogen Deep Moisture Cream",
-      "category": "Moisturizers",
-      "imageURL": "../src/assets/products/moisturizers/adaptogen.jpg",
-      "hoverImageURL": "../src/assets/products/moisturizers/adaptogen-hover.jpg",
-      "rating": 2,
-      "price": 58
-    },
-    {
-      "id": 14,
-      "brand": "Augustinus Bader",
-      "name": "The Cream",
-      "category": "Moisturizers",
-      "imageURL": "../src/assets/products/moisturizers/the-cream.jpg",
-      "hoverImageURL": "../src/assets/products/moisturizers/the-cream-hover.jpg",
-      "rating": 2,
-      "price": 68
-    },
-    {
-      "id": 15,
-      "brand": "Irene Forte",
-      "name": "Aloe Vera Face Cream",
-      "category": "Moisturizers",
-      "tags": ["Vegan"],
-      "imageURL": "../src/assets/products/moisturizers/aloe-vera-cream.png",
-      "hoverImageURL": "../src/assets/products/moisturizers/aloe-vera-cream-hover.jpg",
-      "rating": 5,
-      "price": 120
-    },
-    {
-      "id": 16,
-      "brand": "Environ",
-      "name": "Vita-Complex Super Moisturizer",
-      "category": "Moisturizers",
-      "tags": ["Vegan"],
-      "imageURL": "../src/assets/products/moisturizers/vita-complex.jpg",
-      "hoverImageURL": "../src/assets/products/moisturizers/vita-complex-hover.jpg",
-      "rating": 5,
-      "price": 100
-    },
-    {
-      "id": 17,
-      "brand": "Venn",
+      "brand": "VENN",
       "name": "Advanced Multi-Perfecting Red Oil Serum",
-      "category": "Face Oils",
-      "tags": ["Best Seller"],
-      "imageURL": "../src/assets/products/face-oils/red-oil.jpg",
-      "hoverImageURL": "../src/assets/products/face-oils/red-oil-hover.jpg",
-      "rating": 5,
-      "price": 115
-    },
-    {
-      "id": 18,
-      "brand": "Vintner's Daughter",
-      "name": "Active Botanical Serum",
       "category": "Face Oils",
       "tags": ["Best Seller", "Low Stock"],
       "imageURL": "../src/assets/products/face-oils/red-oil.jpg",
@@ -194,7 +25,7 @@
       "price": 195
     },
     {
-      "id": 19,
+      "id": 3,
       "brand": "Pai",
       "name": "Rosehip Bioregenerate Universal Face Oil",
       "category": "Face Oils",
@@ -205,7 +36,7 @@
       "price": 44
     },
     {
-      "id": 20,
+      "id": 4,
       "brand": "Costa Brazil",
       "name": "Sérum Para A Face - Face Serum",
       "category": "Face Oils",
@@ -216,7 +47,7 @@
       "price": 135
     },
     {
-      "id": 21,
+      "id": 5,
       "brand": "Supernatural",
       "name": "Cosmic Glow Oil",
       "category": "Face Oils",
@@ -226,7 +57,7 @@
       "price": 108
     },
     {
-      "id": 22,
+      "id": 6,
       "brand": "Costa Brazil",
       "name": "Costa Brazil Oleo Para A Face - Kaya Anti-Aging Face Oil",
       "category": "Face Oils",
@@ -237,7 +68,7 @@
       "price": 128
     },
     {
-      "id": 23,
+      "id": 7,
       "brand": "Youth to the people",
       "name": "Superberry Hydrate and Glow Dream Oil",
       "category": "Face Oils",
@@ -248,7 +79,7 @@
       "price": 44
     },
     {
-      "id": 24,
+      "id": 8,
       "brand": "Pai",
       "name": "Impossible Glow",
       "category": "Face Oils",
@@ -259,18 +90,18 @@
       "price": 44
     },
     {
-      "id": 25,
-      "brand": "Venn",
-      "name": "Advanced Multi-Perfecting Red Oil Serum",
-      "category": "Face Serums",
-      "tags": ["Best Seller"],
-      "imageURL": "../src/assets/products/face-serums/red-serum.jpg",
-      "hoverImageURL": "../src/assets/products/face-serums/red-serum-hover.jpg",
+      "id": 9,
+      "brand": "LELAND FRANCIS",
+      "name": "Twenty-nine Botanical Serum",
+      "category": "Face Oils",
+      "tags": ["VEGAN"],
+      "imageURL": "../src/assets/products/face-serums/twenty-nine-botanical-serum.png",
+      "hoverImageURL": "../src/assets/products/face-serums/twenty-nine-botanical-serum-hover.jpg",
       "rating": 5,
-      "price": 115
+      "price": 90
     },
     {
-      "id": 26,
+      "id": 10,
       "brand": "Venn",
       "name": "Age-Response Compound K Hyaluronic Booster",
       "category": "Face Serums",
@@ -281,7 +112,7 @@
       "price": 125
     },
     {
-      "id": 27,
+      "id": 11,
       "brand": "Vintner's daughter",
       "name": "Active Botanical Serum",
       "category": "Face Serums",
@@ -292,7 +123,7 @@
       "price": 195
     },
     {
-      "id": 28,
+      "id": 12,
       "brand": "Youth to the people",
       "name": "15% Vitamin C + Clean Caffeine Energy Serum",
       "category": "Face Serums",
@@ -302,7 +133,7 @@
       "price": 195
     },
     {
-      "id": 29,
+      "id": 13,
       "brand": "Youth to the people",
       "name": "Triple Peptide + Cactus Oasis Serum",
       "category": "Face Serums",
@@ -312,7 +143,7 @@
       "price": 54
     },
     {
-      "id": 30,
+      "id": 14,
       "brand": "Zitsticks",
       "name": "MEGASHADE™ Breakout-proof SPF Serum",
       "category": "Face Serums",
@@ -322,7 +153,7 @@
       "price": 40
     },
     {
-      "id": 31,
+      "id": 15,
       "brand": "Ideo",
       "name": "Ideo Skin Memory Serum",
       "category": "Face Serums",
@@ -332,7 +163,7 @@
       "price": 175
     },
     {
-      "id": 32,
+      "id": 16,
       "brand": "Beautycounter",
       "name": "Counter+ All Bright C Serum",
       "category": "Face Serums",
@@ -342,7 +173,7 @@
       "price": 90
     },
     {
-      "id": 33,
+      "id": 17,
       "brand": "Kosas",
       "name": "Clear Air Brow Tinted Volumizing Treatment Gel",
       "category": "Brows",
@@ -353,7 +184,7 @@
       "price": 22
     },
     {
-      "id": 34,
+      "id": 18,
       "brand": "Kosas",
       "name": "Air Brow Tinted Volumizing Treatment Gel",
       "category": "Brows",
@@ -364,7 +195,7 @@
       "price": 22
     },
     {
-      "id": 35,
+      "id": 19,
       "brand": "Kosas",
       "name": "Brow Pop Dual-Action Defining Pencil",
       "category": "Brows",
@@ -375,7 +206,7 @@
       "price": 22
     },
     {
-      "id": 36,
+      "id": 20,
       "brand": "Westman Atelier",
       "name": "Bonne Brow",
       "category": "Brows",
@@ -386,7 +217,7 @@
       "price": 38
     },
     {
-      "id": 37,
+      "id": 21,
       "brand": "Roen",
       "name": "vowBrow Pencil",
       "category": "Brows",
@@ -397,7 +228,7 @@
       "price": 26
     },
     {
-      "id": 38,
+      "id": 22,
       "brand": "Tweezers",
       "name": "Classic Stainless Slat Tweezers",
       "category": "Brows",
@@ -407,7 +238,7 @@
       "price": 23
     },
     {
-      "id": 39,
+      "id": 23,
       "brand": "Beautycounter",
       "name": "Brilliant Brow",
       "category": "Brows",
@@ -418,7 +249,7 @@
       "price": 23
     },
     {
-      "id": 40,
+      "id": 24,
       "brand": "Tweezers",
       "name": "Point Tweezer Classic Stainless",
       "category": "Brows",
@@ -429,7 +260,7 @@
       "price": 23
     },
     {
-      "id": 41,
+      "id": 25,
       "brand": "Eyeco",
       "name": "Lash Alert Mascara",
       "category": "Mascara",
@@ -440,7 +271,7 @@
       "price": 24
     },
     {
-      "id": 42,
+      "id": 26,
       "brand": "Beautycounter",
       "name": "Think Big All-in-One Mascara",
       "category": "Mascara",
@@ -450,7 +281,7 @@
       "price": 30
     },
     {
-      "id": 43,
+      "id": 27,
       "brand": "Westman atelier",
       "name": "Eye Love You Mascara",
       "category": "Mascara",
@@ -460,7 +291,7 @@
       "price": 58
     },
     {
-      "id": 44,
+      "id": 28,
       "brand": "Mob",
       "name": "Volumizing Mascara M66 - Refill",
       "category": "Mascara",
@@ -471,7 +302,7 @@
       "price": 58
     },
     {
-      "id": 45,
+      "id": 29,
       "brand": "Kosas",
       "name": "The Big Clean Volumizing + Lash Care Mascara-Intense Black",
       "category": "Mascara",
@@ -481,7 +312,7 @@
       "price": 13
     },
     {
-      "id": 46,
+      "id": 30,
       "brand": "Mob",
       "name": "MOB Capsule 2",
       "category": "Mascara",
@@ -492,7 +323,7 @@
       "price": 5
     },
     {
-      "id": 47,
+      "id": 31,
       "brand": "Eyeco",
       "name": "Colored Lash Alert Mascara",
       "category": "Mascara",
@@ -503,7 +334,7 @@
       "price": 19
     },
     {
-      "id": 48,
+      "id": 32,
       "brand": "Roen",
       "name": "CAKE Mascara",
       "category": "Mascara",
@@ -514,7 +345,7 @@
       "price": 28
     },
     {
-      "id": 49,
+      "id": 33,
       "brand": "Roen",
       "name": "Elixir Tinted Lip Oil Balm",
       "category": "Lip Glosses",
@@ -525,7 +356,7 @@
       "price": 32
     },
     {
-      "id": 50,
+      "id": 34,
       "brand": "Westman Atelier",
       "name": "Squeaky Clean Liquid Lip Balm",
       "category": "Lip Glosses",
@@ -536,7 +367,7 @@
       "price": 38
     },
     {
-      "id": 51,
+      "id": 35,
       "brand": "Lanolips",
       "name": "Holographic Lip Water",
       "category": "Lip Glosses",
@@ -547,7 +378,7 @@
       "price": 17.50
     },
     {
-      "id": 52,
+      "id": 36,
       "brand": "Lanolips",
       "name": "Tinted Balm",
       "category": "Lip Glosses",
@@ -558,7 +389,7 @@
       "price": 14
     },
     {
-      "id": 53,
+      "id": 37,
       "brand": "Alpyn beauty",
       "name": "Willow & Sweet Agave Plumping Lip Mask",
       "category": "Lip Glosses",
@@ -569,7 +400,7 @@
       "price": 28
     },
     {
-      "id": 54,
+      "id": 38,
       "brand": "Kosas",
       "name": "Wet Lip Oil Treatment Plumping Gloss",
       "category": "Lip Glosses",
@@ -580,7 +411,7 @@
       "price": 22
     },
     {
-      "id": 55,
+      "id": 39,
       "brand": "Maarks Lip",
       "name": "MAARKS Lip",
       "category": "Lip Glosses",
@@ -591,7 +422,7 @@
       "price": 29
     },
     {
-      "id": 56,
+      "id": 40,
       "brand": "Lanolips",
       "name": "Watermelon Lip Water",
       "category": "Lip Glosses",
@@ -601,7 +432,7 @@
       "price": 17.50
     },
     {
-      "id": 57,
+      "id": 41,
       "brand": "Mob",
       "name": "MOB RePurpose Capsule",
       "category": "Lip Sticks",
@@ -612,7 +443,7 @@
       "price": 5
     },
     {
-      "id": 58,
+      "id": 42,
       "brand": "Beautycounter",
       "name": "Sheer Genius Conditioning Lipstick",
       "category": "Lip Sticks",
@@ -622,7 +453,7 @@
       "price": 35
     },
     {
-      "id": 59,
+      "id": 43,
       "brand": "Kosas",
       "name": "Weightless Lip Color",
       "category": "Lip Sticks",
@@ -633,7 +464,7 @@
       "price": 28
     },
     {
-      "id": 60,
+      "id": 44,
       "brand": "Mob",
       "name": "MOB Cream Lipstick",
       "category": "Lip Sticks",
@@ -644,9 +475,19 @@
       "price": 22
     },
     {
-      "id": 61,
+      "id": 45,
       "brand": "Westman Atelier",
-      "name": "Lip Suede Palette Les Nudes",
+      "name": "The Gift Edition",
+      "category": "Lip Sticks",
+      "imageURL": "../src/assets/products/lip-sticks/gift-edition.jpg",
+      "hoverImageURL": "../src/assets/products/lip-sticks/gift-edition-hover.jpg",
+      "rating": 5,
+      "price": 133
+    },
+    {
+      "id": 46,
+      "brand": "Westman Atelier",
+      "name": "The Gift Edition",
       "category": "Lip Sticks",
       "imageURL": "../src/assets/products/lip-sticks/lip-suede.jpg",
       "hoverImageURL": "../src/assets/products/lip-sticks/lip-suede-hover.jpg",
@@ -654,17 +495,7 @@
       "price": 85
     },
     {
-      "id": 62,
-      "brand": "Maarks Lip",
-      "name": "MAARKS Lip",
-      "category": "Lip Sticks",
-      "imageURL": "../src/assets/products/lip-sticks/maarks.jpg",
-      "hoverImageURL": "../src/assets/products/lip-sticks/maarks-hover.jpg",
-      "rating": 5,
-      "price": 28
-    },
-    {
-      "id": 63,
+      "id": 47,
       "brand": "Westman Atelier",
       "name": "Lip Suede Palette Les Rouges",
       "category": "Lip Sticks",
@@ -674,7 +505,7 @@
       "price": 85
     },
     {
-      "id": 64,
+      "id": 48,
       "brand": "Mob",
       "name": "MOB Matte Lipstick (M67)",
       "category": "Lip Sticks",
@@ -683,6 +514,2802 @@
       "hoverImageURL": "../src/assets/products/lip-sticks/mob-matte-hover.jpg",
       "rating": 0,
       "price": 22
+    },
+    {
+      "id": 49,
+      "brand": "BeautyCounter",
+      "name": "Dew Skin Tinted Moisturizer",
+      "category": "Moisturizers",
+      "tags": ["Best Seller"],
+      "imageURL": "../src/assets/products/moisturizers/dew-skin.jpg",
+      "hoverImageURL": "../src/assets/products/moisturizers/dew-skin-hover.jpg",
+      "rating": 0,
+      "price": 50
+    },
+    {
+      "id": 50,
+      "brand": "Spectacle",
+      "name": "Spectacle Performance Crème",
+      "category": "Moisturizers",
+      "tags": ["Best Seller", "New Arrival"],
+      "imageURL": "../src/assets/products/moisturizers/spectacle.png",
+      "hoverImageURL": "../src/assets/products/moisturizers/spectacle-hover.png",
+      "rating": 4.5,
+      "price": 87
+    },
+    {
+      "id": 51,
+      "brand": "Ursa Major",
+      "name": "Golden Hour Recovery Cream",
+      "category": "Moisturizers",
+      "tags": ["Best Seller"],
+      "imageURL": "../src/assets/products/moisturizers/golden-hour.jpg",
+      "hoverImageURL": "../src/assets/products/moisturizers/golden-hour-hover.jpg",
+      "rating": 5,
+      "price": 20
+    },
+    {
+      "id": 52,
+      "brand": "Youth to the people",
+      "name": "Superfood Air-Whip Moisture Cream",
+      "category": "Moisturizers",
+      "imageURL": "../src/assets/products/moisturizers/superfood-cream.jpg",
+      "hoverImageURL": "../src/assets/products/moisturizers/superfood-cream-hover.jpg",
+      "rating": 5,
+      "price": 48
+    },
+    {
+      "id": 53,
+      "brand": "Youth to the people",
+      "name": "Adaptogen Deep Moisture Cream",
+      "category": "Moisturizers",
+      "imageURL": "../src/assets/products/moisturizers/adaptogen.jpg",
+      "hoverImageURL": "../src/assets/products/moisturizers/adaptogen-hover.jpg",
+      "rating": 2,
+      "price": 58
+    },
+    {
+      "id": 54,
+      "brand": "Augustinus Bader",
+      "name": "The Cream",
+      "category": "Moisturizers",
+      "imageURL": "../src/assets/products/moisturizers/the-cream.jpg",
+      "hoverImageURL": "../src/assets/products/moisturizers/the-cream-hover.jpg",
+      "rating": 2,
+      "price": 68
+    },
+    {
+      "id": 55,
+      "brand": "Irene Forte",
+      "name": "Aloe Vera Face Cream",
+      "category": "Moisturizers",
+      "tags": ["Vegan"],
+      "imageURL": "../src/assets/products/moisturizers/aloe-vera-cream.png",
+      "hoverImageURL": "../src/assets/products/moisturizers/aloe-vera-cream-hover.jpg",
+      "rating": 5,
+      "price": 120
+    },
+    {
+      "id": 56,
+      "brand": "Environ",
+      "name": "Vita-Complex Super Moisturizer",
+      "category": "Moisturizers",
+      "tags": ["Vegan"],
+      "imageURL": "../src/assets/products/moisturizers/vita-complex.jpg",
+      "hoverImageURL": "../src/assets/products/moisturizers/vita-complex-hover.jpg",
+      "rating": 5,
+      "price": 100
+    },
+    {
+      "id": 57,
+      "brand": "Bioderma",
+      "name": "Bioderma H20 Wipes",
+      "category": "Cleansers",
+      "imageURL": "../src/assets/products/cleansers/bioderma-wipes.jpg",
+      "hoverImageURL": "../src/assets/products/cleansers/bioderma-wipes-hover.png",
+      "rating": 4,
+      "price": 12
+    },
+    {
+      "id": 58,
+      "brand": "Nature of things",
+      "name": "Clarifying Facial Polish",
+      "category": "Cleansers",
+      "tags": ["Best Seller"],
+      "imageURL": "../src/assets/products/cleansers/polish.jpg",
+      "hoverImageURL": "../src/assets/products/cleansers/polish-hover.jpg",
+      "rating": 3,
+      "price": 65
+    },
+    {
+      "id": 59,
+      "brand": "Ursa major",
+      "name": "Essential Face Wipes",
+      "category": "Cleansers",
+      "imageURL": "../src/assets/products/cleansers/ursa-wipes.jpg",
+      "hoverImageURL": "../src/assets/products/cleansers/ursa-wipes-hover.png",
+      "rating": 5,
+      "price": 26
+    },
+    {
+      "id": 60,
+      "brand": "Bioderma",
+      "name": "Sensibio H2O",
+      "category": "Cleansers",
+      "tags": ["Low Stock"],
+      "imageURL": "../src/assets/products/cleansers/bioderma-sensibio-h2o.jpg",
+      "hoverImageURL": "../src/assets/products/cleansers/bioderma-sensibio-h2o-hover.jpg",
+      "rating": 5,
+      "price": 7
+    },
+    {
+      "id": 61,
+      "brand": "Youth to the people",
+      "name": "Superfood Cleanser",
+      "category": "Cleansers",
+      "tags": ["New Arrival"],
+      "imageURL": "../src/assets/products/cleansers/superfood-cleanser.png",
+      "hoverImageURL": "../src/assets/products/cleansers/superfood-cleanser-hover.png",
+      "rating": 5,
+      "price": 36
+    },
+    {
+      "id": 62,
+      "brand": "Youth to the people",
+      "name": "SuperBerry Melt + Dream Balm",
+      "category": "Cleansers",
+      "tags": ["Best Seller"],
+      "imageURL": "../src/assets/products/cleansers/superberry-dream-balm.jpg",
+      "hoverImageURL": "../src/assets/products/cleansers/superberry-dream-balm-hover.jpg",
+      "rating": 5,
+      "price": 34
+    },
+    {
+      "id": 63,
+      "brand": "Pai",
+      "name": "Light Work Cleansing Oil",
+      "category": "Cleansers",
+      "tags": ["Vegan"],
+      "imageURL": "../src/assets/products/cleansers/pai-cleansing.png",
+      "hoverImageURL": "../src/assets/products/cleansers/pai-cleansing-hover.jpg",
+      "rating": 3,
+      "price": 29
+    },
+    {
+      "id": 64,
+      "brand": "Environ",
+      "name": "Clarifying Facial Polish",
+      "category": "Cleansers",
+      "tags": ["Best Seller", "Low Stock"],
+      "imageURL": "../src/assets/products/cleansers/environ-clarifying.png",
+      "hoverImageURL": "../src/assets/products/cleansers/environ-clarifying-hover.png",
+      "rating": 4,
+      "price": 41
+    }
+  ],
+
+
+  "productInfo": [
+    {
+      "id": 17,
+      "brand": "YOUTH TO THE PEOPLE",
+      "name": "Polypeptide-121 Future Cream",
+      "category": "Skincare - Moisturize",
+      "tags": [
+        "New Arrival"
+      ],
+      "rating": 0,
+      "price": 64,
+      "quantity": 1,
+      "generalDescription": "A multi-tasking gel cream boosted with plant proteins, ceramides + peptides to strengthen barrier, boosts hyaluronic acid + collagen production, visibly firms, evens tone, and reduce fines lines overtime.",
+      "principalBenefits": ["Strengthens barrier", "Visibly firms and reduces fine lines", "Improves fullness and density", "Boosts hydration and skin elasticity"],
+      "description": "This intensely moisturizing cream with peptides, plant proteins, and ceramides replenishes critical moisture to help visibly firm, reduce the look of fine lines and wrinkles, and strengthen the skin’s moisture barrier.",
+      "ingredients": "Plant Proteins (Pea, Rice, Hemp + Flax): Minimizes the appearance of deep wrinkles, reduces age spots and boosts hyaluronic acid production Peptide Complex Increases skin elasticity + boost collagen synthesis to reduce lines, wrinkles, and redness. Ceramides Restores the protective barrier function of the skin. Niacinamide + Bisabolol: Anti-inflammatory + soothing properties, evens skin tone + diminishes dullness.Agave: Instant film-former that reduces the appearance of fine lines.",
+      "carouselImages": ["../src/assets/productInfo/polypeptide-121-carousel1.jpg", "../src/assets/productInfo/polypeptide-121-carousel2.jpg", "../src/assets/productInfo/polypeptide-121-carousel3.jpg"],
+      "section": [
+        {
+          "information": {
+            "title": "Benefits Include:",
+            "content": ["Boosts hydration + skin elasticity", "Evens skin tone", "Fragrance-free"]
+          },
+          "image":"../src/assets/productInfo/polypeptide-121-section1.jpg"
+        },
+        {
+          "information": {
+            "title": "How to use",
+            "content": ["Morning and night, apply a dime-size amount of product to clean face and neck. Avoid contact with eyes."]
+          },
+          "image":"../src/assets/productInfo/polypeptide-121-section2.jpg"
+        },
+        {
+          "information": {
+            "title": "Key ingredients",
+            "content": ["Polypeptide-121: Visibly firms and reduces the appearance of fine lines and wrinkles.", "Plant Proteins: Minimize the appearance of deep wrinkles.", "Ceramides: Help maintain the skin’s protective moisture barrier."]
+          },
+          "image":"../src/assets/productInfo/polypeptide-121-section3.jpg"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "brand": "VENN",
+      "name": "Advanced Multi-Perfecting Red Oil Serum",
+      "category": "Skincare - Face Oil",
+      "tags": ["Best Seller", "Low Stock"],
+      "rating": 5,
+      "price": 195,
+      "quantity": 1,
+      "generalDescription": "This provocative red serum is inspired by Korea’s ancient skincare prescription Jaungo—using 34 root extracts, botanicals, and essential oils to dramatically improve your skin’s appearance.",
+      "principalBenefits": ["The next-gen face oil", "Stronger, firmer skin", "Leaves skin radiant and energized", " Clean, safe ingredients"],
+      "description": "Venn’s beloved Advanced Multi-Perfecting Red Oil Serum (Upgrade) is a multi-correctional oil serum that visibly improves skin’s elasticity and firmness and nourishes the skin with restorative moisture. This potent serum uses as key active ingredients Lithospermum Erythrorhizon (Gromwell) and Angelica Gigas (Korean Angelica) Root Extracts that have been fermented for 150 hours at low temperature for improved absorption and amplified performance. Added to this fermented active foundation are 32 other root extracts and botanicals rich with antioxidants, phytochemicals, vitamins, and essential minerals to deliver clinically proven, unparalleled results.",
+      "ingredients": "Candida Bombicola/Glucose/Methyl Rapeseedate Ferment, Olea Europaea Fruit Oil, Citrullus Lanatus Seed Oil, Helianthus Annuus Seed Oil, Actinidia Chinensis Seed Oil, Silybum Marianum Ethyl Ester, Aleurites Moluccanus Seed Oil, Caprylic/Capric Triglyceride, Rosa Canina Fruit Oil, Simmondsia Chinensis Seed Oil, Corylus Avellana Seed Oil, Prunus Avium Seed Oil, Lithospermum Erythrorhizon Root Extract, Plukenetia Volubilis Seed Oil, Angelica Gigas Root Extract, Prunus Amygdalus Dulcis Oil, Glyceryl Caprylate, Cupressus Sempervirens Oil, Rosmarinus Officinalis Leaf Oil, Spilanthes Acmella Flower Extract,",
+      "carouselImages": ["../src/assets/productInfo/red-oil-serum-carousel1.jpg", "../src/assets/productInfo/red-oil-serum-carousel2.jpg", "../src/assets/productInfo/red-oil-serum-carousel3.jpg"],
+      "quotes": {
+        "title": "Why Jess Loves It...",
+        "content": "“Rich in antioxidants and incredibly hydrating, this oil is not to be missed. I am compeltely addicted.“"
+      },
+      "section": [
+        {
+          "information": {
+            "title": "Benefits Include:",
+            "content": ["Clinically tested to hydrate skin for up to 24 hours", "Improve skin’s elasticity and firmness", "Instantly increase skin’s radiance", "Dermatologist tested", "Non-irritating and non-sensitizing for all skin types"]
+          },
+          "image":"../src/assets/productInfo/red-oil-section1.jpg"
+        },
+        {
+          "information": {
+            "title": "How To Use",
+            "content": ["Apply 2-3 drops to the palm of your hand and use fingertips to gently press and release onto clean skin and neck."]
+          },
+          "image":"../src/assets/productInfo/red-oil-section2.jpg"
+        },
+        {
+          "information": {
+            "title": "Key Ingredients",
+            "content": ["Candida Bombicola (Rape Flower): Hydrates and maintains skin health", "Angelica Gigas (Korean Angelica): Brightens and protects against free radicals", "Rosa Canina Fruit Oil (Rosehip Berry): Lessens the appearance of wrinkles", "Actinidia Chinensis Seed Oil (Kiwi): Anti-aging antioxidant promotes elasticity", "Citrullus Lanatus Seed Oil (Watermelon): Restores skin elasticity and increases firmness", "Lithospermum Erythrorhizon (Gromwell): Root Extract balances and tones Corylus Avellana Seed Oil (Hazelnut): Adds visible radiance"]
+          },
+          "image":"../src/assets/productInfo/red-oil-section3.jpg"
+        },
+        {
+          "information": {
+            "title": "Clinical results",
+            "content": ["100% agree dull skin appears brighter", "100% agree skin appears more radiant", "100% agree skin feels protected, stronger, and more energized", "100% agree skin feels smoother and softer", "96% agree skin appears healthier", "92% agree the appearance of skin damaged by sun exposure improved", "92% agree age spots have never been less noticeable in such a short time"]
+          },
+          "image":"../src/assets/productInfo/red-oil-section4.webp"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "brand": "Pai",
+      "name": "Rosehip Bioregenerate Universal Face Oil",
+      "category": "Skincare - Face Oil",
+      "tags": ["Best Seller", "Vegan"],
+      "rating": 5,
+      "price": 44,
+      "quantity": 1,
+      "generalDescription": "A vanity staple—this multi-tasker tackles blemishes, dry patches, pigmentation, dullness, redness, and fine lines with every application.",
+      "principalBenefits": ["Game-changing organic Rosehip Oil", "SHEN Best Seller", "Evens Skin Tone", "30ml, 10ml"],
+      "description": "Regenerate and balance your skin with Pai’s Rosehip Bioregenerate Universal Face Oil, a highly concentrated blend of CO2 extracted organic Rosehip fruit and seed oil rich in Omegas 3,6,7, and 9. Consistently rated 5-stars, this Rosehip Oil conditions to improve firmness, elasticity, wrinkles, and skin clarity.",
+      "ingredients": "ROSA CANINA SEED EXTRACT*ᶜ (rosehip seed extract), ROSA CANINA FRUIT EXTRACT*ᶜ (rosehip fruit extract), TOCOPHEROL (vitamin e), ROSMARINUS OFFICINALIS LEAF EXTRACT* (rosemary extract)",
+      "carouselImages": ["../src/assets/productInfo/rosehip-bioregenerate-carousel1.png", "../src/assets/productInfo/rosehip-bioregenerate-carousel2.png", "../src/assets/productInfo/rosehip-bioregenerate-carousel3.png", "rosehip-bioregenerate-carousel4.png", "rosehip-bioregenerate-carousel5.png", "rosehip-bioregenerate-carousel6.png"],
+      "quotes": {
+        "title": "Why Jess Loves It...",
+        "content": "“This product is a no-brainer- it's great for all skin types, and because it has such simple ingredients its a great one for those who find face oils with lots of essential oils overwhelming.“"
+      },
+      "section": [
+        {
+          "information": {
+            "title": "Benefits Include:",
+            "content": ["Suited for all skin types, no matter how sensitive, especially those with pigmentation, dullness or fine lines", "Supercharged oil delivers 2x the regenerative sterols and 5x more antioxidant carotenoids than cold-pressed Rosehip seed oils", "Improves blemishes, dry patches, dullness, fine lines, scars, and sun damage", "COSMOS Organic, Vegan, Cruelty-free"]
+          },
+          "image":"../src/assets/productInfo/rosehip-bioregenerate-section1.webp"
+        },
+        {
+          "information": {
+            "title": "How To Use",
+            "content": ["Use the Dropper Place 2-3 drops of the face oil in the palm of your hands. ", "Apply to Your Face Massage directly onto cleansed, damp skin. Allow the oil to fully absorb before dressing.", "Pro Tip For best results, we recommend using oils at night before bed. For extra hydration, mix 2-3 drops of Rosehip Bioregenerate Oil with your favorite moisturizer", "Contains Nut Oil. Avoid direct contact with eyes."]
+          },
+          "image":"../src/assets/productInfo/rosehip-bioregenerate-section2.webp"
+        },
+        {
+          "information": {
+            "title": "Key Ingredients",
+            "content": ["Rosehip Seed and Fruit: Organic Rosehip Oil in its purest form repairs with Omegas 3, 6, 7 and 9, while antioxidant carotenoids protect from future damage"]
+          },
+          "image":"../src/assets/productInfo/rosehip-bioregenerate-section3.jpg"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "brand": "Costa Brazil",
+      "name": "Sérum Para A Face - Face Serum",
+      "category": "Skincare - Face Oil",
+      "tags": ["Vegan"],
+      "rating": 0,
+      "price": 135,
+      "quantity": 1,
+      "generalDescription": "This high-performance, lightweight Face Serum features a blend of hyaluronic acid, vitamin C-rich Camu Camu, Açai, Guaraná, Rosemary Leaf, and Breu Extracts.",
+      "principalBenefits": ["Rich in vitamin C", "Good for all skin types", "Fragrance-Free", "30 ml / 1 fl oz"],
+      "description": "Created with an ultra-hydrating base of aloe leaf juice, our formula provides a supply of vitamins, omegas and antioxidants to help nourish, visibly brighten and improve the look and feel of skin texture and tone. It absorbs quickly and helps skin look and feel radiant, healthy, and prepped for any layers that follow.",
+      "ingredients": "Hyaluronic Acid attracts moisture to hydrate the skin, making it appear firmer, more plump, and smoother. Guaraná, a caffeine-rich Brazilian plant native to the Amazon, which energizes the skin and reveals a fresh, healthy-looking complexion. Açaí, a powerful antioxidant, is rich in natural forms of vitamins A, B, C, and E and helps to revitalize skin, and restore moisture. Camu Camu is one of the richest botanical sources of vitamin C and also features polyphenols and natural forms of vitamin B3 (niacin). This natural skin brightener helps targets discoloration, and minimize the look of fine lines. Breu Branco Extract is an aromatic natural resin with a calming effect on the body and mind. Rosemary Leaf Extract helps even skin tone and reduce puffiness.",
+      "carouselImages": ["../src/assets/productInfo/sérum-para-face-carousel1.jpg", "../src/assets/productInfo/sérum-para-face-carousel2.jpg", "../src/assets/productInfo/sérum-para-face-carousel3.webp"],
+      "section": [
+        {
+          "information": {
+            "title": "Benefits Include:",
+            "content": ["Visibly Improves the Appearance of Firmness", "Visibly Evens Skin Tone and Brightens Calms", "Hydrates", "Dermatologist Tested | Vegan | Cruelty Free", "Free of Parabens, Phthalates, PEGs, Silicones, Sulfates, Gluten, Glycols, Ethanolamines, EDTA, BHA, BHT, Mineral Oil, and Artificial Colorants"]
+          },
+          "image":"../src/assets/productInfo/sérum-para-face-section1.webp"
+        },
+        {
+          "information": {
+            "title": "How to use",
+            "content": ["Apply twice daily to freshly cleansed skin.", "Place 1-3 pumps into palms and gently massage over the face, neck, and chest.", "Follow with Costa Brazil Kaya Anti-Aging Face Oil for added hydration."]
+          },
+          "image":"../src/assets/productInfo/sérum-para-face-section2.webp"
+        },
+        {
+          "information": {
+            "title": "Key ingredients",
+            "content": ["Camu Camu", "Hyaluronic Acid", "Acai Extract", "Rosemary Leaf Extract"]
+          },
+          "image":"../src/assets/productInfo/sérum-para-face-section3.webp"
+        },
+        {
+          "information": {
+            "title": "Clinical results",
+            "content": ["Using this product daily helps skin look and feel tighter and improves the look and feel of skin texture and tone while helping to soften the appearance of visible marks, leaving behind an energized, radiant, healthier-looking skin."]
+          }
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "brand": "Supernatural",
+      "name": "Cosmic Glow Oil",
+      "category": "Skincare - Face Oil",
+      "rating": 0,
+      "price": 108,
+      "quantity": 1,
+      "generalDescription": "Sexy to look at, sinful to use. A staple at Shen, this face oil is packed with Vitamin C and Omega-3, 6, and 9 for that unbeatable glow.",
+      "principalBenefits": ["Ultra light and deeply nourishing", "Silky and easily absorbed", "Good for all skin types"],
+      "description": "Supernal Cosmic Glow Oil is botanically-infused containing nutrient-rich ingredients handcrafted in small batches to transform one’s daily skincare practice. We recommend using this gorgeous oil to revitalize your skin’s natural luminosity.",
+      "ingredients": "Camellia Oleifera (Camellia) Seed Oil*, Squalane, Adansonia Digitata (Baobab) Seed Oil*, Emblica Officinalis (Amla) Fruit Extract and Sesamum Indicum (Sesame) Seed Oil, Sclerocarya Birrea (Marula) Oil**, Vaccinium Macrocarpon (Cranberry) Seed Oil*, Plukenetia Volubilis (Sacha Inchi) Seed Oil*, Tocopherol (Non-GMO Vitamin E from Helianthus Annuus [Sunflower] Seed Oil), Boswellia Carterii (Frankincense) Gum Oil**",
+      "carouselImages": ["../src/assets/productInfo/cosmic-glow-oil-f-carousel1.png", "../src/assets/productInfo/cosmic-glow-oil-f-carousel2.png", "../src/assets/productInfo/cosmic-glow-oil-f-carousel3.png", "../src/assets/productInfo/cosmic-glow-oil-f-carousel4.png", "../src/assets/productInfo/cosmic-glow-oil-f-carousel5.png"],
+      "quotes": {
+        "title": "Why Jess Loves It...",
+        "content": "“As the first retailer of Supernal and a super fan myself, I find myself always going back to this face oil. The scent, the feel and the effects really show you what amazing skincare can do.“"
+      },
+      "section": [
+        {
+          "information": {
+            "title": "Benefits Include:",
+            "content": ["Formulated with Amla Blue Tansy, and Roman Chamomile to soothe and brighten", "Fortified with Vitamin C and Omegas 3, 6, and 9 to penetrate quickly", "Ideal for normal, dry, oily, and combination skin", "Vegan, soy-free, and gluten-free"]
+          },
+          "image":"../src/assets/productInfo/cosmic-glow-oil-f-section1.png"
+        },
+        {
+          "information": {
+            "title": "How To Use",
+            "content": ["Prep Your Skin", "Cleanse your skin.", "Use the Dropper", "Warm a few drops of the oil in the palms of your hands.", "Apply to Your Face", "Lightly press onto skin and blend in an upwards motion up to two times daily. Use morning and evening, preferably."]
+          },
+          "image":"../src/assets/productInfo/cosmic-glow-oil-f-section2.png"
+        },
+        {
+          "information": {
+            "title": "Key ingredients",
+            "content": ["Vitamin C: Hydrates, brightens, and helps even tone", "Omegas 3, 6, and 9: Aid in the inflammatory response of the skin and work to improve texture, softness, and a healthy skin barrier"]
+          },
+          "image":"../src/assets/productInfo/cosmic-glow-oil-f-section3.jpg"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "brand": "Costa Brazil",
+      "name": "Costa Brazil Oleo Para A Face - Kaya Anti-Aging Face Oil",
+      "category": "Skincare - Face Oil",
+      "tags": ["Vegan"],
+      "rating": 0,
+      "price": 125,
+      "quantity": 1,
+      "generalDescription": "A Brazilian rainforest beauty elixir powered by nature to enhance your skin’s healthy glow.",
+      "principalBenefits": ["30 ml/ 1 fl oz", "No added fragrance", "Beauty oil powered by nature", "Safe for all skin types"],
+      "description": "This anti-aging oil nourishes and revitalizes skin, helps improve firmness and reduces the appearance of fine lines. Enhances firming, younger appearance, boosts radiance, calms and soothes. Packed with omegas, antioxidant-rich Cacay Oil assists in reducing the appearance of aging, fine lines and other environmental stressors. ",
+      "ingredients": "Silybum Marianum (Milk Thistle) Ethyl Ester**, Coco-Caprylate/Caprate**, Cacay (Caryodendron Orinocense) Seed Oil* (Organic), Sapucaia(Lecythis Pisonis) Oil*(Organic), Brazil (Bertholletia excelsa) Seed Oil* (Organic)",
+      "carouselImages": ["../src/assets/productInfo/costa-brazil-oleo-carousel1.png", "../src/assets/productInfo/costa-brazil-oleo-carousel2.png", "../src/assets/productInfo/costa-brazil-oleo-carousel3.png", "../src/assets/productInfo/costa-brazil-oleo-carousel4.png", "../src/assets/productInfo/costa-brazil-oleo-carousel5.png"],
+      "section": [
+        {
+          "information": {
+            "title": "Benefits Include:",
+            "content": ["Powerful antioxidants help boost radiance, firmness and hydration", "A highly active, lightweight formula that nourishes and revitalizes your skin, while enhancing firmness and reducing the appearance of fine lines"]
+          },
+          "image":"../src/assets/productInfo/costa-brazil-oleo-section1.jpg"
+        },
+        {
+          "information": {
+            "title": "How to use",
+            "content": ["Indulge your skin and apply daily to your face, neck and décolleté.", "Good for all skin types.", "Place 1-3 drops into palms and pat gently onto cleansed skin. For best results, use morning and evening.", "This versatile oil can be mixed with your moisturizer or foundation for increased luminosity."]
+          },
+          "image":"../src/assets/productInfo/costa-brazil-oleo-section2.jpg"
+        },
+        {
+          "information": {
+            "title": "Key ingredients",
+            "content": ["Silybum Marianum (Milk Thistle) Ethyl Ester**",  "Brazil (Bertholletia excelsa) Seed Oil* (Organic) Murumuru (Astrocaryum murumuru) Seed Butter* (Organic)", "Tea Tree (Camellia Oleifera) Seed Oil* (Organic)"]
+          },
+          "image":"../src/assets/productInfo/costa-brazil-oleo-section3.jpg"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "brand": "Youth to the people",
+      "name": "Superberry Hydrate and Glow Dream Oil",
+      "category": "Skincare - Face Oil",
+      "tags": ["Vegan"],
+      "rating": 0,
+      "price": 44,
+      "quantity": 1,
+      "generalDescription": "This ultra enriched, flash absorbing face oil harnesses the nutrients of rare superberries.",
+      "principalBenefits": ["Fast absorbing face oil", "Loaded with antioxidant rich ingredients", "Illuminates and revives dehydrated skin", "1 oz"],
+      "description": "Maqui, the most antioxidant dense fruit in the world, is combined with açaí and goji, creating a potent antioxidant elixir. Intensely hydrating prickly pear and squalane oil lock in moisture with the help of omega fatty acids and high levels of vitamin C.",
+      "ingredients": "Helianthus Annuus (Sunflower) Seed Oil*, Dicaprylyl Carbonate, Simmondsia Chinensis (Jojoba) Seed Oil*, Opuntia Tuna Extract(Prickly Pear), Euterpe Oleracea Fruit Extract (Acai), Lycium Barbarum (Goji) Extract, Aristotelia Chilensis (Maqui) Fruit Extract, And Moringa Oleifera Leaf Extract, Squalane Olive",
+      "carouselImages": ["../src/assets/productInfo/superberry-hydrate-carousel1.jpg", "../src/assets/productInfo/superberry-hydrate-carousel2.jpg", "../src/assets/productInfo/superberry-hydrate-carousel3.jpg"],
+      "section": [
+        {
+          "information": {
+            "title": "Benefits Include:",
+            "content": ["YTTP’s perfected balance of jojoba and sunflower oil illuminate and revive dehydrated skin without weighing it down. Together, these super ingredients work in harmony to deliver a velvety soft, healthy glow."]
+          },
+          "image":"../src/assets/productInfo/superberry-hydrate-section1.jpg"
+        },
+        {
+          "information": {
+            "title": "How to use",
+            "content": ["After cleansing, apply 2-5 drops of oil into hands.", "Rub together and press into skin.", "Use day and night."]
+          }
+        },
+        {
+          "information": {
+            "title": "Key ingredients",
+            "content": ["Maqui: The most antioxidant dense fruit in the world. This rare superberry helps combat free radicals", "Acai: Rich in omega 3, 6, and 9 fatty acids that help to revive dull, dry skin", "Prickly Pear: Extremely hydrating. Helps ease signs of redness", "Goji: Rich in antioxidants, essential fatty acids and vitamins C, and E. Helps soften the appearance of fine lines and combat free radicals."]
+          }
+        },
+        {
+          "information": {
+            "title": "Clinical results",
+            "content": ["Antioxidant-rich superberries maqui, goji, acai, and prickly Pear deliver vitamin-rich goodness boosted with the latest, clinically-proven form of stable vitamin C (THD ascorbate) for a softer, more youthful-looking complexion."]
+          }
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "brand": "Pai",
+      "name": "Impossible Glow",
+      "category": "Skincare - Face Oil",
+      "tags": ["Vegan"],
+      "rating": 0,
+      "price": 44,
+      "quantity": 1,
+      "generalDescription": "Yes it’s possible to have ridiculously radiant skin without boarding a plane. And yes, it can be from an all-natural formula too. Our bronzing drops don’t just boost radiance, but hydrate and soften the skin too.",
+      "principalBenefits": ["Helps with skin radiance", "Hydrating", "Gives a natural glow", "1 fl oz/ 30ml"],
+      "description": "We don't usually believe in quick fixes, but sometimes you want that golden, just-stepped-off-a-plane glow without dusting off your passport. So we're bringing it to you. A natural, healthy-looking glow, in a certified organic formula, that you can use all year round - and care for your skin while you’re at it.",
+      "ingredients": "AQUA (water), CITRUS LIMON FRUIT WATER* (lemon fruit water), MICA, GLYCERIN**, ASCOPHYLLUM NODOSUM EXTRACT (algae), HYDROLYZED GLYCOSAMINOGLYCANS, SCLEROTIUM GUM, SODIUM LEVULINATE, XANTHAN GUM, SODIUM DEHYDROACETATE, HYALURONIC ACID, SODIUM ANISATE, LACTIC ACID, SODIUM PHYTATE, MALTODEXTRIN, IRON OXIDES (CI 77491), TITANIUM DIOXIDE (CI 77891)",
+      "carouselImages": ["../src/assets/productInfo/impossible-glow-carousel1.jpg", "../src/assets/productInfo/impossible-glow-carousel2.webp", "../src/assets/productInfo/impossible-glow-carousel3.webp", "../src/assets/productInfo/impossible-glow-carousel4.jpg", "../src/assets/productInfo/impossible-glow-carousel5.jpg", "../src/assets/productInfo/impossible-glow-carousel6.jpg"],
+      "section": [
+        {
+          "information": {
+            "title": "Benefits Include:",
+            "content": ["Suited for all skin types and skin tones", "Customizable with multiple ways to build and layer", "Naturally-derived bronzing pigment", "COSMOS Organic, Vegan, Cruelty Free"]
+          },
+          "image":"../src/assets/productInfo/impossible-glow-section1.webp"
+        },
+        {
+          "information": {
+            "title": "How To Use",
+            "content": ["For subtle radiance add one drop to your daily moisturizer or SPF – whichever is your last layer of skincare. For a more intense bronzing effect, massage one to two drops directly into skin. Or gently dab across cheekbones as a highlighter, that hydrates too.", "The Impossible Glow can also be used on the body either directly as highlighter or added to your body cream for a natural glow. Just allow to dry fully before dressing.", "Shake before use."]
+          },
+          "image":"../src/assets/productInfo/impossible-glow-section2.jpeg"
+        },
+        {
+          "information": {
+            "title": "Key Ingredients",
+            "content": ["Hyaluronic Acid -  A sugar the body naturally produces, HA can hold 10-50 times its weight in water. It then stores it like a reservoir for the skin to drink from all day long. You’ll find it in Pai products designed to hydrate skin.", "Sea Kelp - This complexion-saving seaweed is an extremophile – meaning it can survive in extreme climates. Its ability to hold onto moisture in harsh, salty, high UV conditions is exactly what makes it so good at skin hydration. A sustainable crop, it grows at high speed and absorbs up to 20 times more carbon per acre than land forests.", "Lemon Fruit Water - Extracted from lemons, this vitamin C-rich powerhouse brightens and moisturizes the skin to leave it glowing and radiant.", "Mica - This glow-giving natural pearlescent pigment – alongside natural Titanium Dioxide & Iron Oxides particles – reflects light. It’s the size and shape of these particles that change the colour and intensity of our bronzing drops."]
+          },
+          "image":"../src/assets/productInfo/impossible-glow-section3.jpeg"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "brand": "LELAND FRANCIS",
+      "name": "Twenty-nine Botanical Serum",
+      "category": "Skincare - Face Oil",
+      "tags": ["VEGAN"],
+      "rating": 5,
+      "price": 90,
+      "quantity": 1,
+      "generalDescription": "A blend of twenty-nine of the world’s most active natural botanicals, this powerful concentration is packed with ingredients that are anti-inflammatory, balancing, protecting, hydrating, renewing, nourishing, and brightening.",
+      "principalBenefits": ["Anti-inflammatory, balancing and protecting serum", "Vegan and cruelty free", "Clean beauty", "1fl oz/ 30 ml"],
+      "description": "This special blend of botanicals helps to soothe and even skin tone, boost collagen, fight off sunspots, and help battle fine lines and wrinkles.",
+      "ingredients": "Persea Gratissima (Avocado) Oil, Argania Spinosa (Argan) Kernel Oil, Calophyllum Tacamahaca (Tamanu) Seed Oil, Corylus Avellana (Hazelnut) Seed Oil, Oenothera Biennis (Evening Primrose) Oil, Rosa Moschata (Rosehip) Seed Oil, Triticum Vulgare (Wheat) Germ Oil, Vitis Vinifera (Grape) Seed Oil, Arnica Montana (Arnica) Flower Extract, Boswellia Carterii (Frankincense) Oil, Calendula Officinalis (Marigold) Flower Extract, Citrus Limon (Lemon) Peel Oil",
+      "carouselImages": ["../src/assets/productInfo/twenty-nine-botanical-carousel1.png", "../src/assets/productInfo/twenty-nine-botanical-carousel2.jpg"],
+      "section": [
+        {
+          "information": {
+            "title": "Benefits Include:",
+            "content": ["Packed with helpful anti-inflammatory, balancing, hydrating, renewing and nourishing ingredients that work around the clock to help protect and brighten.", "Clean, cruelty free, vegan and made in small batches."]
+          },
+          "image":"../src/assets/productInfo/twenty-nine-botanical-section1.jpg"
+        },
+        {
+          "information": {
+            "title": "How To Use",
+            "content": ["Place 4-8 drops of twenty-nine botanical serum in the palm of your hand, gently rub hands together, and press or massage onto face and neck. Use after cleansing and before face oil both morning and night."]
+          },
+          "image":"../src/assets/productInfo/twenty-nine-botanical-section2.jpg"
+        },
+        {
+          "information": {
+            "title": "Key Ingredients",
+            "content": ["Persea Gratissima (Avocado) Oil", "Argania Spinosa (Argan) Kernel Oil", "Calophyllum Tacamahaca (Tamanu) Seed Oil", "Oenothera Biennis (Evening Primrose) Oil"]
+          },
+          "image":"../src/assets/productInfo/twenty-nine-botanical-section3.jpg"
+        },
+        {
+          "information": {
+            "title": "Clinical results",
+            "content": ["Twenty-nine botanical serum will help to restore skin to a flawless, healthy, and youthful glow."]
+          }
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "brand": "Venn",
+      "name": "Age-Response Compound K Hyaluronic Booster",
+      "category": "Skincare - Face Serums",
+      "tags": ["Best Seller"],
+      "rating": 4,
+      "price": 125,
+      "quantity": 1,
+      "generalDescription": "The Booster is packed with 5 different types of medium- and high-weight hyaluronic molecules, Peptides, Polyamine, and Vitamins B1, B2, B3 (Niacinamide), and B9 that work in synergy with Ginsenoside Compound K to provide comprehensive anti-aging skin benefits, including strengthening the skin's appearance and visibly reducing wrinkles, pores, and discoloration.",
+      "principalBenefits": ["Advanced skin booster", "Fights comprehensive signs of aging", "Promotes stronger, firmer skin", "Clean, safe ingredients", "For all skin types. Dermatologist tested. Non-irritating. Non-sensitizing."],
+      "description": "Anti-aging and brightening serum supercharged with 2,550 ppm of VENN’s water-solubilized Ginsenoside Compound K (KR Patent 10-2055210), a powerhouse Antioxidant and the key anti-aging bioactive component of Panax Ginseng. The Booster features VENN’s Solubilization Technology (KR Patent 10-2055210) to water-solubilize Ginsenoside Compound K and thereby use potent concentrations of this powerful natural active in the formulation for brighter, firmer, and more even-looking skin.",
+      "ingredients": "Houttuynia Cordata Water, Water, Butylene Glycol, Propanediol, Camellia Sinensis Leaf Water, 1,2-Hexanediol, Glycerin, Ginsenosides, Glycine Soja Germ Extract, Acmella Oleracea Extract, Evodia Rutaecarpa Fruit Extract, Diospyros Kaki Leaf Extract, Vitis Vinifera Fruit Extract, Lavandula Angustifolia Flower Extract, Monarda Didyma Leaf Extract, Coffea Arabica Seed Extract, Carthamus Tinctorius Flower Extract, Polygonum Cuspidatum Root Extract,",
+      "carouselImages": ["../src/assets/productInfo/age-response-carousel1.jpg", "../src/assets/productInfo/age-response-carousel2.jpg", "../src/assets/productInfo/age-response-carousel3.jpg"],
+      "quotes": {
+        "title": "Why Jess Loves It...",
+        "content": "“A hyaluronic serum to reduce the appearance of fine lines and wrinkles and isn't tacky at all, just absorbs so nice and you actually feel your skin absorbing the moisture.“"
+      },
+      "section": [
+        {
+          "information": {
+            "title": "Benefits Include:",
+            "content": ["Patented Concentric Technology™ offers 3 technologies for maximum age-defying results", "Promotes collagen synthesis and fights comprehensive signs of aging", "Clinically tested to reduce transepidermal water loss, improve skin elasticity and firmness, visibly reduce wrinkles, and minimize pores", "Recommended as a powerful alternative to a vitamin C (L-ascorbic acid) serum in terms of its skin benefits, without any of the negativities associated with vitamin C such as oxidation and sensitization.", "Non-irritating and non-sensitizing for all skin types"]
+          },
+          "image":"../src/assets/productInfo/age-response-section1.jpg"
+        },
+        {
+          "information": {
+            "title": "How To Use",
+            "content": ["Prep Your Skin Begin with a clean, dry face.", "Use the Dropper Release 1-2 full dropper servings of the booster in the palm of your hand.", "Apply to Your Face Gently pat the booster evenly onto your face and neck. Follow with your favorite moisturizer."]
+          },
+          "image":"../src/assets/productInfo/age-response-section2.jpg"
+        },
+        {
+          "information": {
+            "title": "Key ingredients",
+            "content": ["Hyaluronic Molecules: Increases water content of the skin", "Peptides: Improves skin barrier and reduces wrinkles", "Polyamine: Increases firmness and hydration of the skin", "Vitamins B1, B2, B3 (Niacinamide) and B9: Improves the appearance of fine lines and wrinkles", "Compound K: Promotes collagen synthesis and fights comprehensive signs of aging"]
+          },
+          "image":"../src/assets/productInfo/age-response-section3.jpg"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "brand": "Vintner's daughter",
+      "name": "Active Botanical Serum",
+      "category": "Skincare - Face Serums",
+      "tags": ["Best Seller"],
+      "rating": 5,
+      "price": 195,
+      "quantity": 1,
+      "generalDescription": "This cult-favorite serum is beloved for a reason. Ultra-luxurious, the award-winning oil is formulated with 22 of the world’s turbo-charged botanicals to nourish and restore moisture.",
+      "principalBenefits": ["Safe for blemish-prone, dry, dull, and mature skin", "Delivers restorative moisture through optimal nutrition", "30ml"],
+      "description": "Multi-correctional and multi-beneficial, Vintner’s Daughter Active Botanical Serum is unique because it is made with a proprietary 21-day Phyto Radiance Infusion™ process and 60+ highly concentrated, skin-beautifying vitamins, minerals, phytonutrients, antioxidants, phytoceramides, aminos, and omega fatty acids to effectively address a broad range of skin concerns.",
+      "ingredients": "Vitis Vinifera (Grape) Seed Oil, Corylus Avellana (Hazelnut) SeedOil, Persea Gratissima (Avocado) Oil, Rosa Damascena (Rose) Flower Oil, Daucus Carota Sativa (Carrot) Seed Oil, Oenothera Biennis (Evening Primrose) Seed Extract, Rosa Canina (Rosehip) Seed Extract, Citrus",
+      "carouselImages": ["../src/assets/productInfo/active-botanical-carousel1.png", "../src/assets/productInfo/active-botanical-carousel2.png", "../src/assets/productInfo/active-botanical-carousel3.png"],
+      "quotes": {
+        "title": "Why Jess Loves It...",
+        "content": "“Liquid gold is sometimes how I refer to this incredible all in one face oil.“"
+      },
+      "section": [
+        {
+          "information": {
+            "title": "Benefits Include:",
+            "content": ["For all skin types, Suitable for daily AM/PM use", "Moisturizes and nourishes with abundant Fatty Acids and Omegas 3,6,7 and 9", "Replenishing lipids support the skin barrier along with dryness and dullness", "Soothes and supports stressed skin with Alfalfa, Calendula, Grape Seed, and Dandelion", "Reduces the appearance of redness for a natural, healthy glow", "Increases brightness so your healthiest skin always shines through", "100% natural ingredients, formulated without added sulphates, parabens, phthalates, synthetic fragrance, PEGs, or SLSs"]
+          },
+          "image":"../src/assets/productInfo/active-botanical-section1.png"
+        },
+        {
+          "information": {
+            "title": "How To Use",
+            "content": ["Prep Your Skin", "Begin with clean skin, and if desired, the complementary Active Treatment Essence.", "Use the Dropper", "Place 5-6 drops of the serum in the palm of your hand.", "Activate", "Quickly rub your palms together to further activate the serum.", "Apply to Your Face", "Using the unique Pat/Press Method™, use both hands to push and press the serum onto your face, neck, and décolleté for 30 seconds."]
+          },
+          "image":"../src/assets/productInfo/active-botanical-section2.png"
+        },
+        {
+          "information": {
+            "title": "Key ingredients",
+            "content": ["Fatty acids and omegas 3, 6, 7, and 9: Replenish essential lipids and support the skin's barrier.", "Alfalfa, Calendula, Grape Seed, and Dandelion: Soothe, revitalize, and calm skin", "Nettle, Lavender, Carrot Seed, and Lemon: Support healthy cellular renewal and combat oxidative stress", "Rose, Frankincense, Tamanu, and Turmeric: Soothe, brighten and combat damage caused by free radicals"]
+          },
+          "image":"../src/assets/productInfo/active-botanical-section3.png"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "brand": "Youth to the people",
+      "name": "15% Vitamin C + Clean Caffeine Energy Serum",
+      "category": "Skincare - Face Serums",
+      "rating": 5,
+      "price": 195,
+      "quantity": 1,
+      "generalDescription": "Clinical-grade 15% vitamin C serum is boosted with clean, plant-derived caffeine to immediately brighten, visibly reduce morning puffiness, and hydrate.",
+      "principalBenefits": ["Energizing Vitamin C serum", "Features plant-derived caffeine", "Reduces hyperpigmentation, evens tone and firms skin"],
+      "description": "Elevate your morning ritual with this first-of-its-kind vitamin C serum boosted with clean, plant-derived caffeine from superleafs yerba mate + guayusa.",
+      "ingredients": "Water/Aqua/Eau, 3-O-Ethyl Ascorbic Acid (Vitamin C), Tetrahexyldecyl Ascorbate (Vitamin C), Propanediol, Glycerin, Pentylene Glycol, Sodium Citrate, Squalane, Triethyl Citrate, Gluconolactone, Citric Acid, Polyhydroxystearic Acid, Polyglyceryl-6 Polyricinoleate, Xanthan",
+      "carouselImages": ["../src/assets/productInfo/clean-caffeine-carousel1.jpg", "../src/assets/productInfo/clean-caffeine-carousel2.webp"],
+      "section": [
+        {
+          "information": {
+            "title": "Benefits Include:",
+            "content": ["Target dullness for instant brightening", "Visibly reduce hyperpigmentation", "Even complexion", "Firm the look of skin", "Energize tired skin reducing morning puffiness"]
+          },
+          "image":"../src/assets/productInfo/clean-caffeine-section1.jpg"
+        },
+        {
+          "information": {
+            "title": "How to use",
+            "content": ["In the morning, apply 2-4 pumps to cleansed face and neck.", "Follow with Superfood Moisture Cream."]
+          },
+          "image":"../src/assets/productInfo/clean-caffeine-section2.jpg"
+        },
+        {
+          "information": {
+            "title": "Key ingredients",
+            "content": ["15% Vitamin C Complex: Three powerful sources of vitamin c are combined in this ultra-stable complex—Ethyl Ascorbic Acid, Tetrahexyldecyl Ascorbate, and Magnesium Ascorbyl Phosphate— For maximum efficacy.", "Yerba Mate + Guayusa: Naturally high in caffeine and antioxidants, this clean, superleaf-derived extract helps reduce morning puffiness.", "Passion Fruit: High in antioxidants, helps scavenge for free radicals.", "Dragon Fruit: Promotes skin health and replenishes essential moisture.", "Squalane: An emollient that provides weightless hydration, locking in moisture."]
+          },
+          "image":"../src/assets/productInfo/clean-caffeine-section3.jpg"
+        },
+        {
+          "information": {
+            "title": "Clinical results",
+            "content": ["90% saw an overall improvement in skin tone", "87% agree skin looks brighter", "87% agree skin looks refreshed", "80% saw a visible improvement in skin's texture"]
+          }
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "brand": "Youth to the people",
+      "name": "Triple Peptide + Cactus Oasis Serum",
+      "category": "Skincare - Face Serums",
+      "rating": 0,
+      "price": 54,
+      "quantity": 1,
+      "generalDescription": "A multidimensional, peptide -packed hydrating serum to instantly firm, plump, and deeply hydrate the skin.",
+      "principalBenefits": ["Plumping, revitalizing serum", "Deeply hydrates with cactus elixir", "Perfect for all skin types", "30 ml"],
+      "description": "This pro-grade formula delivers 4 types of hyaluronic acid + polyglutamic acid, paired with organic cactus elixir to visibly plump and deliver a surge of long-lasting, plumping moisture.",
+      "ingredients": "4D Hyaluronic Acid: Intensely hydrates, visibly smooths texture, and revitalizes thirsty skin cells. Triple Bio-peptide Blend: Youth To The People‘s proven peptide blend supports collagen production to visibly improve texture, tone, and the look of fine lines and wrinkles. Cactus and Rambutan Peel: Moisture-binding plant extracts help skin hang onto hydration longer.",
+      "carouselImages": ["../src/assets/productInfo/triple-peptide-carousel1.png", "../src/assets/productInfo/triple-peptide-carousel2.png", "../src/assets/productInfo/triple-peptide-carousel3.png", "../src/assets/productInfo/triple-peptide-carousel4.png", "../src/assets/productInfo/triple-peptide-carousel5.png"],
+      "section": [
+        {
+          "information": {
+            "title": "Benefits Include:",
+            "content": ["Visibly firms the looks of skin", "Deeply hydrates", "Instantly plumps", "Protects against daily pollutants"]
+          },
+          "image":"../src/assets/productInfo/triple-peptide-section1.jpeg"
+        },
+        {
+          "information": {
+            "title": "How to use",
+            "content": ["Apply 1-2 pumps onto clean, damp skin. Follow with Superfood Moisture Cream or Adaptogen Deep Moisture Cream."]
+          },
+          "image":"../src/assets/productInfo/triple-peptide-section2.jpeg"
+        },
+        {
+          "information": {
+            "title": "Key ingredients",
+            "content": ["Hyaluronic Acid", "Triple Bio Peptide Blend", "Cactus and Rambutan Peel"]
+          },
+          "image":"../src/assets/productInfo/triple-peptide-section3.jpeg"
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "brand": "Zitsticks",
+      "name": "MEGASHADE™ Breakout-proof SPF Serum",
+      "category": "Skincare - Face Serums",
+      "rating": 0,
+      "price": 40,
+      "quantity": 1,
+      "generalDescription": "A broad-spectrum SPF 50+ serum, built for daily protection from the sun, formulated for acne-prone skin.",
+      "principalBenefits": ["50 ml"],
+      "description": "Sun is nice! Vitamin D is regenerative! One harsh underside is that the sun’s UV rays can corrode skin barrier integrity, leading to signs of ageing. Another is that that it can deepen the color of things like post-inflammatory hyperpigmentation, melasma and sun spots. It’s no recent revelation that protecting your skin from UV rays is very important, and we've developed a non-comedogenic sunscreen serum especially for acne-prone skin.",
+      "ingredients": "Homosalate, Octinoxate, Octisalate, Zinc Oxide, Aloe Barbadensis Leaf (Aloe Vera Gel) Juice, Amodimethicone, Aqua (Deionized Water), Butylene Glycol, Butyloctyl Salicylate, C12-15 Alkyl Benzoate, Camellia Sinensis (Green Tea) Extract, Caprylic/Capric Triglyceride, Carbomer",
+      "carouselImages": ["../src/assets/productInfo/breakout-proof-carousel1.jpg"],
+      "section": [
+        {
+          "information": {
+            "title": "Benefits Include:",
+            "content": ["Protects against UV rays", "Soothes breakouts", "Brightens + blocks dark spots", "Intensely hydrates", "Promotes supple bounce", "Silky makeup primer"]
+          },
+          "image":"../src/assets/productInfo/breakout-proof-section1.jpg"
+        },
+        {
+          "information": {
+            "title": "How To Use:",
+            "content": ["Apply one full dropper to skin as your last skincare step, or prior to applying makeup. Reapply every 2 hours. Use daily, irrespective of weather."]
+          },
+          "image":"../src/assets/productInfo/breakout-proof-section2.jpg"
+        },
+        {
+          "information": {
+            "title": "Key Ingredients:",
+            "content": ["Colloidal Oatmeal", "Ferulic Acid", "Tea Tree Oil", "Vitamin E"]
+          }
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "brand": "Ideo",
+      "name": "Ideo Skin Memory Serum",
+      "category": "Skincare - Face Serums",
+      "rating": 5,
+      "price": 175,
+      "quantity": 1,
+      "generalDescription": "Anti-aging serum with proprietary RMA Complex that targets and addresses the visible signs of aging.",
+      "principalBenefits": ["Serum and hydration with Hyaluronic Acid", "Milky, light texture", "Reduces redness, hyperpigmentation, fine lines & wrinkles; brightens & smooths", "pH: 5.54", "30ml / 1 fl. oz"],
+      "description": "Serialized form of brain, anti-aging RMA Complex that targets the visible signs of aging like discoloration, lines, unevenness and laxity that are a result of disordered and destabilized epidermal cells. Cells that have forgotten how to be young. IDEO acts like a reprogrammer. Helping cells regain their youth memory, relearn youthful behavior and resolve their underlying age issues in the process.",
+      "ingredients": "Distilled Water, Resveratrol Powder, Ethyl Alcohol (200 proof),Aloe Barbadensis Leaf Powder,Niacinamide (Vitamin B3),Polysorbate 20,Sorbitan Laurate,Polyglyceryl-4 Laurate,Dilauryl Citrate",
+      "carouselImages": ["../src/assets/productInfo/ideo-skin-carousel1.png", "../src/assets/productInfo/ideo-skin-carousel2.png", "../src/assets/productInfo/ideo-skin-carousel3.png",  "../src/assets/productInfo/ideo-skin-carousel4.png"],
+      "quotes": {
+        "title": "Why Jess Loves It...",
+        "content": "“I am on my second bottle of this and see no turning back! Absorbs quickly, makes your skin feel hydrate, plump, radiant, and minimizes fine lines. I can't wait to gift this to my mom and is one product I have even suggested to friends as an excellent gift that gives results!“"
+      },
+      "section": [
+        {
+          "information": {
+            "title": "Benefits Include:",
+            "content": ["Reduces redness, hyperpigmentation, fine lines & wrinkles; brightens & smooths", "Formulated without parabens"]
+          },
+          "image":"../src/assets/productInfo/ideo-skin-section1.png"
+        },
+        {
+          "information": {
+            "title": "How To Use",
+            "content": ["Shake well.", "Apply AM & PM to face and neck on clean, dry skin.", "For maximum effectiveness exfoliate 1-3x per week."]
+          },
+          "image":"../src/assets/productInfo/ideo-skin-section2.png"
+        },
+        {
+          "information": {
+            "title": "Key Ingredients",
+            "content": ["Hyaluronic Acid", "Resveratrol", "Maleate", "Niacinamide", "Vit C"]
+          },
+          "image":"../src/assets/productInfo/ideo-skin-section3.png"
+        },
+        {
+          "information": {
+            "title": "Clinical results",
+            "content": ["63% experienced improvement in skin redness", "50% experienced improvement in hyperpigmentation", "67% experienced improvement to skin tone", "Over 70% noticed an anti-aging benefit after using the serum"]
+          }
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "brand": "Beautycounter",
+      "name": "Counter+ All Bright C Serum",
+      "category": "Skincare - Face Serums",
+      "rating": 5,
+      "price": 90,
+      "quantity": 1,
+      "generalDescription": "Brighten up with this game-changing serum. This ultra-potent 10% blend of two forms of vitamin C instantly brightens skin and helps reduce the appearance of existing dark spots, while antioxidant-rich turmeric and camu camu extracts help protect against new ones.",
+      "principalBenefits": ["Defends skin from the damaging effects of environmental stressors", "Reveals a more youthful-looking complexion", "Even skin tone", "Improve skin radiance and brightness"],
+      "description": "The formula also helps defend skin from the damaging effects of environmental stressors—revealing a more youthful-looking complexion.",
+      "ingredients": "Aqua/Water/Eau, Propanediol, Bis-Glyceryl Ascorbate*, Tetrahexyldecyl Ascorbate*, Pentylene Glycol, Coconut Alkanes, Glycerin, Hydroxyethyl Acrylate/Sodium Acryloyldimethyl Taurate Copolymer, Curcuma Longa (Turmeric) Root Extract, Myrciaria Dubia Fruit Extract†, Curcumin",
+      "carouselImages": ["../src/assets/productInfo/counter-carousel1.jpg", "../src/assets/productInfo/counter-carousel2.jpg"],
+      "section": [
+        {
+          "information": {
+            "title": "Benefits Include:",
+            "content": ["A unique blend of two ultra-stable forms of vitamin C delivers a supercharged 10% potency", "Our quick-absorbing formula allows for easy layering and an instant boost of radiance", "Leaves skin glowing and promotes an even skin tone"]
+          },
+          "image":"../src/assets/productInfo/counter-section1.png"
+        },
+        {
+          "information": {
+            "title": "How to use",
+            "content": ["Use All Bright C Serum as a treat step with any regimen. After cleansing and toning in the morning, use your regimen’s regular serum, then layer All Bright C Serum on top. Apply to face, neck, and décolletage. Follow with moisturizer."]
+          },
+          "image":"../src/assets/productInfo/counter-section1.jpg"
+        },
+        {
+          "information": {
+            "title": "Key ingredients",
+            "content": ["5% Tetrahexyldecyl Ascorbate (Vitamin C): Antioxidant that reduces the appearance of dark spots and boosts skin brightening, to reveal more youthful-looking skin.", "5% Bis-Glyceryl Ascorbate (Vitamin C): Moisturizes skin while providing antioxidant benefits known to protect skin from damaging environmental stressors. Helps improve the appearance of fine lines and wrinkles.", "Curcuma Longa (Turmeric) Root Extract: The serum’s vibrant hue? That’s thanks to turmeric, an antioxidant superstar that helps even skin tone and improve the appearance of fine lines and wrinkles.", "Myrciaria Dubia (Camu Camu) Fruit Extract: This powerful antioxidant helps reduce the appearance of dark spots while brightening, to visually improve signs of skin fatigue."]
+          },
+          "image":"../src/assets/productInfo/counter-section1.jpg"
+        },
+        {
+          "information": {
+            "title": "Clinical results",
+            "content": ["100% Said skin looked brighter", "94% Said it reduced the appearance of dark spots", "97% Said skin looked more youthful", "94% Said skin tone looked more even"]
+          }
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "brand": "Kosas",
+      "name": "Clear Air Brow Tinted Volumizing Treatment Gel",
+      "category": "Make up - Brows",
+      "tags": ["Best Seller"],
+      "rating": 0,
+      "price": 22,
+      "quantity": 1,
+      "generalDescription": "This clear volumizing gel boosts and fluffs for the look of laminated brows in a flash.",
+      "principalBenefits": ["Volumizing treatment gel", "Swipe and set for fuller brows", "Fills and shapes", "Supports brow hair health", "Increases brow volume"],
+      "description": "Kosas Clear Air Brow Volumizing Treatment Gel delivers clean, long-wear hold for airy, feathery brows. Not your ordinary clear gel, it’s supercharged with activities found in hair products for conditioned, maxed-out brows.",
+      "ingredients": "Aqua, Copernicia Cerifera (Carnauba) Wax, Euphorbia Cerifera (Candelilla) Wax, Ricinus Communis (Castor) Seed Oil, Pullulan, Stearic Acid, Cetyl Alcohol, Glycerin, Oleic/Linoleic/Linolenic Polyglycerides",
+      "carouselImages": ["../src/assets/productInfo/clear-air-brow-carousel1.jpg", "../src/assets/productInfo/clear-air-brow-carousel2.jpg", "../src/assets/productInfo/clear-air-brow-carousel3.jpg","../src/assets/productInfo/clear-air-brow-carousel3.jpg", "../src/assets/productInfo/clear-air-brow-carousel5.jpg"],
+      "quotes": {
+        "title": "Why Jess Loves It...",
+        "content": "“Holds my tinted brows perfectly in place and doesnt move all day. This is also the only brow gel that hasn't flaked on my face.“"
+      },
+      "section": [
+        {
+          "information": {
+            "title": "Benefits Include:",
+            "content": ["Adds sheen and dimension", "Soft flexible hold", "Panthenol Provitamin B5 helps revive brows", "Free of fragrance, silicone, mineral oil, synthetic waxes, and microplastics", "Vegan formula"]
+          },
+          "image":"../src/assets/productInfo/clear-air-brow-section1.jpg"
+        },
+        {
+          "information": {
+            "title": "How To Use",
+            "content": ["Brush Upwards", "Brush through brows to fluff and add volume.", "For An Extra Boost", "Start by brushing backwards from the tail end of your brows to the inner corner, then brush through brows like usual.", "Pro Tip", "Apply Brow Pop pencil first, then layer on the clear gel for maximum dimension and hold."]
+          },
+          "image":"../src/assets/productInfo/clear-air-brow-section2.jpg"
+        },
+        {
+          "information": {
+            "title": "Key ingredients",
+            "content": ["Biodegradable Plant-Based Microfibers: Boosts brow volume and fullness", "Castor Oil: Helps brows reach full growth potential", "Panthenol Provitamin B5: Helps revive brows", "Biotinoyl Tripeptide-1: Supports healthier, fuller brows", "Hyaluronic Acid: Strengthens hair"]
+          },
+          "image":"../src/assets/productInfo/clear-air-brow-section3.jpg"
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "brand": "Kosas",
+      "name": "Air Brow Tinted Volumizing Treatment Gel",
+      "category": "Make up - Brows",
+      "tags": ["Best Seller"],
+      "rating": 5,
+      "price": 22,
+      "quantity": 1,
+      "generalDescription": "Not your average brow gel. This tinted volumizing treatment boosts, fluffs, and tints for big brow energy.",
+      "principalBenefits": ["Volumizing treatment gel", "Fills and shapes", "Tints and holds", "Supports brow hair health", "Increases brow volume"],
+      "description": "Kosas Air Brow provides clean, long-wear color for airy, feathery brows supercharged by activities found in hair products for conditioned, maxed-out brows.",
+      "ingredients": "Aqua, Copernicia Cerifera (Carnauba) Wax, Euphorbia Cerifera (Candelilla) Wax, Ricinus Communis (Castor) Seed Oil, Pullulan, Stearic Acid, Cetyl Alcohol, Glycerin,",
+      "carouselImages": ["../src/assets/productInfo/air-brow-tinted-carousel1.jpg", "../src/assets/productInfo/air-brow-tinted-carousel2.jpg", "../src/assets/productInfo/air-brow-tinted-carousel3.jpg", "../src/assets/productInfo/air-brow-tinted-carousel4.jpg", "../src/assets/productInfo/air-brow-tinted-carousel5.jpg", "../src/assets/productInfo/air-brow-tinted-carousel6.jpg", "../src/assets/productInfo/air-brow-tinted-carousel7.jpg", "../src/assets/productInfo/air-brow-tinted-carousel8.jpg", "../src/assets/productInfo/air-brow-tinted-carousel9.jpg", "../src/assets/productInfo/air-brow-tinted-carousel10.jpg", "../src/assets/productInfo/air-brow-tinted-carousel11.jpg", "../src/assets/productInfo/air-brow-tinted-carousel12.jpg", "../src/assets/productInfo/air-brow-tinted-carousel13.jpg", "../src/assets/productInfo/air-brow-tinted-carousel14.jpg", "../src/assets/productInfo/air-brow-tinted-carousel15.jpg", "../src/assets/productInfo/air-brow-tinted-carousel16.jpg", "../src/assets/productInfo/air-brow-tinted-carousel17.jpg", "../src/assets/productInfo/air-brow-tinted-carousel18.jpg", "../src/assets/productInfo/air-brow-tinted-carousel19.jpg", "../src/assets/productInfo/air-brow-tinted-carousel20.jpg", "../src/assets/productInfo/air-brow-tinted-carousel21.jpg"],
+      "section": [
+        {
+          "information": {
+            "title": "Benefits Include:",
+            "content": ["Adds sheen and dimension", "High pay-off pigment", "Soft flexible hold", "Panthenol Provitamin B5 helps revive brows", "Vegan formula, Free of fragrance, silicone, mineral oil, synthetic waxes, and microplastics"]
+          },
+          "image":"../src/assets/productInfo/air-brow-tinted-section1.jpg"
+        },
+        {
+          "information": {
+            "title": "How To Use",
+            "content": ["Brush Upwards Brush through brows to fluff and add volume.", "For An Extra Boost Start by brushing backwards from the tail end of your brows to the inner corner, then brush through brows like usual.", "Pro Tip Apply Brow Pop pencil first, then layer on tinted gel for maximum dimension and hold."]
+          },
+          "image":"../src/assets/productInfo/air-brow-tinted-section2.jpg"
+        },
+        {
+          "information": {
+            "title": "Key ingredients",
+            "content": ["Biodegradable Plant-Based Microfibers: Boosts brow volume and fullness", "Castor Oil: Helps brows reach full growth potential", "Panthenol Provitamin B5: Helps revive brows", "Biotinoyl Tripeptide-1: Supports healthier, fuller brows"]
+          },
+          "image":"../src/assets/productInfo/air-brow-tinted-section3.jpg"
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "brand": "Kosas",
+      "name": "Brow Pop Dual-Action Defining Pencil",
+      "category": "Make up - Brows",
+      "tags": ["Best Seller", "Vegan"],
+      "rating": 0,
+      "price": 22,
+      "quantity": 1,
+      "generalDescription": "Sculpt, define, and create a bolder brow with this dual-action micro triangle pencil. Fill in sparse brows with precise, hair-like strokes that stay put and plentiful.",
+      "principalBenefits": ["Dual-action defining pencil", "Fill and shape", "Soft, natural real hair look", "Long-wearing"],
+      "description": "Create your custom brow by angling Kosas Brow Pop Dual-Action Defining Pencil’s genius triangle tip. Use the thin tip of the triangle to create hairlike strokes. Use the thicker side to fill in more sparse areas. Finish with the spoolie brush to blend and shape all the hairs in place.",
+      "ingredients": "Hydrogenated Coco-Glycerides, Hydrogenated Castor Oil, Mica, Euphorbia Cerifera (Candelilla) Wax, Copernicia Cerifera (Carnauba) Wax, Panthenol, Simmondsia Chinensis (Jojoba) Seed Oil, Ethylhexylglycerin, Caprylyl Glycol",
+      "carouselImages": ["../src/assets/productInfo/brow-pop-dual-carousel1.jpg", "../src/assets/productInfo/brow-pop-dual-carousel2.jpg", "../src/assets/productInfo/brow-pop-dual-carousel3.jpg","../src/assets/productInfo/brow-pop-dual-carousel4.jpg", "../src/assets/productInfo/brow-pop-dual-carousel5.jpg", "../src/assets/productInfo/brow-pop-dual-carousel6.jpg","../src/assets/productInfo/brow-pop-dual-carousel7.jpg", "../src/assets/productInfo/brow-pop-dual-carousel8.jpg", "../src/assets/productInfo/brow-pop-dual-carousel9.jpg","../src/assets/productInfo/brow-pop-dual-carousel10.jpg", "../src/assets/productInfo/brow-pop-dual-carousel11.jpg", "../src/assets/productInfo/brow-pop-dual-carousel12.jpg","../src/assets/productInfo/brow-pop-dual-carousel13.jpg", "../src/assets/productInfo/brow-pop-dual-carousel14.jpg", "../src/assets/productInfo/brow-pop-dual-carousel15.jpg","../src/assets/productInfo/brow-pop-dual-carousel16.jpg", "../src/assets/productInfo/brow-pop-dual-carousel17.jpg", "../src/assets/productInfo/brow-pop-dual-carousel18.jpg","../src/assets/productInfo/brow-pop-dual-carousel19.jpg"],
+      "quotes": {
+        "title": "Why Jess Loves It...",
+        "content": "“Although I'm a brow tint fanatic I do find sometimes I need a little more oomph and this pencil does the trick, light and easy to use.“"
+      },
+      "section": [
+        {
+          "information": {
+            "title": "Benefits Include:",
+            "content": ["Castor oil helps brows reach full growth potential", "Panthenol Provitamin B5 helps revive brows", "Free of Fragrance, silicone, mineral oil, synthetic waxes, and microplastics", "4 Shades", "including grey", "Vegan formula"]
+          },
+          "image":"../src/assets/productInfo/brow-pop-dual-section1.jpg"
+        },
+        {
+          "information": {
+            "title": "How To Use",
+            "content": ["Apply Hairlike Strokes Use the thin tip of the triangle to create hairlike strokes. Use the thicker side to fill in more sparse areas.", "Fluff Things Up Next, use the spoolie brush to shape brow hair upwards.", "Pro Tip Layer Air Brow tinted gel and/or Air Brow clear gel over pencil for maximum tint, volume, and hold."]
+          },
+          "image":"../src/assets/productInfo/brow-pop-dual-section2.jpg"
+        },
+        {
+          "information": {
+            "title": "Key ingredients",
+            "content": ["Castor Oil: Helps brows reach full growth potential", "Panthenol Provitamin B5: Helps revive brows"]
+          },
+          "image":"../src/assets/productInfo/brow-pop-dual-section3.jpg"
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "brand": "Westman Atelier",
+      "name": "Bonne Brow",
+      "category": "Make up - Brows",
+      "tags": ["Vegan"],
+      "rating": 0,
+      "price": 38,
+      "quantity": 1,
+      "generalDescription": "Natural definition meets feathery fullness for the ultimate ‘Bonne Brow.’ This dual-ended tool features a retractable, angled-tip pencil to fill and define with a precision spoolie to blend and groom.",
+      "principalBenefits": ["Stone - Blonde and Red Hair", "Clay - Medium Blonde and Brown Hair", "Bark - Dark Brown Hair", "Slate - Black/Brown and Black Hair", "Silicone free, paraben free, talc free, phthalates free, fragrance free, no PEGS. Vegan & never tested on animals."],
+      "description": "Made with 100% naturally-derived pigments, the firm-yet-gentle formula glides on evenly to mimic hair-like strokes for a just-right brow every time. Buildable finish goes from soft and defined to bold and full. A detachable, dry spoolie allows for superior control, easy corrections, and precise blending.",
+      "ingredients": "Stone: Iron Oxides (Ci 77492), Hydrogenated Castor Oil, Stearic Acid, Synthetic Fluorphlogopite, Iron Oxides (Ci 77491), Iron Oxides (Ci 77499), Titanium Dioxide (Ci 77891), Triethylhexanoin, Neopentyl Glycol Dicaprate, Dipentaerythrityl Pentaisostearate, Polyglyceryl-2, Triisostearate, Tocopherol, Aluminum Hydroxide.",
+      "carouselImages": ["../src/assets/productInfo/bonne-brow-carousel1.jpg", "../src/assets/productInfo/bonne-brow-carousel2.jpg", "../src/assets/productInfo/bonne-brow-carousel3.jpg", "../src/assets/productInfo/bonne-brow-carousel4.jpg", "../src/assets/productInfo/bonne-brow-carousel5.jpg", "../src/assets/productInfo/bonne-brow-carousel6.jpg", "../src/assets/productInfo/bonne-brow-carousel7.jpg", "../src/assets/productInfo/bonne-brow-carousel8.jpg", "../src/assets/productInfo/bonne-brow-carousel9.jpg", "../src/assets/productInfo/bonne-brow-carousel10.jpg", "../src/assets/productInfo/bonne-brow-carousel11.jpg", "../src/assets/productInfo/bonne-brow-carousel12.jpg"],
+      "section": [
+        {
+          "information": {
+            "title": "Benefits Include",
+            "content": ["100% Naturally Derived Pigments, Buildable and blendable color", "Detachable Dry Spoolie, For superior control and precise grooming", "Retractable Angled Tip, For easy, hair-like strokes"]
+          },
+          "image":"../src/assets/productInfo/bonne-brow-section1.jpg"
+        },
+        {
+          "information": {
+            "title": "How To Use",
+            "content": ["Start by brushing brows upward with dry spoolie, following natural hair direction. Use your pencil as a guide for where brows should begin and end. Hold pencil vertically from the lower corner of the nose and follow the line up—this is where brows should begin. Tilt pencil diagonally from the same starting point to the outer corner of your eye and follow the line to your temple–this is where brows should end. Apply gentle, baby strokes to fill where needed, the lighter the touch the better!"]
+          },
+          "image":"../src/assets/productInfo/bonne-brow-section2.jpg"
+        },
+        {
+          "information": {
+            "title": "Key Ingredients",
+            "content": ["100% Naturally Derived Pigments"]
+          },
+          "image":"../src/assets/productInfo/bonne-brow-section3.jpg"
+        },
+        {
+          "information": {
+            "title": "Results"
+          },
+          "image":"../src/assets/productInfo/bonne-brow-section4.jpg"
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "brand": "Roen",
+      "name": "vowBrow Pencil",
+      "category": "Make up - Brows",
+      "tags": ["Vegan"],
+      "rating": 5,
+      "price": 26,
+      "quantity": 1,
+      "generalDescription": "Celebrity makeup artist and founder Nikki DeRoest wanted to simplify your life, by deliberately only creating three perfect shades. In her years of experience, she found that she didn’t need more than that… so why make more.",
+      "principalBenefits": ["Easy to use and easy to select the perfect shade", "The perfect product to complete your look"],
+      "description": "vowBrow is the perfect brow pencil to help you achieve any brow shape. Tested by an Artist on different brows, shapes, and skin tones, and made for you to use every day. Easily define, fill, and shape. vowBrow’s fine 1.7mm tip and firm formula allows for a precise application, assisting you in making natural hair strokes. Use the spoolie brush to help groom and blend. vowBrow comes in three shades that work on all skin tones. Always made with clean ingredients that don’t compromise on performance.",
+      "ingredients": "Diisostearyl Malate, Triethylhexanoin, C20-40 Acid, Synthetic Wax, C20-40 Alcohols, Polyethylene, Glyceryl Behenate/Eicosadioate, Ethylene/Propylene Copolymer, Ethylcellulose, Boron Nitride, VP/Eicosene Copolymer, Tocopherol, Ascorbyl Palmitate, May Contain: Titanium Dioxide (CI 77891), Mica (CI 77019), Iron Oxides (CI 77491, CI77492, CI77499)",
+      "carouselImages": ["../src/assets/productInfo/vowBrow-carousel1.jpg", "../src/assets/productInfo/vowBrow-carousel2.jpg", "../src/assets/productInfo/vowBrow-carousel3.jpg", "../src/assets/productInfo/vowBrow-carousel4.png", "../src/assets/productInfo/vowBrow-carousel4.png", "../src/assets/productInfo/vowBrow-carousel4.png"],
+      "quotes": {
+        "title": "Why SHEN Loves It...",
+        "content": "“Very good pencil and easy to use.“"
+      },
+      "section": [
+        {
+          "information": {
+            "title": "How to use",
+            "content": ["Take off the cap, and give the pencil one quarter turn. The formula is firm to give the most realistic hair strokes, so you don’t want too much pencil exposed. Define and fill brow shape using feather-light strokes for a perfectly defined brow. Use the spoolie side of pencil to gently brush brow hairs up and shape. It’s also an amazing blending tool. Always twist the tip back down after using to improve longevity and usage of product."]
+          },
+          "image":"../src/assets/productInfo/vowBrow-section1.png"
+        },
+        {
+          "information": {
+            "title": "Key ingredients",
+            "content": ["Ethylene/Propylene Copolymer", "Ethylcellulose, Boron Nitride"]
+          },
+          "image":"../src/assets/productInfo/vowBrow-section2.png"
+        },
+        {
+          "information": {
+            "title": "Clinical results",
+            "content": ["vowBrow is the perfect brow pencil to help you achieve any brow shape. Tested by an Artist on different brows, shapes, and skin tones, and made for you to use every day. Easily define, fill, and shape. vowBrow’s fine 1.7mm tip and firm formula allows for a precise application, assisting you in making natural hair strokes. Use the spoolie brush to help groom and blend. vowBrow comes in three shades that work on all skin tones. Always made with clean ingredients that don’t compromise on performance."]
+          }
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "brand": "Tweezers",
+      "name": "Classic Stainless Slat Tweezers",
+      "category": "Make up - Brows",
+      "rating": 0,
+      "price": 23,
+      "quantity": 1,
+      "generalDescription": "Expertly shape your brows with our classic, award-winning slant tip tweezer. A staple to your beauty routine and famous for its precision, the Slant Tweezer features perfectly aligned, hand-filed tips that grab every hair, every time.",
+      "principalBenefits": ["Superior calibrated tension for comfort, control, and true precision", "Allure 'Best of Beauty' winner every year since 2001", "This product is not tested on animals"],
+      "description": "Professional quality, 25° slanted tip is the perfect angle for working against the brow bone. Clean tweezer tips after each use with alcohol wipe or peroxide. Tweezer can be sanitized in an autoclave or barbicide.",
+      "carouselImages": ["../src/assets/productInfo/classic-stainless-carousel1.png"],
+      "section": [
+        {
+          "information": {
+            "title": "Benefits Include:",
+            "content": ["Professional quality, 25° slanted tip is the perfect angle for working against the brow bone", "Perfectly aligned, hand-filed tips close evenly and firmly to remove hair from the root", "Superior calibrated tension for comfort, control, and true precision"]
+          },
+          "image":"../src/assets/productInfo/classic-stainless-section1.webp"
+        },
+        {
+          "information": {
+            "title": "How to use",
+            "content": ["Prepare for hair removal by opening pores using a warm washcloth, not too hot to prevent redness. This will help to reduce pain.", "For maximum control, tweeze using your thumb and index fingers near the middle of the tweezer body.", "Grab the unwanted hair with the tweezer tips slanted at a 25° angle, squeeze down on the body of the tweezer and pull in the direction of hair growth to remove hair from the root.", "Continue until you have removed all unwanted hair."]
+          }
+        },
+        {
+          "information": {
+            "title": "Clinical results",
+            "image":"../src/assets/productInfo/classic-stainless-section2.webp"          }
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "brand": "Beautycounter",
+      "name": "Brilliant Brow",
+      "category": "Make up - Brows",
+      "tags": ["Vegan"],
+      "rating": 0,
+      "price": 23,
+      "quantity": 1,
+      "generalDescription": "Face-framer. Game-changer. Groom your brows and get a natural tint with our light-hold formula made with conditioning plant-based waxes and butters.",
+      "principalBenefits": ["Flake-proof, foolproof, and easy to use", "Cocoa Seed Butter, Shea Butter, Coconut Oil, and Jojoba Oil: condition brow hairs", "Elderberry Extract protects and conditions"],
+      "description": "Flake-proof, foolproof, and easy to use, a tapered applicator allows for precision, while our buildable formula coats hairs for the appearance of thicker, fuller, natural-looking brows.",
+      "ingredients": "Aqua/Water/Eau, Coconut Alkanes, Silica, Polyglyceryl-3 Polyricinoleate, Copernicia Cerifera (Carnauba) Wax/Cire de carnauba*, Brassica Campestris/Aleurites Fordi Oil Copolymer, Glycerin*, Sorbitan Olivate, Theobroma Cacao (Cocoa) Seed Butter*, Helianthus Annuus (Sunflower) Seed Wax, Butyrospermum Parkii (Shea) Butter*, Sambucus Nigra Fruit Extract",
+      "carouselImages": ["../src/assets/productInfo/brilliant-brow-carousel1.jpg", "../src/assets/productInfo/brilliant-brow-carousel2.jpg", "../src/assets/productInfo/brilliant-brow-carousel3.jpg", "../src/assets/productInfo/brilliant-brow-carousel4.jpg", "../src/assets/productInfo/brilliant-brow-carousel5.jpg", "../src/assets/productInfo/brilliant-brow-carousel6.jpg", "../src/assets/productInfo/brilliant-brow-carousel7.jpg", "../src/assets/productInfo/brilliant-brow-carousel8.jpg"],
+      "section": [
+        {
+          "information": {
+            "title": "Benefits Include:",
+            "content": ["Flake-proof, foolproof, and easy to use, a tapered applicator allows for precision, while our buildable formula coats hairs for the appearance of thicker, fuller, natural-looking brows", "Cocoa Seed Butter, Shea Butter, Coconut Oil, and Jojoba Oil: condition brow hairs to keep them soft and flexible."]
+          },
+          "image":"../src/assets/productInfo/brilliant-brow-section1.jpeg"
+        },
+        {
+          "information": {
+            "title": "Find Your Shade",
+            "content": ["Light: neutral beige for light to dark blonde and strawberry blonde hair.", "Medium: neutral medium brown for light to medium brunette hair.", "Dark: neutral deep brown for dark brunette hair. Soft Black: cool soft black for deep brunette to black hair."]
+          },
+          "image":"../src/assets/productInfo/brilliant-brow-section2.jpeg"
+        },
+        {
+          "information": {
+            "title": "Key ingredients",
+            "content": ["Cocoa Seed Butter, Shea Butter, Coconut Oil, and Jojoba Oil: condition brow hairs to keep them soft and flexible.", "Carnauba Wax and Sunflower Seed Wax: add structure to help define, groom, and condition brow hairs.", "Elderberry Extract: a superfruit extract rich in phytonutrients and antioxidants that protect and condition."]
+          },
+          "image":"../src/assets/productInfo/brilliant-brow-section3.jpeg"
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "brand": "Tweezers",
+      "name": "Point Tweezer Classic Stainless",
+      "category": "Make up - Brows",
+      "tags": ["Best Seller"],
+      "rating": 0,
+      "price": 23,
+      "quantity": 1,
+      "generalDescription": "This all-in-one stainless steel Pointed Slant Tweezer is uniquely designed with perfectly aligned, hand-filed tips that combine the expert handling of our Slant with the remarkable precision of our Point.",
+      "principalBenefits": ["Perfectly aligned, hand filed tips", "Dual-purpose tweezer for brow shaping and precision work. Use slant side for general tweezing and shaping and the point side for precision work such as removing baby fine hairs."],
+      "description": "Famous for its precision, with perfectly aligned hand-finished points that are so precise you can grab the smallest and finest hairs with ease. Great for brows, ingrown hairs and splinters. The point tweezer has extra-sharp, perfectly aligned hand filed points.",
+      "carouselImages": ["../src/assets/productInfo/point-tweezer-carousel1.png"],
+      "section": [
+        {
+          "information": {
+            "title": "Benefits Include:",
+            "content": ["Famous for its precision, with perfectly aligned hand-finished points that are so precise you can grab the smallest and finest hairs with ease. Great for brows, ingrown hairs and splinters.", "Stainless steel is durable and easy to clean.", "This product is not tested on animals."]
+          },
+          "image":"../src/assets/productInfo/point-tweezer-section1.webp"
+        },
+        {
+          "information": {
+            "title": "How to use",
+            "content": ["Tweeze in the direction of hair growth, plucking one hair at a time at the root to avoid breakage. For ingrowns, cleanse skin and disinfect tip of tweezer with alcohol or peroxide."]
+          }
+        },
+        {
+          "information": {
+            "title": "Results"
+          },
+          "image":["../src/assets/productInfo/point-tweezer-section21.webp", "../src/assets/productInfo/point-tweezer-section22.webp"]
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "brand": "Eyeco",
+      "name": "Lash Alert Mascara",
+      "category": "Make up - Mascara",
+      "tags": ["Low Stock"],
+      "rating": 3,
+      "price": 24,
+      "quantity": 1,
+      "generalDescription": "A botanical-fueled energizing formula, infused with caffeine and a double dose of fibers to lift the sleepiest of ‘bed lashes’ for perkier volume, curl and care all day. Lash Alert will improve long-term elasticity and resilience for naturally thicker lashes, around the clock.",
+      "principalBenefits": ["Volume boosting mascara", "Aids in naturally thicker lashes long term"],
+      "description": "Lash Alert will improve long-term elasticity and resilience for naturally thicker lashes, around the clock. ‘This mascara is even better – and way easier – than false lashes’ – Refinery29",
+      "ingredients": "Water, Acrylates/ Ethylhexyl Acrylate Copolymer, Cera Alba (Beeswax), Butyrospermum Parkii (Shea) Butter, Copernicia Cerifera Cera (Carnauba) Wax, Ozokerite, Stearic Acid",
+      "carouselImages": ["../src/assets/productInfo/alert-mascara-carousel1.jpg", "../src/assets/productInfo/alert-mascara-carousel2.jpg"],
+      "quotes": {
+        "content": "“This mascara is even better – and way easier – than false lashes’ – Refinery29"
+      },
+      "section": [
+        {
+          "information": {
+            "title": "Benefits Include:",
+            "content": ["Contains caffeine to wake up lashes", "Enriched with biotin, castor oil and arginine to leave lashes feeling nourished and conditioned", "Gives lashes a natural flutter"]
+          },
+          "image":"../src/assets/productInfo/alert-mascara-section1.png"
+        },
+        {
+          "information": {
+            "title": "How to use",
+            "content": ["Clean eyelids and lashes of dirt and oil before applying. Apply to lashes and let dry. Apply multiple coats for a more dramatic look."]
+          },
+          "image":"../src/assets/productInfo/alert-mascara-section1.jpeg"
+        },
+        {
+          "information": {
+            "title": "Key ingredients",
+            "content": ["Cera Alba (Beeswax)", "Butyrospermum Parkii (Shea) Butter", "Copernicia Cerifera Cera (Carnauba) Wax", "PEG-40HydrogenatedCastorOil", "Allium Sativum (Garlic) Bulb Extract", "Camellia Sinensis Leaf Extract", "Polygonum Multi Orum Root Extract", "Caffeine"]
+          }
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "brand": "Beautycounter",
+      "name": "Think Big All-in-One Mascara",
+      "category": "Make up - Mascara",
+      "rating": 1,
+      "price": 30,
+      "quantity": 1,
+      "generalDescription": "This clean, clinically proven mascara obsesses over every lash to lift while adding volume and length.",
+      "principalBenefits": ["Clean and effective", "Strengthens for longer, fuller lashes", "Soft, molded brush", "Deep rich black color", "Contains lash-care conditioners", "Longwear, smudge-proof color"],
+      "description": "Beautycounter’s Think Big All-In-One Mascara is obsessively clean and clinically powered to create visibly longer, defined, and separated lashes. Made with zero harmful ingredients—this mascara supports stronger lashes via nourishing Tripeptide Technology. Plus, the soft, molded brush makes application effortless to define lashes from roots to ends with bold rich color.",
+      "ingredients": "Aqua/Water/Eau, Iron Oxides (CI 77499), Synthetic Beeswax, Palmitic Acid, Stearic Acid, Oryza Sativa (Rice) Bran Wax",
+      "carouselImages": ["../src/assets/productInfo/think-big-mascara-carousel1.jpg", "../src/assets/productInfo/think-big-mascara-carousel2.jpg", "../src/assets/productInfo/think-big-mascara-carousel3.jpg", "../src/assets/productInfo/think-big-mascara-carousel4.jpg", "../src/assets/productInfo/think-big-mascara-carousel5.jpg"],
+      "quotes": {
+        "title": "Why Jess Loves It...",
+        "content": "“The brush on this makes my lashes look amazing, it seperates them while lengthening them and it doesn't seem to be under my eyes mid day.“"
+      },
+      "section": [
+        {
+          "information": {
+            "title": "Benefits Include:",
+            "content": ["Tripeptide Technology supports healthier, fuller lashes", "Provitamin B5 gently conditions lashes", "97% experienced fuller, healthier-looking lashes after just four weeks"]
+          },
+          "image":"../src/assets/productInfo/think-big-mascara-section1.jpeg"
+        },
+        {
+          "information": {
+            "title": "How To Use",
+            "content": ["Apply to Your Lashes Sweep the soft, molded brush through your lashes from base to tips for instant volume and lift.", "To Remove Using your favorite makeup remover or cleanser, gently press and wipe (never rub) formula from lashes.", "Pro Tip Apply up to three coats to build desired volume."]
+          },
+          "image":"../src/assets/productInfo/think-big-mascara-section2.jpg"
+        },
+        {
+          "information": {
+            "title": "Key ingredients",
+            "content": ["Tripeptide Technology: A blend of lash-care conditioners to make lashes appear longer, fuller, and stronger", "Panthenol (provitamin B5): Nourishes and conditions lashes", "Biotinyl-tripeptide: Helps support stronger, healthier-looking lashes", "Rice Bran, Calendula, and Carnauba Waxes: Build creamy volume with a weightless feel"]
+          },
+          "image":"../src/assets/productInfo/think-big-mascara-section3.jpg"
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "brand": "Westman atelier",
+      "name": "Eye Love You Mascara",
+      "category": "Make up - Mascara",
+      "rating": 3,
+      "price": 58,
+      "quantity": 1,
+      "generalDescription": "This super black volumizing mascara is as essential to your makeup wardrobe as the famed little black dress. Just a few swipes deliver bold definition to the eyes and wake up the face.",
+      "principalBenefits": ["Clean, high-performing mascara", "Creamy conditioning formula nurtures lashes", "Lashes feel hydrated and look super glossy", "Big bold brush easily spreads rich color", "Long-lasting with no pilling or clumping"],
+      "description": "Westman Atelier’s Eye Love You Mascara is a luxurious 96% natural origin mascara combining innovative plant-powered technology with creamy conditioning ingredients. We also love the densely packed nylon brush to volumize, define, and curl even the wimpiest lashes.",
+      "ingredients": "Aqua/Water, Cera Alba/Beeswax, Copernicia Cerifera Cera/Copernicia Cerifera (Carnauba) Wax, Sucrose Distearate",
+      "carouselImages": ["../src/assets/productInfo/eye-love-u-mascara-carousel1.jpg", "../src/assets/productInfo/eye-love-u-mascara-carousel2.jpg", "../src/assets/productInfo/eye-love-u-mascara-carousel3.jpg", "../src/assets/productInfo/eye-love-u-mascara-carousel4.jpg"],
+      "quotes": {
+        "title": "Why Jess Loves It...",
+        "content": "“The perfect clean black mascara! Love this to amp up the eyes.“"
+      },
+      "section": [
+        {
+          "information": {
+            "title": "Benefits",
+            "content": ["Delivers supercharged lashes that are glossy, pitch black, and healthy from the root", "Clean and no animal testing", "Silicone-free, paraben-free, and synthetic fragrance-free", "No PEGs and no phthalates"]
+          },
+          "image":"../src/assets/productInfo/eye-love-u-mascara-section1.jpg"
+        },
+        {
+          "information": {
+            "title": "How To Use",
+            "content": ["Apply to Your Lashes Hold the brush horizontally right at the base of the lashes and use a slight side-to side wiggling motion to build thickness and volume.", "Gucci’s Tip To get those little lashes at the inner corners, turn the brush vertically and sweep upward with the tip for really great lift and curl."]
+          }
+        },
+        {
+          "information": {
+            "title": "Key ingredients",
+            "content": ["Galactoarabinan: Lash conditioning, weightless hydration", "Sunflower Seed, Carnauba, and Beeswax Blend: Helps amplify volume for smooth application", "Chicory Root: Extends wearability"]
+          },
+          "image":"../src/assets/productInfo/eye-love-u-mascara-section1.jpg"
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "brand": "Mob",
+      "name": "Volumizing Mascara M66 - Refill",
+      "category": "Make up - Mascara",
+      "tags": ["Best Seller", "Vegan"],
+      "rating": 3,
+      "price": 58,
+      "quantity": 1,
+      "generalDescription": "Maximum volume mascara. Clean, cruelty-free, and vegan like all MOB products.",
+      "principalBenefits": ["Just the mascara refill, must purchase capsule separately"],
+      "description": "Vegan, clean mascara for instant big, bold, fluffy lashes. All-day smudge proof wear with unprecedented curl and hold. Endlessly refillable.",
+      "ingredients": "Water, copernicia cerifera (carnauba) wax, hydrogenated jojoba oil, glyceryl stearate, oryza sativa (rice) bran wax, potassium cetyl phosphate, glycerin, helianthus annuus (sunflower) seed wax, hydrolyzed jojoba esters, simmondsia chinensis (jojoba) seed oil, olea europaea (olive) oil unsaponifiables,",
+      "carouselImages": ["../src/assets/productInfo/volumizing-mascara-carousel1.jpg", "../src/assets/productInfo/volumizing-mascara-carousel2.jpg", "../src/assets/productInfo/volumizing-mascara-carousel3.jpg", "../src/assets/productInfo/volumizing-mascara-carousel4.png"],
+      "section": [
+        {
+          "information": {
+            "title": "Benefits Include:",
+            "content": ["A creamy blend of sunflower and berry wax, olive oil, and jojoba replace traditionally used beeswax to condition the lashes and provide a creamy, easy to build mascara without clumping, tackiness, or flaking."]
+          },
+          "image":"../src/assets/productInfo/volumizing-mascara-section1.jpg"
+        },
+        {
+          "information": {
+            "content": ["Gently wiggle the wand from the root to the end of the lashes. Continue to add and build layers until desired level volume and thickness is achieved."]
+          },
+          "image":"../src/assets/productInfo/volumizing-mascara-section2.jpg"
+        },
+        {
+          "information": {
+            "title": "Key Ingredients",
+            "content": ["A creamy blend of sunflower and berry wax, olive oil, and jojoba replace traditionally used beeswax to condition the lashes and provide a creamy, easy to build mascara without clumping, tackiness, or flaking."]
+          },
+          "image":"../src/assets/productInfo/volumizing-mascara-section3.jpg"
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "brand": "Kosas",
+      "name": "The Big Clean Volumizing + Lash Care Mascara-Intense Black",
+      "category": "Make up - Mascara",
+      "rating": 0,
+      "price": 13,
+      "quantity": 1,
+      "generalDescription": "Part mascara, part lash treatment—we can’t live without this unique formulation that delivers healthier, bigger, fluffier lashes.",
+      "principalBenefits": ["Works like a hair care serum for your lashes", "Supports stronger, healthier lashes", "Oversized rainbow-shaped brush", "Ophthalmology tested", "Safe for sensitive eyes", "100% saw longer, thicker, lusher lashes", "87% did not experience smudging"],
+      "description": "Bring on the drama with Kosas’ The Big Clean Mascara. The huge curling brush acts like a teasing comb to bring out every lash. Swipe daily for maximum volume, length, separation, and curl—plus lash strengthening via an active haircare formula to ensure all lashes reach their full growth potential.",
+      "ingredients": "Aqua, Beeswax, CI 77499, Diisostearoyl Polyglyceryl-3 Dimer Dilinoleate, Polyglyceryl-6 Distearate, Pullulan, Glycerin, Cetyl Alcohol",
+      "carouselImages": ["../src/assets/productInfo/big-clean-volumizing-carousel1.png", "../src/assets/productInfo/big-clean-volumizing-carousel2.png", "../src/assets/productInfo/big-clean-volumizing-carousel3.png", "../src/assets/productInfo/big-clean-volumizing-carousel4.png", "../src/assets/productInfo/big-clean-volumizing-carousel5.png"],
+      "quotes": {
+        "title": "Why Jess Loves It...",
+        "content": "“This mascara is like a clean version of Great Lash.“"
+      },
+      "section": [
+        {
+          "information": {
+            "title": "Benefits Include:",
+            "content": ["High density spiraled bristles create instant fluffy lashes", "Ergonomic curve style grabs every lash for the ultimate curl", "Coats every lash so even the tiniest hairs reach full volume", "Non-irritating and hypoallergenic", "Clinically tested to wear for 12 hours", "Plant-based sugars replace traditionally used micro-plastics"]
+          },
+          "image":"../src/assets/productInfo/big-clean-volumizing-section1.png"
+        },
+        {
+          "information": {
+            "title": "How To Use",
+            "content": ["Apply to Your Lashes", "Press the brush against the base of your lashes and wiggle it upward, with the curve of the brush following the natural curve of your eye.", "Pro Tip", "For natural-looking volume, apply one coat. For a more dramatic effect, wait 30 seconds and apply another coat."]
+          },
+          "image":"../src/assets/productInfo/big-clean-volumizing-section2.png"
+        },
+        {
+          "information": {
+            "title": "Key ingredients",
+            "content": ["Castor oil: High levels of Omega-6 Fatty Acids moisturize and nourish hair so lashes appear naturally lush, strong, and shiny", "Panthenol Pro Vitamin B5: Revives lashes", "Biotinyl Tripeptide-1: Supports healthier, fuller lashes"]
+          },
+          "image":"../src/assets/productInfo/big-clean-volumizing-section3.png"
+        },
+        {
+          "information": {
+            "title": "Clinical results",
+            "content": ["Ophthalmology tested. Safe for sensitive eyes. Non-irritating. Hypoallergenic. Clinically tested to wear for 12 hours.", "100% say longer, thicker, lusher lashes ", "87% did not experience smudging"]
+          },
+          "image":"../src/assets/productInfo/big-clean-volumizing-section1.png"
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "brand": "Mob",
+      "name": "MOB Capsule 2",
+      "category": "Make up - Mascara",
+      "tags": ["Vegan"],
+      "rating": 0,
+      "price": 5,
+      "quantity": 1,
+      "generalDescription": "This capsule holds one MOB Mascara Refill.",
+      "principalBenefits": ["Just the capsule is included, must purchase mascara refill separately"],
+      "description": "Endlessly reusable and refillable Mascara Capsule is made with 50% post-consumer recycled materials and holds one MOB Mascara Refill.",
+      "carouselImages": ["../src/assets/productInfo/MOB-capsule-carousel1.jpg", "../src/assets/productInfo/MOB-capsule-carousel2.jpg"]
+    },
+    {
+      "id": 47,
+      "brand": "Eyeco",
+      "name": "Colored Lash Alert Mascara",
+      "category": "Make up - Mascara",
+      "tags": ["Low Stock"],
+      "rating": 2,
+      "price": 19,
+      "quantity": 1,
+      "generalDescription": "A botanically-infused and fibre filled formula, this mascara will give your lashes instant energy thanks to caffeine and biotin. Lifting the sleepiest of lashes and conditioning with arginine, this black mascara gives perkier volume, curl and care all day.",
+      "principalBenefits": ["Contains caffeine to wake up lashes", "Enriched with biotin, castor oil and arginine to leave lashes feeling nourished and conditioned", "Gives lashes a natural flutter"],
+      "description": "Our bestselling Lash Alert Mascara now available in four new shades. In our most -loved and best -selling formula, fuelled with botanicals and infused with caffeine, biotin and a dose of fibres to lift the sleepiest of lashes for perkier volume, curl & care all day. Now in 4 new shades. Available in 8ml Brown with 6 ml in Purple, Green and Blue",
+      "ingredients": "Water/Aqua/Eau, Acrylates/Ethylhexyl Acrylate Copolymer, Cera Alba/Beeswax/Cire D'Abeille, Butyrospermum Parkii (Shea) Butter, Cera Microcristallina/Microcrystalline Wax/Cire Microcristalline, Copernicia Cerifera (Carnauba) Wax/Copernicia Cerifera Cera/Cire De Carnauba, Stearic Acid, 1,2-Hexanediol, Polyglyceryl-3 Methylglucose Distearate",
+      "carouselImages": ["../src/assets/productInfo/colored-mascara-carousel1.jpg", "../src/assets/productInfo/colored-mascara-carousel2.png", "../src/assets/productInfo/colored-mascara-carousel3.jpg", "../src/assets/productInfo/colored-mascara-carousel4.jpg", "../src/assets/productInfo/colored-mascara-carousel5.png", "../src/assets/productInfo/colored-mascara-carousel6.jpg", "../src/assets/productInfo/colored-mascara-carousel7.jpg", "../src/assets/productInfo/colored-mascara-carousel8.png", "../src/assets/productInfo/colored-mascara-carousel9.jpg", "../src/assets/productInfo/colored-mascara-carousel10.jpg", "../src/assets/productInfo/colored-mascara-carousel11.png", "../src/assets/productInfo/colored-mascara-carousel12.jpg"],
+      "section": [
+        {
+          "information": {
+            "title": "Benefits Include",
+            "content": ["Contains caffeine to wake up lashes", "Enriched with biotin, castor oil and arginine to leave lashes feeling nourished and conditioned", "CGives lashes a natural flutter"]
+          },
+          "image":"../src/assets/productInfo/colored-mascara-section1.png"
+        },
+        {
+          "information": {
+            "title": "How To Use",
+            "content": ["The curved brush will hug all the way around your lash line. To enhance the lifting effect, carefully rotate the brush backwards on itself when you reach the tips of your lashes to encourage curl."]
+          }
+        },
+        {
+          "information": {
+            "title": "Key Benefits",
+            "content": ["Cera Alba/Beeswax/Cire D'Abeille", "Butyrospermum Parkii (Shea) Butter", "Allium Sativum Bulb Extract", "Camellia Sinensis (Green Tea) Leaf Extract", "Biotin"]
+          }
+        },
+        {
+          "information": {
+            "title": "Clinical Results"
+          },
+          "image":"../src/assets/productInfo/colored-mascara-section2.jpeg"
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "brand": "Roen",
+      "name": "CAKE Mascara",
+      "category": "Make up - Mascara",
+      "tags": ["Vegan"],
+      "rating": 0,
+      "price": 28,
+      "quantity": 1,
+      "generalDescription": "A clean mascara that volumizes, defines and lifts lashes with its clump-free and buildable formula.",
+      "principalBenefits": ["Infused with olive oil to keep lashes hydrated", "Silica and Nylon-12 for high-impact volume that is 100% clump-free", "Vegan, gluten-free, cruelty-free, paraben-free, fragrance- free and made without alcohol."],
+      "description": "CAKE’s buildable and volumizing formula plumps lashes with a uniquely fluffy brush designed with flexible bristles to lengthen and lift from the root. The intensely black formula provides an extra-dark finish leaving you with flake-free, thick, and lengthened lashes that stay-all-day.",
+      "ingredients": "AQUA, HELIANTHUS, SEED WAX, MYRICA CERIFERA CERA",
+      "carouselImages": ["../src/assets/productInfo/CAKE-mascara-carousel1.png"],
+      "section": [
+        {
+          "information": {
+            "title": "How to use",
+            "content": ["Gently wiggle the wand from the root to the end of the lashes Continue to add and build layers until desired level volume and thickness is achieved"]
+          },
+          "image":"../src/assets/productInfo/CAKE-mascara-section1.jpg"
+        },
+        {
+          "information": {
+            "title": "Key ingredients",
+            "content": ["Plant-based sunflower, bayberry and carnauba waxes for flexibility and hold", "Infused with olive oil to keep lashes nourished and hydrated", "Formulated with a combination of Silica and Nylon-12 for high-impact volume that is 100% clump-free"]
+          },
+          "image":"../src/assets/productInfo/CAKE-mascara-section2.jpg"
+        },
+        {
+          "information": {
+            "title": "Results"
+          },
+          "image":"../src/assets/productInfo/CAKE-mascara-section3.jpg"
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "brand": "Roen",
+      "name": "Elixir Tinted Lip Oil Balm",
+      "category": "Make up - Lip Glosses",
+      "tags": ["Vegan"],
+      "rating": 3,
+      "price": 32,
+      "quantity": 1,
+      "generalDescription": "These lip balms are a hybrid of skincare + makeup, giving you hydration, and care, along with a gorgeous flush of colour.",
+      "principalBenefits": ["ALBA Natural-Nude", "STELLA Pink", "SCARLET Deep Cherry"],
+      "description": "Formulated with powerhouse antioxidants and nutrient-rich ingredients. This delicate blend of sustainable plant-based oils and waxes make for a unique hybrid oil that transforms your lips. Argan Oil protects skin from UV radiation and sun damage, Vitamin E helps to maintain the soft youthful texture of your lips by reducing the signs of aging and Sweet Almond Oil locks in moisture for soft plump hydrated lips.",
+      "ingredients": "COCOS NUCIFERA OIL, HELIANTHUS ANNUUS SEED OIL, BIS-DIGLYCERYL DPOLYACYLADIPATE-2, COPERNICIA CERIFERA WAX",
+      "carouselImages": ["../src/assets/productInfo/elixir-lip-oil-carousel1.png", "../src/assets/productInfo/elixir-lip-oil-carousel2.png", "../src/assets/productInfo/elixir-lip-oil-carousel3.png", "../src/assets/productInfo/elixir-lip-oil-carousel4.png", "../src/assets/productInfo/elixir-lip-oil-carousel5.jpg"],
+      "section": [
+        {
+          "information": {
+            "title": "How To Use",
+            "content": ["Apply directly to the lips for a glamorous boost of hydration."]
+          },
+          "image":"../src/assets/productInfo/elixir-lip-oil-section1.jpg"
+        },
+        {
+          "information": {
+            "title": "Key Ingredients",
+            "content": ["Castor Oil", "Argan", "Sweet Almond Oil"]
+          },
+          "image":"../src/assets/productInfo/elixir-lip-oil-section2.jpg"
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "brand": "Westman Atelier",
+      "name": "Squeaky Clean Liquid Lip Balm",
+      "category": "Make up - Lip Glosses",
+      "tags": ["Best Seller"],
+      "rating": 5,
+      "price": 38,
+      "quantity": 1,
+      "generalDescription": "Goes on like a lip oil—but feels like a balm—to hydrate and enhance lips with juicy, buildable color.",
+      "principalBenefits": ["Hydrates for a cushiony, dimensional lip look", "Active ingredients soothe and nourish", "Always juicy, never sticky", "Enhances natural lip color", "Six pillowy soft shades"],
+      "description": "Made with naturally-derived pigments and clean, active ingredients, Westman Atelier Squeaky Clean Liquid Lip Balm dresses the lips with kissable, nourishing, hydrating color.",
+      "ingredients": "Garconne, Nana, Pipsqueak, Ma Puce, Nou Nou: Diisostearoyl Polyglyceryl-3 Dimer Dilinoleate",
+      "carouselImages": ["../src/assets/productInfo/squeaky-lip-balm-carousel1.jpg", "../src/assets/productInfo/squeaky-lip-balm-carousel2.jpg", "../src/assets/productInfo/squeaky-lip-balm-carousel3.jpg", "../src/assets/productInfo/squeaky-lip-balm-carousel4.jpg", "../src/assets/productInfo/squeaky-lip-balm-carousel5.jpg", "../src/assets/productInfo/squeaky-lip-balm-carousel6.jpg", "../src/assets/productInfo/squeaky-lip-balm-carousel7.jpg", "../src/assets/productInfo/squeaky-lip-balm-carousel8.jpg", "../src/assets/productInfo/squeaky-lip-balm-carousel9.jpg", "../src/assets/productInfo/squeaky-lip-balm-carousel10.jpg", "../src/assets/productInfo/squeaky-lip-balm-carousel11.jpg", "../src/assets/productInfo/squeaky-lip-balm-carousel12.jpg", "../src/assets/productInfo/squeaky-lip-balm-carousel13.jpg", "../src/assets/productInfo/squeaky-lip-balm-carousel14.jpg", "../src/assets/productInfo/squeaky-lip-balm-carousel15.jpg", "../src/assets/productInfo/squeaky-lip-balm-carousel16.jpg", "../src/assets/productInfo/squeaky-lip-balm-carousel17.jpg", "../src/assets/productInfo/squeaky-lip-balm-carousel18.jpg", "../src/assets/productInfo/squeaky-lip-balm-carousel19.jpg", "../src/assets/productInfo/squeaky-lip-balm-carousel20.jpg", "../src/assets/productInfo/squeaky-lip-balm-carousel21.jpg", "../src/assets/productInfo/squeaky-lip-balm-carousel22.jpg", "../src/assets/productInfo/squeaky-lip-balm-carousel23.jpg", "../src/assets/productInfo/squeaky-lip-balm-carousel24.jpg", "../src/assets/productInfo/squeaky-lip-balm-carousel25.jpg"],
+      "section": [
+        {
+          "information": {
+            "title": "Benefits Include:",
+            "content": ["Lip tint and lip treatment in one juicy swipe", "Wear alone or layer over lipstick", "Add depth and shine without stickiness.", "No silicones, parabens, PEGs, talc, phthalates, or synthetic fragrances", "No animal testing"]
+          },
+          "image":"../src/assets/productInfo/squeaky-lip-balm-section1.jpg"
+        },
+        {
+          "information": {
+            "title": "How To Use",
+            "content": ["Apply to Your Lips. Apply Squeaky Clean from the center of the bottom lip outward and blot for a boosted natural lip tone.", "*Gucci’s Tip - For a juicy look with more dimension, layer these tinted oils over lipsticks in a similar shade."]
+          },
+          "image":"../src/assets/productInfo/squeaky-lip-balm-section2.jpg"
+        },
+        {
+          "information": {
+            "title": "Key ingredients",
+            "content": ["Organic Jojoba, Almond and Argan Oil Blend: Hydrates and softens", "Shea Butter: Nourishes and soothes", "Plant-Based Seed Oils: Imparts a pillowy sensation"]
+          },
+          "image":"../src/assets/productInfo/squeaky-lip-balm-section3.jpg"
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "brand": "Lanolips",
+      "name": "Holographic Lip Water",
+      "category": "Make up - Lip Glosses",
+      "tags": ["Low Stock"],
+      "rating": 0,
+      "price": 17.50,
+      "quantity": 1,
+      "generalDescription": "The weightless, luxurious hydration fluid delivers powerful hydration thanks to our hardworking lanolin, Nature’s Wonder Moisturiser™.",
+      "principalBenefits": ["A drink of water for your lips", "98.9% natural"],
+      "description": "Weightless hydration with a little help from our friends Hyaluronic Acid to keep skin supple and moist and Glycerin to help keep lips healthy and soft, we have created the perfect non-sticky formula.",
+      "ingredients": "Lanolin Oil*, Lanolin*, Calcium Aluminium Borosilicate*, Aroma*, Tocopheral (Vit E)*, Helianthus Annuus (Sunflower) Seed Oil*, Sodium Hyaluronate*, Glycerin*, Silica*, Tin Oxide*, Limonene*, CI 77891. *Natural & Mineral Derived",
+      "carouselImages": ["../src/assets/productInfo/holographic-lip-carousel1.png", "../src/assets/productInfo/holographic-lip-carousel2.png"],
+      "section": [
+        {
+          "information": {
+            "title": "Benefits Include:",
+            "content": ["Non-sticky with an underwater-holographic glow", "A drink of water for your lips", "Lip Water will dive down and hydrate your deeper layers, leaving your lips glistening and soft"]
+          },
+          "image":"../src/assets/productInfo/holographic-lip-section1.jpg"
+        },
+        {
+          "information": {
+            "title": "How to use",
+            "content": ["Apply to lips as needed, and when you feel like licking your lips."]
+          },
+          "image":"../src/assets/productInfo/holographic-lip-section2.jpg"
+        },
+        {
+          "information": {
+            "title": "Key ingredients",
+            "content": ["Lanolin Oil*", "Tocopheral (Vitamin E)*", "Helianthus Annuus (Sunflower) Seed Oil*"]
+          },
+          "image":"../src/assets/productInfo/holographic-lip-section3.jpg"
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "brand": "Lanolips",
+      "name": "Tinted Balm",
+      "category": "Make up - Lip Glosses",
+      "tags": ["Low Stock"],
+      "rating": 5,
+      "price": 14,
+      "quantity": 1,
+      "generalDescription": "Lanolips original formula with just the right amount of color.",
+      "principalBenefits": ["Soft, hydrated lips","Sheer, natural tint with fruity undertones", "12.5 g"],
+      "description": "Creates soft, hydrated & pretty lips. Superb lanolin-rich lip conditioner + sheer pretty colour tint. Sheer fruity tint deepens your natural lip color.",
+      "ingredients": "Lanolin*, Theobroma Cacao Seed Butter*, Ricinus Communic Seed Oil*, Cera Alba/Beeswax/Cire D'abeille*, Butyrospermum Parkii (Shea) Butter*",
+      "carouselImages": ["../src/assets/productInfo/lanolips-tinted-balm-carousel1.jpg", "../src/assets/productInfo/lanolips-tinted-balm-carousel2.jpg", "../src/assets/productInfo/lanolips-tinted-balm-carousel3.png"],
+      "section": [
+        {
+          "information": {
+            "title": "Benefits Include:",
+            "content": ["High lanolin content", "Non-sticky hydration", "Lasts for hours with the perfect nude tint which suits everyone"]
+          },
+          "image":"../src/assets/productInfo/lanolips-tinted-balm-section1.png"
+        },
+        {
+          "information": {
+            "title": "How to use",
+            "content": ["Apply to lips as needed. Smile."]
+          },
+          "image":"../src/assets/productInfo/lanolips-tinted-balm-section2.png"
+        },
+        {
+          "information": {
+            "title": "Key ingredients",
+            "content": ["Lanolin*", "Theobroma Cacao Seed Butter*", "Ricinus Communis Seed Oil*", "Butyrospermum Parkii (Shea) Butter*"]
+          },
+          "image":"../src/assets/productInfo/lanolips-tinted-balm-section3.png"
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "brand": "Alpyn beauty",
+      "name": "Willow & Sweet Agave Plumping Lip Mask",
+      "category": "Make up - Lip Glosses",
+      "tags": ["Low Stock", "New Arrival"],
+      "rating": 5,
+      "price": 28,
+      "quantity": 1,
+      "generalDescription": "An every day, anytime lip treatment powered by sweet agave and hyaluronic acid for cushiony, fuller-looking lips and willow bark to smooth and soften.",
+      "principalBenefits": ["Delivers lip-quenching, skin-smoothing hydration", "Nature’s salicylic acid exfoliates, smooths and softens", "Good for all lip types"],
+      "description": "Feeling tight-lipped? This silky, hydrating, every day mask is at your service. Hyaluronic acid and sweet agave extract bind moisture for increased hydration, while white willow bark gently softens any roughness. Wild chokecherry and vitamin E provide a layer of antioxidant protection. Lips look fuller, softer, smoother, and more supple.",
+      "ingredients": "Hydroxystearic/Linolenic/Oleic Polyglycerides, Ricinus Communis (Castor) Seed Oil, Polyhydroxystearic Acid, Helianthus Annuus (Sunflower) Seed Oil*, Agave Tequilana Leaf Extract*, Prunus Armeniaca (Apricot) Kernel Oil*, Cocos Nucifera (Coconut) Oil*, Helianthus",
+      "carouselImages": ["../src/assets/productInfo/willow-lip-carousel1.jpg", "../src/assets/productInfo/willow-lip-carousel2.jpg", "../src/assets/productInfo/willow-lip-carousel3.jpg", "../src/assets/productInfo/willow-lip-carousel4.jpg", "../src/assets/productInfo/willow-lip-carousel5.jpg"],
+      "section": [
+        {
+          "information": {
+            "title": "How To Use",
+            "content": ["Dab onto lips as needed. Great as an overnight mask or over/under lipstick for velvety soft lips."]
+          },
+          "image":"../src/assets/productInfo/willow-lip-section1.jpg"
+        },
+        {
+          "information": {
+            "title": "Key Ingredients",
+            "content": ["Sweet Blue Agave Leaf: Delivers lip-quenching, skin-smoothing hydration", "Hyaluronic Acid: Binds moisture for added fullness", "Willow Bark (from Jackson Hole, WY): Nature’s salicylic acid exfoliates, smooths and softens"]
+          },
+          "image":"../src/assets/productInfo/willow-lip-section2.jpg"
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "brand": "Kosas",
+      "name": "Wet Lip Oil Treatment Plumping Gloss",
+      "category": "Make up - Lip Glosses",
+      "tags": ["Low Stock", "New Arrival"],
+      "rating": 5,
+      "price": 22,
+      "quantity": 1,
+      "generalDescription": "These glosses serve up juicy, plump lips. We say make it a double.",
+      "principalBenefits": ["Lip treatment meets gloss", "Tingle-free plumping", "Super comfy, never drying", "5 universally flattering shades"],
+      "description": "Kosas Wet Lip Oil Treatment Plumping Gloss is the perfect hybrid lip treatment and gloss combo. Packed with Hyaluronic Acid and Peptides to visibly plump and hydrate, you’ll look like you poured on a juicy serving of color.",
+      "ingredients": "Ricinus Communis (Castor) Seed Oil, Oleic/Linoleic/Linolenic Polyglycerides, Bis-Diglyceryl Polyacyladipate-2, Polyhydroxystearic Acid, Caprylic/Capric Triglyceride",
+      "carouselImages": ["../src/assets/productInfo/lip-oil-treatment-carousel1.jpg", "../src/assets/productInfo/lip-oil-treatment-carousel2.jpg", "../src/assets/productInfo/lip-oil-treatment-carousel3.jpg", "../src/assets/productInfo/lip-oil-treatment-carousel4.jpg", "../src/assets/productInfo/lip-oil-treatment-carousel5.jpg", "../src/assets/productInfo/lip-oil-treatment-carousel5.jpg", "../src/assets/productInfo/lip-oil-treatment-carousel6.jpg", "../src/assets/productInfo/lip-oil-treatment-carousel7.jpg", "../src/assets/productInfo/lip-oil-treatment-carousel8.jpg", "../src/assets/productInfo/lip-oil-treatment-carousel9.jpg", "../src/assets/productInfo/lip-oil-treatment-carousel10.jpg", "../src/assets/productInfo/lip-oil-treatment-carousel11.jpg", "../src/assets/productInfo/lip-oil-treatment-carousel12.jpg", "../src/assets/productInfo/lip-oil-treatment-carousel13.jpg", "../src/assets/productInfo/lip-oil-treatment-carousel14.jpg", "../src/assets/productInfo/lip-oil-treatment-carousel15.jpg", "../src/assets/productInfo/lip-oil-treatment-carousel16.jpg", "../src/assets/productInfo/lip-oil-treatment-carousel17.jpg", "../src/assets/productInfo/lip-oil-treatment-carousel18.jpg"],
+      "quotes": {
+        "title": "Why Jess Loves It...",
+        "content": "“Lip gloss with the added benefit of a treatment. It just feels and looks so good.“"
+      },
+      "section": [
+        {
+          "information": {
+            "title": "Benefits Include:",
+            "content": ["Hydrating active ingredients that visibly plump and protect", "Amino acid coated pigments lend a non-drying texture", "Clean, sustainable, vegan, and cruelty-free"]
+          },
+          "image":"../src/assets/productInfo/lip-oil-treatment-section1.jpg"
+        },
+        {
+          "information": {
+            "title": "How To Use",
+            "content": ["Swipe Across Lips Apply and go. The contoured doe-foot applicator hugs the shape of your lip so it’s super easy to apply. Use the tip for detailing and touch-up.", "Pro Tip Wear over your favorite lipstick for long-lasting dimensional color."]
+          },
+          "image":"../src/assets/productInfo/lip-oil-treatment-section2.jpg"
+        },
+        {
+          "information": {
+            "title": "Key ingredients",
+            "content": ["Hyaluronic Acid: Attracts water and locks in hydration", "Peptides: Visibly plumps", "Evening Primrose Oil: Protects", "Avocado Oil: Cushions and moisturizes", "Shea Butter: Soothes and softens", "Konjac Root: Creates a gel-like barrier between lips and the environment"]
+          },
+          "image":"../src/assets/productInfo/lip-oil-treatment-section3.jpg"
+        }
+      ]
+    },
+    {
+      "id": 55,
+      "brand": "Maarks Lip",
+      "name": "MAARKS Lip",
+      "category": "Make up - Lip Glosses",
+      "tags": ["New Arrival"],
+      "rating": 5,
+      "price": 29,
+      "quantity": 1,
+      "generalDescription": "A lipstick that lives by the rule: fewer is better. Five staple shades in all, each prettier than the last.",
+      "principalBenefits": ["Comfortable sexy wear", "Single stroke coverage", "Creamy matte finish", "Botanically rich lipsticks"],
+      "description": "MAARKS Lip is an essential lipstick wardrobe that provides decadent nourishment—with castor seed oil, shea butter, and coconut oil, all essential for maximum lip hydration.",
+      "ingredients": "Caprylic/Capric Triglyceride (derived from coconut oil), Ozokerite, Microcrystalline Wax, Silica, Cera Alba, Diisostearyl Malate, Polyethylene, Phenoxyethanol, Butyrospermum Parkii (Shea) Butter, Simmondsia Chinensis (Jojoba) Seed oil, Cocos Nucifera (Coconut) Oil, Ricinus",
+      "carouselImages": ["../src/assets/productInfo/MAARKS-lip-carousel1.jpg", "../src/assets/productInfo/MAARKS-lip-carousel2.jpg", "../src/assets/productInfo/MAARKS-lip-carousel3.jpg", "../src/assets/productInfo/MAARKS-lip-carousel4.jpg", "../src/assets/productInfo/MAARKS-lip-carousel5.jpg", "../src/assets/productInfo/MAARKS-lip-carousel6.jpg", "../src/assets/productInfo/MAARKS-lip-carousel7.jpg", "../src/assets/productInfo/MAARKS-lip-carousel8.jpg", "../src/assets/productInfo/MAARKS-lip-carousel9.jpg","../src/assets/productInfo/MAARKS-lip-carousel10.jpg", "../src/assets/productInfo/MAARKS-lip-carousel11.jpg", "../src/assets/productInfo/MAARKS-lip-carousel12.jpg", "../src/assets/productInfo/MAARKS-lip-carousel13.jpg", "../src/assets/productInfo/MAARKS-lip-carousel14.jpg", "../src/assets/productInfo/MAARKS-lip-carousel15.jpg"],
+      "quotes": {
+        "title": "Why Jess Loves It...",
+        "content": "“Hydrating matte lipsticks all the way from Australia. Rouge is my go to to make me feel more put together.“"
+      },
+      "section": [
+        {
+          "information": {
+            "title": "Benefits Include:",
+            "content": ["5 colors that flatter a variety of skin tonesv", "Cruelty-free", "Gorgeous layerable lip color"]
+          },
+          "image":"../src/assets/productInfo/MAARKS-lip-section1.jpg"
+        },
+        {
+          "information": {
+            "title": "How To Use",
+            "content": ["Apply to Lips Glide on color directly from the lipstick bullet. Use a small lip brush to perfect and define the edge of your lip line for a striking finish.", "Pro Tips For a softer lip look, apply sparingly from the bullet into the middle of the upper and lower lip. Then use your fingertips to spread and blend the color out to the edges of your lip line."]
+          },
+          "image":"../src/assets/productInfo/MAARKS-lip-section2.jpg"
+        },
+        {
+          "information": {
+            "title": "Key ingredients",
+            "content": ["Shea Butter: Hydrating collagen support", "Jojoba Oil: Vitamin packed hydration", "Coconut Oil: Moisturizing and naturally antibacterial", "Castor Seed Oil: Soothes dry skin"]
+          },
+          "image":"../src/assets/productInfo/MAARKS-lip-section3.jpg"
+        }
+      ]
+    },
+    {
+      "id": 56,
+      "brand": "Lanolips",
+      "name": "Watermelon Lip Water",
+      "category": "Make up - Lip Glosses",
+      "rating": 5,
+      "price": 17.50,
+      "quantity": 1,
+      "generalDescription": "The best-selling liquid lanolin Lip Water, now with a juicy, shimmering watermelon tint.",
+      "principalBenefits": ["Lightweight hydration", "Glowing, holographic tint", "Leaves you looking hydrated and glowing", "10ml /.338 fl oz"],
+      "description": "A bit like a serum, lighter than a balm, Watermelon Lip Water gives a transparent watermelon-pink holographic shimmer - for watermelon juice-tasting lips that are both hydrated and glowing. It’s lightweight. It's hydrating. It's natural. Liquid lanolin & hyaluronic acid boost moisture. The glowing, holographic fruity tint looks gorgeous on everyone. (It’s basically watermelon juice for your lips).",
+      "ingredients": "Lanolin Oil,* Lanolin,* Aroma (Nat Flavour),* Ricinus Communis (Castor) Seed Oil,* Mica,* Tocopherol (Vit E),* Helianthus Annus (Sunflower) Seed Oil,* Glycerin,* Sodium Hyaluronate",
+      "carouselImages": ["../src/assets/productInfo/watermelon-lip-carousel1.jpg", "../src/assets/productInfo/watermelon-lip-carousel2.jpg"],
+      "section": [
+        {
+          "information": {
+            "title": "Benefits Include:",
+            "content": ["A weightless, luxurious hydration fluid with hyaluronic acid, glycerin and tint", "99.4% Natural + 0.6% Tint"]
+          },
+          "image":"../src/assets/productInfo/watermelon-lip-section1.png"
+        },
+        {
+          "information": {
+            "title": "Key ingredients",
+            "content": ["Lanolin Oil", "Ricinus Communis (Castor) Seed Oil", "Tocopherol (Vitamin E)"]
+          }
+        }
+      ]
+    },
+    {
+      "id": 57,
+      "brand": "Mob",
+      "name": "MOB RePurpose Capsule",
+      "category": "Make up - Lip Sticks",
+      "tags": ["Best Seller"],
+      "rating": 5,
+      "price": 5,
+      "quantity": 1,
+      "generalDescription": "Refillable design reduces waste and saves money by only paying for packaging once. Holds one MOB Lipstick or Lip Balm Refill.",
+      "principalBenefits": ["Packaging only. Must purchase refills separately"],
+      "description": "Endlessly refillable with MOB Lip Refills and made with 50% post-consumer recycled PET, the most easily recycled resin.",
+      "carouselImages": ["../src/assets/productInfo/MOB-rePurpose-carousel1.jpg", "../src/assets/productInfo/MOB-rePurpose-carousel2.jpg", "../src/assets/productInfo/MOB-rePurpose-carousel3.jpg"]
+    },
+    {
+      "id": 58,
+      "brand": "Beautycounter",
+      "name": "Sheer Genius Conditioning Lipstick",
+      "category": "Make up - Lip Sticks",
+      "rating": 0,
+      "price": 35,
+      "quantity": 1,
+      "generalDescription": "This best-selling creamy lipstick is a no-brainer and a standard amongst lipstick lovers everywhere. You’ll savor the nourishing benefits of this balm like we do.",
+      "principalBenefits": ["Easy-to-wear buildable color", "Organic lip-loving ingredients", "Suitable for all skin types", "Non-irritating and non-sensitizing"],
+      "description": "The ultimate everyday lipstick. Beautycounter’s Sheer Genius Conditioning Lipstick delivers a sheer wash of color and light-catching sheen. Blended with botanical waxes and sustainably-derived Jojoba Esters, this luxe formula conditions lips in 10 universally flattering colors. Play with all shades for the easiest form of self-expression.",
+      "ingredients": "Jojoba Esters, Diisostearyl Malate, Octyldodecyl Ricinoleate, Cera Microcristallina (Microcrystalline Wax)/Cire microcristalline, Ricinus Communis (Castor) Seed Oil, Vanilla Planifolia Fruit Extract*",
+      "carouselImages": ["../src/assets/productInfo/sheer-genius-carousel1.jpg", "../src/assets/productInfo/sheer-genius-carousel2.jpg", "../src/assets/productInfo/sheer-genius-carousel3.jpg", "../src/assets/productInfo/sheer-genius-carousel4.jpg", "../src/assets/productInfo/sheer-genius-carousel5.jpg", "../src/assets/productInfo/sheer-genius-carousel6.jpg", "../src/assets/productInfo/sheer-genius-carousel7.jpg", "../src/assets/productInfo/sheer-genius-carousel8.jpg", "../src/assets/productInfo/sheer-genius-carousel9.jpg", "../src/assets/productInfo/sheer-genius-carousel10.jpg", "../src/assets/productInfo/sheer-genius-carousel11.jpg", "../src/assets/productInfo/sheer-genius-carousel12.jpg", "../src/assets/productInfo/sheer-genius-carousel13.jpg", "../src/assets/productInfo/sheer-genius-carousel14.jpg", "../src/assets/productInfo/sheer-genius-carousel15.jpg", "../src/assets/productInfo/sheer-genius-carousel16.jpg", "../src/assets/productInfo/sheer-genius-carousel17.jpg", "../src/assets/productInfo/sheer-genius-carousel18.jpg", "../src/assets/productInfo/sheer-genius-carousel19.jpg"],
+      "section": [
+        {
+          "information": {
+            "title": "Benefits Include:",
+            "content": ["Moisture-rich Castor Oil delivers an even coat of sheer color", "Weightless coverage offers creamy conditioning", "Plant-based waxes lock-in moisture with every swipe", "Dermatologist-tested"]
+          },
+          "image":"../src/assets/productInfo/sheer-genius-section1.jpg"
+        },
+        {
+          "information": {
+            "title": "How To Use",
+            "content": ["Apply to Your Lips Swipe onto lips, building coverage until the desired level of sheer, creamy color is achieved."]
+          },
+          "image":"../src/assets/productInfo/sheer-genius-section2.jpg"
+        },
+        {
+          "information": {
+            "title": "Key ingredients",
+            "content": ["ECOCERT-certified Organic Vanilla: Responsibly sourced Vanilla from Madagascar delivers signature sweet scent", "Sustainably-sourced Jojoba Esters: Native to South America, these plant-based emollients melt on lip and impart a polished sheen"]
+          },
+          "image":"../src/assets/productInfo/sheer-genius-section3.jpg"
+        }
+      ]
+    },
+    {
+      "id": 59,
+      "brand": "Kosas",
+      "name": "Weightless Lip Color",
+      "category": "Make up - Lip Sticks",
+      "tags": ["Best Seller"],
+      "rating": 5,
+      "price": 28,
+      "quantity": 1,
+      "generalDescription": "Lip color that glides on for weightless, pigment-rich wear. The 8 shade edit is made with six botanical oils and three hydrating butters.",
+      "principalBenefits": ["Works on all skin tones", "Clean, non-toxic formula", "Long-lasting, ultra-hydrating"],
+      "description": "Kosas Weightless Lip Color offers eight universally flattering shades made with unique formulas that melt and soothe the lips to hydrate and nourish throughout the day.",
+      "ingredients": "Ricinus Communis (Castor) Seed Oil, Caprylic/Capric Triglyceride, Bis-Diglyceryl Polyacyladipate-2, Euphorbia Cerifera (Candelilla) Cera/Euphorbia Cerifera (Candelilla) Wax",
+      "carouselImages": ["../src/assets/productInfo/weightless-lip-carousel1.jpg", "../src/assets/productInfo/weightless-lip-carousel2.jpg", "../src/assets/productInfo/weightless-lip-carousel3.jpg", "../src/assets/productInfo/weightless-lip-carousel4.jpg", "../src/assets/productInfo/weightless-lip-carousel5.jpg", "../src/assets/productInfo/weightless-lip-carousel6.jpg", "../src/assets/productInfo/weightless-lip-carousel7.jpg", "../src/assets/productInfo/weightless-lip-carousel8.jpg", "../src/assets/productInfo/weightless-lip-carousel9.jpg", "../src/assets/productInfo/weightless-lip-carousel10.jpg", "../src/assets/productInfo/weightless-lip-carousel11.jpg", "../src/assets/productInfo/weightless-lip-carousel12.jpg", "../src/assets/productInfo/weightless-lip-carousel13.jpg", "../src/assets/productInfo/weightless-lip-carousel14.jpg", "../src/assets/productInfo/weightless-lip-carousel15.jpg", "../src/assets/productInfo/weightless-lip-carousel16.jpg", "../src/assets/productInfo/weightless-lip-carousel17.jpg", "../src/assets/productInfo/weightless-lip-carousel18.jpg", "../src/assets/productInfo/weightless-lip-carousel19.jpg", "../src/assets/productInfo/weightless-lip-carousel20.jpg", "../src/assets/productInfo/weightless-lip-carousel21.jpg", "../src/assets/productInfo/weightless-lip-carousel22.jpg"],
+      "quotes": {
+        "title": "Why Jess Loves It...",
+        "content": "“I launched these lipsticks and still wear them all the time. Rosewater seems to be my favorite. The colour goes from day to night perfectly.“"
+      },
+      "section": [
+        {
+          "information": {
+            "title": "Benefits Include:",
+            "content": ["Clean, non-toxic formula", "Lasting pigment", "Hydrates and nourishes"]
+          },
+          "image":"../src/assets/productInfo/weightless-lip-section1.jpg"
+        },
+        {
+          "information": {
+            "title": "How To Use",
+            "content": ["Apply to Lips Glide color on directly from the tube. Apply often for added hydration.", "Pro Tips For maximum wear, pat color onto lips with your finger first, then layer directly from the tube. For a stained look, use your finger to dab color onto lips. Repeat for more color payoff."]
+          },
+          "image":"../src/assets/productInfo/weightless-lip-section2.jpg"
+        },
+        {
+          "information": {
+            "title": "Key ingredients",
+            "content": [
+              "Mango Seed Butter: Smoothes fine lines", "Shea Butter: Soothes and softens", "Cocoa Seed Butter: Repairs", "Green Tea Seed Oil: Anti-aging free radical defense", "Rosehip Seed Oil: Antioxidant-rich", "Jojoba Oil - Vitamin-packed moisturizer", "Sweet Orange Oil - Uplifting, mood boosting sent"
+            ]
+          },
+          "image":"../src/assets/productInfo/weightless-lip-section3.jpg"
+        }
+      ]
+    },
+    {
+      "id": 60,
+      "brand": "Mob",
+      "name": "MOB Cream Lipstick",
+      "category": "Make up - Lip Sticks",
+      "tags": ["Best Seller", "Vegan"],
+      "rating": 5,
+      "price": 22,
+      "quantity": 1,
+      "generalDescription": "Color saturation and hydration in one swipe. Beyond creamy, infused with vitamins C & E, chamomile and jojoba to nourish and calm your lips.",
+      "principalBenefits": [".10 oz / 3 grams", "All skin types", "Super creamy, hydrating, rich, cushiony", "Highly pigmented creamy lipstick"],
+      "description": "We loaded our lipstick with a high, 15-20% pigment load for one swipe, full coverage color. Our natural tripeptide gives a plumping effect for a dewy, creamy finish.",
+      "ingredients": "Jojoba Esters, Tridecyl Trimellitate Phytosteryl/Octyldodecyl Lauroyl Glutamate, Diisostearyl Malate, Polyhydroxystearic Acid, Microcrystalline Wax, Copernicia Cerifera (Carnauba) Wax, Cetearyl Nonanoate",
+      "carouselImages": ["../src/assets/productInfo/cream-lipstick-carousel1.jpg", "../src/assets/productInfo/cream-lipstick-carousel2.jpg", "../src/assets/productInfo/cream-lipstick-carousel3.jpg", "../src/assets/productInfo/cream-lipstick-carousel4.jpg", "../src/assets/productInfo/cream-lipstick-carousel5.jpg", "../src/assets/productInfo/cream-lipstick-carousel6.jpg", "../src/assets/productInfo/cream-lipstick-carousel7.jpg", "../src/assets/productInfo/cream-lipstick-carousel8.jpg", "../src/assets/productInfo/cream-lipstick-carousel9.jpg", "../src/assets/productInfo/cream-lipstick-carousel10.jpg", "../src/assets/productInfo/cream-lipstick-carousel11.jpg", "../src/assets/productInfo/cream-lipstick-carousel12.jpg", "../src/assets/productInfo/cream-lipstick-carousel13.jpg", "../src/assets/productInfo/cream-lipstick-carousel14.jpg", "../src/assets/productInfo/cream-lipstick-carousel15.jpg", "../src/assets/productInfo/cream-lipstick-carousel16.jpg"],
+      "section": [
+        {
+          "information": {
+            "title": "Benefits Include:",
+            "content": ["Color saturation and hydration in one swipe.", "Beyond creamy, infused with vitamins C & E, chamomile and jojoba to nourish and calm your lips."]
+          },
+          "image":"../src/assets/productInfo/cream-lipstick-section1.jpg"
+        },
+        {
+          "information": {
+            "title": "How to use",
+            "content": ["Apply directly to lips."]
+          },
+          "image":"../src/assets/productInfo/cream-lipstick-section2.jpg"
+        },
+        {
+          "information": {
+            "title": "Key ingredients",
+            "content": ["Vitamin C", "Vitamin E", "Jojoba Extract", "Orange Peel Oil"]
+          },
+          "image":"../src/assets/productInfo/cream-lipstick-section3.jpg"
+        }
+      ]
+    },
+    {
+      "id": 61,
+      "brand": "Westman Atelier",
+      "name": "Lip Suede Palette Les Nudes",
+      "category": "Make up - Lip Sticks",
+      "rating": 4,
+      "price": 85,
+      "quantity": 1,
+      "generalDescription": "This luxurious lip color palette contains four vibrant shades infused with long-lasting pigments and powerful regenerating benefits.",
+      "principalBenefits": ["Luxurious, creamy lip palette", "Multiple flattering lip shades", "Nourishes and plumps lips"],
+      "description": "Housed in a bright lacquered compact, each ultra-flattering lip shade—in tomato red, brick, fuchsia, and dusty rose—can be custom mixed for endless possibilities. Nourishes, plumps, and boosts collagen using 100% natural ingredients. Matte suede texture moisturizes and conditions lips.",
+      "ingredients": "RICINUS COMMUNIS SEED OIL/ RICINUS COMMUNIS (CASTOR) SEED OI, IMMONDSIA CHINENSIS SEED OIL/SIMMONDSIA CHINENSIS (JOJOBA) SEED OIL, PERSEA GRATISSIMA OIL/PERSEA GRATISSIMA (AVOCADO) OIL, CERA ALBA/ BEESWAX",
+      "carouselImages": ["../src/assets/productInfo/lip-suede-palette-carousel1.jpg", "../src/assets/productInfo/lip-suede-palette-carousel2.jpg", "../src/assets/productInfo/lip-suede-palette-carousel3.jpg", "../src/assets/productInfo/lip-suede-palette-carousel4.jpg", "../src/assets/productInfo/lip-suede-palette-carousel5.jpg", "../src/assets/productInfo/lip-suede-palette-carousel6.jpg"],
+      "quotes": {
+        "title": "Why SHEN Loves It...",
+        "content": "“I love the colors in this palette - they are nice and hydrating on the lips as well. Highly recommend this one.“"
+      },
+      "section": [
+        {
+          "information": {
+            "title": "Benefits Include:",
+            "content": ["Sheer suede texture made with 100% natural pigments in a preservative-free and petrolatum-free base.", "No silicones, no parabens, no PEGs, no phthalates, no synthetic fragrances. ", "No animal testing."]
+          },
+          "image":"../src/assets/productInfo/lip-suede-palette-section1.jpg"
+        },
+        {
+          "information": {
+            "title": "How to use",
+            "content": ["To prep lips before color, exfoliate first and follow with a hydrating balm."]
+          }
+        },
+        {
+          "information": {
+            "title": "Key ingredients",
+            "content": ["Avocado Seed Oil - Antioxidant, emollient and soothing properties. Helps skin maintain hydration and minimize free radical damage.", "Biomimetic Peptides - Boosts collagen production, lip volume, hydration, and softness.", "Carnuba Wax - A vegan wax, loaded with fatty acids, that provides a smooth texture. Strengthens the moisture barrier and holds pigment in place.", "Organic Jojoba Oil - Provides antioxidant protection, improves hydration, and strengthens the skin’s moisture barrier.", "Plant Based Seed Oil - Imparts pillowy, juicy sensation without the stickiness.", "Shea Butter - Provides nourishing moisture to maintain healthy-looking lips, replacing the need for mineral oil. or petrolatum.", "Vegetable-Derived Blend - Clean, plant based cushiony base replaces need for petrolatum."]
+          },
+          "image":"../src/assets/productInfo/lip-suede-palette-section3.jpg"
+        }
+      ]
+    },
+    {
+      "id": 62,
+      "brand": "Westman Atelier",
+      "name": "The Gift Edition",
+      "category": "Make up - Lip Sticks",
+      "rating": 5,
+      "price": 133,
+      "quantity": 1,
+      "generalDescription": "Gucci Westman introduces two new limited-edition products inspired by effortless elegance with a Parisian twist.",
+      "principalBenefits": ["Limited edition gift set", "Four matte lip shades", "Clean ingredients"],
+      "description": "Lip Suede in Bordeaux provides four wearable, matte lip shades, from soft nude to delicate merlot, in one customizable lip palette. Complement statement lips with a skin-firming glassy, champagne glow by pairing with NEW Lit Up Highlight Stick in Pärla. Made with clean, skin-loving ingredients and high-performance pigments, this holiday edit is always effortless and never overdone.",
+      "carouselImages": ["../src/assets/productInfo/gift-edition-carousel1.jpg", "../src/assets/productInfo/gift-edition-carousel2.jpg", "../src/assets/productInfo/gift-edition-carousel3.jpg", "../src/assets/productInfo/gift-edition-carousel4.jpg", "../src/assets/productInfo/gift-edition-carousel5.jpg", "../src/assets/productInfo/gift-edition-carousel6.jpg"]
+    },
+    {
+      "id": 63,
+      "brand": "Westman Atelier",
+      "name": "Lip Suede Palette Les Rouges",
+      "category": "Make up - Lip Sticks",
+      "rating": 0,
+      "price": 85,
+      "quantity": 1,
+      "generalDescription": "This luxurious lip color palette contains four vibrant shades infused with long-lasting pigments and powerful regenerating benefits.",
+      "principalBenefits": ["Luxurious, creamy lip palette", "Multiple flattering lip shades", "Nourishes and plumps lips"],
+      "description": "Housed in a bright lacquered compact, each ultra-flattering lip shade—in tomato red, brick, fuchsia, and dusty rose—can be custom mixed for endless possibilities. Nourishes, plumps, and boosts collagen using 100% natural ingredients. Matte suede texture moisturizes and conditions lips.",
+      "ingredients": "RICINUS COMMUNIS SEED OIL/RICINUS COMMUNIS (CASTOR) SEED OIL, PRUNUS AVIUM SEED OIL/PRUNUS AVIUM (SWEET CHERRY) SEED OIL, SCLEROCARYA BIRREA SEED OIL, HYDROGENATED COCO-GLYCERIDES, CANDELILLA CERA/ EUPHORBIA",
+      "carouselImages": ["../src/assets/productInfo/lip-suede-rouger-carousel1.jpg", "../src/assets/productInfo/lip-suede-rouger-carousel2.jpg", "../src/assets/productInfo/lip-suede-rouger-carousel3.jpg", "../src/assets/productInfo/lip-suede-rouger-carousel4.jpg", "../src/assets/productInfo/lip-suede-rouger-carousel5.jpg"],
+      "section": [
+        {
+          "information": {
+            "title": "Benefits Include:",
+            "content": ["No silicones", "No parabens", "No PEGs", "No phthalates", "No synthetic fragrances", "Vegan & no animal testing"]
+          },
+          "image":"../src/assets/productInfo/lip-suede-rouger-section1.jpg"
+        },
+        {
+          "information": {
+            "title": "How to use",
+            "content": ["To prep lips before color, exfoliate first and follow with a hydrating balm.", "Apply the bright tomato red and fuchsia shades with a brush for more shape and definition. You can also press the color on with your fingers—I love a deep brick red or warm dusty rose stain with soft edges."]
+          }
+        },
+        {
+          "information": {
+            "title": "Key ingredients",
+            "content": ["Biomimetic Peptides - Boosts collagen production, lip volume, hydration, and softness.", "Cold Pressed Cherry Oil - 16% concentration to strengthen moisture resention. Rich in antioxidents Vitamin A & E, and Omega 3 & Omega 6 oils.", "Sunflower Seed Wax - A vegan wax, loaded with fatty acids, to smooth texture and strength the skin's moisture barrier.", "Carnuba Wax - A vegan wax, loaded with fatty acids, that provides a smooth texture. Strengthens the moisture barrier and holds pigment in place.", "Marula Oil - Supports skin from environmental stressors and provides essential fatty acids for healthy skin.", "Vitamin E - Natural emollient to help hydrate the skin. Rich in antioxidants to protect the skin against environmental damage."]
+          },
+          "image":"../src/assets/productInfo/lip-suede-rouger-section3.jpg"
+        }
+      ]
+    },
+    {
+      "id": 64,
+      "brand": "Mob",
+      "name": "MOB Matte Lipstick (M67)",
+      "category": "Make up - Lip Sticks",
+      "tags": ["Vegan"],
+      "rating": 0,
+      "price": 22,
+      "quantity": 1,
+      "generalDescription": "",
+      "principalBenefits": ["", "", "", ""],
+      "description": "",
+      "ingredients": "",
+      "carouselImages": ["../src/assets/productInfo/", "../src/assets/productInfo/", "../src/assets/productInfo/"],
+      "quotes": {
+        "title": "",
+        "content": ""
+      },
+      "section": [
+        {
+          "information": {
+            "title": "",
+            "content": ["", "", "", "", ""]
+          },
+          "image":"../src/assets/productInfo/"
+        },
+        {
+          "information": {
+            "title": "",
+            "content": [""]
+          },
+          "image":"../src/assets/productInfo/"
+        },
+        {
+          "information": {
+            "title": "",
+            "content": [""]
+          },
+          "image":"../src/assets/productInfo/"
+        },
+        {
+          "information": {
+            "title": "",
+            "content": ["", "", "", "", "", "", ""]
+          },
+          "image":"../src/assets/productInfo/"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "brand": "BeautyCounter",
+      "name": "Dew Skin Tinted Moisturizer",
+      "category": "Skincare - Moisturizers",
+      "tags": ["Best Seller"],
+      "rating": 0,
+      "price": 50,
+      "quantity": 1,
+      "generalDescription": "",
+      "principalBenefits": ["", "", "", ""],
+      "description": "",
+      "ingredients": "",
+      "carouselImages": ["../src/assets/productInfo/", "../src/assets/productInfo/", "../src/assets/productInfo/"],
+      "quotes": {
+        "title": "",
+        "content": ""
+      },
+      "section": [
+        {
+          "information": {
+            "title": "",
+            "content": ["", "", "", "", ""]
+          },
+          "image":"../src/assets/productInfo/"
+        },
+        {
+          "information": {
+            "title": "",
+            "content": [""]
+          },
+          "image":"../src/assets/productInfo/"
+        },
+        {
+          "information": {
+            "title": "",
+            "content": [""]
+          },
+          "image":"../src/assets/productInfo/"
+        },
+        {
+          "information": {
+            "title": "",
+            "content": ["", "", "", "", "", "", ""]
+          },
+          "image":"../src/assets/productInfo/"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "brand": "Spectacle",
+      "name": "Spectacle Performance Crème",
+      "category": "Skincare - Moisturizers",
+      "tags": ["Best Seller", "New Arrival"],
+      "rating": 4.5,
+      "price": 87,
+      "quantity": 1,
+      "generalDescription": "",
+      "principalBenefits": ["", "", "", ""],
+      "description": "",
+      "ingredients": "",
+      "carouselImages": ["../src/assets/productInfo/", "../src/assets/productInfo/", "../src/assets/productInfo/"],
+      "quotes": {
+        "title": "",
+        "content": ""
+      },
+      "section": [
+        {
+          "information": {
+            "title": "",
+            "content": ["", "", "", "", ""]
+          },
+          "image":"../src/assets/productInfo/"
+        },
+        {
+          "information": {
+            "title": "",
+            "content": [""]
+          },
+          "image":"../src/assets/productInfo/"
+        },
+        {
+          "information": {
+            "title": "",
+            "content": [""]
+          },
+          "image":"../src/assets/productInfo/"
+        },
+        {
+          "information": {
+            "title": "",
+            "content": ["", "", "", "", "", "", ""]
+          },
+          "image":"../src/assets/productInfo/"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "brand": "Ursa Major",
+      "name": "Golden Hour Recovery Cream",
+      "category": "Skincare - Moisturizers",
+      "tags": ["Best Seller"],
+      "rating": 5,
+      "price": 20,
+      "quantity": 1,
+      "generalDescription": "",
+      "principalBenefits": ["", "", "", ""],
+      "description": "",
+      "ingredients": "",
+      "carouselImages": ["../src/assets/productInfo/", "../src/assets/productInfo/", "../src/assets/productInfo/"],
+      "quotes": {
+        "title": "",
+        "content": ""
+      },
+      "section": [
+        {
+          "information": {
+            "title": "",
+            "content": ["", "", "", "", ""]
+          },
+          "image":"../src/assets/productInfo/"
+        },
+        {
+          "information": {
+            "title": "",
+            "content": [""]
+          },
+          "image":"../src/assets/productInfo/"
+        },
+        {
+          "information": {
+            "title": "",
+            "content": [""]
+          },
+          "image":"../src/assets/productInfo/"
+        },
+        {
+          "information": {
+            "title": "",
+            "content": ["", "", "", "", "", "", ""]
+          },
+          "image":"../src/assets/productInfo/"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "brand": "Youth to the people",
+      "name": "Superfood Air-Whip Moisture Cream",
+      "category": "Skincare - Moisturizers",
+      "rating": 5,
+      "price": 48,
+      "quantity": 1,
+      "generalDescription": "",
+      "principalBenefits": ["", "", "", ""],
+      "description": "",
+      "ingredients": "",
+      "carouselImages": ["../src/assets/productInfo/", "../src/assets/productInfo/", "../src/assets/productInfo/"],
+      "quotes": {
+        "title": "",
+        "content": ""
+      },
+      "section": [
+        {
+          "information": {
+            "title": "",
+            "content": ["", "", "", "", ""]
+          },
+          "image":"../src/assets/productInfo/"
+        },
+        {
+          "information": {
+            "title": "",
+            "content": [""]
+          },
+          "image":"../src/assets/productInfo/"
+        },
+        {
+          "information": {
+            "title": "",
+            "content": [""]
+          },
+          "image":"../src/assets/productInfo/"
+        },
+        {
+          "information": {
+            "title": "",
+            "content": ["", "", "", "", "", "", ""]
+          },
+          "image":"../src/assets/productInfo/"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "brand": "Youth to the people",
+      "name": "Adaptogen Deep Moisture Cream",
+      "category": "Skincare - Moisturizers",
+      "rating": 2,
+      "price": 58,
+      "quantity": 1,
+      "generalDescription": "",
+      "principalBenefits": ["", "", "", ""],
+      "description": "",
+      "ingredients": "",
+      "carouselImages": ["../src/assets/productInfo/", "../src/assets/productInfo/", "../src/assets/productInfo/"],
+      "quotes": {
+        "title": "",
+        "content": ""
+      },
+      "section": [
+        {
+          "information": {
+            "title": "",
+            "content": ["", "", "", "", ""]
+          },
+          "image":"../src/assets/productInfo/"
+        },
+        {
+          "information": {
+            "title": "",
+            "content": [""]
+          },
+          "image":"../src/assets/productInfo/"
+        },
+        {
+          "information": {
+            "title": "",
+            "content": [""]
+          },
+          "image":"../src/assets/productInfo/"
+        },
+        {
+          "information": {
+            "title": "",
+            "content": ["", "", "", "", "", "", ""]
+          },
+          "image":"../src/assets/productInfo/"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "brand": "Augustinus Bader",
+      "name": "The Cream",
+      "category": "Skincare - Moisturizers",
+      "rating": 2,
+      "price": 68,
+      "quantity": 1,
+      "generalDescription": "",
+      "principalBenefits": ["", "", "", ""],
+      "description": "",
+      "ingredients": "",
+      "carouselImages": ["../src/assets/productInfo/", "../src/assets/productInfo/", "../src/assets/productInfo/"],
+      "quotes": {
+        "title": "",
+        "content": ""
+      },
+      "section": [
+        {
+          "information": {
+            "title": "",
+            "content": ["", "", "", "", ""]
+          },
+          "image":"../src/assets/productInfo/"
+        },
+        {
+          "information": {
+            "title": "",
+            "content": [""]
+          },
+          "image":"../src/assets/productInfo/"
+        },
+        {
+          "information": {
+            "title": "",
+            "content": [""]
+          },
+          "image":"../src/assets/productInfo/"
+        },
+        {
+          "information": {
+            "title": "",
+            "content": ["", "", "", "", "", "", ""]
+          },
+          "image":"../src/assets/productInfo/"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "brand": "Irene Forte",
+      "name": "Aloe Vera Face Cream",
+      "category": "Skincare - Moisturizers",
+      "tags": ["Vegan"],
+      "rating": 5,
+      "price": 120,
+      "quantity": 1,
+      "generalDescription": "",
+      "principalBenefits": ["", "", "", ""],
+      "description": "",
+      "ingredients": "",
+      "carouselImages": ["../src/assets/productInfo/", "../src/assets/productInfo/", "../src/assets/productInfo/"],
+      "quotes": {
+        "title": "",
+        "content": ""
+      },
+      "section": [
+        {
+          "information": {
+            "title": "",
+            "content": ["", "", "", "", ""]
+          },
+          "image":"../src/assets/productInfo/"
+        },
+        {
+          "information": {
+            "title": "",
+            "content": [""]
+          },
+          "image":"../src/assets/productInfo/"
+        },
+        {
+          "information": {
+            "title": "",
+            "content": [""]
+          },
+          "image":"../src/assets/productInfo/"
+        },
+        {
+          "information": {
+            "title": "",
+            "content": ["", "", "", "", "", "", ""]
+          },
+          "image":"../src/assets/productInfo/"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "brand": "Environ",
+      "name": "Vita-Complex Super Moisturizer",
+      "category": "Skincare - Moisturizers",
+      "tags": ["Vegan"],
+      "rating": 5,
+      "price": 100,
+      "quantity": 1,
+      "generalDescription": "",
+      "principalBenefits": ["", "", "", ""],
+      "description": "",
+      "ingredients": "",
+      "carouselImages": ["../src/assets/productInfo/", "../src/assets/productInfo/", "../src/assets/productInfo/"],
+      "quotes": {
+        "title": "",
+        "content": ""
+      },
+      "section": [
+        {
+          "information": {
+            "title": "",
+            "content": ["", "", "", "", ""]
+          },
+          "image":"../src/assets/productInfo/"
+        },
+        {
+          "information": {
+            "title": "",
+            "content": [""]
+          },
+          "image":"../src/assets/productInfo/"
+        },
+        {
+          "information": {
+            "title": "",
+            "content": [""]
+          },
+          "image":"../src/assets/productInfo/"
+        },
+        {
+          "information": {
+            "title": "",
+            "content": ["", "", "", "", "", "", ""]
+          },
+          "image":"../src/assets/productInfo/"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "brand": "Bioderma",
+      "name": "Bioderma H20 Wipes",
+      "category": "Skincare - Cleansers",
+      "rating": 4,
+      "price": 12,
+      "quantity": 1,
+      "generalDescription": "",
+      "principalBenefits": ["", "", "", ""],
+      "description": "",
+      "ingredients": "",
+      "carouselImages": ["../src/assets/productInfo/", "../src/assets/productInfo/", "../src/assets/productInfo/"],
+      "quotes": {
+        "title": "",
+        "content": ""
+      },
+      "section": [
+        {
+          "information": {
+            "title": "",
+            "content": ["", "", "", "", ""]
+          },
+          "image":"../src/assets/productInfo/"
+        },
+        {
+          "information": {
+            "title": "",
+            "content": [""]
+          },
+          "image":"../src/assets/productInfo/"
+        },
+        {
+          "information": {
+            "title": "",
+            "content": [""]
+          },
+          "image":"../src/assets/productInfo/"
+        },
+        {
+          "information": {
+            "title": "",
+            "content": ["", "", "", "", "", "", ""]
+          },
+          "image":"../src/assets/productInfo/"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "brand": "Nature of things",
+      "name": "Clarifying Facial Polish",
+      "category": "Skincare - Cleansers",
+      "tags": ["Best Seller"],
+      "rating": 3,
+      "price": 65,
+      "quantity": 1,
+      "generalDescription": "",
+      "principalBenefits": ["", "", "", ""],
+      "description": "",
+      "ingredients": "",
+      "carouselImages": ["../src/assets/productInfo/", "../src/assets/productInfo/", "../src/assets/productInfo/"],
+      "quotes": {
+        "title": "",
+        "content": ""
+      },
+      "section": [
+        {
+          "information": {
+            "title": "",
+            "content": ["", "", "", "", ""]
+          },
+          "image":"../src/assets/productInfo/"
+        },
+        {
+          "information": {
+            "title": "",
+            "content": [""]
+          },
+          "image":"../src/assets/productInfo/"
+        },
+        {
+          "information": {
+            "title": "",
+            "content": [""]
+          },
+          "image":"../src/assets/productInfo/"
+        },
+        {
+          "information": {
+            "title": "",
+            "content": ["", "", "", "", "", "", ""]
+          },
+          "image":"../src/assets/productInfo/"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "brand": "Ursa major",
+      "name": "Essential Face Wipes",
+      "category": "Skincare - Cleansers",
+      "rating": 5,
+      "price": 26,
+      "quantity": 1,
+      "generalDescription": "",
+      "principalBenefits": ["", "", "", ""],
+      "description": "",
+      "ingredients": "",
+      "carouselImages": ["../src/assets/productInfo/", "../src/assets/productInfo/", "../src/assets/productInfo/"],
+      "quotes": {
+        "title": "",
+        "content": ""
+      },
+      "section": [
+        {
+          "information": {
+            "title": "",
+            "content": ["", "", "", "", ""]
+          },
+          "image":"../src/assets/productInfo/"
+        },
+        {
+          "information": {
+            "title": "",
+            "content": [""]
+          },
+          "image":"../src/assets/productInfo/"
+        },
+        {
+          "information": {
+            "title": "",
+            "content": [""]
+          },
+          "image":"../src/assets/productInfo/"
+        },
+        {
+          "information": {
+            "title": "",
+            "content": ["", "", "", "", "", "", ""]
+          },
+          "image":"../src/assets/productInfo/"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "brand": "Bioderma",
+      "name": "Sensibio H2O",
+      "category": "Skincare - Cleansers",
+      "tags": ["Low Stock"],
+      "rating": 5,
+      "price": 7,
+      "quantity": 1,
+      "generalDescription": "",
+      "principalBenefits": ["", "", "", ""],
+      "description": "",
+      "ingredients": "",
+      "carouselImages": ["../src/assets/productInfo/", "../src/assets/productInfo/", "../src/assets/productInfo/"],
+      "quotes": {
+        "title": "",
+        "content": ""
+      },
+      "section": [
+        {
+          "information": {
+            "title": "",
+            "content": ["", "", "", "", ""]
+          },
+          "image":"../src/assets/productInfo/"
+        },
+        {
+          "information": {
+            "title": "",
+            "content": [""]
+          },
+          "image":"../src/assets/productInfo/"
+        },
+        {
+          "information": {
+            "title": "",
+            "content": [""]
+          },
+          "image":"../src/assets/productInfo/"
+        },
+        {
+          "information": {
+            "title": "",
+            "content": ["", "", "", "", "", "", ""]
+          },
+          "image":"../src/assets/productInfo/"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "brand": "Youth to the people",
+      "name": "Superfood Cleanser",
+      "category": "Skincare - Cleansers",
+      "tags": ["New Arrival"],
+      "rating": 5,
+      "price": 36,
+      "quantity": 1,
+      "generalDescription": "",
+      "principalBenefits": ["", "", "", ""],
+      "description": "",
+      "ingredients": "",
+      "carouselImages": ["../src/assets/productInfo/", "../src/assets/productInfo/", "../src/assets/productInfo/"],
+      "quotes": {
+        "title": "",
+        "content": ""
+      },
+      "section": [
+        {
+          "information": {
+            "title": "",
+            "content": ["", "", "", "", ""]
+          },
+          "image":"../src/assets/productInfo/"
+        },
+        {
+          "information": {
+            "title": "",
+            "content": [""]
+          },
+          "image":"../src/assets/productInfo/"
+        },
+        {
+          "information": {
+            "title": "",
+            "content": [""]
+          },
+          "image":"../src/assets/productInfo/"
+        },
+        {
+          "information": {
+            "title": "",
+            "content": ["", "", "", "", "", "", ""]
+          },
+          "image":"../src/assets/productInfo/"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "brand": "Youth to the people",
+      "name": "SuperBerry Melt + Dream Balm",
+      "category": "Skincare - Cleansers",
+      "tags": ["Best Seller"],
+      "rating": 5,
+      "price": 34,
+      "quantity": 1,
+      "generalDescription": "",
+      "principalBenefits": ["", "", "", ""],
+      "description": "",
+      "ingredients": "",
+      "carouselImages": ["../src/assets/productInfo/", "../src/assets/productInfo/", "../src/assets/productInfo/"],
+      "quotes": {
+        "title": "",
+        "content": ""
+      },
+      "section": [
+        {
+          "information": {
+            "title": "",
+            "content": ["", "", "", "", ""]
+          },
+          "image":"../src/assets/productInfo/"
+        },
+        {
+          "information": {
+            "title": "",
+            "content": [""]
+          },
+          "image":"../src/assets/productInfo/"
+        },
+        {
+          "information": {
+            "title": "",
+            "content": [""]
+          },
+          "image":"../src/assets/productInfo/"
+        },
+        {
+          "information": {
+            "title": "",
+            "content": ["", "", "", "", "", "", ""]
+          },
+          "image":"../src/assets/productInfo/"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "brand": "Pai",
+      "name": "Light Work Cleansing Oil",
+      "category": "Skincare - Cleansers",
+      "tags": ["Vegan"],
+      "rating": 3,
+      "price": 29,
+      "quantity": 1,
+      "generalDescription": "",
+      "principalBenefits": ["", "", "", ""],
+      "description": "",
+      "ingredients": "",
+      "carouselImages": ["../src/assets/productInfo/", "../src/assets/productInfo/", "../src/assets/productInfo/"],
+      "quotes": {
+        "title": "",
+        "content": ""
+      },
+      "section": [
+        {
+          "information": {
+            "title": "",
+            "content": ["", "", "", "", ""]
+          },
+          "image":"../src/assets/productInfo/"
+        },
+        {
+          "information": {
+            "title": "",
+            "content": [""]
+          },
+          "image":"../src/assets/productInfo/"
+        },
+        {
+          "information": {
+            "title": "",
+            "content": [""]
+          },
+          "image":"../src/assets/productInfo/"
+        },
+        {
+          "information": {
+            "title": "",
+            "content": ["", "", "", "", "", "", ""]
+          },
+          "image":"../src/assets/productInfo/"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "brand": "Environ",
+      "name": "Clarifying Facial Polish",
+      "category": "Skincare - Cleansers",
+      "tags": ["Best Seller", "Low Stock"],
+      "rating": 4,
+      "price": 41,
+      "quantity": 1,
+      "generalDescription": "",
+      "principalBenefits": ["", "", "", ""],
+      "description": "",
+      "ingredients": "",
+      "carouselImages": ["../src/assets/productInfo/", "../src/assets/productInfo/", "../src/assets/productInfo/"],
+      "quotes": {
+        "title": "",
+        "content": ""
+      },
+      "section": [
+        {
+          "information": {
+            "title": "",
+            "content": ["", "", "", "", ""]
+          },
+          "image":"../src/assets/productInfo/"
+        },
+        {
+          "information": {
+            "title": "",
+            "content": [""]
+          },
+          "image":"../src/assets/productInfo/"
+        },
+        {
+          "information": {
+            "title": "",
+            "content": [""]
+          },
+          "image":"../src/assets/productInfo/"
+        },
+        {
+          "information": {
+            "title": "",
+            "content": ["", "", "", "", "", "", ""]
+          },
+          "image":"../src/assets/productInfo/"
+        }
+      ]
     }
   ]
 }
+
+

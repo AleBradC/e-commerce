@@ -1,4 +1,5 @@
 import { useCallback, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 
 import useBreakpoint from '../../hooks/useBreakpointsHook/useBreakpoint'
@@ -34,6 +35,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
   const breakPoint = useBreakpoint()
   const dispatch = useAppDispatch()
   const isDesktop = breakPoint === 'lg' || breakPoint === 'xl'
+  const navigate = useNavigate()
 
   const [hoveredCard, setHoveredCard] = useState(false)
   const [addProductToCard] = useAddProductToCardMutation()
@@ -66,8 +68,17 @@ export const ProductCard: React.FC<ProductCardProps> = ({
     [addProductToCard, brand, dispatch, imageURL, name, price]
   )
 
+  const handleOpenProduct = () => {
+    navigate(`/productsInfo/${id}`)
+  }
+
   return (
-    <Container onMouseEnter={handleHover} onMouseLeave={handleRemoveHover} className={className}>
+    <Container
+      onClick={handleOpenProduct}
+      onMouseEnter={handleHover}
+      onMouseLeave={handleRemoveHover}
+      className={className}
+    >
       <Header>
         {!hoveredCard && (
           <HoverHeader>
