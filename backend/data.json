@@ -678,7 +678,7 @@
     {
       "id": 64,
       "brand": "Environ",
-      "name": "Clarifying Facial Polish",
+      "name": "Botanical Infused Sebu-Wash Gel Cleanser",
       "category": "Cleansers",
       "tags": ["Best Seller", "Low Stock"],
       "imageURL": "../src/assets/products/cleansers/environ-clarifying.png",
@@ -691,7 +691,7 @@
 
   "productInfo": [
     {
-      "id": 17,
+      "id": 1,
       "brand": "YOUTH TO THE PEOPLE",
       "name": "Polypeptide-121 Future Cream",
       "category": "Skincare - Moisturize",
@@ -731,7 +731,7 @@
       ]
     },
     {
-      "id": 18,
+      "id": 2,
       "brand": "VENN",
       "name": "Advanced Multi-Perfecting Red Oil Serum",
       "category": "Skincare - Face Oil",
@@ -780,7 +780,7 @@
       ]
     },
     {
-      "id": 19,
+      "id": 3,
       "brand": "Pai",
       "name": "Rosehip Bioregenerate Universal Face Oil",
       "category": "Skincare - Face Oil",
@@ -822,7 +822,7 @@
       ]
     },
     {
-      "id": 20,
+      "id": 4,
       "brand": "Costa Brazil",
       "name": "Sérum Para A Face - Face Serum",
       "category": "Skincare - Face Oil",
@@ -866,7 +866,7 @@
       ]
     },
     {
-      "id": 21,
+      "id": 5,
       "brand": "Supernatural",
       "name": "Cosmic Glow Oil",
       "category": "Skincare - Face Oil",
@@ -907,7 +907,7 @@
       ]
     },
     {
-      "id": 22,
+      "id": 6,
       "brand": "Costa Brazil",
       "name": "Costa Brazil Oleo Para A Face - Kaya Anti-Aging Face Oil",
       "category": "Skincare - Face Oil",
@@ -945,7 +945,7 @@
       ]
     },
     {
-      "id": 23,
+      "id": 7,
       "brand": "Youth to the people",
       "name": "Superberry Hydrate and Glow Dream Oil",
       "category": "Skincare - Face Oil",
@@ -987,7 +987,7 @@
       ]
     },
     {
-      "id": 24,
+      "id": 8,
       "brand": "Pai",
       "name": "Impossible Glow",
       "category": "Skincare - Face Oil",
@@ -1025,7 +1025,7 @@
       ]
     },
     {
-      "id": 25,
+      "id": 9,
       "brand": "LELAND FRANCIS",
       "name": "Twenty-nine Botanical Serum",
       "category": "Skincare - Face Oil",
@@ -1069,7 +1069,7 @@
       ]
     },
     {
-      "id": 26,
+      "id": 10,
       "brand": "Venn",
       "name": "Age-Response Compound K Hyaluronic Booster",
       "category": "Skincare - Face Serums",
@@ -1111,7 +1111,7 @@
       ]
     },
     {
-      "id": 27,
+      "id": 11,
       "brand": "Vintner's daughter",
       "name": "Active Botanical Serum",
       "category": "Skincare - Face Serums",
@@ -1153,7 +1153,7 @@
       ]
     },
     {
-      "id": 28,
+      "id": 12,
       "brand": "Youth to the people",
       "name": "15% Vitamin C + Clean Caffeine Energy Serum",
       "category": "Skincare - Face Serums",
@@ -1196,7 +1196,7 @@
       ]
     },
     {
-      "id": 29,
+      "id": 13,
       "brand": "Youth to the people",
       "name": "Triple Peptide + Cactus Oasis Serum",
       "category": "Skincare - Face Serums",
@@ -1233,7 +1233,7 @@
       ]
     },
     {
-      "id": 30,
+      "id": 14,
       "brand": "Zitsticks",
       "name": "MEGASHADE™ Breakout-proof SPF Serum",
       "category": "Skincare - Face Serums",
@@ -1269,7 +1269,7 @@
       ]
     },
     {
-      "id": 31,
+      "id": 15,
       "brand": "Ideo",
       "name": "Ideo Skin Memory Serum",
       "category": "Skincare - Face Serums",
@@ -1316,7 +1316,7 @@
       ]
     },
     {
-      "id": 32,
+      "id": 16,
       "brand": "Beautycounter",
       "name": "Counter+ All Bright C Serum",
       "category": "Skincare - Face Serums",
@@ -1359,7 +1359,7 @@
       ]
     },
     {
-      "id": 33,
+      "id": 17,
       "brand": "Kosas",
       "name": "Clear Air Brow Tinted Volumizing Treatment Gel",
       "category": "Make up - Brows",
@@ -1401,7 +1401,7 @@
       ]
     },
     {
-      "id": 34,
+      "id": 18,
       "brand": "Kosas",
       "name": "Air Brow Tinted Volumizing Treatment Gel",
       "category": "Make up - Brows",
@@ -1439,7 +1439,7 @@
       ]
     },
     {
-      "id": 35,
+      "id": 19,
       "brand": "Kosas",
       "name": "Brow Pop Dual-Action Defining Pencil",
       "category": "Make up - Brows",
@@ -1481,7 +1481,7 @@
       ]
     },
     {
-      "id": 36,
+      "id": 20,
       "brand": "Westman Atelier",
       "name": "Bonne Brow",
       "category": "Make up - Brows",
@@ -1525,7 +1525,7 @@
       ]
     },
     {
-      "id": 37,
+      "id": 21,
       "brand": "Roen",
       "name": "vowBrow Pencil",
       "category": "Make up - Brows",
@@ -1566,7 +1566,7 @@
       ]
     },
     {
-      "id": 38,
+      "id": 22,
       "brand": "Tweezers",
       "name": "Classic Stainless Slat Tweezers",
       "category": "Make up - Brows",
@@ -1599,7 +1599,7 @@
       ]
     },
     {
-      "id": 39,
+      "id": 23,
       "brand": "Beautycounter",
       "name": "Brilliant Brow",
       "category": "Make up - Brows",
@@ -1637,7 +1637,7 @@
       ]
     },
     {
-      "id": 40,
+      "id": 24,
       "brand": "Tweezers",
       "name": "Point Tweezer Classic Stainless",
       "category": "Make up - Brows",
@@ -1672,7 +1672,7 @@
       ]
     },
     {
-      "id": 41,
+      "id": 25,
       "brand": "Eyeco",
       "name": "Lash Alert Mascara",
       "category": "Make up - Mascara",
@@ -1712,7 +1712,7 @@
       ]
     },
     {
-      "id": 42,
+      "id": 26,
       "brand": "Beautycounter",
       "name": "Think Big All-in-One Mascara",
       "category": "Make up - Mascara",
@@ -1753,7 +1753,7 @@
       ]
     },
     {
-      "id": 43,
+      "id": 27,
       "brand": "Westman atelier",
       "name": "Eye Love You Mascara",
       "category": "Make up - Mascara",
@@ -1793,7 +1793,7 @@
       ]
     },
     {
-      "id": 44,
+      "id": 28,
       "brand": "Mob",
       "name": "Volumizing Mascara M66 - Refill",
       "category": "Make up - Mascara",
@@ -1830,7 +1830,7 @@
       ]
     },
     {
-      "id": 45,
+      "id": 29,
       "brand": "Kosas",
       "name": "The Big Clean Volumizing + Lash Care Mascara-Intense Black",
       "category": "Make up - Mascara",
@@ -1878,7 +1878,7 @@
       ]
     },
     {
-      "id": 46,
+      "id": 30,
       "brand": "Mob",
       "name": "MOB Capsule 2",
       "category": "Make up - Mascara",
@@ -1892,7 +1892,7 @@
       "carouselImages": ["../src/assets/productInfo/MOB-capsule-carousel1.jpg", "../src/assets/productInfo/MOB-capsule-carousel2.jpg"]
     },
     {
-      "id": 47,
+      "id": 31,
       "brand": "Eyeco",
       "name": "Colored Lash Alert Mascara",
       "category": "Make up - Mascara",
@@ -1934,7 +1934,7 @@
       ]
     },
     {
-      "id": 48,
+      "id": 32,
       "brand": "Roen",
       "name": "CAKE Mascara",
       "category": "Make up - Mascara",
@@ -1971,7 +1971,7 @@
       ]
     },
     {
-      "id": 49,
+      "id": 33,
       "brand": "Roen",
       "name": "Elixir Tinted Lip Oil Balm",
       "category": "Make up - Lip Glosses",
@@ -2002,7 +2002,7 @@
       ]
     },
     {
-      "id": 50,
+      "id": 34,
       "brand": "Westman Atelier",
       "name": "Squeaky Clean Liquid Lip Balm",
       "category": "Make up - Lip Glosses",
@@ -2040,7 +2040,7 @@
       ]
     },
     {
-      "id": 51,
+      "id": 35,
       "brand": "Lanolips",
       "name": "Holographic Lip Water",
       "category": "Make up - Lip Glosses",
@@ -2078,7 +2078,7 @@
       ]
     },
     {
-      "id": 52,
+      "id": 36,
       "brand": "Lanolips",
       "name": "Tinted Balm",
       "category": "Make up - Lip Glosses",
@@ -2116,7 +2116,7 @@
       ]
     },
     {
-      "id": 53,
+      "id": 37,
       "brand": "Alpyn beauty",
       "name": "Willow & Sweet Agave Plumping Lip Mask",
       "category": "Make up - Lip Glosses",
@@ -2147,7 +2147,7 @@
       ]
     },
     {
-      "id": 54,
+      "id": 38,
       "brand": "Kosas",
       "name": "Wet Lip Oil Treatment Plumping Gloss",
       "category": "Make up - Lip Glosses",
@@ -2189,7 +2189,7 @@
       ]
     },
     {
-      "id": 55,
+      "id": 39,
       "brand": "Maarks Lip",
       "name": "MAARKS Lip",
       "category": "Make up - Lip Glosses",
@@ -2231,7 +2231,7 @@
       ]
     },
     {
-      "id": 56,
+      "id": 40,
       "brand": "Lanolips",
       "name": "Watermelon Lip Water",
       "category": "Make up - Lip Glosses",
@@ -2260,7 +2260,7 @@
       ]
     },
     {
-      "id": 57,
+      "id": 41,
       "brand": "Mob",
       "name": "MOB RePurpose Capsule",
       "category": "Make up - Lip Sticks",
@@ -2274,7 +2274,7 @@
       "carouselImages": ["../src/assets/productInfo/MOB-rePurpose-carousel1.jpg", "../src/assets/productInfo/MOB-rePurpose-carousel2.jpg", "../src/assets/productInfo/MOB-rePurpose-carousel3.jpg"]
     },
     {
-      "id": 58,
+      "id": 42,
       "brand": "Beautycounter",
       "name": "Sheer Genius Conditioning Lipstick",
       "category": "Make up - Lip Sticks",
@@ -2311,7 +2311,7 @@
       ]
     },
     {
-      "id": 59,
+      "id": 43,
       "brand": "Kosas",
       "name": "Weightless Lip Color",
       "category": "Make up - Lip Sticks",
@@ -2355,7 +2355,7 @@
       ]
     },
     {
-      "id": 60,
+      "id": 44,
       "brand": "Mob",
       "name": "MOB Cream Lipstick",
       "category": "Make up - Lip Sticks",
@@ -2393,7 +2393,7 @@
       ]
     },
     {
-      "id": 61,
+      "id": 45,
       "brand": "Westman Atelier",
       "name": "Lip Suede Palette Les Nudes",
       "category": "Make up - Lip Sticks",
@@ -2433,7 +2433,7 @@
       ]
     },
     {
-      "id": 62,
+      "id": 46,
       "brand": "Westman Atelier",
       "name": "The Gift Edition",
       "category": "Make up - Lip Sticks",
@@ -2446,7 +2446,7 @@
       "carouselImages": ["../src/assets/productInfo/gift-edition-carousel1.jpg", "../src/assets/productInfo/gift-edition-carousel2.jpg", "../src/assets/productInfo/gift-edition-carousel3.jpg", "../src/assets/productInfo/gift-edition-carousel4.jpg", "../src/assets/productInfo/gift-edition-carousel5.jpg", "../src/assets/productInfo/gift-edition-carousel6.jpg"]
     },
     {
-      "id": 63,
+      "id": 47,
       "brand": "Westman Atelier",
       "name": "Lip Suede Palette Les Rouges",
       "category": "Make up - Lip Sticks",
@@ -2482,7 +2482,7 @@
       ]
     },
     {
-      "id": 64,
+      "id": 48,
       "brand": "Mob",
       "name": "MOB Matte Lipstick (M67)",
       "category": "Make up - Lip Sticks",
@@ -2490,48 +2490,37 @@
       "rating": 0,
       "price": 22,
       "quantity": 1,
-      "generalDescription": "",
-      "principalBenefits": ["", "", "", ""],
-      "description": "",
-      "ingredients": "",
-      "carouselImages": ["../src/assets/productInfo/", "../src/assets/productInfo/", "../src/assets/productInfo/"],
-      "quotes": {
-        "title": "",
-        "content": ""
-      },
+      "generalDescription": "MOB’s Matte Lipstick is loaded with pigment for rich, one-swipe color payoff, and a 100% natural combo of bio- fermented powder and amino acids coats lips with a blurring, velvety finish and creamy comfort feel.",
+      "principalBenefits": ["Formulated without silicones, beeswax, or carmine", ".10 oz / 3 grams"],
+      "description": "The innovative, vegan formula replaces traditionally used silicones with a 100% natural bio-based elastomer gel for a silky application, and a super blend infusion of 4 plant waxes replace beeswax for a soft and flexible texture. Anti-oxidants, vitamins C & E, Phytosphingosine and Bisabolol work together to protect, soothe, and seal in moisture for non-drying wear.",
+      "ingredients": "Octyldodecanol, Jojoba Esters, Candelilla Cera/Euphorbia Cerifera (Candelilla) Wax /Cire De Candelilla, Coco-Caprylate/Caprate, C10-18 Triglycerides, Cetearyl Nonanoate, Saccharomyces Ferment",
+      "carouselImages": ["../src/assets/productInfo/mob-matte-lipstick-carousel1.jpg", "../src/assets/productInfo/mob-matte-lipstick-carousel2.jpg", "../src/assets/productInfo/mob-matte-lipstick-carousel3.png"],
       "section": [
         {
           "information": {
-            "title": "",
-            "content": ["", "", "", "", ""]
+            "title": "Benefits Include",
+            "content": ["100% natural combo of bio- fermented powder and amino acids coats lips with a blurring, velvety finish and creamy comfort feel"]
           },
-          "image":"../src/assets/productInfo/"
+          "image":"../src/assets/productInfo/mob-matte-lipstick-section1.jpg"
         },
         {
           "information": {
-            "title": "",
-            "content": [""]
+            "title": "How to Use...",
+            "content": ["Apply directly to your lips"]
           },
-          "image":"../src/assets/productInfo/"
+          "image":"../src/assets/productInfo/mob-matte-lipstick-section2.jpg"
         },
         {
           "information": {
-            "title": "",
-            "content": [""]
+            "title": "Key ingredients",
+            "content": ["Jojoba Extract", "Sunflower Extract", "Vitamin C", "Vitamin E"]
           },
-          "image":"../src/assets/productInfo/"
-        },
-        {
-          "information": {
-            "title": "",
-            "content": ["", "", "", "", "", "", ""]
-          },
-          "image":"../src/assets/productInfo/"
+          "image":"../src/assets/productInfo/mob-matte-lipstick-section3.jpg"
         }
       ]
     },
     {
-      "id": 9,
+      "id": 49,
       "brand": "BeautyCounter",
       "name": "Dew Skin Tinted Moisturizer",
       "category": "Skincare - Moisturizers",
@@ -2539,48 +2528,42 @@
       "rating": 0,
       "price": 50,
       "quantity": 1,
-      "generalDescription": "",
-      "principalBenefits": ["", "", "", ""],
-      "description": "",
-      "ingredients": "",
-      "carouselImages": ["../src/assets/productInfo/", "../src/assets/productInfo/", "../src/assets/productInfo/"],
+      "generalDescription": "The dewy soft-focus finish on this tinted moisturizer makes it a clear favorite. It’s our go-to for buildable sheer coverage and SPF protection in one.",
+      "principalBenefits": ["Sheer dewy finish", "Safer SPF", "Glow-boosting ingredients", "Buildable color"],
+      "description": "You can't beat the luminous finish on Beautycounter’s award-winning Dew Skin Tinted Moisturizer—complete with SPF 20 mineral sunscreen protection. The formula features a blend of Black Currant Seed Oil, Peony Root Extract, and Vitamin C to help brighten while leaving skin radiantly fresh.",
+      "ingredients": "Water, Caprylic/Capric Triglyceride, Coco-Caprylate, Trimethylsiloxysilicate, Isopropyl Palmitate, Dimethicone/Vinyl Dimethicone Crosspolymer, Poyglyceryl-4",
+      "carouselImages": ["../src/assets/productInfo/dew-skin-tinted-carousel1.jpg", "../src/assets/productInfo/dew-skin-tinted-carousel2.jpg", "../src/assets/productInfo/dew-skin-tinted-carousel3.jpg", "../src/assets/productInfo/dew-skin-tinted-carousel4.jpg", "../src/assets/productInfo/dew-skin-tinted-carousel5.jpg", "../src/assets/productInfo/dew-skin-tinted-carousel6.jpg", "../src/assets/productInfo/dew-skin-tinted-carousel7.jpg", "../src/assets/productInfo/dew-skin-tinted-carousel8.jpg", "../src/assets/productInfo/dew-skin-tinted-carousel9.jpg", "../src/assets/productInfo/dew-skin-tinted-carousel10.jpg", "../src/assets/productInfo/dew-skin-tinted-carousel11.jpg", "../src/assets/productInfo/dew-skin-tinted-carousel12.jpg", "../src/assets/productInfo/dew-skin-tinted-carousel13.jpg", "../src/assets/productInfo/dew-skin-tinted-carousel14.jpg", "../src/assets/productInfo/dew-skin-tinted-carousel15.jpg", "../src/assets/productInfo/dew-skin-tinted-carousel16.jpg", "../src/assets/productInfo/dew-skin-tinted-carousel17.jpg", "../src/assets/productInfo/dew-skin-tinted-carousel18.jpg", "../src/assets/productInfo/dew-skin-tinted-carousel19.jpg", "../src/assets/productInfo/dew-skin-tinted-carousel20.jpg", "../src/assets/productInfo/dew-skin-tinted-carousel21.jpg", "../src/assets/productInfo/dew-skin-tinted-carousel22.jpg", "../src/assets/productInfo/dew-skin-tinted-carousel23.jpg"],
       "quotes": {
-        "title": "",
-        "content": ""
+        "title": "Why Jess Loves It...",
+        "content": "“A protective SPF, with just enough coverage to even out my skin tone and add a bit of natural glow.“"
       },
       "section": [
         {
           "information": {
-            "title": "",
-            "content": ["", "", "", "", ""]
+            "title": "Benefits Include:",
+            "content": ["Clinically proven to increase firmness and elasticity", "Brightens for an even complexion", "SPF 20 mineral sunscreen"]
           },
-          "image":"../src/assets/productInfo/"
+          "image":"../src/assets/productInfo/dew-skin-tinted-section1.jpg"
         },
         {
           "information": {
-            "title": "",
-            "content": [""]
+            "title": "How To Use",
+            "content": ["Apply to Your Skin Use daily, alone, or on top of moisturizer.", "For More Coverage Layer SPF foundation on top."]
           },
-          "image":"../src/assets/productInfo/"
+          "image":"../src/assets/productInfo/dew-skin-tinted-section2.jpg"
         },
         {
           "information": {
-            "title": "",
-            "content": [""]
+            "title": "Key ingredients",
+            "content": ["Non-nano Zinc Oxide: physical, mineral sun protection technology", "Black Currant Seed Oil and Peony Root Extract: help even skin tone and enhance radiance", "Vitamin C: brightens and evens skin tone"
+            ]
           },
-          "image":"../src/assets/productInfo/"
-        },
-        {
-          "information": {
-            "title": "",
-            "content": ["", "", "", "", "", "", ""]
-          },
-          "image":"../src/assets/productInfo/"
+          "image":"../src/assets/productInfo/dew-skin-tinted-section3.jpg"
         }
       ]
     },
     {
-      "id": 10,
+      "id": 50,
       "brand": "Spectacle",
       "name": "Spectacle Performance Crème",
       "category": "Skincare - Moisturizers",
@@ -2588,48 +2571,37 @@
       "rating": 4.5,
       "price": 87,
       "quantity": 1,
-      "generalDescription": "",
-      "principalBenefits": ["", "", "", ""],
-      "description": "",
-      "ingredients": "",
-      "carouselImages": ["../src/assets/productInfo/", "../src/assets/productInfo/", "../src/assets/productInfo/"],
-      "quotes": {
-        "title": "",
-        "content": ""
-      },
+      "generalDescription": "Say hello to your new desert-island favorite. This multitasking super cream is a standalone performance product for minimalists and aficionados alike.",
+      "principalBenefits": ["Winner of 'Best moisturizer for aging skin' and delivered to you in 'Best sustainable packaging' - Marie Claire 2021 Skin Awards", "Hydrates, smoothes, and soothes", "Beautiful primer-like consistency", "Supports collagen and elastin production"],
+      "description": "Spectacle Performance Creme works in every season to keep skin looking healthy and glowing. Formulated to withstand the high desert of Santa Fe and the streets of London, this gel-cream texture preps the skin before makeup and sits beautifully under SPF using skin-identical ingredients and sustainable green science. Consider this your one and done.",
+      "ingredients": "Aqua, Glycerin, Carthamus Tinctorius Oleosomes, Sodium Acrylates Copolymer, Niacinamide, Lecithin, D'Glucosyl Gallic Acid, Copper Lysinate/Prolinate",
+      "carouselImages": ["../src/assets/productInfo/spectacle-performance-carousel1.png"],
       "section": [
         {
           "information": {
-            "title": "",
-            "content": ["", "", "", "", ""]
+            "title": "Benefits Include:",
+            "content": ["Simplifies your routine by tackling multiple skin concerns at once", "Reinforces the skin’s defensive barrier", "Reduces discoloration and redness", "Protects against environmental stress"]
           },
-          "image":"../src/assets/productInfo/"
+          "image":"../src/assets/productInfo/spectacle-performance-section1.jpg"
         },
         {
           "information": {
-            "title": "",
-            "content": [""]
+            "title": "How to use",
+            "content": ["Apply to Your Skin", "Apply liberally to the face and neck. Use morning and evening.", "Pro Tip", "Wear under your favorite SPF."]
           },
-          "image":"../src/assets/productInfo/"
+          "image":"../src/assets/productInfo/spectacle-performance-section2.jpg"
         },
         {
           "information": {
-            "title": "",
-            "content": [""]
+            "title": "Key ingredients",
+            "content": ["Ergothioneine: Protects the cell membrane from oxidation and reduces fine lines and UV damage", "1.5% Niacinamide: Improves uneven skin tone, diminishes dullness, and softens fine lines while strengthening the skin’s defensive barrier", "2% Copper Amino Acids: Re-energizes cells and promotes the production of collagen and elastin", "0.1% Encapsulated Retinoid Complex: Works without any irritation to refine texture and protect collagen", "Ceramides: These lipids play a vital role in a hydrated and healthy skin barrier", "Multi-Molecular Weight Hyaluronic Acid: Hydrates on multiple levels to draw in moisture for a youthful bounce"]
           },
-          "image":"../src/assets/productInfo/"
-        },
-        {
-          "information": {
-            "title": "",
-            "content": ["", "", "", "", "", "", ""]
-          },
-          "image":"../src/assets/productInfo/"
+          "image":"../src/assets/productInfo/spectacle-performance-section3.jpg"
         }
       ]
     },
     {
-      "id": 11,
+      "id": 51,
       "brand": "Ursa Major",
       "name": "Golden Hour Recovery Cream",
       "category": "Skincare - Moisturizers",
@@ -2637,192 +2609,156 @@
       "rating": 5,
       "price": 20,
       "quantity": 1,
-      "generalDescription": "",
-      "principalBenefits": ["", "", "", ""],
-      "description": "",
-      "ingredients": "",
-      "carouselImages": ["../src/assets/productInfo/", "../src/assets/productInfo/", "../src/assets/productInfo/"],
-      "quotes": {
-        "title": "",
-        "content": ""
-      },
+      "generalDescription": "This intensely hydrating yet fast-absorbing face cream provides deep hydration and nourishment to soothe and replenish weary skin.",
+      "principalBenefits": ["Aroma: Neroli, sandalwood and a touch of sour rose anchored with fresh-soaked earth", "Fast-absorbing face cream", "Nourishes, soothes and replenishes skin", "Perfect for all skin types", "1.57 fl oz, .5 fl oz"],
+      "description": "Use this as a daily moisturizer, as a “wrinkle-busting” night cream or anytime your skin needs extra TLC. Works great for all skin types; especially recommended for anyone recovering from prolonged exposure to the elements.",
+      "ingredients": "Aloe Barbadensis (Aloe Vera) Leaf Juice*, Helianthus Annuus (Sunflower) Seed Oil*, Glyceryl Stearate Citrate, Cetearyl Alcohol, Glyceryl Caprylate, Leuconostoc/Radish Root Ferment Filtrate, Glycerin*, Limnanthes Alba (Meadowfoam) Seed Oil, Glyceryl Undecylenate",
+      "carouselImages": ["../src/assets/productInfo/goldern-hour-carousel1.jpg", "../src/assets/productInfo/goldern-hour-carousel2.jpg", "../src/assets/productInfo/goldern-hour-carousel3.jpg", "../src/assets/productInfo/goldern-hour-carousel4.jpg"],
       "section": [
         {
           "information": {
-            "title": "",
-            "content": ["", "", "", "", ""]
+            "title": "Benefits Include:",
+            "content": ["Delivers intense hydration without feeling heavy", "Helps combat the visible signs of aging", "Reduces the appearance of redness and uneven skin tone", "Soothes irritation from dryness and exposure to the elements", "Works for all skin types, especially dry, sensitive or neglected skin", "NEVER ANY petrochemicals, sulfates, parabens, synthetic fragrance or color, glycols, silicones or PEGs. This product is 100% naturally-derived and contains 81% organic ingredients."]
           },
-          "image":"../src/assets/productInfo/"
+          "image":"../src/assets/productInfo/goldern-hour-section1.jpg"
         },
         {
           "information": {
-            "title": "",
-            "content": [""]
+            "title": "Key ingredients",
+            "content": ["Aloe Barbadensis (Aloe Vera) Leaf Juice*", "Helianthus Annuus (Sunflower) Seed Oil*", "Ribes Nigrum (Black Currant) Seed Oil", "T Rosmarinus Officinalis (Rosemary) Leaf Extract*"]
           },
-          "image":"../src/assets/productInfo/"
-        },
-        {
-          "information": {
-            "title": "",
-            "content": [""]
-          },
-          "image":"../src/assets/productInfo/"
-        },
-        {
-          "information": {
-            "title": "",
-            "content": ["", "", "", "", "", "", ""]
-          },
-          "image":"../src/assets/productInfo/"
+          "image":"../src/assets/productInfo/goldern-hour-section2.jpg"
         }
       ]
     },
     {
-      "id": 12,
+      "id": 52,
       "brand": "Youth to the people",
       "name": "Superfood Air-Whip Moisture Cream",
       "category": "Skincare - Moisturizers",
       "rating": 5,
       "price": 48,
       "quantity": 1,
-      "generalDescription": "",
-      "principalBenefits": ["", "", "", ""],
-      "description": "",
-      "ingredients": "",
-      "carouselImages": ["../src/assets/productInfo/", "../src/assets/productInfo/", "../src/assets/productInfo/"],
+      "generalDescription": "A dime-sized amount of this delectable cream goes a long way to soothe and cool skin on contact.",
+      "principalBenefits": ["Air-whipped gel cream", "Light, clean, herbaceous scent", "Absorbs quickly and does not clog your pores", "Made with superfoods including kale and spinach", "Contains antioxidant green tea"],
+      "description": "A dime-sized amount of this delectable cream goes a long way to soothe and cool skin on contact. Air-whipped gel cream Light, clean, herbaceous scent Absorbs quickly and does not clog your pores Made with superfoods including kale and spinach Contains antioxidant green tea",
+      "ingredients": "Water/Aqua/Eau (Aqua), Helianthus Annuus (Sunflower) Seed Oil, Glyceryl Stearate, Cetyl Alcohol, Glycerin, Lecithin, Butylene Glycol",
+      "carouselImages": ["../src/assets/productInfo/superfood-airwhip-carousel1.jpg", "../src/assets/productInfo/superfood-airwhip-carousel2.jpg"],
       "quotes": {
-        "title": "",
-        "content": ""
+        "title": "Why Jess Loves It..",
+        "content": "“The light texture hydrates beautifully without clogging my pores. This cream is the perfect combo.“"
       },
       "section": [
         {
           "information": {
-            "title": "",
-            "content": ["", "", "", "", ""]
+            "title": "Benefits Include:",
+            "content": ["Friendly for all skin types", "Best for combo and oily skin", "Feels deliciously cool on contact", "Glass jar easily recycles", "100% vegan, cruelty-free, and made in California"]
           },
-          "image":"../src/assets/productInfo/"
+          "image":"../src/assets/productInfo/superfood-airwhip-section1.png"
         },
         {
           "information": {
-            "title": "",
-            "content": [""]
+            "title": "How To Use",
+            "content": ["Apply to Your Face", "Smooth a dime-sized amount of cream on the skin until it's fully absorbed. Use morning and night.", "Pro Tip", "This lightweight cream absorbs quickly, making it a great makeup primer. Apply a small amount before makeup, or mix with your foundation for a hydrating boost."]
           },
-          "image":"../src/assets/productInfo/"
+          "image":"../src/assets/productInfo/superfood-airwhip-section2.jpg"
         },
         {
           "information": {
-            "title": "",
-            "content": [""]
+            "title": "Key ingredients",
+            "content": ["Proprietary Superfoods Blend: Kale, Spinach, Green Tea, Alfalfa, Vitamins C and E", "Kale: Rich in skin-loving Phytonutrients and Vitamins C and E", "Green Tea: This plant powerhouse is packed with nourishing antioxidants", "Hyaluronic Acid: A natural hydrator known for its incredible moisture-retaining properties"]
           },
-          "image":"../src/assets/productInfo/"
-        },
-        {
-          "information": {
-            "title": "",
-            "content": ["", "", "", "", "", "", ""]
-          },
-          "image":"../src/assets/productInfo/"
+          "image":"../src/assets/productInfo/superfood-airwhip-section3.png"
         }
       ]
     },
     {
-      "id": 13,
+      "id": 53,
       "brand": "Youth to the people",
       "name": "Adaptogen Deep Moisture Cream",
       "category": "Skincare - Moisturizers",
       "rating": 2,
       "price": 58,
       "quantity": 1,
-      "generalDescription": "",
-      "principalBenefits": ["", "", "", ""],
-      "description": "",
-      "ingredients": "",
-      "carouselImages": ["../src/assets/productInfo/", "../src/assets/productInfo/", "../src/assets/productInfo/"],
-      "quotes": {
-        "title": "",
-        "content": ""
-      },
+      "generalDescription": "A deeply hydrating, calming moisture cream powered by herbs and holy basil. It's especially good for dry skin types.",
+      "principalBenefits": ["Deeply moisturizing facial cream", "Calms sensitive, stressed skin"],
+      "description": "A deeply hydrating moisturizer with superior plant extracts and a pro-grade peptide complex formulated for dry, reactive, and sensitive skin. This fragrance-free formula is made with an intelligent hydration trio of Squalane, Jojoba + Shea butter for long-lasting deep hydration that won't clog pores. Adaptogenic extract blend helps skin cope with dryness, irritation, redness, and fine lines + wrinkles. Calming Peptide keeps the skin’s response to environmental stress in check.",
+      "ingredients": "Purified Water, Helianthus Annuus (Sunflower) Oil, Glyceryl Stearate, Ocimum Tenuiflorum (Holy Basil), Aloe Leaf Juice, Squalane (Olive)",
+      "carouselImages": ["../src/assets/productInfo/adaptogen-carousel1.jpg", "../src/assets/productInfo/adaptogen-carousel2.jpg", "../src/assets/productInfo/adaptogen-carousel3.jpg"],
       "section": [
         {
           "information": {
-            "title": "",
-            "content": ["", "", "", "", ""]
+            "title": "Benefits Include:",
+            "content": ["Deeply boosts hydration without the risk of clogged pores.", "Protect skin from enviornmental stressors", "100% vegan ingredients"
+            ]
           },
-          "image":"../src/assets/productInfo/"
+          "image":"../src/assets/productInfo/adaptogen-section1.jpg"
         },
         {
           "information": {
-            "title": "",
-            "content": [""]
+            "title": "How to use",
+            "content": ["In the morning, apply 2-4 pumps to cleansed face and neck.", "Follow with Superfood Moisture Cream."]
           },
-          "image":"../src/assets/productInfo/"
+          "image":"../src/assets/productInfo/adaptogen-section2.jpg"
         },
         {
           "information": {
-            "title": "",
-            "content": [""]
-          },
-          "image":"../src/assets/productInfo/"
-        },
-        {
-          "information": {
-            "title": "",
-            "content": ["", "", "", "", "", "", ""]
-          },
-          "image":"../src/assets/productInfo/"
+            "title": "Key ingredients",
+            "content": ["Proprietary Adaptogen Blend: Ashwagandha, Rhodiola, and Reishi. The use of adaptogens as medicine, taken internally and applied topically, has been championed by Eastern medicine and Ayurveda for 5,000 years."]
+          }
         }
       ]
     },
     {
-      "id": 14,
+      "id": 54,
       "brand": "Augustinus Bader",
       "name": "The Cream",
       "category": "Skincare - Moisturizers",
       "rating": 2,
       "price": 68,
       "quantity": 1,
-      "generalDescription": "",
-      "principalBenefits": ["", "", "", ""],
-      "description": "",
-      "ingredients": "",
-      "carouselImages": ["../src/assets/productInfo/", "../src/assets/productInfo/", "../src/assets/productInfo/"],
+      "generalDescription": "This vanity staple delivers beauty ingenuity with a cult following due to groundbreaking stem-cell technology triggering your existing stem cells to repair and renew.",
+      "principalBenefits": ["Lightweight hydration for mildly dry, combination, or oily skin", "Clinically proven to reduce the signs of aging", "Rich in Antioxidants, Amino Acids, and Vitamins A, B, C, and E", "Groundbreaking stem-cell technology", "High-performance skincare powered by TFC8® technology", "Free from perfumes, silicones, and fillers", "Designed for daytime use", "30ml, 50ml"],
+      "description": "Augustinus Bader’s The Cream is coveted by beauty circles because it boosts moisture with renewing hydration and regenerates stem cells using the Trigger Factor Complex—a combination of natural amino acids, high-grade vitamins, and synthesized molecules. By supporting the body's innate renewal processes, The Cream reduces signs of aging and damage caused by environmental conditions.",
+      "ingredients": "Aqua (Water), Caprylic/capric Triglyceride, Pentylene Glycol, Propylene Glycol, Hydrogenated Phosphatidylcholine, Glycerin, Sorbitol, Tocopheryl Acetate, Butyrospermum Parkii (Shea)",
+      "carouselImages": ["../src/assets/productInfo/the-cream-carousel1.jpg", "../src/assets/productInfo/the-cream-carousel2.jpg", "../src/assets/productInfo/the-cream-carousel3.jpg", "../src/assets/productInfo/the-cream-carousel4.jpg"],
       "quotes": {
-        "title": "",
-        "content": ""
+        "title": "Why Jess Loves It...",
+        "content": "“The one cream that is perfect when you don't want to do a million steps but still want something that packs a punch.“"
       },
       "section": [
         {
           "information": {
-            "title": "",
-            "content": ["", "", "", "", ""]
+            "title": "Benefits Include:",
+            "content": ["Visibly reduces signs of aging as well as damage from environmental stressors", "Reduces redness and calms sensitized skin", "Stimulates production of collagen, promotes elasticity, and normalizes the skin barrier", "Packed with lipids to support the moisture barrier and nurture suppleness", "Recyclable bottle and FSC certified carton"]
           },
-          "image":"../src/assets/productInfo/"
+          "image":"../src/assets/productInfo/the-cream-section1.jpg"
         },
         {
           "information": {
-            "title": "",
-            "content": [""]
+            "title": "How To Use",
+            "content": ["Massage Along Your Face In upward sweeping motions, massage the cream along your jawline. Sweep the cream from your nose to your ears, and across your forehead. Massage the cream across your cheeks to your temples.", "Massage Along Your Neck Apply the cream from the base of the neck to the tip of the chin in an upward motion. Use any excess cream to massage over the décolleté."]
           },
-          "image":"../src/assets/productInfo/"
+          "image":"../src/assets/productInfo/the-cream-section2.jpg"
         },
         {
           "information": {
-            "title": "",
-            "content": [""]
+            "title": "Key Ingredients",
+            "content": ["TFC8® Technology: Formulated with nourishing vitamins and amino acids, protective antioxidants, and soothing aloe vera", "Vitamin A: Improves regeneration, supports moisture retention, and visibly reduces fine lines", "Vitamin C: Stimulates the production of collagen while brightening"]
           },
-          "image":"../src/assets/productInfo/"
+          "image":"../src/assets/productInfo/the-cream-section3.jpg"
         },
         {
           "information": {
-            "title": "",
-            "content": ["", "", "", "", "", "", ""]
+            "title": "Clinical results",
+            "content": ["92% agree skin appears healthier", "87% agree skin feels protected, stronger, and more energized", "87% agree skin has a youthful, healthy, radiant glow"]
           },
-          "image":"../src/assets/productInfo/"
+          "image":"../src/assets/productInfo/the-cream-section4.jpg"
         }
       ]
     },
     {
-      "id": 15,
+      "id": 55,
       "brand": "Irene Forte",
       "name": "Aloe Vera Face Cream",
       "category": "Skincare - Moisturizers",
@@ -2830,48 +2766,43 @@
       "rating": 5,
       "price": 120,
       "quantity": 1,
-      "generalDescription": "",
-      "principalBenefits": ["", "", "", ""],
-      "description": "",
-      "ingredients": "",
-      "carouselImages": ["../src/assets/productInfo/", "../src/assets/productInfo/", "../src/assets/productInfo/"],
-      "quotes": {
-        "title": "",
-        "content": ""
-      },
+      "generalDescription": "A hydrating cream to help visibly reduce the appearance of fine lines caused by dehydration and dryness. Enriched with Vegetable Protein Complex, and Aloe Leaf Juice to hydrate, calm and soothe the skin. Organic Olive Oil, Avocado and Shea replenish the natural barrier to preserve and protect moisture levels.",
+      "principalBenefits": ["Clinically approved for sensitive skin. Also suitable for all skin types, especially dry or dehydrated.", "pH 5.5", "50 ml"],
+      "description": "A cream that absorbs quickly and leaves skin feeling hydrated. Clinically approved for sensitive skin. Also suitable for all skin types, especially dry or dehydrated. Enriched with Vegetable Protein Complex, and Aloe Leaf Juice to hydrate, calm and soothe the skin. Organic Olive Oil, Avocado and Shea replenish the natural barrier to preserve and protect moisture levels.",
+      "ingredients": "Aqua (Water), Simmondsia Chinensis (Jojoba) Seed Oil*, Glyceryl Stearate, Cetearyl Alcohol, nAloe Barbadensis Leaf Juice*, lycerin",
+      "carouselImages": ["../src/assets/productInfo/aloe-vera-carousel1.jpg", "../src/assets/productInfo/aloe-vera-carousel2.jpg", "../src/assets/productInfo/aloe-vera-carousel3.jpg", "../src/assets/productInfo/aloe-vera-carousel4.jpeg"],
       "section": [
         {
           "information": {
-            "title": "",
-            "content": ["", "", "", "", ""]
+            "title": "Benefits Include:",
+            "content": ["Clinically approved for sensitive skin. Also suitable for all skin types, especially dry or dehydrated.", "Absorbs quickly and leaves skin feeling hydrated.", "Organic Olive Oil, Avocado Oil and Shea Butter replenish the natural barrier to preserve and protect moisture levels."]
           },
-          "image":"../src/assets/productInfo/"
+          "image":"../src/assets/productInfo/aloe-vera-section1.jpg"
         },
         {
           "information": {
-            "title": "",
-            "content": [""]
+            "title": "How to use",
+            "content": ["Apply to the face, neck and décolleté, smoothing with circular upward motions. Use morning and/or evening."]
           },
-          "image":"../src/assets/productInfo/"
+          "image":"../src/assets/productInfo/aloe-vera-section2.jpg"
         },
         {
           "information": {
-            "title": "",
-            "content": [""]
+            "title": "Key ingredients",
+            "content": ["Jojoba Oil: A wax ester that is similar in texture to the sebum that we produce naturally; 25-30% of human sebum is wax esters. Jojoba Oil moisturizes the skin through unique dual action: on the one hand, it mixes with sebum and forms a thin, non-greasy, semi-occlusive layer; on the other hand, it absorbs into the skin through pores and hair follicles, and then diffuses into the intercellular spaces of the outer layer of the skin to make it soft and supple.", "Aloe Leaf Juice: A nutrient-rich juice from the succulent heart of the Aloe Leaf that helps deeply hydrate, whilst calming and soothing the skin.", "Omega-Rich Oils (3, 6 & 9), including Avocado Oil, Shea Butter & Olive Oil: Topical application of omega fatty acids helps to: strengthen and smooth the skin’s surface; repair the skin barrier to improve moisture and elasticity; soothe irritated, sensitive and red skin; reduce UV-induced photo damage and signs of aging; and nourish and protect skin against environmental damage moisture, regulate oil production and maintain elasticity.\nStar Omega: Avocado Oil is a particularly good oil for dry skin as it has extraordinary skin penetration abilities and can nourish different skin layers. It is a very rich, highly moisturizing emollient oil that makes the skin smooth and nourished."]
           },
-          "image":"../src/assets/productInfo/"
+          "image":"../src/assets/productInfo/aloe-vera-section3.jpg"
         },
         {
           "information": {
-            "title": "",
-            "content": ["", "", "", "", "", "", ""]
+            "title": "Clinical Results"
           },
-          "image":"../src/assets/productInfo/"
+          "image":"../src/assets/productInfo/aloe-vera-section4.jpg"
         }
       ]
     },
     {
-      "id": 16,
+      "id": 56,
       "brand": "Environ",
       "name": "Vita-Complex Super Moisturizer",
       "category": "Skincare - Moisturizers",
@@ -2879,96 +2810,71 @@
       "rating": 5,
       "price": 100,
       "quantity": 1,
-      "generalDescription": "",
-      "principalBenefits": ["", "", "", ""],
-      "description": "",
-      "ingredients": "",
-      "carouselImages": ["../src/assets/productInfo/", "../src/assets/productInfo/", "../src/assets/productInfo/"],
+      "generalDescription": "We love the luxurious feel of this moisturizing cream. Plus, it easily absorbs leaving our skin feeling hydrated and instantly smoother.",
+      "principalBenefits": ["Restores the skin’s natural moisture balance", "Prevents tight, dry skin", "Leaves skin feeling silky soft"],
+      "description": "Emollient-rich Environ Vita-Complex Super Moisturizer enhances the skin's barrier function while intensely moisturizing. Packed with vitamins and antioxidants, this facial moisturizer also protects against free-radical damage—resulting in skin that feels nourished and refreshed.",
+      "ingredients": "Aqua (Water), C12 – 15 Alkyl Benzoate, Glycerin, polysorbate 40, Caprylic/Capric Triglyceride, Saccharide Isomerate, Ethylhexyl Palmitate",
+      "carouselImages": ["../src/assets/productInfo/super-moisturizer-carousel1.jpg"],
       "quotes": {
-        "title": "",
-        "content": ""
+        "title": "Why Jess Loves It...",
+        "content": "“Simple hydrating moisturizer with vitamins your skin needs.“"
       },
       "section": [
         {
           "information": {
-            "title": "",
-            "content": ["", "", "", "", ""]
+            "title": "How To Use",
+            "content": ["Prep Your Skin Pre-cleanse, cleanse, and tone.", "Apply to Your Face Apply to your face, neck, and décolleté for effective hydration."]
           },
-          "image":"../src/assets/productInfo/"
+          "image":"../src/assets/productInfo/super-moisturizer-section1.jpg"
         },
         {
           "information": {
-            "title": "",
-            "content": [""]
+            "title": "Key ingredients",
+            "content": ["Pentavitin®: Supports the moisture barrier of the epidermis, provides continuous hydration, and is 100% plant derived", "Revidrate™: Stimulates genes and enzymes to increase hydrating factors in the skin, supports the skin’s water and lipid balance, and protects skin from everyday environmental stressors"]
           },
-          "image":"../src/assets/productInfo/"
-        },
-        {
-          "information": {
-            "title": "",
-            "content": [""]
-          },
-          "image":"../src/assets/productInfo/"
-        },
-        {
-          "information": {
-            "title": "",
-            "content": ["", "", "", "", "", "", ""]
-          },
-          "image":"../src/assets/productInfo/"
+          "image":"../src/assets/productInfo/super-moisturizer-section2.jpg"
         }
       ]
     },
     {
-      "id": 1,
+      "id": 57,
       "brand": "Bioderma",
       "name": "Bioderma H20 Wipes",
       "category": "Skincare - Cleansers",
       "rating": 4,
       "price": 12,
       "quantity": 1,
-      "generalDescription": "",
-      "principalBenefits": ["", "", "", ""],
-      "description": "",
-      "ingredients": "",
-      "carouselImages": ["../src/assets/productInfo/", "../src/assets/productInfo/", "../src/assets/productInfo/"],
-      "quotes": {
-        "title": "",
-        "content": ""
-      },
+      "generalDescription": "The dermatological wipes Sensibio H2O are enriched with an active micellar solution perfectly compatible with the skin: its fatty acid esters, the constituent elements of micelles, are similar to the phospholipids of the skin cell membranes and naturally help rebuild the skin's hydrolipidic film.",
+      "principalBenefits": ["Micellar dermatological wipes", "Perfect for cleansing and makeup removal", "Perfect for sensitive skin and reducing the irritation caused by cleansing", "25 wipes"],
+      "description": "Sensibio H2O dermatological wipes guarantee a perfect cleansing and/or make-up removal for sensitive skin and eyes and an excellent tolerance and comfort. Enhanced with soothing ingredients, Allantoïne, Sensibio H2O dermatological wipes prevent the skin from feeling the irritation often caused by cleansing.",
+      "ingredients": "Aqua/Water/Eau, Polysorbate 20, Pentylene Glycol, Mannitol, Xylitol, Rhamnose, Fructooligosaccharides",
+      "carouselImages": ["../src/assets/productInfo/bioderma-H20-carousel1.jpg", "../src/assets/productInfo/bioderma-H20-carousel2.png"],
       "section": [
         {
           "information": {
-            "title": "",
-            "content": ["", "", "", "", ""]
+            "title": "Benefits Include:",
+            "content": ["Gently cleanses and soothes", "Removes makeup from face and eyes", "Provides instant feeling of freshness"]
           },
-          "image":"../src/assets/productInfo/"
+          "image":"../src/assets/productInfo/bioderma-H20-section1.jpg"
         },
         {
           "information": {
-            "title": "",
-            "content": [""]
+            "title": "How to use",
+            "content": ["Morning and/or evening, every day, as needed.", "STEP 1 Open the sachet and take a wipe", "STEP 2 Gently cleanse and/or remove makeup from your face, eyes and neck", "STEP 3 Use more than one wipe if needed, until the wipe remains clean", "STEP 4 Lightly pat your face with a clean cloth to dry"]
           },
-          "image":"../src/assets/productInfo/"
+          "image":"../src/assets/productInfo/bioderma-H20-section2.png"
         },
         {
           "information": {
-            "title": "",
-            "content": [""]
+            "title": "Key ingredients",
+            "content": ["Polysorbate 20", "Pentylene Glycol", "Mannitol", "Rhamnose"]
           },
-          "image":"../src/assets/productInfo/"
-        },
-        {
-          "information": {
-            "title": "",
-            "content": ["", "", "", "", "", "", ""]
-          },
-          "image":"../src/assets/productInfo/"
+          "image":"../src/assets/productInfo/bioderma-H20-section3.jpeg"
         }
       ]
     },
     {
-      "id": 2,
+      "id": 58,
       "brand": "Nature of things",
       "name": "Clarifying Facial Polish",
       "category": "Skincare - Cleansers",
@@ -2976,96 +2882,78 @@
       "rating": 3,
       "price": 65,
       "quantity": 1,
-      "generalDescription": "",
-      "principalBenefits": ["", "", "", ""],
-      "description": "",
-      "ingredients": "",
-      "carouselImages": ["../src/assets/productInfo/", "../src/assets/productInfo/", "../src/assets/productInfo/"],
-      "quotes": {
-        "title": "",
-        "content": ""
-      },
+      "generalDescription": "This show-stopping polishing powder holds space on our vanity—and in our hearts. Don’t miss out on its spa-worthy deliciousness.",
+      "principalBenefits": ["Dual-performing clarifying facial polish", "Purifies, resurfaces, and exfoliates", "Cleanses and exfoliates all skin types", "Aesthetic on point", "45 g / 1.45 net wt" ],
+      "description": "This Clarifying Facial Polish by Nature Of Things combines the purifying action of a cleanser with the resurfacing and glow-enhancing benefits of an exfoliant. Mix with a few droplets of water to activate the powder into a paste. Nutrient-rich lava ash from the Korean island of Jeju and Kisameet Glacial Clay penetrate deep into the skin to draw out impurities and oil, unclog pores, and promote overall tightness and tone.",
+      "ingredients": "*Microcrystalline Cellulose, *Oryza Sativa (Rice) Powder, *Sodium Cocoyl Isethionate, *Avena Sativa (Oat) Kernel Extract, **Solum Diatomeae/ Diatomaceous Earth/Terre De Diatomées, *Oryza Sativa (Rice) Starch, *Sodium Lauroyl Glutamate, *Coconut Acid, *Colloidal Oatmeal",
+      "carouselImages": ["../src/assets/productInfo/clarifying-carousel1.jpg", "../src/assets/productInfo/clarifying-carousel2.jpg", "../src/assets/productInfo/clarifying-carousel3.jpg"],
       "section": [
         {
           "information": {
-            "title": "",
-            "content": ["", "", "", "", ""]
+            "title": "Benefits Include:",
+            "content": ["Cleanses skin and remove impurities", "Exfoliates and improves texture", "Reduces dullness and the appearance of pores", "Enhances absorption of subsequent products"]
           },
-          "image":"../src/assets/productInfo/"
+          "image":"../src/assets/productInfo/clarifying-section1.jpg"
         },
         {
           "information": {
-            "title": "",
-            "content": [""]
+            "title": "How To Use",
+            "content": ["Prep for Application", "Pour 1/2 teaspoon (roughly a dime-sized amount) of powder into the palm of your hand. Add a few drops of water and mix until you achieve a creamy consistency.","Apply to Your Skin", "Gently massage onto your face and neck using circular motions. Avoid the eye area. Rinse with warm water.", "When to Apply", "Use twice daily. You can easily adjust the consistency and strength of exfoliation by how much water you incorporate into the paste.", "Pro Tip", "Use less water for a stronger exfoliating effect, or more water for a milder one."]
           },
-          "image":"../src/assets/productInfo/"
+          "image":"../src/assets/productInfo/clarifying-section2.jpg"
         },
         {
           "information": {
-            "title": "",
-            "content": [""]
+            "title": "Key Ingredients",
+            "content": ["Diatomaceous Earth", "Bromelain", "Eucalyptus Leaf Extract", "Colloidal Oatmeal"]
           },
-          "image":"../src/assets/productInfo/"
-        },
-        {
-          "information": {
-            "title": "",
-            "content": ["", "", "", "", "", "", ""]
-          },
-          "image":"../src/assets/productInfo/"
+          "image":"../src/assets/productInfo/clarifying-section3.jpg"
         }
       ]
     },
     {
-      "id": 3,
+      "id": 59,
       "brand": "Ursa major",
       "name": "Essential Face Wipes",
       "category": "Skincare - Cleansers",
       "rating": 5,
       "price": 26,
       "quantity": 1,
-      "generalDescription": "",
-      "principalBenefits": ["", "", "", ""],
-      "description": "",
-      "ingredients": "",
-      "carouselImages": ["../src/assets/productInfo/", "../src/assets/productInfo/", "../src/assets/productInfo/"],
+      "generalDescription": "We can’t get enough of these cleansing staples. Stash these beauty basics everywhere—they cleanse, exfoliate, soothe, and hydrate on the spot in one easy step.",
+      "principalBenefits": ["Individually-wrapped cleansing face wipes", "Exfoliates, soothes, and hydrates", "Removes oil and grime", "Travel-friendly", "Natural ingredients and toxin-free"],
+      "description": "Dare we say Essential Face Wipes by Ursa Major are perfect—especially for those nights when you don’t feel like washing your face. These award-winning, individually-wrapped bamboo face wipes are the ideal multi-taskers for cleansing and soothing your complexion anywhere you are.",
+      "ingredients": "Aloe: Soothes and hydrates, Sugarcane: Natural source of glycolic acid to brighten and condition",
+      "carouselImages": ["../src/assets/productInfo/essential-face-wipes-carousel1.jpg", "../src/assets/productInfo/essential-face-wipes-carousel2.jpg", "../src/assets/productInfo/essential-face-wipes-carousel3.png", "../src/assets/productInfo/essential-face-wipes-carousel4.png"],
       "quotes": {
-        "title": "",
-        "content": ""
+        "title": "Why Jess Loves It...",
+        "content": "“I use these on my face, my chest and my hands. I can't get enough of them. Plus the scent just smells clean.“"
       },
       "section": [
         {
           "information": {
-            "title": "",
-            "content": ["", "", "", "", ""]
+            "title": "Benefits Include:",
+            "content": ["Cleans and cools the complexion", "Essential Face Tonic formula cleans, exfoliates, soothes, and hydrates", "Ideal for travel and gym visits", "No petrochemicals, SLS, SLES, glycols, silicones, or PEGs", "Paraben-free and synthetic fragrance-free"]
           },
-          "image":"../src/assets/productInfo/"
+          "image":"../src/assets/productInfo/essential-face-wipes-section1.png"
         },
         {
           "information": {
-            "title": "",
-            "content": [""]
+            "title": "How To Use",
+            "content": ["Stash and Go", "Best suited for travel, post-exercise, or anytime you need a quick reboot on the fly.", "Apply to Your Face", "Open up the packet and use the front and back of the wipe to cleanse and moisturize."]
           },
-          "image":"../src/assets/productInfo/"
+          "image":"../src/assets/productInfo/essential-face-wipes-section2.png"
         },
         {
           "information": {
-            "title": "",
-            "content": [""]
+            "title": "Key ingredients",
+            "content": ["Aloe: Soothes and hydrates", "Sugarcane: Natural source of glycolic acid to brighten and condition", "Green Tea: Rich in antioxidants to promote healthy skin", "Sodium Hyaluronate: Retains moisture to reduce the appearance of fine lines and wrinkles"]
           },
-          "image":"../src/assets/productInfo/"
-        },
-        {
-          "information": {
-            "title": "",
-            "content": ["", "", "", "", "", "", ""]
-          },
-          "image":"../src/assets/productInfo/"
+          "image":"../src/assets/productInfo/essential-face-wipes-section3.jpg"
         }
       ]
     },
     {
-      "id": 4,
+      "id": 60,
       "brand": "Bioderma",
       "name": "Sensibio H2O",
       "category": "Skincare - Cleansers",
@@ -3073,48 +2961,37 @@
       "rating": 5,
       "price": 7,
       "quantity": 1,
-      "generalDescription": "",
-      "principalBenefits": ["", "", "", ""],
-      "description": "",
-      "ingredients": "",
-      "carouselImages": ["../src/assets/productInfo/", "../src/assets/productInfo/", "../src/assets/productInfo/"],
-      "quotes": {
-        "title": "",
-        "content": ""
-      },
+      "generalDescription": "A unique cleansing and make-up removing micellar water that respects the fragility of sensitive skin.",
+      "principalBenefits": ["Dermatological micellar water", "Perfect for sensitive skin and reducing the irritation caused by cleansing", "100ml"],
+      "description": "Sensibio H2O is the 1st and only dermatological micellar water perfectly compatible with the skin: its fatty acid esters, the constituent elements of micelles, are similar to the phospholipids of the skin cell membranes and naturally help rebuild the skin's hydrolipidic film.",
+      "ingredients": "Aqua/Water/Eau, Peg-6 Caprylic/Capric Glycerides, Fructooligosaccharides, Mannitol, Xylitol, Rhamnose, Cucumis Sativus (Cucumber) Fruit Extract, Propylene Glycol, Cetrimonium Bromide, Disodium Edta.",
+      "carouselImages": ["../src/assets/productInfo/sensibio-H2O-carousel1.jpg", "../src/assets/productInfo/sensibio-H2O-carousel2.jpg"],
       "section": [
         {
           "information": {
-            "title": "",
-            "content": ["", "", "", "", ""]
+            "title": "Benefits Include:",
+            "content": ["Gently cleanses skin from impurities, fine particles and pollution", "Effectively removes makeup from face and eyes", "Instantly soothes the skin", "Preserves skin balance"]
           },
-          "image":"../src/assets/productInfo/"
+          "image":"../src/assets/productInfo/sensibio-H2O-section1.png"
         },
         {
           "information": {
-            "title": "",
-            "content": [""]
+            "title": "How to use",
+            "content": ["Soak a cotton pad and gently cleanse and/or remove make-up from your face and eyes before your night routine."]
           },
-          "image":"../src/assets/productInfo/"
+          "image":"../src/assets/productInfo/sensibio-H2O-section2.jpg"
         },
         {
           "information": {
-            "title": "",
-            "content": [""]
+            "title": "Key ingredients",
+            "content": ["Cucumis Sativus (Cucumber)", "Fruit Extract"]
           },
-          "image":"../src/assets/productInfo/"
-        },
-        {
-          "information": {
-            "title": "",
-            "content": ["", "", "", "", "", "", ""]
-          },
-          "image":"../src/assets/productInfo/"
+          "image":"../src/assets/productInfo/sensibio-H2O-section3.jpg"
         }
       ]
     },
     {
-      "id": 5,
+      "id": 61,
       "brand": "Youth to the people",
       "name": "Superfood Cleanser",
       "category": "Skincare - Cleansers",
@@ -3122,48 +2999,41 @@
       "rating": 5,
       "price": 36,
       "quantity": 1,
-      "generalDescription": "",
-      "principalBenefits": ["", "", "", ""],
-      "description": "",
-      "ingredients": "",
-      "carouselImages": ["../src/assets/productInfo/", "../src/assets/productInfo/", "../src/assets/productInfo/"],
+      "generalDescription": "Drench your complexion in a delicious serving of green juice. This juicy, antioxidant-packed, gel cleanser is pH balanced, non-drying, and removes makeup with ease.",
+      "principalBenefits": ["Superfood antioxidant facial cleanser", "Designed for daily use", "Gentle enough for all skin types", "Rich gel texture lathers beautifully", "Recyclable packing", "8 fl oz/ 237ml"],
+      "description": "Yummy Superfood Cleanser by Youth To The People naturally lathers without sulfates and rinses quickly without stripping the skin. Like a fortifying green juice, it contains superfood antioxidants like kale, spinach, and green tea for the ultimate skin cleanse.",
+      "ingredients": "Water/Aqua/Eau, Cocamidopropyl Hydroxysultaine, Sodium Cocoyl Glutamate, Sorbeth-230 Tetraoleate, Polysorbate 20, Sodium Chloride, Aloe Barbadensis Leaf (Aloe Vera) Juice Powder, Brassica Oleracea Acephala (Kale) Leaf Extract, Spinacia Oleracea (Spinach) Leaf Extract",
+      "carouselImages": ["../src/assets/productInfo/superfood-cleanser-carousel1.png", "../src/assets/productInfo/superfood-cleanser-carousel2.png", "../src/assets/productInfo/superfood-cleanser-carousel3.png","../src/assets/productInfo/superfood-cleanser-carousel4.png"],
       "quotes": {
-        "title": "",
-        "content": ""
+        "title": "Why Jess Loves It...",
+        "content": "“One of my favorite cleansers that just does the job leaving skin clean but not dry.“"
       },
       "section": [
         {
           "information": {
-            "title": "",
-            "content": ["", "", "", "", ""]
+            "title": "Benefits Include:",
+            "content": ["Proprietary Superfoods Blend: Kale, Spinach, Green Tea, Alfalfa, Vitamins C and E", "Clean, vegan, 100% cruelty-free", "Based in California"]
           },
-          "image":"../src/assets/productInfo/"
+          "image":"../src/assets/productInfo/superfood-cleanser-section1.png"
         },
         {
           "information": {
-            "title": "",
-            "content": [""]
+            "title": "How To Use",
+            "content": ["Prep Your Skin", "Wet your face and apply 1-2 pumps of the cleanser onto wet hands. Next, rub into a light lather.", "Apply to Your Face", "Massage along your face and neck for 30 seconds for a deep cleanse. Use twice daily in the morning and evening to prevent pore buildup."]
           },
-          "image":"../src/assets/productInfo/"
+          "image":"../src/assets/productInfo/superfood-cleanser-section2.png"
         },
         {
           "information": {
-            "title": "",
-            "content": [""]
+            "title": "Key Ingredients",
+            "content": ["Kale: Contains skin-loving phytonutrients and vitamins C and E", "Spinach: Boasts a high natural moisture content and cooling properties", "Green Tea: An anti-inflammatory oil packed with essential fatty acids"]
           },
-          "image":"../src/assets/productInfo/"
-        },
-        {
-          "information": {
-            "title": "",
-            "content": ["", "", "", "", "", "", ""]
-          },
-          "image":"../src/assets/productInfo/"
+          "image":"../src/assets/productInfo/superfood-cleanser-section3.png"
         }
       ]
     },
     {
-      "id": 6,
+      "id": 62,
       "brand": "Youth to the people",
       "name": "SuperBerry Melt + Dream Balm",
       "category": "Skincare - Cleansers",
@@ -3171,48 +3041,37 @@
       "rating": 5,
       "price": 34,
       "quantity": 1,
-      "generalDescription": "",
-      "principalBenefits": ["", "", "", ""],
-      "description": "",
-      "ingredients": "",
-      "carouselImages": ["../src/assets/productInfo/", "../src/assets/productInfo/", "../src/assets/productInfo/"],
-      "quotes": {
-        "title": "",
-        "content": ""
-      },
+      "generalDescription": "Break down makeup, build skin up.This oil-to-milk balm dissolves face, eye, and lip makeup while softening, conditioning, and hydrating with oil-soluble hyaluronic acid and omegas. The PEG-free formula fully rinses without residue, leaving skin super clean and free to dream—never greasy.",
+      "principalBenefits": ["Unique cleansing balm", "Safe for all skin types", "Dissolves makeup, dirt and oil"],
+      "description": "This innovative cleansing balm is infused with nutrient-rich oils, superberry antioxidants, and coconut-derived fatty acids that instantly melt away stubborn makeup, SPF + impurities, even water-resistant formulations leaving skin clean, hydrated, soft and ready to dream. This formula is gentle enough to use around the eye area.",
+      "ingredients": "Sunflower, Moringa, and Jojoba Seed Oils are nutrient-rich omegas melt away makeup and dirt while softening skin. Superberry Antioxidants Goji, Maqui, and Acai Berries neutralize daily oxidative stressors. Oil-Soluble Hyaluronic Acid conditions and hydrates (even after rinsing).",
+      "carouselImages": ["../src/assets/productInfo/superBerry-melt-carousel1.jpg", "../src/assets/productInfo/superBerry-melt-carousel2.jpg", "../src/assets/productInfo/superBerry-melt-carousel3.jpg", "../src/assets/productInfo/superBerry-melt-carousel4.jpg", "../src/assets/productInfo/superBerry-melt-carousel5.jpg", "../src/assets/productInfo/superBerry-melt-carousel6.png", "../src/assets/productInfo/superBerry-melt-carousel7.jpg", "../src/assets/productInfo/superBerry-melt-carousel8.jpg", "../src/assets/productInfo/superBerry-melt-carousel9.png"],
       "section": [
         {
           "information": {
-            "title": "",
-            "content": ["", "", "", "", ""]
+            "title": "Benefits Include:",
+            "content": ["Instantly dissolves stubborn makeup, SPF + water-resistant formulas", "Gently cleanses, hydrates + softens", "Restores skin's natural barrier without stripping its natural oils", "Non-comedogenic"]
           },
-          "image":"../src/assets/productInfo/"
+          "image":"../src/assets/productInfo/superBerry-melt-section1.jpg"
         },
         {
           "information": {
-            "title": "",
-            "content": [""]
+            "title": "How to use",
+            "content": ["Using dry hands, massage onto dry skin until balm has transformed into an oil. Wet hands and continue massaging until oil emulsifies into a milk. To remove, rinse thoroughly with water. Use alone or as the first step of your double cleanse."]
           },
-          "image":"../src/assets/productInfo/"
+          "image":"../src/assets/productInfo/superBerry-melt-section2.jpg"
         },
         {
           "information": {
-            "title": "",
-            "content": [""]
+            "title": "Key ingredients",
+            "content": ["Jojoba Oil", "Prickly Pair Extract", "Acai Extract", "Goji Extract"]
           },
-          "image":"../src/assets/productInfo/"
-        },
-        {
-          "information": {
-            "title": "",
-            "content": ["", "", "", "", "", "", ""]
-          },
-          "image":"../src/assets/productInfo/"
+          "image":"../src/assets/productInfo/superBerry-melt-section3.jpg"
         }
       ]
     },
     {
-      "id": 7,
+      "id": 63,
       "brand": "Pai",
       "name": "Light Work Cleansing Oil",
       "category": "Skincare - Cleansers",
@@ -3220,92 +3079,84 @@
       "rating": 3,
       "price": 29,
       "quantity": 1,
-      "generalDescription": "",
-      "principalBenefits": ["", "", "", ""],
-      "description": "",
-      "ingredients": "",
-      "carouselImages": ["../src/assets/productInfo/", "../src/assets/productInfo/", "../src/assets/productInfo/"],
+      "generalDescription": "This heavy-lifting cleansing oil feels as sleek on the skin as it looks in the bottle.",
+      "principalBenefits": ["Cleansing, balancing, and softening", "Gentle, yet hyper-efficient", "Removes makeup and SPF with ease", "No rubbing and zero sting", "Leaves skin soft, nourished, and radiant", "28ml, 100ml"],
+      "description": "We love Pai’s Light Work Cleansing Oil with regenerating Rosehip because it glides over our skin—lifting away dulling impurities and even stubborn waterproof mascara. Experience first hand how its juicy texture melts away impurities with ease and without any irritation.",
+      "ingredients": "OLEA EUROPAEA FRUIT OIL* (olive oil), HELIANTHUS ANNUUS SEED OIL* (sunflower oil), POLYGLYCERYL-4 OLEATE, RICINUS COMMUNIS SEED OIL* (castor oil), ROSA CANINA FRUIT EXTRACT*ᶜ (rosehip fruit extract), JASMINUM GRANDIFLORUM FLOWER EXTRACT* (jasmine oil), CITRUS AURANTIFOLIA PEEL OIL* (lime oil), CITRUS AURANTIUM DULCIS",
+      "carouselImages": ["../src/assets/productInfo/light-work-oil-carousel1.png", "../src/assets/productInfo/light-work-oil-carousel2.jpg", "../src/assets/productInfo/light-work-oil-carousel3.png", "../src/assets/productInfo/light-work-oil-carousel4.png", "../src/assets/productInfo/light-work-oil-carousel5.jpg"],
       "quotes": {
-        "title": "",
-        "content": ""
+        "title": "Why Jess Loves It...",
+        "content": "“It feels so comforting, doesn’t dry out my skin and preps my skin perfectly for the rest of my skincare routine.“"
       },
       "section": [
         {
           "information": {
-            "title": "",
-            "content": ["", "", "", "", ""]
+            "title": "Benefits Include:",
+            "content": ["For sensitive skin and eyes", "Cleanses without irritation", "Melts away impurities", "Gently tackles waterproof mascara", "Recyclable packaging"]
           },
-          "image":"../src/assets/productInfo/"
+          "image":"../src/assets/productInfo/light-work-oil-section1.jpg"
         },
         {
           "information": {
-            "title": "",
-            "content": [""]
+            "title": "How To Use",
+            "content": ["Shake it Up", "Shake before use. Massage 2-3 pumps of the cleansing oil into your palms.", "Apply to Your Face", "On dry skin, glide oil along the lashline and all over the face to dissolve make-up and daily build-up. Add a few drops of water to create a light milky texture, then rinse thoroughly with water to remove."]
           },
-          "image":"../src/assets/productInfo/"
+          "image":"../src/assets/productInfo/light-work-oil-section2.jpg"
         },
         {
           "information": {
-            "title": "",
-            "content": [""]
+            "title": "Key Ingredients",
+            "content": ["Rosehip Fruit Extract: Filled with Omegas 3, 6, 7, and 9 to repair the skin and antioxidant Carotenoids to protect from further damage"]
           },
-          "image":"../src/assets/productInfo/"
-        },
-        {
-          "information": {
-            "title": "",
-            "content": ["", "", "", "", "", "", ""]
-          },
-          "image":"../src/assets/productInfo/"
+          "image":"../src/assets/productInfo/light-work-oil-section3.jpg"
         }
       ]
     },
     {
-      "id": 8,
+      "id": 64,
       "brand": "Environ",
-      "name": "Clarifying Facial Polish",
+      "name": "Botanical Infused Sebu-Wash Gel Cleanser",
       "category": "Skincare - Cleansers",
       "tags": ["Best Seller", "Low Stock"],
       "rating": 4,
       "price": 41,
       "quantity": 1,
-      "generalDescription": "",
-      "principalBenefits": ["", "", "", ""],
-      "description": "",
-      "ingredients": "",
-      "carouselImages": ["../src/assets/productInfo/", "../src/assets/productInfo/", "../src/assets/productInfo/"],
+      "generalDescription": "Botanical Infused Sebu-Wash Gel Cleanser is a mattifying foaming face wash formulated with a combination of ingredients that assist in washing away dirt and excess surface oil that may aggravate the appearance of blemishes, leaving the skin feeling refreshed and clean.",
+      "principalBenefits": ["Mattifying foaming face wash", "Leaves skin feeling refreshed and clean", "Washes away excess surface oil", "150ml (5.07 fl oz) tube"],
+      "description": "We highly recommend Environ’s Botanical Infused Sebu-Wash Gel Cleanser to mattify an oily complexion. This foaming face wash packs special ingredients to wash away dirt and excess surface oil that may exacerbate blemishes, leaving the skin feeling super fresh and clean.",
+      "ingredients": "Aqua (Water), Sodium Lauroyl Sarcosinate, Glycerin, Lauryl Betaine, PEG-40 Hydrogenated Castor Oil, Xanthum Gum, PEG-7 Glyceryl Cocoate, Polysorbate 20, Sodium Citrate, Melaleuca Alternifolia (Tea Tree) Leaf Oil, Sodium Chloride",
+      "carouselImages": ["../src/assets/productInfo/sebu-wash-gel-carousel1.png"],
       "quotes": {
-        "title": "",
-        "content": ""
+        "title": "Why Jess Loves It...",
+        "content": "“The best cleanser for anyone suffering from acne or breakouts, even my pre teen son has noticed a difference.“"
       },
       "section": [
         {
           "information": {
-            "title": "",
-            "content": ["", "", "", "", ""]
+            "title": "Benefits Include:",
+            "content": ["Mild mattifying cleanser with a low-foaming activity", "Special ingredient helps to wash away excess surface oil and dirt"]
           },
-          "image":"../src/assets/productInfo/"
+          "image":"../src/assets/productInfo/sebu-wash-gel-section1.jpg"
         },
         {
           "information": {
-            "title": "",
-            "content": [""]
+            "title": "How To Use",
+            "content": ["Apply this gel into the palms of your hands and lather into a foam before washing the face and rinsing thoroughly with tepid water. Use morning and evening before toning with Sebu-Tone Clarfier. Avoid contact with the eyes. If contact occurs, rinse carefully with tepid water."]
           },
-          "image":"../src/assets/productInfo/"
+          "image":"../src/assets/productInfo/sebu-wash-gel-section2.jpg"
         },
         {
           "information": {
-            "title": "",
-            "content": [""]
+            "title": "Key ingredients",
+            "content": ["Tea Tree: An anti-inflammatory, it helps soothe and relieve irritated skin and reduce redness and swelling.", "Salicylic Acid: Sheds dead cells from the top layer and decreases redness and swelling from inflammation. It also decreases the number of pimples that form and speeds healing."]
           },
-          "image":"../src/assets/productInfo/"
+          "image":"../src/assets/productInfo/sebu-wash-gel-section3.jpg"
         },
         {
           "information": {
-            "title": "",
-            "content": ["", "", "", "", "", "", ""]
-          },
-          "image":"../src/assets/productInfo/"
+            "title": "Product Notes:",
+            "content": ["Warning: This product contains Salicylic Acid as a keratolytic agent. Avoid using this product if any known allergies to the ingredients exist. Avoid if allergic to Aspirin®.", "Warning: This product contains a Beta Hydroxy Acid (BHA) that may increase your skin’s sensitivity to the sun and particularly the possibility of sunburn. Use a sunscreen, wear protective clothing, and limit sun exposure while using this product and for a week afterwards."]
+          }
         }
       ]
     }
