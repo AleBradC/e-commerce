@@ -95,8 +95,8 @@
       "name": "Twenty-nine Botanical Serum",
       "category": "Face Oils",
       "tags": ["VEGAN"],
-      "imageURL": "../src/assets/products/face-serums/twenty-nine-botanical-serum.png",
-      "hoverImageURL": "../src/assets/products/face-serums/twenty-nine-botanical-serum-hover.jpg",
+      "imageURL": "../src/assets/products/face-oils/twenty-nine-botanical-serum.png",
+      "hoverImageURL": "../src/assets/products/face-oils/twenty-nine-botanical-serum-hover.jpg",
       "rating": 5,
       "price": 90
     },
