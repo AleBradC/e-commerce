@@ -52,6 +52,10 @@ export const ProductCard: React.FC<ProductCardProps> = ({
     }
   }
 
+  const handleOpenProduct = () => {
+    navigate(`/product/${id}`)
+  }
+
   const handleAddToCard = useCallback(
     async (productId: number) => {
       await addProductToCard({
@@ -67,10 +71,6 @@ export const ProductCard: React.FC<ProductCardProps> = ({
     },
     [addProductToCard, brand, dispatch, imageURL, name, price]
   )
-
-  const handleOpenProduct = () => {
-    navigate(`/productsInfo/${id}`)
-  }
 
   return (
     <Container

@@ -50,3 +50,24 @@ export interface BlogPostType {
   postImage: string
   label: string
 }
+
+export interface ProductInfoType {
+  id: number
+  brand: string
+  name: string
+  category: string
+  tags: []
+  rating: number
+  price: number
+  quantity: number
+  generalDescription: string
+  principalBenefits: []
+  description: string
+  ingredients: string
+  carouselImages: []
+  quotes: {
+    title: string
+    content: string
+  }
+  section: []
+}

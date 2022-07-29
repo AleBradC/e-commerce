@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
-import { ProductCartType, ProductType } from '../helpers/types'
+import { ProductCartType, ProductInfoType, ProductType } from '../helpers/types'
 
 export const api = createApi({
   reducerPath: 'api',
@@ -16,6 +16,7 @@ export const api = createApi({
     'FaceOilsProducts',
     'FaceSerumsProducts',
     'NewArrivalProducts',
+    'Product',
   ],
   endpoints: builder => ({
     getProducts: builder.query<ProductType[], void>({
@@ -100,6 +101,10 @@ export const api = createApi({
       }),
       invalidatesTags: ['CartProducts'],
     }),
+    getProductById: builder.query<ProductInfoType, { productID: string | undefined }>({
+      query: ({ productID }) => `/api/productInfo/product/${productID}`,
+      providesTags: ['Product'],
+    }),
   }),
 })
 
@@ -120,4 +125,5 @@ export const {
   useGetFaceOilsProductsQuery,
   useGetFaceSerumsProductsQuery,
   useGetNewArrivalsProductsQuery,
+  useGetProductByIdQuery,
 } = api

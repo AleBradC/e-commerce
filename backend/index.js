@@ -35,7 +35,7 @@ app.use('/api/products/face-serums-products', faceSerumsProducts)
 app.use('/api/products/new-arrival-products', newArrivalProducts)
 
 app.use('/api/cart', cart)
-app.use('/api/product-info', productInfo)
+app.use('/api/productInfo/product', productInfo)
 
 app.get('/', (req, res) => {
   res.send('HELLO :D ')
