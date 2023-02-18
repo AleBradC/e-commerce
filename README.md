@@ -1,5 +1,7 @@
 # e-Commerce-Shen
 
+# Steps
+
 # Tech Stack 
 
 1. React 
@@ -23,3 +25,6 @@ Others:
 4. Swiper
 5. Draft.js
 6. DropZone
+
+#Notes: 
+- availabe only for desktop & large desktops
