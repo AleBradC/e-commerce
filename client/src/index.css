@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+
+  background-image: linear-gradient(to bottom right, #f8ebe3, #FAEFE9, #F8EBE4, #f2d8ca);
+}
+
+button {
+  cursor: pointer;
+}
+
+image {
+  width: 100%;
+}

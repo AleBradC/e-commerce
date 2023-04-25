@@ -4,4 +4,11 @@ coverage
 build
 dist
 
+yarn.lock
+coverage
+build
+es
+umd
+dist
+.git
 .DS_Store
