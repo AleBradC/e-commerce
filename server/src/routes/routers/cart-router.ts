@@ -1,8 +1,9 @@
 import express from "express";
-import CartProduct from "../models/CartProduct";
-const router = express.Router();
+import CartProduct from "../../models/CartProduct";
 
-router.get("/", async (req, res) => {
+const cartRouter = express.Router();
+
+cartRouter.get("/", async (req, res) => {
   try {
     const cartProducts = await CartProduct.find();
     res.send(cartProducts);
@@ -11,7 +12,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.delete("/:id/delete", async (req, res) => {
+cartRouter.delete("/:id/delete", async (req, res) => {
   try {
     await CartProduct.deleteOne({ id: req.params.id });
     res.status(204).send();
@@ -22,7 +23,7 @@ router.delete("/:id/delete", async (req, res) => {
 });
 
 // ALL
-router.delete("/delete", async (req, res) => {
+cartRouter.delete("/delete", async (req, res) => {
   try {
     await CartProduct.remove();
 
@@ -33,7 +34,7 @@ router.delete("/delete", async (req, res) => {
   }
 });
 
-router.put("/:id/add", async (req, res) => {
+cartRouter.put("/:id/add", async (req, res) => {
   try {
     const { id, brand, name, imageURL, price, quantity } = req.body;
     const product = await CartProduct.findOne({ id: req.params.id });
@@ -56,18 +57,18 @@ router.put("/:id/add", async (req, res) => {
     const updatedProduct = await product.updateOne({
       $inc: { quantity: quantity },
     });
-    res.send(updatedProduct);
+    return res.send(updatedProduct);
   } catch (error) {
-    res.status(404);
-    res.send({ error: "Product doesn't exist!" });
+    return res.status(404);
+    // res.send({ error: "Product doesn't exist!" });
   }
 });
 
-router.put("/:id/increaseQuantity", async (req, res) => {
+cartRouter.put("/:id/increaseQuantity", async (req, res) => {
   try {
     const product = await CartProduct.findOne({ id: req.params.id });
 
-    const updatedProduct = await product.updateOne({
+    const updatedProduct = await product?.updateOne({
       $inc: { quantity: 1 },
     });
 
@@ -78,10 +79,10 @@ router.put("/:id/increaseQuantity", async (req, res) => {
   }
 });
 
-router.put("/:id/decreaseQuantity", async (req, res) => {
+cartRouter.put("/:id/decreaseQuantity", async (req, res) => {
   try {
     const product = await CartProduct.findOne({ id: req.params.id });
-    const updatedProduct = await product.updateOne({
+    const updatedProduct = await product?.updateOne({
       $inc: { quantity: -1 },
     });
     res.send(updatedProduct);
@@ -91,4 +92,4 @@ router.put("/:id/decreaseQuantity", async (req, res) => {
   }
 });
 
-export default router;
+export default cartRouter;

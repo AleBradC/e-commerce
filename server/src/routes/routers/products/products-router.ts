@@ -1,10 +1,10 @@
 import express from "express";
 import { Request, Response } from "express";
-import Product from "../models/Poduct";
+import Product from "../../../models/Poduct";
 
-const router = express.Router();
+const productsRouter = express.Router();
 
-router.get("/", async (_req: Request, res: Response) => {
+productsRouter.get("/", async (_req: Request, res: Response) => {
   try {
     const products = await Product.find();
     res.send(products);
@@ -13,4 +13,4 @@ router.get("/", async (_req: Request, res: Response) => {
   }
 });
 
-export default router;
+export default productsRouter;

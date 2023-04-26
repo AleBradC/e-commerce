@@ -1,19 +1,19 @@
-import ProductInfo from '../src/models/productInfo.js.js'
-import express from 'express'
+import express from "express";
+import ProductInfo from "../../models/ProductInfo";
 
-const router = express.Router()
+const productInfoRouter = express.Router();
 
-router.get('/:id', async (req, res) => {
+productInfoRouter.get("/:id", async (req, res) => {
   try {
-    const product = await ProductInfo.findOne({ id: req.params.id })
-    res.send(product)
+    const product = await ProductInfo.findOne({ id: req.params.id });
+    res.send(product);
   } catch (error) {
-    res.status(404)
-    res.send({ error: "Product doesn't exist!" })
+    res.status(404);
+    res.send({ error: "Product doesn't exist!" });
   }
-})
+});
 
-// router.put('/:id/rating', async (req, res) => {
+// productInfoRouter.put('/:id/rating', async (req, res) => {
 //   try {
 //     const { rating } = req.body;
 //     const product = await ProductInfo.findOne({id: req.params.id});
@@ -31,7 +31,7 @@ router.get('/:id', async (req, res) => {
 //   }
 // });
 //
-// router.put('/:id/addComment', async (req, res) => {
+// productInfoRouter.put('/:id/addComment', async (req, res) => {
 //   try {
 //     const product = await ProductInfo.findOne({id: req.params.id});
 //
@@ -50,4 +50,4 @@ router.get('/:id', async (req, res) => {
 //   }
 // });
 
-export default router
+export default productInfoRouter;
