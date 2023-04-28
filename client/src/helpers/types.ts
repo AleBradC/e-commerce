@@ -101,3 +101,8 @@ export interface ProductInfoType {
     image: string
   }
 }
+
+export enum AccordionType {
+  DESCRIPTION = 'DESCRIPTION',
+  INGREDIENTS = 'INGREDIENTS',
+}

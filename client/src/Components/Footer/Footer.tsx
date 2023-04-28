@@ -36,8 +36,6 @@ export const Footer = () => {
 
   const handleSubscribe = (data: FooterFormFields) => {
     console.log(data, 'footer')
-    // to do spinner
-
     reset()
   }
 

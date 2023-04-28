@@ -14,7 +14,7 @@ import CheckIcon from '../../assets/icons/checkbox-icon.png'
 import { Accordion } from '../../components/Accordion/Accordion'
 import { ThumbnailSlider } from '../../components/ThumbnailSlider/ThumbnailSlider'
 import { RatingReviewSection } from './Components/RatingReviewSection'
-import { AccordionType } from '../../types'
+import { AccordionType } from '../../helpers/types'
 
 const ProductPage = () => {
   const { id } = useParams() as { id: string }
@@ -228,7 +228,9 @@ const ProductPage = () => {
         </ClinicalResultsSection>
       )}
 
-      <RatingReviewSection productInfo={productInfo} />
+      <ReviewsContainer>
+        <RatingReviewSection productInfo={productInfo} />
+      </ReviewsContainer>
 
       <StickyFooter isVisible={showStickyFooter}>
         <StickyFooterProductInfoContainer>
@@ -632,6 +634,11 @@ const ClinicalResultsItem = styled.div`
   margin: 0 0 10px;
   line-height: 1.5;
   letter-spacing: -0.3px;
+`
+
+const ReviewsContainer = styled.div`
+  width: 100%;
+  margin-top: 60px;
 `
 
 const StickyFooter = styled.div<{ isVisible: boolean }>`

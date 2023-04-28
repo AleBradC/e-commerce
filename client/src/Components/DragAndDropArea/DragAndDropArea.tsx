@@ -5,7 +5,6 @@ import styled from 'styled-components'
 export interface DragAndDropAreaProps {
   onUpload: (image: File) => void
   image: string
-  // type: any -> to do round for user avatar, square for comments
 }
 
 export const DragAndDropArea: React.FC<DragAndDropAreaProps> = ({ onUpload, image }) => {
