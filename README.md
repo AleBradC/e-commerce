@@ -30,10 +30,7 @@ E-commerce website, this project was created to focus on creating component with
 # Getting Started
 
 - clone de project
-- cd server
-- npm run dev
-- cd client
-- npm run dev
+- npm run dev -> to run the server and client
 
 # Notes:
 
