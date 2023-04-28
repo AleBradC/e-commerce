@@ -10,6 +10,7 @@ import lipSticksProductsRouter from "./routers/products/lip-sticks-products-rout
 import mascaraProductsRouter from "./routers/products/mascara-products-router";
 import moisturizersProductsRouter from "./routers/products/moisturizers-products-router";
 import newArrivalProductsRouter from "./routers/products/new-arrival-products-router";
+import productInfoRouter from "./routers/products/product-info-router";
 
 const router = express.Router();
 
@@ -23,5 +24,6 @@ router.use("/moisturizers-products", moisturizersProductsRouter);
 router.use("/face-oils-products", faceOilsProductsRouter);
 router.use("/face-serums-products", faceSerumsProductsRouter);
 router.use("/new-arrival-products", newArrivalProductsRouter);
+router.use("/info", productInfoRouter);
 
 export default router;

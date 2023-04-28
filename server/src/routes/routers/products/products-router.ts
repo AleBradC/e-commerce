@@ -6,7 +6,7 @@ const productsRouter = express.Router();
 
 productsRouter.get("/", async (_req: Request, res: Response) => {
   try {
-    const products = await Product.find();
+    const products = await Product.find({}, { _id: 0, __v: 0 });
     res.send(products);
   } catch (error) {
     res.status(500).send("Error: " + error.message);

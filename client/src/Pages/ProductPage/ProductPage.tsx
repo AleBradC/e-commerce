@@ -3,28 +3,28 @@ import { useParams } from 'react-router-dom'
 import styled, { css } from 'styled-components'
 
 import { useAddProductToCardMutation, useGetProductByIdQuery } from '../../redux/api'
-import { AccordionType } from './types'
+
 import { useAppDispatch } from '../../redux/hooks'
 import { toggleBagDrawer } from '../../redux/reducers/bagDrawerSlice'
-import { ThumbnailSlider } from '../../components/ThumbnailSlider/ThumbnailSlider'
 import { Rating } from '../../components/Rating/Rating'
-import { Accordion } from '../../components/Accordion/Accordion'
 import { Tag } from '../../components/Tag/Tag'
 import { Button } from '../../components/Button/Button'
-import { RatingReviewSection } from './Components/RatingReviewSection'
 import Loading from '../../components/Loading/Loading'
-
 import CheckIcon from '../../assets/icons/checkbox-icon.png'
+import { Accordion } from '../../components/Accordion/Accordion'
+import { ThumbnailSlider } from '../../components/ThumbnailSlider/ThumbnailSlider'
+import { RatingReviewSection } from './Components/RatingReviewSection'
+import { AccordionType } from '../../types'
 
 const ProductPage = () => {
-  const { productID } = useParams()
+  const { id } = useParams() as { id: string }
   const dispatch = useAppDispatch()
 
   const {
     data: productInfo,
     isLoading: productInfoIsLoading,
     isFetching: productInfoIsFetching,
-  } = useGetProductByIdQuery({ productID })
+  } = useGetProductByIdQuery({ id })
   const [addProductToCard, { isLoading: addProductToCardIsLoading }] = useAddProductToCardMutation()
 
   const [isDescriptionAccordionExpended, setIsDescriptionAccordionExpended] = useState(false)

@@ -1,6 +1,6 @@
 export const homeRoute = '/'
 export const logInRoute = '/log-in'
-export const productRoute = 'product/:productID'
+export const productRoute = 'product/:id'
 export const searchRoute = '/search'
 export const bagRoute = '/bag'
 export const allProductsRoute = '/all-products'

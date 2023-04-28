@@ -1,18 +1,19 @@
 import express from "express";
+import { Request, Response } from "express";
 import CartProduct from "../../models/CartProduct";
 
 const cartRouter = express.Router();
 
-cartRouter.get("/", async (req, res) => {
+cartRouter.get("/", async (_req: Request, res: Response) => {
   try {
-    const cartProducts = await CartProduct.find();
+    const cartProducts = await CartProduct.find({}, { _id: 0, __v: 0 });
     res.send(cartProducts);
   } catch (error) {
     res.status(500).send("Error: " + error.message);
   }
 });
 
-cartRouter.delete("/:id/delete", async (req, res) => {
+cartRouter.delete("/:id/delete", async (req: Request, res: Response) => {
   try {
     await CartProduct.deleteOne({ id: req.params.id });
     res.status(204).send();
@@ -23,7 +24,7 @@ cartRouter.delete("/:id/delete", async (req, res) => {
 });
 
 // ALL
-cartRouter.delete("/delete", async (req, res) => {
+cartRouter.delete("/delete", async (_req: Request, res: Response) => {
   try {
     await CartProduct.remove();
 
@@ -34,14 +35,13 @@ cartRouter.delete("/delete", async (req, res) => {
   }
 });
 
-cartRouter.put("/:id/add", async (req, res) => {
+cartRouter.put("/:id/add", async (req: Request, res: Response) => {
   try {
     const { id, brand, name, imageURL, price, quantity } = req.body;
     const product = await CartProduct.findOne({ id: req.params.id });
 
     if (!product) {
       const cartProduct = new CartProduct({
-        _id: id,
         id: id,
         brand: brand,
         name: name,
@@ -60,11 +60,10 @@ cartRouter.put("/:id/add", async (req, res) => {
     return res.send(updatedProduct);
   } catch (error) {
     return res.status(404);
-    // res.send({ error: "Product doesn't exist!" });
   }
 });
 
-cartRouter.put("/:id/increaseQuantity", async (req, res) => {
+cartRouter.put("/:id/increaseQuantity", async (req: Request, res: Response) => {
   try {
     const product = await CartProduct.findOne({ id: req.params.id });
 
@@ -79,7 +78,7 @@ cartRouter.put("/:id/increaseQuantity", async (req, res) => {
   }
 });
 
-cartRouter.put("/:id/decreaseQuantity", async (req, res) => {
+cartRouter.put("/:id/decreaseQuantity", async (req: Request, res: Response) => {
   try {
     const product = await CartProduct.findOne({ id: req.params.id });
     const updatedProduct = await product?.updateOne({
