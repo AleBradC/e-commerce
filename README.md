@@ -7,14 +7,13 @@ e-commerce app
 - React
 - Redux Toolkit Query
 - TypeScript
-- Yarn & Vite
-- Router & Lazy Loading & Suspense
-- i18next - work in progress
 - StyledComponents
 - Node
 - Express.js
 - Mongoose & MongoDB
 - useForm
+- Vite
+- Router & Lazy Loading & Suspense
 - FloatingUI
 - Swiper
 - Draft.js
