@@ -101,8 +101,8 @@ export const api = createApi({
       }),
       invalidatesTags: ['CartProducts'],
     }),
-    getProductById: builder.query<ProductInfoType, { productID: string | undefined }>({
-      query: ({ productID }) => `/api/productInfo/product/${productID}`,
+    getProductById: builder.query<ProductInfoType, { id: string }>({
+      query: ({ id }) => `/api/products/info/${id}`,
       providesTags: ['Product'],
     }),
   }),

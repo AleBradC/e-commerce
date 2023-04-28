@@ -8,7 +8,7 @@ import config from "../config";
 import router from "./routes";
 
 import cartRouter from "./routes/routers/cart-router";
-import productInfoRouter from "./routes/routers/product-info-router";
+import productInfoRouter from "./routes/routers/products/product-info-router";
 
 const app = express();
 const port = config.port;
@@ -22,7 +22,6 @@ app.use(helmet());
 
 app.use("/api/products", router);
 app.use("/api/cart", cartRouter);
-app.use("/", productInfoRouter);
 
 app.listen(port, () => {
   console.log(`Server runs on port ${port}`);

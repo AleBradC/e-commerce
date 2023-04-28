@@ -8,9 +8,10 @@ import {
   useGetProductsCartQuery,
   useIncreaseQuantityMutation,
 } from '../../redux/api'
-import { BagProductCard } from '../../components/BagProductCard/BagProductCard'
-import { Button } from '../../components/Button'
+
 import { ProgressBar } from '../../components/ProgressBar/ProgressBar'
+import { BagProductCard } from '../../components/BagProductCard/BagProductCard'
+import { Button } from '../../components/Button/Button'
 import { maxSumForFreeShipping, standardShopping } from '../../helpers/variables'
 import Loading from '../../components/Loading/Loading'
 
