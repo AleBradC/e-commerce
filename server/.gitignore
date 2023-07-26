@@ -1,5 +1,6 @@
 node_modules
 ./node_modules
+/node_modules
 coverage
 build
 dist
@@ -8,3 +9,4 @@ dist
 .DS_Store
 .env
 /.env
+

@@ -18,10 +18,7 @@ e-commerce app
 - Swiper
 - Draft.js
 - DropZone
-
-# Status
-
-- in progress
+- Docker
 
 # Description
 
@@ -29,12 +26,11 @@ E-commerce website, this project was created to focus on creating component with
 
 # Getting Started
 
+- install docker for desktop
 - clone de project
-- cd server
-- npm run dev
-- cd client
-- npm run dev
+- run npm install - to install all the dependencies
+- run npm run start - this will start the server then the client
 
 # Notes:
 
-- availabe only for desktop & large desktops
+- available only for desktop & large desktops

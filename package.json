@@ -1,6 +1,14 @@
 {
-  "dependencies": {
-    "mongodb": "^5.3.0",
-    "mongoose": "^7.0.5"
-  }
+  "name": "e-commerce",
+  "version": "1.0.0",
+  "description": "e-commerce app",
+  "main": "index.js",
+  "scripts": {
+    "install": "cd server && npm install && cd ../client && npm install",
+    "start": "npm run server & npm run client",
+    "server": "npm run watch --prefix server",
+    "client": "npm start --prefix client"
+  },
+  "author": "",
+  "license": "ISC"
 }
