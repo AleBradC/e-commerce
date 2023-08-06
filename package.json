@@ -5,10 +5,17 @@
   "main": "index.js",
   "scripts": {
     "install": "cd server && npm install && cd ../client && npm install",
+    "start:docker": "docker-compose up --build",
     "start": "npm run server & npm run client",
-    "server": "npm run watch --prefix server",
-    "client": "npm start --prefix client"
+    "server": "npm start --prefix server",
+    "client": "npm start --prefix client",
+    "docker-up": "docker-compose up -d",
+    "docker-down": "docker-compose down"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "faker": "^6.6.6",
+    "yargs": "^17.7.2"
+  }
 }

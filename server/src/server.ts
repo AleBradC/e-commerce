@@ -8,7 +8,6 @@ import config from "../config";
 import router from "./routes";
 
 import cartRouter from "./routes/routers/cart-router";
-import productInfoRouter from "./routes/routers/products/product-info-router";
 
 const app = express();
 const port = config.port;
@@ -23,12 +22,12 @@ app.use(helmet());
 app.use("/api/products", router);
 app.use("/api/cart", cartRouter);
 
-app.listen(port, () => {
-  console.log(`Server runs on port ${port}`);
-});
-
 mongoose
   .set("strictQuery", false)
   .connect(uri)
   .then(() => console.log("MongoDB connection established..."))
   .catch((error) => console.error("MongoDB connection failed:", error.message));
+
+app.listen(port, () => {
+  console.log(`Server runs on port ${port}`);
+});
