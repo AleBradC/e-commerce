@@ -26,7 +26,7 @@ const HomePage = React.lazy(() => import('./pages/HomePage/HomePage'))
 const LogInPage = React.lazy(() => import('./pages/LogInPage/LogInPage'))
 const BagPage = React.lazy(() => import('./pages/BagPage/BagPage'))
 const SearchPage = React.lazy(() => import('./pages/SearchPage/SearchPage'))
-const ProductPage = React.lazy(() => import('./pages/ProductPage/ProductPage')) // TO DO with ID
+const ProductPage = React.lazy(() => import('./pages/ProductPage/ProductPage'))
 const AllProductsPage = React.lazy(() => import('./pages/ProductsPages/AllProductsPage/AllProductsPage'))
 const MascaraProductsPage = React.lazy(
   () => import('./pages/ProductsPages/MakeupProductsPages/EyesProductsPages/MascaraProductsPage')

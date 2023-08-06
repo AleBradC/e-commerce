@@ -11,7 +11,8 @@ import cartRouter from "./routes/routers/cart-router";
 
 const app = express();
 const port = config.port;
-const uri = config.uri as string;
+const uri = config.uri as string; // for real DB
+const localURI = config.localURI as string; // for seed DB
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -24,7 +25,7 @@ app.use("/api/cart", cartRouter);
 
 mongoose
   .set("strictQuery", false)
-  .connect(uri)
+  .connect(localURI)
   .then(() => console.log("MongoDB connection established..."))
   .catch((error) => console.error("MongoDB connection failed:", error.message));
 

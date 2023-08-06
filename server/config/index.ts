@@ -4,6 +4,6 @@ dotenv.config();
 
 export default {
   port: process.env.PORT,
-  // uri: process.env.ATLAS_URI,
-  uri: process.env.MONGODB_URI,
+  uri: process.env.ATLAS_URI,
+  localURI: process.env.MONGODB_URI,
 };
