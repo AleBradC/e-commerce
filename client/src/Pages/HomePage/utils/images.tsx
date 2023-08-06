@@ -9,8 +9,8 @@ import BeautySectionImg3 from '../../../assets/homePage/beauty-section-img3.png'
 
 import SummerEssentialsImg from '../../../assets/homePage/carrousel-image-essentials.png'
 
-import CarouselImg1 from '../../../assets/homePage/carousel/carousel-item1.png'
-import CarouselImg2 from '../../../assets/homePage/carousel/carousel-item2.png'
+import CarouselImg1 from '../../../assets/homePage/carousel/carousel-item1.jpg'
+import CarouselImg2 from '../../../assets/homePage/carousel/carousel-item2.jpg'
 import CarouselImg3 from '../../../assets/homePage/carousel/carousel-item3.jpg'
 
 import AllureLogoImg from '../../../assets/homePage/complexCarousel/allure-logo.png'

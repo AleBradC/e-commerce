@@ -71,9 +71,9 @@ export const carouselSliders: CarouselItemType[] = [
     topContent: 'Organic Jojoba',
     middleContent: 'Shea Butter',
     bottomContent: 'Plant-Based Seed Oils',
-    productBrand: 'WESTMAN ATELIER',
-    productName: 'Squeaky Clean Liquid Lip Balm',
-    id: 1,
+    productBrand: 'Costa Brazil',
+    productName: 'Sérum Para A Face - Face Serum',
+    id: 4,
   },
   {
     image: CarouselImg3,
