@@ -1,0 +1,112 @@
+[
+  {
+    "id": 10,
+    "brand": "Venn",
+    "name": "Age-Response Compound K Hyaluronic Booster",
+    "category": "Face Serums",
+    "tags": ["Best Seller", "New Arrival"],
+    "imageURL": "../src/assets/products/face-serums/hyaluronic.jpg",
+    "hoverImageURL": "../src/assets/products/face-serums/hyaluronic-hover.jpg",
+    "rating": 4,
+    "price": 125,
+    "principalBenefits": [
+      "Advanced skin booster",
+      "Fights comprehensive signs of aging",
+      "Promotes stronger, firmer skin",
+      "Clean, safe ingredients",
+      "For all skin types. Dermatologist tested. Non-irritating. Non-sensitizing."
+    ]
+  },
+  {
+    "id": 11,
+    "brand": "Vintner's daughter",
+    "name": "Active Botanical Serum",
+    "category": "Face Serums",
+    "tags": ["Best Seller"],
+    "imageURL": "../src/assets/products/face-serums/black-serum.png",
+    "hoverImageURL": "../src/assets/products/face-serums/black-serum-hover.png",
+    "rating": 5,
+    "price": 195,
+    "principalBenefits": [
+      "Safe for blemish-prone, dry, dull, and mature skin",
+      "Delivers restorative moisture through optimal nutrition",
+      "30ml"
+    ]
+  },
+  {
+    "id": 12,
+    "brand": "Youth to the people",
+    "name": "15% Vitamin C + Clean Caffeine Energy Serum",
+    "category": "Face Serums",
+    "imageURL": "../src/assets/products/face-serums/vitamine.jpg",
+    "hoverImageURL": "../src/assets/products/face-serums/vitamine-hover.webp",
+    "rating": 5,
+    "price": 195,
+    "principalBenefits": [
+      "Energizing Vitamin C serum",
+      "Features plant-derived caffeine",
+      "Reduces hyperpigmentation, evens tone and firms skin"
+    ]
+  },
+  {
+    "id": 13,
+    "brand": "Youth to the people",
+    "name": "Triple Peptide + Cactus Oasis Serum",
+    "category": "Face Serums",
+    "imageURL": "../src/assets/products/face-serums/triple-peptide.png",
+    "hoverImageURL": "../src/assets/products/face-serums/triple-peptide-hover.png",
+    "rating": 0,
+    "price": 54,
+    "principalBenefits": [
+      "Plumping, revitalizing serum",
+      "Deeply hydrates with cactus elixir",
+      "Perfect for all skin types",
+      "30 ml"
+    ]
+  },
+  {
+    "id": 14,
+    "brand": "Zitsticks",
+    "name": "MEGASHADE™ Breakout-proof SPF Serum",
+    "category": "Face Serums",
+    "tags": ["New Arrival"],
+    "imageURL": "../src/assets/products/face-serums/megashade.jpg",
+    "hoverImageURL": "../src/assets/products/face-serums/megashade-hover.jpg",
+    "rating": 0,
+    "price": 40,
+    "principalBenefits": ["50 ml", "Perfect for all skins"]
+  },
+  {
+    "id": 15,
+    "brand": "Ideo",
+    "name": "Ideo Skin Memory Serum",
+    "category": "Face Serums",
+    "imageURL": "../src/assets/products/face-serums/ideo.png",
+    "hoverImageURL": "../src/assets/products/face-serums/ideo-hover.png",
+    "rating": 5,
+    "price": 175,
+    "principalBenefits": [
+      "Serum and hydration with Hyaluronic Acid",
+      "Milky, light texture",
+      "Reduces redness, hyperpigmentation, fine lines & wrinkles; brightens & smooths",
+      "pH: 5.54",
+      "30ml / 1 fl. oz"
+    ]
+  },
+  {
+    "id": 16,
+    "brand": "Beautycounter",
+    "name": "Counter+ All Bright C Serum",
+    "category": "Face Serums",
+    "imageURL": "../src/assets/products/face-serums/counter-serum.jpg",
+    "hoverImageURL": "../src/assets/products/face-serums/counter-serum-hover.jpg",
+    "rating": 5,
+    "price": 90,
+    "principalBenefits": [
+      "Defends skin from the damaging effects of environmental stressors",
+      "Reveals a more youthful-looking complexion",
+      "Even skin tone",
+      "Improve skin radiance and brightness"
+    ]
+  }
+]

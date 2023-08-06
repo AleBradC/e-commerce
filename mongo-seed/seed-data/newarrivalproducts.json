@@ -1,0 +1,71 @@
+[
+  {
+    "id": 2,
+    "brand": "VENN",
+    "name": "Advanced Multi-Perfecting Red Oil Serum",
+    "category": "Face Oils",
+    "tags": ["Best Seller", "Low Stock"],
+    "imageURL": "../src/assets/products/face-oils/red-oil.jpg",
+    "hoverImageURL": "../src/assets/products/face-oils/red-oil-hover.jpg",
+    "rating": 5,
+    "price": 195,
+    "principalBenefits": [
+      "The next-gen face oil",
+      "Stronger, firmer skin",
+      "Leaves skin radiant and energized",
+      " Clean, safe ingredients"
+    ]
+  },
+  {
+    "id": 20,
+    "brand": "Westman Atelier",
+    "name": "Bonne Brow",
+    "category": "Brows",
+    "tags": ["Vegan"],
+    "imageURL": "../src/assets/products/brows/bonne.jpg",
+    "hoverImageURL": "../src/assets/products/brows/bonne-hover.jpg",
+    "rating": 0,
+    "price": 38,
+    "principalBenefits": [
+      "Stone - Blonde and Red Hair",
+      "Clay - Medium Blonde and Brown Hair",
+      "Bark - Dark Brown Hair",
+      "Slate - Black/Brown and Black Hair",
+      "Silicone free, paraben free, talc free, phthalates free, fragrance free, no PEGS. Vegan & never tested on animals."
+    ]
+  },
+  {
+    "id": 8,
+    "brand": "Pai",
+    "name": "Impossible Glow",
+    "category": "Face Oils",
+    "tags": ["Vegan"],
+    "imageURL": "../src/assets/products/face-oils/impossible.jpg",
+    "hoverImageURL": "../src/assets/products/face-oils/impossible-hover.jpg",
+    "rating": 0,
+    "price": 44,
+    "principalBenefits": [
+      "Helps with skin radiance",
+      "Hydrating",
+      "Gives a natural glow",
+      "1 fl oz/ 30ml"
+    ]
+  },
+  {
+    "id": 9,
+    "brand": "LELAND FRANCIS",
+    "name": "Twenty-nine Botanical Serum",
+    "category": "Face Oils",
+    "tags": ["Vegan", "New Arrival"],
+    "imageURL": "../src/assets/products/face-oils/twenty-nine-botanical-serum.png",
+    "hoverImageURL": "../src/assets/products/face-oils/twenty-nine-botanical-serum-hover.jpg",
+    "rating": 5,
+    "price": 90,
+    "principalBenefits": [
+      "Anti-inflammatory, balancing and protecting serum",
+      "Vegan and cruelty free",
+      "Clean beauty",
+      "1fl oz/ 30 ml"
+    ]
+  }
+]

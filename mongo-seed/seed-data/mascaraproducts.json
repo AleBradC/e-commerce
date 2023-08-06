@@ -1,0 +1,131 @@
+[
+  {
+    "id": 25,
+    "brand": "Eyeco",
+    "name": "Lash Alert Mascara",
+    "category": "Mascara",
+    "tags": ["Low Stock"],
+    "imageURL": "../src/assets/products/mascara/lash-alert.jpg",
+    "hoverImageURL": "../src/assets/products/mascara/lash-alert-hover.jpg",
+    "rating": 3,
+    "price": 24,
+    "principalBenefits": [
+      "Volume boosting mascara",
+      "Aids in naturally thicker lashes long term"
+    ]
+  },
+  {
+    "id": 26,
+    "brand": "Beautycounter",
+    "name": "Think Big All-in-One Mascara",
+    "category": "Mascara",
+    "imageURL": "../src/assets/products/mascara/think-big.jpg",
+    "hoverImageURL": "../src/assets/products/mascara/think-big-hover.jpg",
+    "rating": 1,
+    "price": 30,
+    "principalBenefits": [
+      "Clean and effective",
+      "Strengthens for longer, fuller lashes",
+      "Soft, molded brush",
+      "Deep rich black color",
+      "Contains lash-care conditioners",
+      "Longwear, smudge-proof color"
+    ]
+  },
+  {
+    "id": 27,
+    "brand": "Westman atelier",
+    "name": "Eye Love You Mascara",
+    "category": "Mascara",
+    "imageURL": "../src/assets/products/mascara/eye-love.jpg",
+    "hoverImageURL": "../src/assets/products/mascara/eye-love-hover.jpg",
+    "rating": 3,
+    "price": 58,
+    "principalBenefits": [
+      "Clean, high-performing mascara",
+      "Creamy conditioning formula nurtures lashes",
+      "Lashes feel hydrated and look super glossy",
+      "Big bold brush easily spreads rich color",
+      "Long-lasting with no pilling or clumping"
+    ]
+  },
+  {
+    "id": 28,
+    "brand": "Mob",
+    "name": "Volumizing Mascara M66 - Refill",
+    "category": "Mascara",
+    "tags": ["Best Seller", "Vegan"],
+    "imageURL": "../src/assets/products/mascara/volumizing.png",
+    "hoverImageURL": "../src/assets/products/mascara/volumizing-hover.jpg",
+    "rating": 3,
+    "price": 58,
+    "principalBenefits": [
+      "Just the mascara refill, must purchase capsule separately"
+    ]
+  },
+  {
+    "id": 29,
+    "brand": "Kosas",
+    "name": "The Big Clean Volumizing + Lash Care Mascara-Intense Black",
+    "category": "Mascara",
+    "imageURL": "../src/assets/products/mascara/the-big-clean.png",
+    "hoverImageURL": "../src/assets/products/mascara/the-big-clean-hover.png",
+    "rating": 0,
+    "price": 13,
+    "principalBenefits": [
+      "Works like a hair care serum for your lashes",
+      "Supports stronger, healthier lashes",
+      "Oversized rainbow-shaped brush",
+      "Ophthalmology tested",
+      "Safe for sensitive eyes",
+      "100% saw longer, thicker, lusher lashes",
+      "87% did not experience smudging"
+    ]
+  },
+  {
+    "id": 30,
+    "brand": "Mob",
+    "name": "MOB Capsule 2",
+    "category": "Mascara",
+    "tags": ["Vegan"],
+    "imageURL": "../src/assets/products/mascara/mob.png",
+    "hoverImageURL": "../src/assets/products/mascara/mob-hover.jpg",
+    "rating": 0,
+    "price": 5,
+    "principalBenefits": [
+      "Just the capsule is included, must purchase mascara refill separately"
+    ]
+  },
+  {
+    "id": 31,
+    "brand": "Eyeco",
+    "name": "Colored Lash Alert Mascara",
+    "category": "Mascara",
+    "tags": ["Low Stock"],
+    "imageURL": "../src/assets/products/mascara/colored.jpg",
+    "hoverImageURL": "../src/assets/products/mascara/colored-hover.png",
+    "rating": 2,
+    "price": 19,
+    "principalBenefits": [
+      "Contains caffeine to wake up lashes",
+      "Enriched with biotin, castor oil and arginine to leave lashes feeling nourished and conditioned",
+      "Gives lashes a natural flutter"
+    ]
+  },
+  {
+    "id": 32,
+    "brand": "Roen",
+    "name": "CAKE Mascara",
+    "category": "Mascara",
+    "tags": ["Vegan"],
+    "imageURL": "../src/assets/products/mascara/cake.png",
+    "hoverImageURL": "../src/assets/products/mascara/cake-hover.png",
+    "rating": 0,
+    "price": 28,
+    "principalBenefits": [
+      "Infused with olive oil to keep lashes hydrated",
+      "Silica and Nylon-12 for high-impact volume that is 100% clump-free",
+      "Vegan, gluten-free, cruelty-free, paraben-free, fragrance- free and made without alcohol."
+    ]
+  }
+]

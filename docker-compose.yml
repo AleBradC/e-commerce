@@ -11,6 +11,7 @@ services:
       - /app/node_modules
     stdin_open: true
     tty: true
+
   server:
     build: ./server
     container_name: e_commerce_server_container
@@ -19,13 +20,21 @@ services:
     volumes:
       - ./server:/app
       - /app/node_modules
-  nginx:
-    restart: always
-    depends_on:
-      - server
-      - client
-    build:
-      context: ./nginx
-      dockerfile: Dockerfile
+
+  mongo:
+    image: mongo:latest
     ports:
-      - "3050:80"
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+  mongo-seed:
+    build: ./mongo-seed
+    links:
+      - mongo
+    volumes:
+      - ./mongo-seed/seed-data:/seed-data
+
+volumes:
+  mongo-data:
+    driver: local

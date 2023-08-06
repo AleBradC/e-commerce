@@ -1,0 +1,130 @@
+[
+  {
+    "id": 33,
+    "brand": "Roen",
+    "name": "Elixir Tinted Lip Oil Balm",
+    "category": "Lip Glosses",
+    "tags": ["Vegan"],
+    "imageURL": "../src/assets/products/lip-glosses/elixir.png",
+    "hoverImageURL": "../src/assets/products/lip-glosses/elixir-hover.png",
+    "rating": 3,
+    "price": 32,
+    "principalBenefits": [
+      "ALBA Natural-Nude",
+      "STELLA Pink",
+      "SCARLET Deep Cherry"
+    ]
+  },
+  {
+    "id": 34,
+    "brand": "Westman Atelier",
+    "name": "Squeaky Clean Liquid Lip Balm",
+    "category": "Lip Glosses",
+    "tags": ["Best Seller"],
+    "imageURL": "../src/assets/products/lip-glosses/squeaky.jpg",
+    "hoverImageURL": "../src/assets/products/lip-glosses/squeaky-hover.jpg",
+    "rating": 5,
+    "price": 38,
+    "principalBenefits": [
+      "Hydrates for a cushiony, dimensional lip look",
+      "Active ingredients soothe and nourish",
+      "Always juicy, never sticky",
+      "Enhances natural lip color",
+      "Six pillowy soft shades"
+    ]
+  },
+  {
+    "id": 35,
+    "brand": "Lanolips",
+    "name": "Holographic Lip Water",
+    "category": "Lip Glosses",
+    "tags": ["Low Stock"],
+    "imageURL": "../src/assets/products/lip-glosses/holographic.png",
+    "hoverImageURL": "../src/assets/products/lip-glosses/holographic-hover.png",
+    "rating": 0,
+    "price": 17.5,
+    "principalBenefits": ["A drink of water for your lips", "98.9% natural"]
+  },
+  {
+    "id": 36,
+    "brand": "Lanolips",
+    "name": "Tinted Balm",
+    "category": "Lip Glosses",
+    "tags": ["Low Stock"],
+    "imageURL": "../src/assets/products/lip-glosses/tinted-balm.jpg",
+    "hoverImageURL": "../src/assets/products/lip-glosses/tinted-balm-hover.jpg",
+    "rating": 5,
+    "price": 14,
+    "principalBenefits": [
+      "Soft, hydrated lips",
+      "Sheer, natural tint with fruity undertones",
+      "12.5 g"
+    ]
+  },
+  {
+    "id": 37,
+    "brand": "Alpyn beauty",
+    "name": "Willow & Sweet Agave Plumping Lip Mask",
+    "category": "Lip Glosses",
+    "tags": ["Low Stock", "New Arrival"],
+    "imageURL": "../src/assets/products/lip-glosses/willow.jpg",
+    "hoverImageURL": "../src/assets/products/lip-glosses/willow-hover.jpg",
+    "rating": 5,
+    "price": 28,
+    "principalBenefits": [
+      "Delivers lip-quenching, skin-smoothing hydration",
+      "Nature’s salicylic acid exfoliates, smooths and softens",
+      "Good for all lip types"
+    ]
+  },
+  {
+    "id": 38,
+    "brand": "Kosas",
+    "name": "Wet Lip Oil Treatment Plumping Gloss",
+    "category": "Lip Glosses",
+    "tags": ["Low Stock", "New Arrival"],
+    "imageURL": "../src/assets/products/lip-glosses/wet-lip.jpg",
+    "hoverImageURL": "../src/assets/products/lip-glosses/wet-lip-hover.jpg",
+    "rating": 5,
+    "price": 22,
+    "principalBenefits": [
+      "Lip treatment meets gloss",
+      "Tingle-free plumping",
+      "Super comfy, never drying",
+      "5 universally flattering shades"
+    ]
+  },
+  {
+    "id": 39,
+    "brand": "Maarks Lip",
+    "name": "MAARKS Lip",
+    "category": "Lip Glosses",
+    "tags": ["New Arrival"],
+    "imageURL": "../src/assets/products/lip-glosses/maarks.jpg",
+    "hoverImageURL": "../src/assets/products/lip-glosses/maarks-hover.jpg",
+    "rating": 5,
+    "price": 29,
+    "principalBenefits": [
+      "Comfortable sexy wear",
+      "Single stroke coverage",
+      "Creamy matte finish",
+      "Botanically rich lipsticks"
+    ]
+  },
+  {
+    "id": 40,
+    "brand": "Lanolips",
+    "name": "Watermelon Lip Water",
+    "category": "Lip Glosses",
+    "imageURL": "../src/assets/products/lip-glosses/watermelon.jpg",
+    "hoverImageURL": "../src/assets/products/lip-glosses/watermelon-hover.png",
+    "rating": 5,
+    "price": 17.5,
+    "principalBenefits": [
+      "Lightweight hydration",
+      "Glowing, holographic tint",
+      "Leaves you looking hydrated and glowing",
+      "10ml /.338 fl oz"
+    ]
+  }
+]

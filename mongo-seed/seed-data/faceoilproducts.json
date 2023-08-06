@@ -1,0 +1,136 @@
+[
+  {
+    "id": 2,
+    "brand": "VENN",
+    "name": "Advanced Multi-Perfecting Red Oil Serum",
+    "category": "Face Oils",
+    "tags": ["Best Seller", "Low Stock"],
+    "imageURL": "../src/assets/products/face-oils/red-oil.jpg",
+    "hoverImageURL": "../src/assets/products/face-oils/red-oil-hover.jpg",
+    "rating": 5,
+    "price": 195,
+    "principalBenefits": [
+      "The next-gen face oil",
+      "Stronger, firmer skin",
+      "Leaves skin radiant and energized",
+      " Clean, safe ingredients"
+    ]
+  },
+  {
+    "id": 3,
+    "brand": "Pai",
+    "name": "Rosehip Bioregenerate Universal Face Oil",
+    "category": "Face Oils",
+    "tags": ["Best Seller", "Vegan"],
+    "imageURL": "../src/assets/products/face-oils/resehip.png",
+    "hoverImageURL": "../src/assets/products/face-oils/rosehip-hover.png",
+    "rating": 5,
+    "price": 44,
+    "principalBenefits": [
+      "Game-changing organic Rosehip Oil",
+      "SHEN Best Seller",
+      "Evens Skin Tone",
+      "30ml, 10ml"
+    ]
+  },
+  {
+    "id": 4,
+    "brand": "Costa Brazil",
+    "name": "Sérum Para A Face - Face Serum",
+    "category": "Face Oils",
+    "tags": ["Vegan"],
+    "imageURL": "../src/assets/products/face-oils/para-a-face.jpg",
+    "hoverImageURL": "../src/assets/products/face-oils/para-a-face-hover.webp",
+    "rating": 0,
+    "price": 135,
+    "principalBenefits": [
+      "Rich in vitamin C",
+      "Good for all skin types",
+      "Fragrance-Free",
+      "30 ml / 1 fl oz"
+    ]
+  },
+  {
+    "id": 5,
+    "brand": "Supernatural",
+    "name": "Cosmic Glow Oil",
+    "category": "Face Oils",
+    "imageURL": "../src/assets/products/face-oils/supernatural.png",
+    "hoverImageURL": "../src/assets/products/face-oils/supernatural-hover.png",
+    "rating": 0,
+    "price": 108,
+    "principalBenefits": [
+      "Ultra light and deeply nourishing",
+      "Silky and easily absorbed",
+      "Good for all skin types"
+    ]
+  },
+  {
+    "id": 6,
+    "brand": "Costa Brazil",
+    "name": "Costa Brazil Oleo Para A Face - Kaya Anti-Aging Face Oil",
+    "category": "Face Oils",
+    "tags": ["Vegan"],
+    "imageURL": "../src/assets/products/face-oils/costa-brazil.png",
+    "hoverImageURL": "../src/assets/products/face-oils/costa-brazil-hover.png",
+    "rating": 0,
+    "price": 128,
+    "principalBenefits": [
+      "30 ml/ 1 fl oz",
+      "No added fragrance",
+      "Beauty oil powered by nature",
+      "Safe for all skin types"
+    ]
+  },
+  {
+    "id": 7,
+    "brand": "Youth to the people",
+    "name": "Superberry Hydrate and Glow Dream Oil",
+    "category": "Face Oils",
+    "tags": ["Vegan"],
+    "imageURL": "../src/assets/products/face-oils/superberry.jpg",
+    "hoverImageURL": "../src/assets/products/face-oils/superberry-hover.jpg",
+    "rating": 0,
+    "price": 44,
+    "principalBenefits": [
+      "Fast absorbing face oil",
+      "Loaded with antioxidant rich ingredients",
+      "Illuminates and revives dehydrated skin",
+      "1 oz"
+    ]
+  },
+  {
+    "id": 8,
+    "brand": "Pai",
+    "name": "Impossible Glow",
+    "category": "Face Oils",
+    "tags": ["Vegan"],
+    "imageURL": "../src/assets/products/face-oils/impossible.jpg",
+    "hoverImageURL": "../src/assets/products/face-oils/impossible-hover.jpg",
+    "rating": 0,
+    "price": 44,
+    "principalBenefits": [
+      "Helps with skin radiance",
+      "Hydrating",
+      "Gives a natural glow",
+      "1 fl oz/ 30ml"
+    ]
+  },
+  {
+    "id": 9,
+    "brand": "LELAND FRANCIS",
+    "name": "Twenty-nine Botanical Serum",
+    "category": "Face Oils",
+    "tags": ["Vegan", "New Arrival"],
+    "imageURL": "../src/assets/products/face-oils/twenty-nine-botanical-serum.png",
+    "hoverImageURL": "../src/assets/products/face-oils/twenty-nine-botanical-serum-hover.jpg",
+    "rating": 5,
+    "price": 90,
+    "principalBenefits": [
+      "Anti-inflammatory, balancing and protecting serum",
+      "Vegan and cruelty free",
+      "Clean beauty",
+      "1fl oz/ 30 ml"
+    ]
+  }
+]

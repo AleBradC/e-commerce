@@ -1,0 +1,125 @@
+[
+  [
+    {
+      "id": 41,
+      "brand": "Mob",
+      "name": "MOB RePurpose Capsule",
+      "category": "Lip Sticks",
+      "tags": ["Best Seller"],
+      "imageURL": "../src/assets/products/lip-sticks/mob.png",
+      "hoverImageURL": "../src/assets/products/lip-sticks/mob-hover.jpg",
+      "rating": 5,
+      "price": 5,
+      "principalBenefits": ["Packaging only. Must purchase refills separately"]
+    },
+    {
+      "id": 42,
+      "brand": "Beautycounter",
+      "name": "Sheer Genius Conditioning Lipstick",
+      "category": "Lip Sticks",
+      "imageURL": "../src/assets/products/lip-sticks/sheer.jpg",
+      "hoverImageURL": "../src/assets/products/lip-sticks/sheer-hover.jpg",
+      "rating": 0,
+      "price": 35,
+      "principalBenefits": [
+        "Easy-to-wear buildable color",
+        "Organic lip-loving ingredients",
+        "Suitable for all skin types",
+        "Non-irritating and non-sensitizing"
+      ]
+    },
+    {
+      "id": 43,
+      "brand": "Kosas",
+      "name": "Weightless Lip Color",
+      "category": "Lip Sticks",
+      "tags": ["Best Seller"],
+      "imageURL": "../src/assets/products/lip-sticks/weigthless.jpg",
+      "hoverImageURL": "../src/assets/products/lip-sticks/weigthless-hover.jpg",
+      "rating": 5,
+      "price": 28,
+      "principalBenefits": [
+        "Works on all skin tones",
+        "Clean, non-toxic formula",
+        "Long-lasting, ultra-hydrating"
+      ]
+    },
+    {
+      "id": 44,
+      "brand": "Mob",
+      "name": "MOB Cream Lipstick",
+      "category": "Lip Sticks",
+      "tags": ["Best Seller", "Vegan"],
+      "imageURL": "../src/assets/products/lip-sticks/mob-cream.png",
+      "hoverImageURL": "../src/assets/products/lip-sticks/mob-cream-hover.jpg",
+      "rating": 5,
+      "price": 22,
+      "principalBenefits": [
+        ".10 oz / 3 grams",
+        "All skin types",
+        "Super creamy, hydrating, rich, cushiony",
+        "Highly pigmented creamy lipstick"
+      ]
+    },
+    {
+      "id": 45,
+      "brand": "Westman Atelier",
+      "name": "Lip Suede Palette Les Nudes",
+      "category": "Lip Sticks",
+      "imageURL": "../src/assets/products/lip-sticks/lip-suede.jpg",
+      "hoverImageURL": "../src/assets/products/lip-sticks/lip-suede-hover.jpg",
+      "rating": 4,
+      "price": 85,
+      "principalBenefits": [
+        "Luxurious, creamy lip palette",
+        "Multiple flattering lip shades",
+        "Nourishes and plumps lips"
+      ]
+    },
+    {
+      "id": 46,
+      "brand": "Westman Atelier",
+      "name": "The Gift Edition",
+      "category": "Lip Sticks",
+      "imageURL": "../src/assets/products/lip-sticks/gift-edition.jpg",
+      "hoverImageURL": "../src/assets/products/lip-sticks/gift-edition-hover.jpg",
+      "rating": 5,
+      "price": 133,
+      "principalBenefits": [
+        "Limited edition gift set",
+        "Four matte lip shades",
+        "Clean ingredients"
+      ]
+    },
+    {
+      "id": 47,
+      "brand": "Westman Atelier",
+      "name": "Lip Suede Palette Les Rouges",
+      "category": "Lip Sticks",
+      "imageURL": "../src/assets/products/lip-sticks/lip-suede-red.jpg",
+      "hoverImageURL": "../src/assets/products/lip-sticks/lip-suede-red-hover.jpg",
+      "rating": 0,
+      "price": 85,
+      "principalBenefits": [
+        "Luxurious, creamy lip palette",
+        "Multiple flattering lip shades",
+        "Nourishes and plumps lips"
+      ]
+    },
+    {
+      "id": 48,
+      "brand": "Mob",
+      "name": "MOB Matte Lipstick (M67)",
+      "category": "Lip Sticks",
+      "tags": ["Vegan"],
+      "imageURL": "../src/assets/products/lip-sticks/mob-matte.png",
+      "hoverImageURL": "../src/assets/products/lip-sticks/mob-matte-hover.jpg",
+      "rating": 0,
+      "price": 22,
+      "principalBenefits": [
+        "Formulated without silicones, beeswax, or carmine",
+        ".10 oz / 3 grams"
+      ]
+    }
+  ]
+]
