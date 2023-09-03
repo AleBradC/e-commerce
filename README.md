@@ -29,12 +29,14 @@ Start the project in a local environment
 
 1. Clone the project
 2. Create an `.env` file in the server directory and add the following:
-   ``env
+
+   ```env
    PORT=8080
-   ``
-3. Install docker for desktop
-4. In the root project directory run `npm run install`. This will install all the dependencies for the server & client
-5. Run the application inside the docker container using `start:docker` this will create the containers for server, client and a seed mongo data base
+   ```
+   
+4. Install docker for desktop
+5. In the root project directory run `npm run install`. This will install all the dependencies for the server & client
+6. Run the application inside the docker container using `start:docker` this will create the containers for server, client and a seed mongo data base
 
 You can test the application in a local environment, make changes and save them, you will see the changes locally.
 
