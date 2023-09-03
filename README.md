@@ -40,6 +40,6 @@ Start the project in a local environment
 
 You can test the application in a local environment, make changes and save them, you will see the changes locally.
 
-## Notes:
+## Notes
 
 - available only for desktop & large desktops
