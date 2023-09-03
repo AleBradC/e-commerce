@@ -1,8 +1,6 @@
-# Project Title
+# E-commerce app
 
-e-commerce app
-
-# Dependencies
+## Dependencies
 
 - React
 - Redux Toolkit Query
@@ -20,28 +18,26 @@ e-commerce app
 - DropZone
 - Docker
 
-# Description
+## Description
 
 E-commerce website, this project was created to focus on creating component with React from scratch and the backend part is just for functionality at a vert basic level.
 
-# Getting Started
+## Getting Started
 
-- before you will need to create .env file for client and server director and add the PORT.
-- server -> PORT = 8080
-- client -> PORT = 3000
+Follow these steps to get started with the project:
+Start the project in a local environment
 
-1. Docker:
+1. Clone the project
+2. Create an `.env` file in the server directory and add the following:
+   ```env
+   PORT=8080
+   ```
+3. Install docker for desktop
+4. In the root project directory run `npm run install`. This will install all the dependencies for the server & client
+5. Run the application inside the docker container using `start:docker` this will create the containers for server, client and a seed mongo data base
 
-- install docker for desktop
-- clone de project
-- run npm run start:docker -> this will install de dependencies, create de docker image and then will start the frontend, backend and DB in their own containers
+You can test the application in a local environment, make changes and save them, you will see the changes locally.
 
-2. Without the Docker:
-
-- clone de project
-- run npm install - this will install all the dependencies on the server and client
-- run npm run start - this will start the server then the client
-
-# Notes:
+## Notes:
 
 - available only for desktop & large desktops
