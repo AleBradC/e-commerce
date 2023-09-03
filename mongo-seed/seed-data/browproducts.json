@@ -1,0 +1,134 @@
+[
+  {
+    "id": 17,
+    "brand": "Kosas",
+    "name": "Clear Air Brow Tinted Volumizing Treatment Gel",
+    "category": "Brows",
+    "tags": ["Best Seller"],
+    "imageURL": "../src/assets/products/brows/clear-air.jpg",
+    "hoverImageURL": "../src/assets/products/brows/clear-air-hover.jpg",
+    "rating": 0,
+    "price": 22,
+    "principalBenefits": [
+      "Volumizing treatment gel",
+      "Swipe and set for fuller brows",
+      "Fills and shapes",
+      "Supports brow hair health",
+      "Increases brow volume"
+    ]
+  },
+  {
+    "id": 18,
+    "brand": "Kosas",
+    "name": "Air Brow Tinted Volumizing Treatment Gel",
+    "category": "Brows",
+    "tags": ["Best Seller"],
+    "imageURL": "../src/assets/products/brows/air-tinted.jpg",
+    "hoverImageURL": "../src/assets/products/brows/air-tinted-hover.jpg",
+    "rating": 5,
+    "price": 22,
+    "principalBenefits": [
+      "Volumizing treatment gel",
+      "Fills and shapes",
+      "Tints and holds",
+      "Supports brow hair health",
+      "Increases brow volume"
+    ]
+  },
+  {
+    "id": 19,
+    "brand": "Kosas",
+    "name": "Brow Pop Dual-Action Defining Pencil",
+    "category": "Brows",
+    "tags": ["Best Seller", "Vegan"],
+    "imageURL": "../src/assets/products/brows/pop-dual.jpg",
+    "hoverImageURL": "../src/assets/products/brows/pop-dual-hover.jpg",
+    "rating": 0,
+    "price": 22,
+    "principalBenefits": [
+      "Dual-action defining pencil",
+      "Fill and shape",
+      "Soft, natural real hair look",
+      "Long-wearing"
+    ]
+  },
+  {
+    "id": 20,
+    "brand": "Westman Atelier",
+    "name": "Bonne Brow",
+    "category": "Brows",
+    "tags": ["Vegan"],
+    "imageURL": "../src/assets/products/brows/bonne.jpg",
+    "hoverImageURL": "../src/assets/products/brows/bonne-hover.jpg",
+    "rating": 0,
+    "price": 38,
+    "principalBenefits": [
+      "Stone - Blonde and Red Hair",
+      "Clay - Medium Blonde and Brown Hair",
+      "Bark - Dark Brown Hair",
+      "Slate - Black/Brown and Black Hair",
+      "Silicone free, paraben free, talc free, phthalates free, fragrance free, no PEGS. Vegan & never tested on animals."
+    ]
+  },
+  {
+    "id": 21,
+    "brand": "Roen",
+    "name": "vowBrow Pencil",
+    "category": "Brows",
+    "tags": ["Vegan"],
+    "imageURL": "../src/assets/products/brows/vowBrow.jpg",
+    "hoverImageURL": "../src/assets/products/brows/vowBrow-hover.jpg",
+    "rating": 5,
+    "price": 26,
+    "principalBenefits": [
+      "Easy to use and easy to select the perfect shade",
+      "The perfect product to complete your look"
+    ]
+  },
+  {
+    "id": 22,
+    "brand": "Tweezers",
+    "name": "Classic Stainless Slat Tweezers",
+    "category": "Brows",
+    "imageURL": "../src/assets/products/brows/classic-stainless.png",
+    "hoverImageURL": "../src/assets/products/brows/classic-stainless-hover.png",
+    "rating": 0,
+    "price": 23,
+    "principalBenefits": [
+      "Superior calibrated tension for comfort, control, and true precision",
+      "Allure 'Best of Beauty' winner every year since 2001",
+      "This product is not tested on animals"
+    ]
+  },
+  {
+    "id": 23,
+    "brand": "Beautycounter",
+    "name": "Brilliant Brow",
+    "category": "Brows",
+    "tags": ["Vegan"],
+    "imageURL": "../src/assets/products/brows/brilliant.jpg",
+    "hoverImageURL": "../src/assets/products/brows/brilliant-hover.jpg",
+    "rating": 0,
+    "price": 23,
+    "principalBenefits": [
+      "Flake-proof, foolproof, and easy to use",
+      "Cocoa Seed Butter, Shea Butter, Coconut Oil, and Jojoba Oil: condition brow hairs",
+      "Elderberry Extract protects and conditions"
+    ]
+  },
+  {
+    "id": 24,
+    "brand": "Tweezers",
+    "name": "Point Tweezer Classic Stainless",
+    "category": "Brows",
+    "tags": ["Best Seller"],
+    "imageURL": "../src/assets/products/brows/point-tweezer.png",
+    "hoverImageURL": "../src/assets/products/brows/point-tweezer-hover.png",
+    "rating": 0,
+    "price": 23,
+    "principalBenefits": [
+      "Perfectly aligned, hand filed tips",
+      "Dual-purpose tweezer for brow shaping and precision work. Use slant side for general tweezing and shaping and the point side for precision work such as removing baby fine hairs."
+    ]
+  }
+]

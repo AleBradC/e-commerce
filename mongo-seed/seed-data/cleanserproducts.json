@@ -1,0 +1,140 @@
+[
+  {
+    "id": 57,
+    "brand": "Bioderma",
+    "name": "Bioderma H20 Wipes",
+    "category": "Cleansers",
+    "imageURL": "../src/assets/products/cleansers/bioderma-wipes.jpg",
+    "hoverImageURL": "../src/assets/products/cleansers/bioderma-wipes-hover.png",
+    "rating": 4,
+    "price": 12,
+    "principalBenefits": [
+      "Micellar dermatological wipes",
+      "Perfect for cleansing and makeup removal",
+      "Perfect for sensitive skin and reducing the irritation caused by cleansing",
+      "25 wipes"
+    ]
+  },
+  {
+    "id": 58,
+    "brand": "Nature of things",
+    "name": "Clarifying Facial Polish",
+    "category": "Cleansers",
+    "tags": ["Best Seller"],
+    "imageURL": "../src/assets/products/cleansers/polish.jpg",
+    "hoverImageURL": "../src/assets/products/cleansers/polish-hover.jpg",
+    "rating": 3,
+    "price": 65,
+    "principalBenefits": [
+      "Dual-performing clarifying facial polish",
+      "Purifies, resurfaces, and exfoliates",
+      "Cleanses and exfoliates all skin types",
+      "Aesthetic on point",
+      "45 g / 1.45 net wt"
+    ]
+  },
+  {
+    "id": 59,
+    "brand": "Ursa major",
+    "name": "Essential Face Wipes",
+    "category": "Cleansers",
+    "imageURL": "../src/assets/products/cleansers/ursa-wipes.jpg",
+    "hoverImageURL": "../src/assets/products/cleansers/ursa-wipes-hover.png",
+    "rating": 5,
+    "price": 26,
+    "principalBenefits": [
+      "Individually-wrapped cleansing face wipes",
+      "Exfoliates, soothes, and hydrates",
+      "Removes oil and grime",
+      "Travel-friendly",
+      "Natural ingredients and toxin-free"
+    ]
+  },
+  {
+    "id": 60,
+    "brand": "Bioderma",
+    "name": "Sensibio H2O",
+    "category": "Cleansers",
+    "tags": ["Low Stock"],
+    "imageURL": "../src/assets/products/cleansers/bioderma-sensibio-h2o.jpg",
+    "hoverImageURL": "../src/assets/products/cleansers/bioderma-sensibio-h2o-hover.jpg",
+    "rating": 5,
+    "price": 7,
+    "principalBenefits": [
+      "Dermatological micellar water",
+      "Perfect for sensitive skin and reducing the irritation caused by cleansing",
+      "100ml"
+    ]
+  },
+  {
+    "id": 61,
+    "brand": "Youth to the people",
+    "name": "Superfood Cleanser",
+    "category": "Cleansers",
+    "tags": ["New Arrival"],
+    "imageURL": "../src/assets/products/cleansers/superfood-cleanser.png",
+    "hoverImageURL": "../src/assets/products/cleansers/superfood-cleanser-hover.png",
+    "rating": 5,
+    "price": 36,
+    "principalBenefits": [
+      "Superfood antioxidant facial cleanser",
+      "Designed for daily use",
+      "Gentle enough for all skin types",
+      "Rich gel texture lathers beautifully",
+      "Recyclable packing",
+      "8 fl oz/ 237ml"
+    ]
+  },
+  {
+    "id": 62,
+    "brand": "Youth to the people",
+    "name": "SuperBerry Melt + Dream Balm",
+    "category": "Cleansers",
+    "tags": ["Best Seller"],
+    "imageURL": "../src/assets/products/cleansers/superberry-dream-balm.jpg",
+    "hoverImageURL": "../src/assets/products/cleansers/superberry-dream-balm-hover.jpg",
+    "rating": 5,
+    "price": 34,
+    "principalBenefits": [
+      "Unique cleansing balm",
+      "Safe for all skin types",
+      "Dissolves makeup, dirt and oil"
+    ]
+  },
+  {
+    "id": 63,
+    "brand": "Pai",
+    "name": "Light Work Cleansing Oil",
+    "category": "Cleansers",
+    "tags": ["Vegan"],
+    "imageURL": "../src/assets/products/cleansers/pai-cleansing.png",
+    "hoverImageURL": "../src/assets/products/cleansers/pai-cleansing-hover.jpg",
+    "rating": 3,
+    "price": 29,
+    "principalBenefits": [
+      "Cleansing, balancing, and softening",
+      "Gentle, yet hyper-efficient",
+      "Removes makeup and SPF with ease",
+      "No rubbing and zero sting",
+      "Leaves skin soft, nourished, and radiant",
+      "28ml, 100ml"
+    ]
+  },
+  {
+    "id": 64,
+    "brand": "Environ",
+    "name": "Botanical Infused Sebu-Wash Gel Cleanser",
+    "category": "Cleansers",
+    "tags": ["Best Seller", "Low Stock"],
+    "imageURL": "../src/assets/products/cleansers/environ-clarifying.png",
+    "hoverImageURL": "../src/assets/products/cleansers/environ-clarifying-hover.png",
+    "rating": 4,
+    "price": 41,
+    "principalBenefits": [
+      "Mattifying foaming face wash",
+      "Leaves skin feeling refreshed and clean",
+      "Washes away excess surface oil",
+      "150ml (5.07 fl oz) tube"
+    ]
+  }
+]

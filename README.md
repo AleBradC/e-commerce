@@ -1,8 +1,6 @@
-# Project Title
+# E-commerce app
 
-e-commerce app
-
-# Dependencies
+## Dependencies
 
 - React
 - Redux Toolkit Query
@@ -18,21 +16,28 @@ e-commerce app
 - Swiper
 - Draft.js
 - DropZone
+- Docker
 
-# Status
-
-- in progress
-
-# Description
+## Description
 
 E-commerce website, this project was created to focus on creating component with React from scratch and the backend part is just for functionality at a vert basic level.
 
-# Getting Started
+## Getting Started
 
-- clone de project
-- npm i -> in client & server file
-- npm run dev -> to run the server and client
+Follow these steps to get started with the project:
+Start the project in a local environment
 
-# Notes:
+1. Clone the project
+2. Create an `.env` file in the server directory and add the following:
+   ```env
+   PORT=8080
+   ```
+3. Install docker for desktop
+4. In the root project directory run `npm run install`. This will install all the dependencies for the server & client
+5. Run the application inside the docker container using `start:docker` this will create the containers for server, client and a seed mongo data base
 
-- availabe only for desktop & large desktops
+You can test the application in a local environment, make changes and save them, you will see the changes locally.
+
+## Notes:
+
+- available only for desktop & large desktops

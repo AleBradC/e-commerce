@@ -1,0 +1,40 @@
+version: "3.8"
+
+services:
+  client:
+    build: ./client
+    container_name: e_commerce_client_container
+    ports:
+      - 3000:3000
+    volumes:
+      - ./client:/app
+      - /app/node_modules
+    stdin_open: true
+    tty: true
+
+  server:
+    build: ./server
+    container_name: e_commerce_server_container
+    ports:
+      - 8080:8080
+    volumes:
+      - ./server:/app
+      - /app/node_modules
+
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+  mongo-seed:
+    build: ./mongo-seed
+    links:
+      - mongo
+    volumes:
+      - ./mongo-seed/seed-data:/seed-data
+
+volumes:
+  mongo-data:
+    driver: local

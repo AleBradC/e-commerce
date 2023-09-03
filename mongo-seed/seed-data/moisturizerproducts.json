@@ -1,0 +1,137 @@
+[
+  {
+    "id": 49,
+    "brand": "BeautyCounter",
+    "name": "Dew Skin Tinted Moisturizer",
+    "category": "Moisturizers",
+    "tags": ["Best Seller"],
+    "imageURL": "../src/assets/products/moisturizers/dew-skin.jpg",
+    "hoverImageURL": "../src/assets/products/moisturizers/dew-skin-hover.jpg",
+    "rating": 0,
+    "price": 50,
+    "principalBenefits": [
+      "Sheer dewy finish",
+      "Safer SPF",
+      "Glow-boosting ingredients",
+      "Buildable color"
+    ]
+  },
+  {
+    "id": 50,
+    "brand": "Spectacle",
+    "name": "Spectacle Performance Crème",
+    "category": "Moisturizers",
+    "tags": ["Best Seller", "New Arrival"],
+    "imageURL": "../src/assets/products/moisturizers/spectacle.png",
+    "hoverImageURL": "../src/assets/products/moisturizers/spectacle-hover.png",
+    "rating": 4.5,
+    "price": 87,
+    "principalBenefits": [
+      "Winner of 'Best moisturizer for aging skin' and delivered to you in 'Best sustainable packaging' - Marie Claire 2021 Skin Awards",
+      "Hydrates, smoothes, and soothes",
+      "Beautiful primer-like consistency",
+      "Supports collagen and elastin production"
+    ]
+  },
+  {
+    "id": 51,
+    "brand": "Ursa Major",
+    "name": "Golden Hour Recovery Cream",
+    "category": "Moisturizers",
+    "tags": ["Best Seller"],
+    "imageURL": "../src/assets/products/moisturizers/golden-hour.jpg",
+    "hoverImageURL": "../src/assets/products/moisturizers/golden-hour-hover.jpg",
+    "rating": 5,
+    "price": 20,
+    "principalBenefits": [
+      "Aroma: Neroli, sandalwood and a touch of sour rose anchored with fresh-soaked earth",
+      "Fast-absorbing face cream",
+      "Nourishes, soothes and replenishes skin",
+      "Perfect for all skin types",
+      "1.57 fl oz, .5 fl oz"
+    ]
+  },
+  {
+    "id": 52,
+    "brand": "Youth to the people",
+    "name": "Superfood Air-Whip Moisture Cream",
+    "category": "Moisturizers",
+    "imageURL": "../src/assets/products/moisturizers/superfood-cream.jpg",
+    "hoverImageURL": "../src/assets/products/moisturizers/superfood-cream-hover.jpg",
+    "rating": 5,
+    "price": 48,
+    "principalBenefits": [
+      "Air-whipped gel cream",
+      "Light, clean, herbaceous scent",
+      "Absorbs quickly and does not clog your pores",
+      "Made with superfoods including kale and spinach",
+      "Contains antioxidant green tea"
+    ]
+  },
+  {
+    "id": 53,
+    "brand": "Youth to the people",
+    "name": "Adaptogen Deep Moisture Cream",
+    "category": "Moisturizers",
+    "imageURL": "../src/assets/products/moisturizers/adaptogen.jpg",
+    "hoverImageURL": "../src/assets/products/moisturizers/adaptogen-hover.jpg",
+    "rating": 2,
+    "price": 58,
+    "principalBenefits": [
+      "Deeply moisturizing facial cream",
+      "Calms sensitive, stressed skin"
+    ]
+  },
+  {
+    "id": 54,
+    "brand": "Augustinus Bader",
+    "name": "The Cream",
+    "category": "Moisturizers",
+    "imageURL": "../src/assets/products/moisturizers/the-cream.jpg",
+    "hoverImageURL": "../src/assets/products/moisturizers/the-cream-hover.jpg",
+    "rating": 2,
+    "price": 68,
+    "principalBenefits": [
+      "Lightweight hydration for mildly dry, combination, or oily skin",
+      "Clinically proven to reduce the signs of aging",
+      "Rich in Antioxidants, Amino Acids, and Vitamins A, B, C, and E",
+      "Groundbreaking stem-cell technology",
+      "High-performance skincare powered by TFC8® technology",
+      "Free from perfumes, silicones, and fillers",
+      "Designed for daytime use",
+      "30ml, 50ml"
+    ]
+  },
+  {
+    "id": 55,
+    "brand": "Irene Forte",
+    "name": "Aloe Vera Face Cream",
+    "category": "Moisturizers",
+    "tags": ["Vegan"],
+    "imageURL": "../src/assets/products/moisturizers/aloe-vera-cream.png",
+    "hoverImageURL": "../src/assets/products/moisturizers/aloe-vera-cream-hover.jpg",
+    "rating": 5,
+    "price": 120,
+    "principalBenefits": [
+      "Clinically approved for sensitive skin. Also suitable for all skin types, especially dry or dehydrated.",
+      "pH 5.5",
+      "50 ml"
+    ]
+  },
+  {
+    "id": 56,
+    "brand": "Environ",
+    "name": "Vita-Complex Super Moisturizer",
+    "category": "Moisturizers",
+    "tags": ["Vegan"],
+    "imageURL": "../src/assets/products/moisturizers/vita-complex.jpg",
+    "hoverImageURL": "../src/assets/products/moisturizers/vita-complex-hover.jpg",
+    "rating": 5,
+    "price": 100,
+    "principalBenefits": [
+      "Restores the skin’s natural moisture balance",
+      "Prevents tight, dry skin",
+      "Leaves skin feeling silky soft"
+    ]
+  }
+]
